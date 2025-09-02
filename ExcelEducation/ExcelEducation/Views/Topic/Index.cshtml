@@ -1,0 +1,101 @@
+﻿<!-- data tables css -->
+<link rel="stylesheet" href="@Url.Content("~/Content/admin/assets/css/plugins/dataTables.bootstrap4.min.css")">
+<link href="@Url.Content("~/Content/admin/Custom.css")" rel="stylesheet" />
+<!-- datepicker -->
+<link href="~/Content/admin/assets/css/plugins/daterangepicker.css" rel="stylesheet" />
+<script src="~/Content/admin/assets/js/plugins/moment.min.js"></script>
+<script src="~/Content/admin/assets/js/plugins/daterangepicker.js"></script>
+<!-- toggle -->
+<link href="~/Scripts/BootstrapToggle/bootstrap4-toggle.min.css" rel="stylesheet" />
+<script src="~/Scripts/BootstrapToggle/bootstrap4-toggle.min.js"></script>
+
+
+<div class="row topic" style="padding:0px; margin:0px">
+
+    <div class="col-sm-12">
+        <div class="card">
+
+            <div class="card-header">
+                <h5>Menu content</h5>
+            </div>
+            <div class="card-body">
+                <div class="row">
+                    <div class="col-md-2">
+                        <div class="form-group">
+                            <label class="control-label">Page Head</label>
+                            <select class="clsddlpagehead col-sm-12" required></select>
+                        </div>
+                    </div>
+                    <div class="col-md-2">
+                        <div class="form-group">
+                            <label class="control-label">Sub menu</label>
+                            <select class="clsddlpage col-sm-12"></select>
+                        </div>
+                    </div>
+                    <div class="col-md-2">
+                        <div class="form-group">
+                            <label class="control-label">Major Topic</label>
+                            <select class="clsddltopic col-sm-12"></select>
+                        </div>
+                    </div>
+                    <div class="col-md-1">
+                        <div class="form-group">
+                            <label style="visibility: hidden" class="control-label">Topic</label>
+                            <div>
+                                <button class="btn btn-sm btn-outline-primary" id="btnAddTopic" type="button"  style="display:none">Add Topic</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="form-group">
+                            <label style="visibility: hidden" class="control-label">Topic</label>
+                            <div>
+                                <button style="display: none" class="btn btn-sm btn-outline-primary" id="btnAddData" type="button">Add data</button>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <table id="griddtable" class="table table-bordered">
+                </table>
+
+            </div>
+        </div>
+    </div>
+</div>
+<div class="topic-content"></div>
+<div class="topic-files"></div>
+
+<script src="@Url.Content("~/Content/admin/assets/js/plugins/jquery.dataTables.min.js")"></script>
+<script src="@Url.Content("~/Content/admin/assets/js/plugins/dataTables.bootstrap4.min.js")"></script>
+
+<script src="@Url.Content("~/Scripts/jquery.validate.min.js")"></script>
+<script src="@Url.Content("~/Scripts/custom/topic/TopicPage.js")"></script>
+<script src="@Url.Content("~/Scripts/custom/topic/TopicDatatable.js")"></script>
+
+
+<script>
+    var GetPageHeads = "@Url.Content("~/Topic/GetPageHeads")";
+    var GetPages = "@Url.Content("~/Topic/GetPages")";
+    var GetTopics = "@Url.Content("~/Topic/GetTopics")";
+    var GetTopicDetails = "@Url.Content("~/Topic/GetTopicDetails")";
+    var AddTopicDetail = "@Url.Content("~/Topic/AddTopicDetail")";
+    var AddTopicDetailFiles = "@Url.Content("~/Topic/AddTopicDetailFiles")";
+    var GetTopicDetailFiles = "@Url.Content("~/Topic/GetTopicDetailFiles")";
+    var DeletePhoto = "@Url.Content("~/Topic/DeletePhoto")";
+    var UploadTopicDetailFiles = "@Url.Content("~/Topic/UploadTopicDetailFiles")";
+    var SetOrder = "@Url.Content("~/Topic/SetOrder")";
+    var SetSubTopicOrder = "@Url.Content("~/Topic/SetSubTopicOrder ")";
+    var DeleteTopicDetailFile = "@Url.Content("~/Topic/DeleteTopicDetailFile")";
+    var UploadTopicDetailPhotos = "@Url.Content("~/Topic/UploadTopicDetailPhotos")";
+    var AddTopic = "@Url.Content("~/Topic/AddTopic")";
+    var GetTopicList = "@Url.Content("~/Topic/GetTopicList")";
+    var SetTopicOrder = "@Url.Content("~/Topic/SetTopicOrder")";
+    var DeleteTopic = "@Url.Content("~/Topic/DeleteTopic")";
+    var DeleteTopicDetail = "@Url.Content("~/Topic/DeleteTopicDetail")";
+    var EditTopic = "@Url.Content("~/Topic/EditTopic")";
+    var GetTopic = "@Url.Content("~/Topic/GetTopic")";
+    var GetPagePhotos = "@Url.Content("~/Topic/GetPagePhotos")";
+</script>
+

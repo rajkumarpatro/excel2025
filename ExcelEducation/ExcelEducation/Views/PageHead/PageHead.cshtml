@@ -1,0 +1,92 @@
+﻿@model DAL.Models.PageHead
+
+@{
+    ViewBag.Title = "Page Head";
+}
+
+<!-- data tables css -->
+<link rel="stylesheet" href="@Url.Content("~/Content/admin/assets/css/plugins/dataTables.bootstrap4.min.css")">
+<link href="@Url.Content("~/Content/admin/Custom.css")" rel="stylesheet" />
+
+<form id="frm_pagehead">
+    <div class="row">
+        <!-- [ sample-page ] start -->
+        <div class="col-sm-12">
+            <div class="card">
+
+                <div class="card-header">
+                    <h5>Page Head</h5>
+                </div>
+                <div class="card-body">
+                    <div class="row">
+                        <div class="col-md-3">
+                            <div class="form-group">
+                                <label>Menu Name</label>
+                                @Html.TextBoxFor(Model => Model.PAGE_HEAD_NAME, new { @class = "form-control", placeholder = "Enter Menu Name", @required = "required" })
+                                <label id="PAGE_HEAD_NAME-error" class="error hide_column invalid-feedback" for="PAGE_HEAD_NAME" style="">This field is required.</label>
+                                @Html.TextBoxFor(Model => Model.ACTION, new { @class = "hide_column", value = "1" })
+                                @Html.TextBoxFor(Model => Model.PAGE_HEAD_ID, new { @class = "hide_column" })
+                            </div>
+                        </div>
+                        <div class="col-md-2">
+                            <label>Description/Link</label>
+                            @Html.DropDownListFor(m => m.IS_LINK, Model.LINKDD, new { @class = "form-control" })
+                        </div>
+                        <div class="col-md-3" id="dv_link">
+                            <label>URL</label>
+                            @Html.TextBoxFor(Model => Model.LINK_URL, new { @class = "form-control", placeholder = "Enter URL" })
+                        </div>
+                        <div class="col-md-1">
+                            <label>Order</label>
+                            @Html.DropDownListFor(m => m.REORDER, Model.ORDERDD, new { @class = "form-control" })
+                        </div>
+                        <div class="col-md-2">
+                            <label>Show</label>
+                            @Html.DropDownListFor(m => m.SHOW, Model.SHOWDD, new { @class = "form-control" })
+                        </div>
+                        <div class="col-md-1">
+                            <br />
+                            <button class="btn notifications btn-success has-ripple" data-type="success" data-from="top" data-align="right" type="submit" id="btnsubmit">Submit</button>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="dt-responsive table-responsive">
+                                <table id="gridtable" class="table table-bordered">
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- [ sample-page ] end -->
+    </div>
+</form>
+
+
+<script src="@Url.Content("~/Content/admin/assets/js/plugins/jquery.dataTables.min.js")"></script>
+<script src="@Url.Content("~/Content/admin/assets/js/plugins/dataTables.bootstrap4.min.js")"></script>
+
+<script src="@Url.Content("~/Content/admin/assets/js/plugins/buttons.colVis.min.js")"></script>
+<script src="@Url.Content("~/Content/admin/assets/js/plugins/buttons.print.min.js")"></script>
+<script src="@Url.Content("~/Content/admin/assets/js/plugins/pdfmake.min.js")"></script>
+<script src="@Url.Content("~/Content/admin/assets/js/plugins/jszip.min.js")"></script>
+<script src="@Url.Content("~/Content/admin/assets/js/plugins/dataTables.buttons.min.js")"></script>
+<script src="@Url.Content("~/Content/admin/assets/js/plugins/buttons.html5.min.js")"></script>
+<script src="@Url.Content("~/Content/admin/assets/js/plugins/buttons.bootstrap4.min.js")"></script>
+<script src="@Url.Content("~/Content/admin/assets/js/pages/data-export-custom.js")"></script>
+
+<!--Custom-->
+<script src="@Url.Content("~/Scripts/jquery.validate.min.js")"></script>
+<script src="@Url.Content("~/Scripts/custom/PageHead/PageHead.js")"></script>
+<script src="@Url.Content("~/Scripts/custom/PageHead/PageHeadDatatable.js")"></script>
+
+<script>
+    var LoadRecord = "@Url.Content("~/PageHead/loadRecord")"
+    var AddEditRecord = "@Url.Content("~/PageHead/addEditRecord")"
+    var SetOrder = "@Url.Content("~/PageHead/SetOrder")"
+    var ToggleRecord = "@Url.Content("~/PageHead/ToggleRecord")"
+    var DeleteRecord = "@Url.Content("~/PageHead/DeleteRecord")"
+</script>
+

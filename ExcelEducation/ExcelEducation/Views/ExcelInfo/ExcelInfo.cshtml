@@ -1,0 +1,123 @@
+﻿@model DAL.Models.ExcelInfoModel
+
+@{
+    ViewBag.Title = "Page";
+    Layout = "~/Views/Shared/_LayoutHome.cshtml";
+}
+
+<!-- breadcrumb area end -->
+<section class="page-header page-header--bg-two" data-jarallax data-speed="0.3" data-imgPosition="50% -100%">
+    <div class="page-header__bg jarallax-img"></div>
+    <!-- /.page-header-bg -->
+    <div class="page-header__overlay"></div>
+    <!-- /.page-header-overlay -->
+    <div class="container text-center">
+        <h2 class="page-header__title">@Model.page</h2>
+        <!-- /.page-breadcrumb list-unstyled -->
+    </div>
+    <!-- /.container -->
+</section>
+
+<!-- profile menu area start -->
+<!--------28/08/25 tetsing start------->
+<section class="service-two" style="background-image: url(../../Content/home/images/shapes/service-bg-2.jpg);">
+    <div class="container">
+
+        <div class="row">
+            @{
+                string columns = "col-xxl-12 col-md-12";
+                var topics = Model.Topics;
+                var firstTopicId = Model.Topics.FirstOrDefault().TOPIC_ID;
+                int topicCount = Model.Topics.Count();
+
+                if (topicCount > 1)
+                {
+                    <div class="col-xl-3 col-lg-4 wow fadeInLeft" data-wow-delay="200ms">
+                        <div class="product__sidebar product__sidebar--left">
+                            <!-- /.price-slider -->
+                                        <div class="product__sidebar__single product__categories">
+                                            <h3 class="product__sidebar__title"> Major Topics</h3>
+                                            <ul class="list-unstyled">
+                                                @foreach (var topic in topics)
+                                                {
+                                                <li id="lnk_topicdetails" data-topicid="@topic.TOPIC_ID">@topic.TOPIC_NAME</li>
+                                                }
+                                                </ul> 
+                                        </div>
+                            <!-- /.category-widget -->
+                        </div>
+                        <!-- /.shop-sidebar -->
+                    </div>
+                    <!-- /.column -->
+
+                }
+            }
+
+            <div class="col-xl-9 col-lg-8">
+                <div class="product__sidebar__single product__categories">
+                    <h2 class=" section-title__title text-center">
+                        Mode of Learning
+                    </h2>
+                    <div class="product__info-top wow fadeInUp" data-wow-delay="200ms">
+                        <div class="product__showing-text-box">
+                            <div class="@columns">
+                                <div class="topic-content"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!--------tetsing End------->
+@*<section class="profile__menu pt-50 pb-50 grey-bg-2">
+    <div class="container">
+        <div class="row">
+
+            @{
+                string columns = "col-xxl-12 col-md-12";
+                var topics = Model.Topics;
+                var firstTopicId = Model.Topics.FirstOrDefault().TOPIC_ID;
+                int topicCount = Model.Topics.Count();
+
+                if (topicCount > 1)
+                {
+                    columns = "col-xxl-9 col-md-9";
+                    <div class="col-xxl-3 col-md-3">
+                        <div class="profile__menu-left white-bg mb-50">
+                            <h3 class="profile__menu-title"><i class="fa-regular fa-square-list"></i> Major Topics</h3>
+                            <div class="profile__menu-tab">
+                                <div class="nav nav-tabs flex-column justify-content-start text-start" id="nav-tab" role="tablist">
+                                    @foreach (var topic in topics)
+                                    {
+                                        <div class="nav-link"><div id="lnk_topicdetails" data-topicid="@topic.TOPIC_ID"><i class="fa-regular fa-arrow-right-from-bracket"></i> @topic.TOPIC_NAME</div></div>
+                                    }
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                }
+            }
+
+
+
+            <div class="@columns">
+                <div class="topic-content"></div>
+            </div>
+        </div>
+    </div>
+</section>*@
+
+@*Custom Js*@
+
+<script src="@Url.Content("~/Scripts/custom/ExcelInfo/PageContent.js")"></script>
+
+<script>
+    var LoadPageContent = "@Url.Content("~/ExcelInfo/LoadPageContents")";
+    var firstTopicID = @firstTopicId;
+
+
+</script>
+<!-- profile menu area end -->

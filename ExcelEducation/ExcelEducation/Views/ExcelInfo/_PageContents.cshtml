@@ -1,0 +1,56 @@
+﻿@model List<DAL.Models.TopicDetail>
+
+@foreach (var pagecontent in Model)
+{
+    string topicname = pagecontent.SUB_TOPIC_NAME.ToString();
+    int subtopicid = pagecontent.SUB_TOPIC_ID;
+    string description = HttpUtility.UrlDecode(pagecontent.TOPIC_DESCRIPTION == null ? "" : pagecontent.TOPIC_DESCRIPTION.ToString());
+    string topicFilepath = (pagecontent.TOPIC_FILEPATH == null ? "" : pagecontent.TOPIC_FILEPATH.ToString());
+    string topicFilepathUpper = topicFilepath.ToUpper();
+
+    if (!pagecontent.SUB_TOPIC_TYPE)
+    {
+        <div class="profile__basic-inner mb-20 pb-20 white-bg">
+            <div class="row align-items-center">
+                <div class="col-xxl-12 col-md-12">
+                    @if (pagecontent.SHOW_TOPIC_NAME == true)
+                    {
+                        <h3 class="profile__basic-title">
+                            @topicname
+                        </h3>
+                    }
+
+
+                    @{
+                        Html.RenderPartial("_ContentDetails", pagecontent);
+                    }
+
+                </div>
+
+            </div>
+        </div>
+    }
+    else
+    {
+        <div class="accordion" id="accordion+@topicname">
+            <div class="accordion-item mb-20">
+                <h2 class="accordion-header" id="@topicname">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#test1" aria-expanded="true" aria-controls="test1">
+                        @topicname
+                    </button>
+                </h2>
+                <div id="test1" class="accordion-collapse collapse" aria-labelledby="@topicname">
+                    <div class="accordion-body">
+                        @Html.Partial("_ContentDetails", pagecontent)
+                    </div>
+                </div>
+            </div>
+        </div>
+    }
+
+
+
+
+}
+
+

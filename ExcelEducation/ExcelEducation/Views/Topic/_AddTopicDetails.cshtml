@@ -1,0 +1,129 @@
+﻿@model DAL.Models.TopicDetail
+@using DAL.Models
+
+<!-- summer note -->
+<link href="~/Scripts/summernote/summernote-bs4.min.css" rel="stylesheet" />
+<script src="~/Scripts/summernote/summernote-bs4.min.js"></script>
+<script src="~/Scripts/custom/topic/TopicDetails.js"></script>
+<link href="~/Scripts/imageuploadify/imageuploadify.min.css" rel="stylesheet" />
+<script src="~/Scripts/imageuploadify/imageuploadify.js"></script>
+@{
+    var file = Model.TOPIC_FILEPATH;
+    var filename = string.Empty;
+
+    if (!string.IsNullOrEmpty(file))
+    {
+        filename = Path.GetFileName(file);
+    }
+}
+
+<div class="col-sm-12">
+    <div class="card">
+        <div class="card-header topicdetail">
+            <h5>Topic Details</h5>
+            <h5 class="closeCard" style="float: right; color: blue; cursor: pointer;"><i class="feather icon-x"></i></h5>
+        </div>
+        <div class="card-body">
+            <form id="frm_topicdetails">
+                @Html.HiddenFor(m => m.SUB_TOPIC_ID)
+                @Html.HiddenFor(m => m.TOPIC_ID)
+                @Html.HiddenFor(m => m.TOPIC_FILEPATH)
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label class="form-label required">Title</label>
+                            @Html.TextBoxFor(m => m.SUB_TOPIC_NAME, new { @class = "form-control", placeholder = "Title", @required = "required" })
+                            <label id="SUB_TOPIC_NAME-error" class="error hide_column invalid-feedback" for="SUB_TOPIC_NAME" style="">This field is required.</label>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="row">
+
+                            <div class="col-md-3">
+
+                                <div class="form-group">
+                                    <label class="form-label">Select Date</label>
+                                    @Html.TextBoxFor(Model => Model.TOPIC_DATE, new { @class = "form-control datepicker", type = "date", placeholder = "Enter Date", @required = "required" })
+                                </div>
+                            </div>
+                            <div class="col-md-3">
+                                <div class="form-group">
+                                    <label class="form-label" style="display:block">Show/Hide Title</label>
+                                    <input class="chktoggle" @(Model.SHOW_TOPIC_NAME ? "checked" : "") type="checkbox" id="SHOW_TOPIC_NAME" name="SHOW_TOPIC_NAME" data-size="sm" data-toggle="toggle" data-on="YES" data-off="NO"
+                                           data-onstyle="success" data-offstyle="danger">
+                                </div>
+                            </div>
+                            <div class="col-md-3">
+                                <div class="form-group">
+                                    <label class="form-label" style="display:block">Select Type</label>
+                                    @Html.DropDownListFor(m => m.SUB_TOPIC_TYPE, Model.SUBTOPICTYPEDD, new { @class = "frmselect col-md-12" })
+
+                                </div>
+                            </div>
+                            <div class="col-md-3">
+                                <div class="form-group">
+                                    <label class="form-label" style="display:block">Set Order</label>
+                                    @Html.DropDownListFor(m => m.SUB_TOPIC_ORDER, Model.ORDERDD, new { @class = "frmselect col-md-5" })
+                                </div>
+                            </div>
+                        </div>
+
+
+                    </div>
+
+                    <div class="col-md-12">
+                        <div class="form-group">
+                            <label class="form-label required">Description</label>
+                            @Html.TextAreaFor(m => m.TOPIC_DESCRIPTION, new { @class = "form-control description" })
+                        </div>
+                    </div>
+
+                    <div class="col-md-12">
+                        <div class="row">
+                            <div class="form-group col-md-1">
+                                <label class="form-label" style="display:block">Upload file</label>
+                                <input class="chktoggle" @(Model.TOPIC_LINK_TYPE ? "checked" : "" ) type="checkbox" id="TOPIC_LINK_TYPE" name="TOPIC_LINK_TYPE" data-size="sm" data-toggle="toggle" data-on="YES" data-off="NO"
+                                       data-onstyle="success" data-offstyle="danger">
+                            </div>
+                            <div class="form-group col-md-2 divfile" style="visibility:  @(Model.TOPIC_LINK_TYPE ? "" : "hidden" ) ">
+                                <label class="form-label required">File</label>
+                                <input type="file" id="uploadfile" class="form-control" />
+                                @if (!string.IsNullOrEmpty(filename))
+                                {
+                                    <br />
+                                    <label>@filename</label>
+                                }
+                            </div>
+                            @if (Model.SUB_TOPIC_ID > 0)
+                            {
+                                <div class="col-md-7">
+                                    <input type="file" id="photosupload" accept=".xlsx,.xls,image/*,.doc,audio/*,.docx,video/*,.ppt,.pptx,.txt,.pdf" multiple>
+                                </div>
+                                <div class="col-md-2">
+                                    <button type="button" class="btn btn-sm btn-outline-primary btnUploadPhotos">Upload photos</button>
+                                </div>
+                            }
+
+                        </div>
+                    </div>
+                    <div class="col-md-12">
+                        <button type="button" id="testbtn" class="btn btn-sm btn-outline-primary">@(Model.SUB_TOPIC_ID > 0 ? "Update" : "Add")</button>
+                        @if (Model.SUB_TOPIC_ID > 0)
+                        {
+                            <button type="button" class="btn btn-sm btn-outline-primary" id="btnAddMultipleFiles">Add multiple files</button>
+                        }
+                    </div>
+                </div>
+
+            </form>
+
+            <hr />
+            <div id="divPagePhotosList">
+                @if (Model.PagePhotos.Any())
+                {
+                    Html.RenderPartial("_PagePhotos", Model.PagePhotos);
+                }
+            </div>
+        </div>
+    </div>
+</div>
