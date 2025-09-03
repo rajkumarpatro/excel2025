@@ -3405,34 +3405,34 @@
 # Common
 --------------------------------------------------------------*/
 :root {
-  --eduact-font: 'Urbanist', sans-serif;
-  --heading-font: 'Urbanist', sans-serif;
-  --eduact-text: #697585;
-  --eduact-text-rgb: 105, 117, 133;
-  --eduact-text2: #B3ADE1;
-  --eduact-text2-rgb: 179, 173, 225;
-  --eduact-grey: #B7B0B4;
-  --eduact-grey-rgb: 183, 176, 180;
-  --eduact-soft: #F1F2FD;
-  --eduact-soft-rgb: 241, 242, 253;
-  --eduact-soft2: #F6F5F5;
-  --eduact-soft2-rgb: 246, 245, 245;
-  --eduact-soft3: #E0E3FD;
-  --eduact-soft3-rgb: 224, 227, 253;
-  --eduact-soft4: #E4E4E4;
-  --eduact-soft4-rgb: 228, 228, 228;
-  --eduact-soft5: #F6F6F6;
-  --eduact-soft5-rgb: 246, 246, 246;
-  --eduact-base: #4F5DE4;
-  --eduact-base-rgb: 79, 93, 228;
-  --eduact-secondary: #F57005;
-  --eduact-secondary-rgb: 245, 112, 5;
-  --eduact-black: #2A254D;
-  --eduact-black-rgb: 42, 37, 77;
-  --eduact-black2: #000000;
-  --eduact-black2-rgb: 0, 0, 0;
-  --eduact-white: #ffffff;
-  --eduact-white-rgb: 255, 255, 255;
+    --eduact-font: 'Urbanist', sans-serif;
+    --heading-font: 'Urbanist', sans-serif;
+    --eduact-text: #697585;
+    --eduact-text-rgb: 105, 117, 133;
+    --eduact-text2: #B3ADE1;
+    --eduact-text2-rgb: 179, 173, 225;
+    --eduact-grey: #B7B0B4;
+    --eduact-grey-rgb: 183, 176, 180;
+    --eduact-soft: #F1F2FD;
+    --eduact-soft-rgb: 241, 242, 253;
+    --eduact-soft2: #F6F5F5;
+    --eduact-soft2-rgb: 246, 245, 245;
+    --eduact-soft3: #E0E3FD;
+    --eduact-soft3-rgb: 224, 227, 253;
+    --eduact-soft4: #E4E4E4;
+    --eduact-soft4-rgb: 228, 228, 228;
+    --eduact-soft5: #F6F6F6;
+    --eduact-soft5-rgb: 246, 246, 246;
+    --eduact-base: #4F5DE4;
+    --eduact-base-rgb: 79, 93, 228;
+    --eduact-secondary: maroon;
+    --eduact-secondary-rgb: 255, 207, 183;
+    --eduact-black: #2A254D;
+    --eduact-black-rgb: 42, 37, 77;
+    --eduact-black2: #000000;
+    --eduact-black2-rgb: 0, 0, 0;
+    --eduact-white: #ffffff;
+    --eduact-white-rgb: 255, 255, 255;
 }
 
 body {
@@ -6708,7 +6708,7 @@ body.megamenu-popup-active .mobile-nav__content {
   background-repeat: no-repeat;
   background-size: cover;
   background-position: bottom center;
-  padding: 28px 0 85px;
+  padding: 28px 0 15px;
 }
 
 @media (max-width: 767px) {
@@ -6769,21 +6769,21 @@ body.megamenu-popup-active .mobile-nav__content {
 }
 
 .service-two__icon {
-  width: 166px;
-  height: 166px;
-  background-color: var(--eduact-secondary);
-  font-size: 60px;
-  line-height: 1;
-  position: relative;
-  z-index: 3;
-  color: var(--eduact-white);
-  margin: -66px auto 35px;
-  display: flex;
-  align-items: end;
-  justify-content: center;
-  border-radius: 50%;
-  transition: 500ms ease;
-  padding: 0 0 22px;
+    width: 166px;
+    height: 166px;
+    background-color: #eb6c58e0;
+    font-size: 60px;
+    line-height: 1;
+    position: relative;
+    z-index: 3;
+    color: white;
+    margin: -66px auto 35px;
+    display: flex;
+    align-items: end;
+    justify-content: center;
+    border-radius: 50%;
+    transition: 500ms ease;
+    padding: 0 0 22px;
 }
 
 .service-two__icon span {
@@ -11574,7 +11574,7 @@ body.megamenu-popup-active .mobile-nav__content {
   height: 556px;
   position: absolute;
   right: 6px;
-  top: -39px;
+  top: -5px;
   z-index: -1;
   -webkit-animation: movebounce3 2s linear infinite;
   animation: movebounce3 2s linear infinite;
