@@ -76,3 +76,5 @@ _[Ss]cripts
 .vs
 ExcelEducation/.vs
 *.config
+# Ignore all C# project files
+*.csproj
