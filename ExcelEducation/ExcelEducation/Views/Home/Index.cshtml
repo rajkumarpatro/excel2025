@@ -47,7 +47,7 @@
 
 
 <!-- Start Banner Carousel -->
-@if (Model.FlashList.Any())
+@if (Model.FlashList?.Count > 0)
 {
     <div class="banner-outer">
         <!-- end single slider -->
@@ -175,7 +175,7 @@
                         </span>+
                     </div><!-- /.fact-one__count -->
                     <h3 class="fact-one__title">
-                        Year of
+                        Year of <br>
                         Excellent Education
                     </h3><!-- /.fact-one__title -->
                 </div><!-- /.fact-item -->
@@ -207,7 +207,7 @@
                         </span>+
                     </div><!-- /.fact-one__count -->
                     <h3 class="fact-one__title">
-                        All India Rankers
+                        All India <br> Rankers
                         Since 2007
                     </h3><!-- /.fact-one__title -->
                 </div><!-- /.fact-item -->
@@ -232,8 +232,8 @@
     </div>
 </section>
 <!-- Counter End -->
-<!-- Team Start -->
-<section class="team-one" style="background-image: url(../../Content/home/images/shapes/team-bg-1.png); padding: 40px 0 14px;">
+<!---- testing team memeber photos Start-->
+<section class="team-two team-two--about" style="background-image: url('@Url.Content("~/Content/home/images/shapes/team-bg-2.png")');">
     <div class="container">
         <div class="section-title text-center wow fadeInUp animated" data-wow-delay="100ms" style="visibility: visible; animation-delay: 100ms; animation-name: fadeInUp;">
             <h5 class="section-title__tagline">
@@ -247,74 +247,58 @@
                     </g>
                 </svg>
             </h5>
+            @*<h2 class="section-title__title">Meet Our Professional Team<br> Members</h2>*@
         </div><!-- section-title -->
-
         <div class="row">
-            <div class="col-xxl-4 col-xl-4 col-lg-4 col-md-6">
-                <div class="research__item research__item-border text-center mb-30 transition-3">
-                    <div class="research__thumb mb-35">
-                        <img src="../../Content/home/images/team-2-1.png" width="200" height="200">
-                    </div>
-                    <div class="research__content">
-                        <h3 class="research__title" style="color: #83221a;">CA. B. L. Agrawal</h3>
-                        <span style="color:#000;font-weight:700;">Teaching Experience : 34 Years</span>
-                        <p>
-                            CA. B. L. Agrawal, a seasoned Chartered Accountant
-                            and passionate educator, has been mentoring
-                            CA students for 34 years. His teaching blends practical
-                            insight and conceptualclarity, shaping thousands
-                            of successful professionals with dedication, expertise,
-                            and a legacy of excellence.
-                        </p>
-                    </div>
-                </div>
+            <div class="col-lg-4 col-md-6 wow fadeInUp animated" data-wow-delay="200ms" style="visibility: visible; animation-delay: 200ms; animation-name: fadeInUp;">
+                <div class="team-two__item">
+                    <div class="team-two__image">
+                        <img src="../../Content/home/images/TM1.png" alt="eduact" style="width: 353px; height: 454px;">
+                    </div><!-- /.team-image -->
+                    <div class="team-two__content">
+                        <h4 class="team-two__title">
+                            <a class="fs-3" href="team-details.html">CA. B. L. Agrawal</a>
+                        </h4><!-- /.team-name -->
+                        <span class="team-two__designation">(B.Com. FCA)</span><!-- /.team-designation -->
+                        <span class="team-two__designation"> Experience  - 34 Years</span><!-- /.team-designation -->
+                        
+                    </div><!-- /.team-content -->
+                </div><!-- /.team-two -->
             </div>
-
-            <div class="col-xxl-4 col-xl-4 col-lg-4 col-md-6">
-                <div class="research__item research__item-border text-center mb-30 transition-3">
-                    <div class="research__thumb mb-35">
-                        <img src="../../Content/home/images/team-2-3.png" width="200" height="200">
-                    </div>
-                    <div class="research__content">
-                        <h3 class="research__title" style="color: #83221a;">CA. Praveen Golchha</h3>
-                        <span style="color:#000;font-weight:700;">Teaching Experience : 26 Years</span>
-                        <p>
-                            CA. Praveen Golchha, a seasoned Chartered Accountant
-                            and passionate educator, has been mentoring
-                            CA students for 26 years. His teaching blends practical
-                            insight and conceptualclarity, shaping thousands
-                            of successful professionals with dedication, expertise,
-                            and a legacy of excellence.
-                        </p>
-                    </div>
-                </div>
+            <div class="col-lg-4 col-md-6 wow fadeInUp animated" data-wow-delay="300ms" style="visibility: visible; animation-delay: 300ms; animation-name: fadeInUp;">
+                <div class="team-two__item">
+                    <div class="team-two__image">
+                        <img src="../../Content/home/images/TM2.png" alt="eduact" style="width: 353px; height: 454px;">
+                    </div><!-- /.team-image -->
+                    <div class="team-two__content">
+                        <h4 class="team-two__title">
+                            <a class="fs-3" href="team-details.html">CA. Praveen Golchha</a>
+                        </h4><!-- /.team-name -->
+                        <span class="team-two__designation">(B.Com. FCA)</span><!-- /.team-designation -->
+                        <span class="team-two__designation"> Experience   -  26 Years</span><!-- /.team-designation -->
+                        
+                    </div><!-- /.team-content -->
+                </div><!-- /.team-two -->
             </div>
-
-            <div class="col-xxl-4 col-xl-4 col-lg-4 col-md-6">
-                <div class="research__item research__item-border text-center mb-30 transition-3">
-                    <div class="research__thumb mb-35">
-                        <img src="../../Content/home/images/team-2-2.PNG" width="200" height="200">
-                    </div>
-                    <div class="research__content">
-                        <h3 class="research__title" style="color: #83221a;">
-                            CA. Sanjay Kumar Goyal
-                        </h3>
-                        <span style="color:#000;font-weight:700;">Teaching Experience : 26 Years</span>
-                        <p>
-                            CA. Sanjay Kumar Goyal, a seasoned Chartered Accountant
-                            and passionate educator, has been mentoring
-                            CA students for 26 years. His teaching blends practical
-                            insight and conceptualclarity, shaping thousands
-                            of successful professionals with dedication, expertise,
-                            and a legacy of excellence.
-                        </p>
-                    </div>
-                </div>
+            <div class="col-lg-4 col-md-6 wow fadeInUp animated" data-wow-delay="400ms" style="visibility: visible; animation-delay: 400ms; animation-name: fadeInUp;">
+                <div class="team-two__item">
+                    <div class="team-two__image">
+                        <img src="../../Content/home/images/TM3.png" alt="eduact" style="width: 353px; height: 454px;">
+                    </div><!-- /.team-image -->
+                    <div class="team-two__content">
+                        <h4 class="team-two__title">
+                            <a class="fs-3" href="team-details.html">CA. Sanjay Kumar Goyal</a>
+                        </h4><!-- /.team-name -->
+                        <span class="team-two__designation">(B.Com. FCA, DISA (ICAI))</span><!-- /.team-designation -->
+                        <span class="team-two__designation"> Experience  -  26 Years</span><!-- /.team-designation -->
+                       
+                    </div><!-- /.team-content -->
+                </div><!-- /.team-two -->
             </div>
         </div>
     </div>
 </section>
-<!-- Team End -->
+<!---- testing team memeber photos end-->
 <!-- Category Start -->
 <section class="category-two" style="padding: 46px 0 45px;">
     <div class="container wow fadeInUp" data-wow-delay="200ms">
@@ -379,7 +363,7 @@
 </section>
 <!-- Category End -->
 <!-- Service Start -->
-<section class="service-two" style="background-image: url('@Url.Content("~/Content/home/images/shapes/service-bg-2.jpeg")');">
+<section class="service-two" style="background-image: url('/Content/home/images/shapes/team-bg-2.png'); ">
     <div class="container">
         <div class="section-title text-center wow fadeInUp" data-wow-delay="100ms">
             <h5 class="section-title__tagline">
@@ -397,64 +381,99 @@
                 Mode of Learning
             </h2>
         </div><!-- section-title -->
+
         <div class="row">
-            <div class="col-xl-4 col-md-6 wow fadeInUp" data-wow-delay="200ms">
-                <div class="service-two__item text-center">
-                    <div class="service-two__wrapper">
-                        <svg viewBox="0 0 303 117" fill="#F6F6F6" xmlns="http://www.w3.org/2000/svg">
-                            <circle cx="151" cy="-129" r="246" />
-                        </svg>
-                        <div class="service-two__icon">
+            <div class="col-xl-3 col-md-6 wow fadeInUp" data-wow-delay="200ms">
+                <div class="service-three__item text-center">
+                    <div class="service-three__wrapper">
+                        <div class="service-three__hover" style="background-image: url(assets/images/service/1.jpg);"></div>
+                        <!-- /.service-icon -->
+                        <div class="service-three__icon">
                             <span class="icon-education"></span>
-                        </div><!-- /.service-icon -->
-                        <h3 class="service-two__title">
-                            <a href="team.html">Face to Face</a>
-                        </h3><!-- /.service-title -->
-                        <p class="service-two__text">Classes</p><!-- /.service-content -->
-
+                        </div>
+                        <!-- /.service-icon -->
+                        <h3 class="service-three__title">
+                            <a href="team.html">Exclusive Coach</a>
+                        </h3>
+                        <!-- /.service-title -->
+                        <p class="service-three__text">Lorem ipsum dolor sit amet consectetur. Convallis ornare semper id hendrerit</p>
+                        <!-- /.service-content -->
+                        <div class="service-three__br"></div>
+                        <a class="service-three__rm" href="team.html"></a>
                     </div>
-                </div><!-- /.service-card-one -->
+                </div>
+                <!-- /.service-card-three -->
             </div>
-            <div class="col-xl-4 col-md-6 wow fadeInUp" data-wow-delay="300ms">
-                <div class="service-two__item text-center">
-                    <div class="service-two__wrapper">
-                        <svg viewBox="0 0 303 117" fill="#F6F6F6" xmlns="http://www.w3.org/2000/svg">
-                            <circle cx="151" cy="-129" r="246" />
-                        </svg>
-                        <div class="service-two__icon">
+            <div class="col-xl-3 col-md-6 wow fadeInUp" data-wow-delay="300ms">
+                <div class="service-three__item text-center">
+                    <div class="service-three__wrapper">
+                        <div class="service-three__hover" style="background-image: url(assets/images/service/2.jpg);"></div>
+                        <!-- /.service-icon -->
+                        <div class="service-three__icon">
                             <span class="icon-business"></span>
-                        </div><!-- /.service-icon -->
-                        <h3 class="service-two__title">
-                            <a href="team-become.html">Live Online</a>
-                        </h3><!-- /.service-title -->
-                        <p class="service-two__text">Classes</p><!-- /.service-content -->
-
+                        </div>
+                        <!-- /.service-icon -->
+                        <h3 class="service-three__title">
+                            <a href="team-become.html">Creative Minds</a>
+                        </h3>
+                        <!-- /.service-title -->
+                        <p class="service-three__text">Lorem ipsum dolor sit amet consectetur. Convallis ornare semper id hendrerit</p>
+                        <!-- /.service-content -->
+                        <div class="service-three__br"></div>
+                        <a class="service-three__rm" href="team-become.html"></a>
                     </div>
-                </div><!-- /.service-card-one -->
+                </div>
+                <!-- /.service-card-three -->
             </div>
-            <div class="col-xl-4 col-md-6 wow fadeInUp" data-wow-delay="400ms">
-                <div class="service-two__item text-center">
-                    <div class="service-two__wrapper">
-                        <svg viewBox="0 0 303 117" fill="#F6F6F6" xmlns="http://www.w3.org/2000/svg">
-                            <circle cx="151" cy="-129" r="246" />
-                        </svg>
-                        <div class="service-two__icon">
+            <div class="col-xl-3 col-md-6 wow fadeInUp" data-wow-delay="400ms">
+                <div class="service-three__item text-center">
+                    <div class="service-three__wrapper">
+                        <div class="service-three__hover" style="background-image: url(assets/images/service/3.jpg);"></div>
+                        <!-- /.service-icon -->
+                        <div class="service-three__icon">
                             <span class="icon-webinar"></span>
-                        </div><!-- /.service-icon -->
-                        <h3 class="service-two__title">
-                            <a href="course.html">Recorded</a>
-                        </h3><!-- /.service-title -->
-                        <p class="service-two__text">Classes</p><!-- /.service-content -->
-
+                        </div>
+                        <!-- /.service-icon -->
+                        <h3 class="service-three__title">
+                            <a href="course.html">Video Tutorials</a>
+                        </h3>
+                        <!-- /.service-title -->
+                        <p class="service-three__text">Lorem ipsum dolor sit amet consectetur. Convallis ornare semper id hendrerit</p>
+                        <!-- /.service-content -->
+                        <div class="service-three__br"></div>
+                        <a class="service-three__rm" href="course.html"></a>
                     </div>
-                </div><!-- /.service-card-one -->
+                </div>
+                <!-- /.service-card-three -->
             </div>
+            <div class="col-xl-3 col-md-6 wow fadeInUp" data-wow-delay="500ms">
+                <div class="service-three__item text-center">
+                    <div class="service-three__wrapper">
+                        <div class="service-three__hover" style="background-image: url(assets/images/service/4.jpg);"></div>
+                        <!-- /.service-icon -->
+                        <div class="service-three__icon">
+                            <span class="icon-neural"></span>
+                        </div>
+                        <!-- /.service-icon -->
+                        <h3 class="service-three__title">
+                            <a href="about.html">Worlds Record</a>
+                        </h3>
+                        <!-- /.service-title -->
+                        <p class="service-three__text">Lorem ipsum dolor sit amet consectetur. Convallis ornare semper id hendrerit</p>
+                        <!-- /.service-content -->
+                        <div class="service-three__br"></div>
+                        <a class="service-three__rm" href="about.html"></a>
+                    </div>
+                </div>
+                <!-- /.service-card-three -->
+            </div>
+        </div> 
 
-        </div>
     </div>
 </section>
-<!-- Service End --> 
-<section class="service-two" style="background-image: url('@Url.Content("~/Content/home/images/shapes/team-bg-3.png")');">
+<!-- Service End -->
+
+<section class="service-two" style="background-image: url('#');">
     <div class="client-carousel ##extraClassName" style="padding: 38px 0;">
         <div class="container">
             <div class="section-title text-center">
@@ -582,13 +601,14 @@
 </section>
 <!-- /.client-carousel -->
 <!-- Call To Action Start -->
-<section class="cta-one">
+
+<section class="cta-one" style="background-image: url(../../Content/home/images/shapes/service-bg-3.jpg);">
     <div class="cta-one__bg" style="background-image: url(../../Content/home/images/shapes/cta-bg-1.jpg);"></div>
     <div class="container">
         <div class="row">
             <div class="col-lg-4 col-md-7 wow fadeInLeft" data-wow-delay="200ms">
                 <div class="cta-one__left">
-                    <img src="../../Content/home/images/shapes/cta-logo.png" alt="eduact" />
+                    @*<img src="../../Content/home/images/shapes/cta-logo.png" alt="eduact" />*@
                     <h3 class="cta-one__left__title">Start learning By Downloading Apps</h3>
                     <div class="app__item mr-15">
                         <div class="row">
@@ -655,6 +675,8 @@
         </div>
     </div>
 </section>
+
+
 <section class="cta-one-space"></section>
 <!-- Call To Action End -->
 <!-- Testimonial Start -->
@@ -701,7 +723,7 @@
                 }
                 }
                 }'>
-                @if(Model.TestimonialList.Any())
+                @if(Model.FlashList?.Count > 0)
                 {
                     foreach(var testimonial in Model.TestimonialList)
                     {
