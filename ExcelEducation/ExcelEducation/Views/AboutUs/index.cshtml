@@ -110,6 +110,66 @@
         margin-top: 163.062px;
         transform: translate3d(0px, -14.3648px, 0px);
     }
+
+    .background-wrapper {
+        background-color: #d6d6d6c2; /* light red */
+        padding: 20px 0; /* some vertical spacing */
+    }
+
+    .team-container {
+        max-width: 1150px;
+        margin: 0 auto;
+        padding: 0 15px; /* some horizontal padding */
+    }
+
+    .team-row {
+        display: flex;
+        justify-content: center;
+        gap: 15px; /* space between team members */
+        margin-bottom: 10px;
+        flex-wrap: wrap; /* allow wrapping */
+    }
+
+    .member {
+        background: white;
+        border: 1px solid #ccc;
+        box-sizing: border-box;
+        border-radius: 8px;
+        padding: 2px;
+        text-align: center;
+        box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        flex: 1 1 200px; /* grow, shrink, base width */
+        max-width: 220px; /* max width per card */
+    }
+
+        .member img {
+            width: 100%; /* full width of card */
+            height: 180px; /* fixed height */
+            border-radius: 8px;
+            object-fit: cover;
+        }
+
+    .name {
+        font-weight: 600;
+        margin: 12px 0 5px 0;
+        font-size: 1rem;
+        color: #222;
+        text-transform: uppercase;
+    }
+
+    .designation {
+        font-size: 0.85rem;
+        color: #666;
+        margin-bottom: 8px;
+        font-style: italic;
+    }
+
+    .experience {
+        font-size: 0.85rem;
+        color: #333;
+    }
+
+
 </style>
 
 <!-- ABOUT US SECTION -->
@@ -281,8 +341,6 @@
     </div>
 </section>
 <!--- Counter End-->
-
-
 <!---- testing team memeber photos Start-->
 <section class="team-two team-two--about" style="background-image: url('@Url.Content("~/Content/home/images/shapes/team-bg-2.png")');">
     <div class="container">
@@ -362,12 +420,100 @@
     </div>
 </section>
 <!---- testing team memeber photos-->
+<!--That Is For Team-->
+<div class="background-wrapper">
+    <div class="team-container">
+
+        <div class="team-row">
+            <div class="member">
+                <img src="https://images.unsplash.com/photo-1508214751196-bcfd4ca60f91?crop=faces&fit=crop&w=180&h=180" alt="Er. Saurabh Agrawal" />
+                <div class="name">Er. SAURABH AGRAWAL</div>
+                <div class="designation">(B.E.) “ELEX & TELECOMM”</div>
+                <div class="experience">Experience - 24 years</div>
+            </div>
+            <div class="member">
+                <img src="https://images.unsplash.com/photo-1527980965255-d3b416303d12?crop=faces&fit=crop&w=180&h=180" alt="Mr. Sunil Jain" />
+                <div class="name">Mr. SUNIL JAIN</div>
+                <div class="designation">(M.COM)</div>
+                <div class="experience">Experience - 23 years</div>
+            </div>
+            <div class="member">
+                <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?crop=faces&fit=crop&w=180&h=180" alt="CA/CS Karnee Bothra" />
+                <div class="name">CA/CS KARNEE BOTHRA</div>
+                <div class="designation">(B.Com, FCA, CS)</div>
+                <div class="experience">Experience - 16 years</div>
+            </div>
+            <div class="member">
+                <img src="https://images.unsplash.com/photo-1520813792240-56fc4a3765a7?crop=faces&fit=crop&w=180&h=180" alt="CA. Lavish Mathani" />
+                <div class="name">CA. LAVISH MATHANI</div>
+                <div class="designation">(B.Com., FCA)</div>
+                <div class="experience">Experience - 14 years</div>
+            </div>
+            <div class="member">
+                <img src="https://images.unsplash.com/photo-1508214751196-bcfd4ca60f91?crop=faces&fit=crop&w=180&h=180" alt="CA. Abhishek Baradiya" />
+                <div class="name">CA. ABHISHEK BARADIYA</div>
+                <div class="designation">(B.Com., FCA)</div>
+                <div class="experience">Experience - 13 years</div>
+            </div>
+        </div>
+
+        <div class="team-row">
+            <div class="member">
+                <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?crop=faces&fit=crop&w=180&h=180" alt="CMA Ashish Jain" />
+                <div class="name">CMA ASHISH JAIN</div>
+                <div class="designation">(B.Com., ACA, CMA, CS(F))</div>
+                <div class="experience">Experience - 14 years</div>
+            </div>
+            <div class="member">
+                <img src="https://images.unsplash.com/photo-1520813792240-56fc4a3765a7?crop=faces&fit=crop&w=180&h=180" alt="Mrs. Garima Shah" />
+                <div class="name">Mrs. GARIMA SHAH</div>
+                <div class="designation">(MBA, M.Phill, Ph.D (Pursuing))</div>
+                <div class="experience">Experience - 18 years</div>
+            </div>
+            <div class="member">
+                <img src="https://images.unsplash.com/photo-1508214751196-bcfd4ca60f91?crop=faces&fit=crop&w=180&h=180" alt="CMA Varchaswa Dewangan" />
+                <div class="name">CMA VARCHASWA DEWANGAN</div>
+                <div class="designation">(CMA, B.Com.)</div>
+                <div class="experience">Experience - 4 years</div>
+            </div>
+            <div class="member">
+                <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?crop=faces&fit=crop&w=180&h=180" alt="CA. Muskan Agrawal" />
+                <div class="name">CA. MUSKAN AGRAWAL</div>
+                <div class="designation">(CA, B.Com.)</div>
+                <div class="experience">Experience - 2 year</div>
+            </div>
+            <div class="member">
+                <img src="https://images.unsplash.com/photo-1520813792240-56fc4a3765a7?crop=faces&fit=crop&w=180&h=180" alt="CS. Shweta Sharma" />
+                <div class="name">CS. SHWETA SHARMA</div>
+                <div class="designation"></div>
+                <div class="experience">Experience - 1 year</div>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+
+
+
+
 
 
 <section class="service-two" style="background-image: url('#');">
     <div class="client-carousel ##extraClassName" style="padding: 38px 0;">
         <div class="container">
             <div class="section-title text-center">
+                <h5 class="section-title__tagline">
+                    Excel
+                    <svg class="arrow-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 55 13">
+                        <g clip-path="url(#clip0_324_36194)">
+                            <path d="M10.5406 6.49995L0.700562 12.1799V8.56995L4.29056 6.49995L0.700562 4.42995V0.819946L10.5406 6.49995Z"></path>
+                            <path d="M25.1706 6.49995L15.3306 12.1799V8.56995L18.9206 6.49995L15.3306 4.42995V0.819946L25.1706 6.49995Z"></path>
+                            <path d="M39.7906 6.49995L29.9506 12.1799V8.56995L33.5406 6.49995L29.9506 4.42995V0.819946L39.7906 6.49995Z"></path>
+                            <path d="M54.4206 6.49995L44.5806 12.1799V8.56995L48.1706 6.49995L44.5806 4.42995V0.819946L54.4206 6.49995Z"></path>
+                        </g>
+                    </svg>
+                </h5>
                 <h2 class="section-title__title">
                     Excel’s Unique Features
                 </h2>
