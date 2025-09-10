@@ -734,12 +734,12 @@
     position: relative;
     background-position: bottom center;
     background-repeat: no-repeat;
-    padding: 55px 0 85px;
+    /*padding: 0px 0 85px;*/
 }
 
 @media (max-width: 767px) {
     .team-two {
-        padding: 75px 0 45px;
+        /*padding: 75px 0 45px;*/
     }
 }
 
