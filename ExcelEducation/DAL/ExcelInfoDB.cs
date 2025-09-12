@@ -76,6 +76,82 @@ namespace DAL
                 return null;
             }
         }
+        public async static Task<List<BlogModel>> GetBlogsAsync()
+        {
+            try
+            {
+                using (IDbConnection db = new SqlConnection(Connection.MyConnection()))
+                {
+                    string queryTopicDetails = @"SELECT SUB_TOPIC_ID, SUB_TOPIC_NAME, TOPIC_DATE, TOPIC_DESCRIPTION, TOPIC_FILEPATH 
+            FROM dbo.TBL_TOPIC_DETAIL AS TTD WHERE TOPIC_ID = 602
+            ORDER BY TOPIC_DATE DESC";
+                    var details = await db.QueryAsync<TopicDetail>(queryTopicDetails);
+
+                    List<BlogModel> ob = new List<BlogModel>();
+
+                    foreach (var detail in details)
+                    {
+                        BlogModel td = new BlogModel();
+                        td.BlogId = detail.SUB_TOPIC_ID;
+                        td.BlogName = detail.SUB_TOPIC_NAME;
+                        td.BlogDate = detail.TOPIC_DATE.ToString();
+                        td.BlogDescription = detail.TOPIC_DESCRIPTION;
+                        td.BlogPhoto = detail.TOPIC_FILEPATH;
+
+                        var photoList = await db.QueryAsync<PagePhotos>("SELECT [PHOTO_ID] ,[SUB_TOPIC_ID] ,[PHOTO_PATH] FROM [dbo].[TBL_PAGE_PHOTOS] WHERE SUB_TOPIC_ID=@SUB_TOPIC_ID", new { SUB_TOPIC_ID = detail.SUB_TOPIC_ID });
+                        td.PagePhotos = photoList.ToList();
+
+                        var fileList = await db.QueryAsync<PageFiles>("SELECT [FILE_ID] ,[SUB_TOPIC_ID] ,CONVERT(VARCHAR(10),[FILE_DATE],105) AS FILE_DATE ,[FILE_DESCRIPTION] ,[FILE_PATH] ,[FILE_ORDER] FROM [dbo].[TBL_PAGE_FILES] WHERE SUB_TOPIC_ID=@SUB_TOPIC_ID", new { SUB_TOPIC_ID = detail.SUB_TOPIC_ID });
+                        td.PagePhotos = photoList.ToList();
+
+                        ob.Add(td);
+                    }
+
+                    return ob;
+                }
+            }
+            catch (Exception ee)
+            {
+                return null;
+            }
+        }
+
+        public async static Task<BlogModel> GetBlogDetailsAsync(int blogId)
+        {
+            try
+            {
+                using (IDbConnection db = new SqlConnection(Connection.MyConnection()))
+                {
+                    BlogModel td = new BlogModel();
+
+                    string queryTopicDetails = @"SELECT SUB_TOPIC_ID, SUB_TOPIC_NAME, TOPIC_DATE, TOPIC_DESCRIPTION, TOPIC_FILEPATH 
+            FROM dbo.TBL_TOPIC_DETAIL AS TTD WHERE SUB_TOPIC_ID = @SUB_TOPIC_ID ORDER BY TOPIC_DATE DESC";
+                    var details = await db.QueryAsync<TopicDetail>(queryTopicDetails, new { SUB_TOPIC_ID = blogId });
+                    var blogDetail = details.FirstOrDefault();
+                    if (blogDetail != null)
+                    {
+                        
+                        td.BlogId = blogDetail.SUB_TOPIC_ID;
+                        td.BlogName = blogDetail.SUB_TOPIC_NAME;
+                        td.BlogDate = blogDetail.TOPIC_DATE.ToString();
+                        td.BlogDescription = blogDetail.TOPIC_DESCRIPTION;
+                        td.BlogPhoto = blogDetail.TOPIC_FILEPATH;
+
+                        var photoList = await db.QueryAsync<PagePhotos>("SELECT [PHOTO_ID] ,[SUB_TOPIC_ID] ,[PHOTO_PATH] FROM [dbo].[TBL_PAGE_PHOTOS] WHERE SUB_TOPIC_ID=@SUB_TOPIC_ID", new { SUB_TOPIC_ID = blogDetail.SUB_TOPIC_ID });
+                        td.PagePhotos = photoList.ToList();
+
+                        var fileList = await db.QueryAsync<PageFiles>("SELECT [FILE_ID] ,[SUB_TOPIC_ID] ,CONVERT(VARCHAR(10),[FILE_DATE],105) AS FILE_DATE ,[FILE_DESCRIPTION] ,[FILE_PATH] ,[FILE_ORDER] FROM [dbo].[TBL_PAGE_FILES] WHERE SUB_TOPIC_ID=@SUB_TOPIC_ID", new { SUB_TOPIC_ID = blogDetail.SUB_TOPIC_ID });
+                        td.PagePhotos = photoList.ToList();
+                    }
+
+                    return td;
+                }
+            }
+            catch (Exception ee)
+            {
+                return null;
+            }
+        }
     }
 
 }
