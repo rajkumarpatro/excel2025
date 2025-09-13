@@ -13670,7 +13670,7 @@ body.megamenu-popup-active {
     text-align: center;
     padding: 47px 20px 44px;
     position: relative;
-    overflow: hidden;
+    
     z-index: 2;
 }
 
