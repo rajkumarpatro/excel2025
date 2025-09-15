@@ -19,6 +19,7 @@ namespace ExcelEducation.Controllers
             var popup = await PopupDB.GetPopup();
             List<FlashModel> flash = await FlashDB.LoadFlash();
             List<CourseMasterModel> courses = await LatestUpdatesDB.GetCourses();
+            var blogs = await ExcelInfoDB.GetBlogsAsync();
 
             HomeViewModel homeViewModel = new HomeViewModel
             {
@@ -29,7 +30,8 @@ namespace ExcelEducation.Controllers
                 BatchDD = new List<SelectListItem>(),
                 CourseMasterDD = courses.Select(x => new SelectListItem {
                     Text = x.M_COURSE_NAME, Value = x.M_COURSE_ID.ToString()
-                }).ToList()
+                }).ToList(),
+                Blogs = blogs
             };
 
             return View("Index", homeViewModel);

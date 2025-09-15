@@ -17,6 +17,7 @@ namespace DAL.Models
         public List<SelectListItem> CourseMasterDD { get; set; }
         public int BatchId { get; set; }
         public List<SelectListItem> BatchDD { get; set; }
+        public List<BlogModel> Blogs { get; set; }
     }   
 
     public class FlashModel
