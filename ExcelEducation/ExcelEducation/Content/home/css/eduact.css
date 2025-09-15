@@ -9547,7 +9547,7 @@ body.megamenu-popup-active {
 }
 
 .course-two__author__name {
-    font-size: 16px;
+    font-size: 22px;
     line-height: 1;
     margin: 0 0 6px;
 }
@@ -9575,7 +9575,7 @@ body.megamenu-popup-active {
 
 .course-two__meta__class {
     margin: 0;
-    font-size: 14px;
+    font-size: 18px;
     color: var(--eduact-text);
     text-transform: uppercase;
     font-weight: 500;
