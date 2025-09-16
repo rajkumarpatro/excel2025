@@ -1,4 +1,9 @@
-﻿<!-- data tables css -->
+﻿@{
+    ViewBag.Title = "Sub Menu Data";
+    Layout = "~/Views/Shared/_LayoutHome.cshtml";
+}
+
+<!-- data tables css -->
 <link rel="stylesheet" href="@Url.Content("~/Content/admin/assets/css/plugins/dataTables.bootstrap4.min.css")">
 <link href="@Url.Content("~/Content/admin/Custom.css")" rel="stylesheet" />
 <!-- datepicker -->
@@ -42,7 +47,7 @@
                         <div class="form-group">
                             <label style="visibility: hidden" class="control-label">Topic</label>
                             <div>
-                                <button class="btn btn-sm btn-outline-primary" id="btnAddTopic" type="button"  style="display:none">Add Topic</button>
+                                <button class="btn btn-sm btn-outline-primary" id="btnAddTopic" type="button" style="display:none">Add Topic</button>
                             </div>
                         </div>
                     </div>
