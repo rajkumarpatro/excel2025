@@ -9389,7 +9389,7 @@ body.megamenu-popup-active {
     }
 
     .course-two__item:hover .course-two__thumb svg {
-        fill: #84231c;
+        fill: #181d44;
     }
 
 .course-two__thumb {
@@ -9452,8 +9452,8 @@ body.megamenu-popup-active {
     background-color: var(--eduact-black);
     color: var(--eduact-white);
     border-radius: 5px;
-    font-size: 14px;
-    font-weight: 600;
+    font-size: 12px;
+    font-weight: 500;
     display: inline-block;
     padding: 0 10.5px;
     margin: 0 0 14px;
@@ -9476,7 +9476,7 @@ body.megamenu-popup-active {
 }
 
 .course-two__title {
-    font-size: 24px;
+    font-size: 18px;
     line-height: 29px;
     margin: 0 0 25px;
 }
@@ -9547,7 +9547,7 @@ body.megamenu-popup-active {
 }
 
 .course-two__author__name {
-    font-size: 22px;
+    font-size: 18px;
     line-height: 1;
     margin: 0 0 6px;
 }
@@ -9557,7 +9557,7 @@ body.megamenu-popup-active {
     letter-spacing: 0.48px;
     line-height: 1;
     text-transform: uppercase;
-    font-size: 12px;
+    font-size: 9px;
     font-weight: 500;
     margin: 0;
 }
@@ -9575,10 +9575,10 @@ body.megamenu-popup-active {
 
 .course-two__meta__class {
     margin: 0;
-    font-size: 18px;
+    font-size: 11px;
     color: var(--eduact-text);
     text-transform: uppercase;
-    font-weight: 500;
+    font-weight: 400;
     line-height: 1;
 }
 
@@ -16689,6 +16689,79 @@ body.boxed-wrapper {
 
 
 /*That Is For Team*/
+
+.button-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px; /* space between buttons */
+    flex-wrap: wrap; /* allows wrapping on small screens */
+    padding: 10px;
+}
+
+.same-size-btn {
+    flex: 1;
+    max-width: 150px;
+    height: 35px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    box-sizing: border-box;
+    padding: 0 10px;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 300;
+    color: white;
+    border-radius: 4px;
+    background-color: #F57105; 
+    transition: background-color 0.3s ease;
+}
+
+    .same-size-btn:hover {
+        background-color: #F57105;
+    }
+
+    .same-size-btn i {
+        position: relative;
+        top: -1px;
+        font-size: 18px;
+    }
+
+/* ---------- Responsive Breakpoints ---------- */
+
+/* Tablets: reduce max-width so more buttons fit in a row */
+@media (max-width: 1024px) {
+    .same-size-btn {
+        max-width: 120px;
+        font-size: 15px;
+        height: 34px;
+    }
+}
+
+/* Mobile: stack buttons full width */
+@media (max-width: 768px) {
+    .button-container {
+        flex-direction: column;
+        align-items: center;
+        gap: 12px;
+    }
+
+    .same-size-btn {
+        max-width: 100%;
+        width: 90%; /* nearly full width */
+        font-size: 16px;
+        height: 40px;
+    }
+}
+
+/* Extra-small phones */
+@media (max-width: 480px) {
+    .same-size-btn {
+        font-size: 15px;
+        height: 38px;
+        padding: 0 8px;
+    }
+}
 
 
 
