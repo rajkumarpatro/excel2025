@@ -3900,6 +3900,7 @@ h6 {
     position: relative;
     z-index: 2;
     padding: 0 20px;
+    margin-top: 60px;
 }
 
     .section-title__tagline svg {
@@ -7089,8 +7090,8 @@ body.megamenu-popup-active {
         }
 
 .service-three__text {
-    font-weight: 500;
-    max-width: 230px;
+    font-weight: 400;
+    width: 400px;
     margin: 0 auto 32px;
     transition: 500ms ease;
 }
@@ -14121,7 +14122,7 @@ body.megamenu-popup-active {
 --------------------------------------------------------------*/
 .accrodion-one {
     position: relative;
-    padding: 120px 0 100px;
+    padding: 20px 0 100px;
 }
 
 @media (max-width: 767px) {
