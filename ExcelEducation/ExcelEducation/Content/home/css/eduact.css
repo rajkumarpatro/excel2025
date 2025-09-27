@@ -3900,7 +3900,7 @@ h6 {
     position: relative;
     z-index: 2;
     padding: 0 20px;
-    margin-top: 60px;
+    margin-top: 95px;
 }
 
     .section-title__tagline svg {
@@ -11502,6 +11502,7 @@ body.megamenu-popup-active {
 @media (max-width: 767px) {
     .cta-one__left img {
         margin-left: 72px;
+        margin-top: 10px;
     }
 }
 
@@ -11680,6 +11681,7 @@ body.megamenu-popup-active {
         max-width: 80%;
         height: auto;
         border-radius: 50%;
+        margin-right: 40px;
     }
 
 .cta-one-space {
@@ -16762,6 +16764,73 @@ body.boxed-wrapper {
         height: 38px;
         padding: 0 8px;
     }
+}
+
+
+
+.list {
+    max-height: 200px;
+    overflow-y: scroll !important;
+}
+/* <!-- Arrow Navigator -->*/
+.jssora051 {
+    display: block !important;
+}
+
+/*jssor slider arrow skin 051 css*/
+.jssora051 {
+    display: block;
+    position: absolute;
+    cursor: pointer;
+}
+
+    .jssora051 .a {
+        fill: none;
+        stroke: #fff;
+        stroke-width: 360;
+        stroke-miterlimit: 10;
+    }
+
+    .jssora051:hover {
+        opacity: .8;
+    }
+
+    .jssora051.jssora051dn {
+        opacity: .5;
+    }
+
+    .jssora051.jssora051ds {
+        opacity: .3;
+        pointer-events: none;
+    }
+
+.feature-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    max-width: 300px;
+    margin-top: 80px;
+    margin-left: 20px;
+}
+
+.feature-item {
+    display: flex;
+    align-items: center;
+    font-size: 18px;
+    color: #333;
+}
+
+.check-icon {
+    background-color: #3ac9a8;
+    color: white;
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 14px;
+    margin-right: 10px;
 }
 
 
