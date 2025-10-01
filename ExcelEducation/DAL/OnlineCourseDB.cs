@@ -15,7 +15,7 @@ namespace DAL
         {
             using (IDbConnection db = new SqlConnection(Connection.MyConnection()))
             {
-                db.Open();
+                db.Open(); 
 
                 var query = @"SELECT dbo.TBL_COURSE.COURSE_ID, dbo.TBL_COURSE.M_COURSE_ID, dbo.TBL_COURSE.COURSE, 
                                     dbo.TBL_COURSE.OFFLINE_FEES, dbo.TBL_COURSE.ISACTIVE , dbo.TBL_COURSE.ISACTIVE_ENQUIRY, dbo.TBL_COURSE.ISACTIVE_OTHER, 

@@ -14,7 +14,7 @@ namespace ExcelEducation.Controllers
         {
             var courses = await OnlineCourseDB.LoadAllCoursesAsync();
             return View(courses);
-        }
+        } 
         public async Task<ActionResult> GetCoursesText()
         {
             // Fetch all courses

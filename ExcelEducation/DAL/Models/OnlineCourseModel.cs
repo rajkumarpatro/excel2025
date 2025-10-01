@@ -5,7 +5,7 @@
         public int COURSE_ID { get; set; }
         public int M_COURSE_ID { get; set; }
         public string COURSE { get; set; }
-        public decimal OFFLINE_FEES { get; set; }
+        public decimal OFFLINE_FEES { get; set; } 
         public string ISACTIVE { get; set; }
         public string ISACTIVE_ENQUIRY { get; set; }
         public string ISACTIVE_OTHER { get; set; }

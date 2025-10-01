@@ -67,7 +67,7 @@
                                 <div class="course-two__author">
                                     <h5 class="course-two__author__name">Special Discounted Fees</h5>
                                     @if (!string.IsNullOrEmpty(course.DISCOUNT_SPECIFIC_DATE) && course.PRICE > 0)
-                                    {
+                                    { 
                                         var discountPercent = Math.Round(((course.PRICE - course.OFFLINE_FEES) * 100) / course.PRICE, 2);
 
                                         <p class="course-two__author__designation" style="color: red;">
