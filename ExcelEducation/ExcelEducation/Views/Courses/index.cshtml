@@ -1,4 +1,5 @@
-﻿@model DAL.Models.CourseModel
+﻿@model List<DAL.Models.OnlineCourseModel>
+
 
 @{
     ViewBag.Title = "course-page";
@@ -12,54 +13,6 @@
     <div class="container">
         <div class="row justify-content-center">
 
-
-            <div class="col-xl-4 col-md-6 wow fadeInUp" data-wow-delay="100ms">
-                <div class="course-two__item">
-                    <div class="course-two__thumb">
-                        <img src="/Content/home/images/course/course-2-1.png" alt="eduact">
-                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 353 177">
-                            <path d="M37 0C16.5655 0 0 16.5655 0 37V93.4816C0 103.547 4.00259 113.295 11.7361 119.737C54.2735 155.171 112.403 177 176.496 177C240.589 177 298.718 155.171 341.261 119.737C348.996 113.295 353 103.546 353 93.4795V37C353 16.5655 336.435 0 316 0H37Z" />
-                        </svg>
-                    </div>
-                    <!-- /.course-thumb -->
-                    <div class="course-two__content">
-
-                        <center>
-                                <div class="course-two__time">Duration - <span>6 Months</span></div>
-                                <div class="course-two__time">No. of Lectures - <span>600+</span></div>
-                                <div class="course-two__time">Mode of Classes - <span>Face to Face</span></div>
-                        </center>
-
-                        <h3 class="course-two__title mt-2">
-                            <a href="management-consulting.html">CA-FOUNDATION</a>
-                            <br />
-                            <a href="management-consulting.html">F2F - CA-FOUNDATION JAN 2026</a>
-                        </h3>
-                        <div class="course-two__bottom">
-                            <div class="course-two__author">
-                                <h5 class="course-two__author__name">Course Fees</h5>
-                                <p class="course-two__author__designation" style="color: red;">.</p>
-                            </div>
-                            <div class="course-two__meta">
-                                <h4 class="course-two__meta__price">₹ 64500 /-</h4>
-                                <p class="course-two__meta__class"><del>.</del> <br></p>
-                            </div>
-                        </div>
-
-                        <div class="button-container mt-2">
-                            <a href="contact.html" class="eduact-btn eduact-btn-second same-size-btn">
-                                <span class="eduact-btn__curve"></span>Watch Demo<i class="fas fa-play-circle"></i>
-                            </a>
-                            <a href="contact.html" class="eduact-btn eduact-btn-second same-size-btn">
-                                <span class="eduact-btn__curve"></span>Explore<i class="fas fa-compass"></i>
-                            </a>
-                        </div>
-
-                    </div>
-                    <!-- /.course-content -->
-                </div>
-                <!-- /.course-card-two -->
-            </div>
             <div class="col-xl-4 col-md-6 wow fadeInUp" data-wow-delay="200ms">
                 <div class="course-two__item">
                     <div class="course-two__thumb">
@@ -110,13 +63,70 @@
             </div>
 
 
+            @foreach (var course in Model)
+            {
+                <div class="col-xl-4 col-md-6 wow fadeInUp" data-wow-delay="100ms">
+                    <div class="course-two__item">
+                        <div class="course-two__thumb">
+                            <img src="@Url.Content(course.ImageUrl ?? "~/Content/home/events-thumb.png")" alt="@course.ImageUrl" />
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 353 177">
+                                <path d="M37 0C16.5655 0 0 16.5655 0 37V93.4816C0 103.547 4.00259 113.295 11.7361 119.737C54.2735 155.171 112.403 177 176.496 177C240.589 177 298.718 155.171 341.261 119.737C348.996 113.295 353 103.546 353 93.4795V37C353 16.5655 336.435 0 316 0H37Z" />
+                            </svg>
+                        </div>
+
+                        <div class="course-two__content">
+                            <center>
+                                <div class="course-two__time">Duration - <span>@course.DurationMonths Months</span></div>
+                                <div class="course-two__time">No. of Lectures - <span>@course.NumberOfLectures +</span></div>
+                                <div class="course-two__time">Mode of Classes - <span>@(string.IsNullOrEmpty(course.ModeOfClasses) ? "Face to Face" : course.ModeOfClasses)</span></div>
+                            </center>
+
+                            <h3 class="course-two__title mt-2"> 
+                                <a href="@Url.Action("Details", "Courses", new { id = course.ID })">@course.ModeOfClasses</a><br />
+                                <a href="@Url.Action("Details", "Courses", new { id = course.ID })">  @course.CourseName   @course.StartDateText</a>
+                            </h3>
+
+                            <div class="course-two__bottom">
+                                <div class="course-two__author">
+                                    <h5 class="course-two__author__name">Course Fees</h5>
+                                    <p class="course-two__author__designation" style="color: red;">
+                                        @(string.IsNullOrEmpty(course.DiscountNote) ? "-" : course.DiscountNote)
+                                    </p>
+                                </div>
+
+                                <div class="course-two__meta">
+                                    @if (course.DiscountedFees.HasValue && course.DiscountedFees.Value < course.CourseFees)
+                                    {
+                                        <h4 class="course-two__meta__price">₹ @course.DiscountedFees.Value.ToString("N0") /-</h4>
+                                        <p class="course-two__meta__class" style="color: red;">₹ <del>@course.CourseFees.ToString("N0")</del></p>
+                                    }
+                                    else
+                                    {
+                                        <h4 class="course-two__meta__price">₹ @course.CourseFees.ToString("N0") /-</h4>
+                                        <p class="course-two__meta__class"><del>-</del></p>
+                                    }
+                                </div>
+                            </div>
+
+                            <div class="button-container mt-2">
+                                <a href="contact.html" class="eduact-btn eduact-btn-second same-size-btn">
+                                    <span class="eduact-btn__curve"></span>Watch Demo<i class="fas fa-play-circle"></i>
+                                </a>
+                                <a href="@Url.Action("Details", "Courses", new { id = course.ID })" class="eduact-btn eduact-btn-second same-size-btn">
+                                    <span class="eduact-btn__curve"></span>Explore<i class="fas fa-compass"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            }
+
 
 
 
         </div>
     </div>
-    
+
 </section>
 
 <!-- Course End -->
-

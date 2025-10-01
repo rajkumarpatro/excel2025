@@ -1,17 +1,25 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
+﻿using System.Threading.Tasks;
 using System.Web.Mvc;
+using DAL.Models;
+using DAL;
 
 namespace ExcelEducation.Controllers
 {
     public class CoursesController : Controller
     {
-        // GET: Course
-        public ActionResult Index()
+        public async Task<ActionResult> Index()
         {
-            return View( );
+            var courses = await OnlineCourseDB.LoadAllCoursesAsync();
+            return View(courses);
+        }
+
+        public async Task<ActionResult> Details(int id)
+        {
+            var course = await OnlineCourseDB.LoadCourseById(id);
+            if (course == null)
+                return HttpNotFound();
+
+            return View(course);
         }
     }
 }
