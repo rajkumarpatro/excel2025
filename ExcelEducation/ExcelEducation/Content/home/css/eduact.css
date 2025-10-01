@@ -9265,9 +9265,23 @@ body.megamenu-popup-active {
         padding: 80px 0;
     }
 }
+.breadcrumb-description {
+    font-size: 15px;
+    line-height: 26px;
+    color: #fff; /* White text for dark background */
+    max-width: 1230px; /* Content width limit */
+    margin: 0 auto; /* Center horizontally */
+    padding: 20px 15px;
+    text-align: center;
+    font-weight: 400;
+}
 
+    .breadcrumb-description strong {
+        font-weight: 600; /* Highlights important text */
+    }
+ 
 .course-two--page {
-    padding: 120px 0 85px;
+    padding: 40px 0 85px;
 }
 
 @media (max-width: 767px) {
