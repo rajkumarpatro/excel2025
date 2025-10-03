@@ -493,8 +493,8 @@
     width: 256px;
     height: 256px;
     border-radius: 50%;
-    background-color: rgba(var(--eduact-white-rgb), 0.1);
-    margin-left: auto;
+    background-color: #ffffff4a;
+    margin-left: 327px;
     z-index: 2;
     animation: shadows2 1s linear infinite;
     -moz-animation: shadows2 1s linear infinite;
