@@ -124,7 +124,7 @@ namespace DAL
                 {
                     BlogModel td = new BlogModel();
 
-                    string queryTopicDetails = @"SELECT SUB_TOPIC_ID, SUB_TOPIC_NAME, TOPIC_DATE, TOPIC_DESCRIPTION, TOPIC_FILEPATH 
+                    string queryTopicDetails = @"SELECT SUB_TOPIC_ID, SUB_TOPIC_NAME, CONVERT(VARCHAR(10), TOPIC_DATE,105) AS TOPIC_DATE, TOPIC_DESCRIPTION, TOPIC_FILEPATH 
             FROM dbo.TBL_TOPIC_DETAIL AS TTD WHERE SUB_TOPIC_ID = @SUB_TOPIC_ID ORDER BY TOPIC_DATE DESC";
                     var details = await db.QueryAsync<TopicDetail>(queryTopicDetails, new { SUB_TOPIC_ID = blogId });
                     var blogDetail = details.FirstOrDefault();

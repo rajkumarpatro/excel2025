@@ -16,4 +16,10 @@ namespace DAL.Models
         [Computed]
         public List<PageFiles> PageFiles { get; set; } = new List<PageFiles>();
     }
+
+    public class BlogDetails
+    {
+        public BlogModel Blog { get; set; }
+        public List<BlogModel> RecentBlogs { get; set; }
+    }
 }
