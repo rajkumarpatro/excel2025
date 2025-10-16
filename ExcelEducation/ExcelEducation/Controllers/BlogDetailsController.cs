@@ -2,18 +2,22 @@
 using DAL.Models;
 using System;
 using System.Threading.Tasks;
+using System.Web;
 using System.Web.Mvc;
 
 namespace ExcelEducation.Controllers
 {
     public class BlogDetailsController : Controller
     {
+        private readonly object blogRepository;
+
         // GET: BlogDetails
         public async Task<ActionResult> Index()
-        {
+        { 
             var blogid = Request.QueryString["blogid"];
             var recentblogs = await ExcelInfoDB.GetBlogsAsync();
             var blogdetails = await ExcelInfoDB.GetBlogDetailsAsync(Convert.ToInt32(blogid));
+             
             var blogDetailsViewModel = new BlogDetails
             {
                 Blog = blogdetails,
