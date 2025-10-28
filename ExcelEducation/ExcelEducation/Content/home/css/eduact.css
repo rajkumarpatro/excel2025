@@ -9265,6 +9265,7 @@ body.megamenu-popup-active {
         padding: 80px 0;
     }
 }
+
 .breadcrumb-description {
     font-size: 15px;
     line-height: 26px;
@@ -9274,12 +9275,12 @@ body.megamenu-popup-active {
     padding: 20px 15px;
     text-align: center;
     font-weight: 400;
-} 
+}
 
     .breadcrumb-description strong {
         font-weight: 600; /* Highlights important text */
     }
- 
+
 .course-two--page {
     padding: 40px 0 85px;
 }
@@ -13687,7 +13688,6 @@ body.megamenu-popup-active {
     text-align: center;
     padding: 47px 20px 44px;
     position: relative;
-    
     z-index: 2;
 }
 
@@ -14159,7 +14159,7 @@ body.megamenu-popup-active {
         position: relative;
         display: block;
         margin-bottom: 20px;
-        padding: 31px 82px 10px 40px;
+        padding: 15px 50px 0px 46px;
         border: 1px solid var(--eduact-soft4);
         border-radius: 8px;
         -webkit-transition: all 500ms ease;
@@ -14191,7 +14191,7 @@ body.megamenu-popup-active {
 .accrodion-one__wrapper .accrodion__icon {
     position: absolute;
     right: 38px;
-    top: 34px;
+    top: 17px;
     width: 22px;
     height: 22px;
     cursor: pointer;
@@ -14244,13 +14244,14 @@ body.megamenu-popup-active {
 .accrodion-one__wrapper .accrodion-title h4 {
     margin: 0;
     padding: 0;
-    font-size: 16px;
+    font-size: 18px;
     font-weight: 600;
     letter-spacing: 0.16px;
-    line-height: 26px;
+    line-height: 15px;
     position: relative;
     -webkit-transition: all 500ms ease;
     transition: all 500ms ease;
+    margin-top: 5px;
 }
 
 .accrodion-one__wrapper .accrodion-content {
@@ -16730,7 +16731,7 @@ body.boxed-wrapper {
     font-weight: 300;
     color: white;
     border-radius: 4px;
-    background-color: #F57105; 
+    background-color: #F57105;
     transition: background-color 0.3s ease;
 }
 
@@ -16846,7 +16847,3 @@ body.boxed-wrapper {
     font-size: 14px;
     margin-right: 10px;
 }
-
-
-
-

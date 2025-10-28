@@ -12,45 +12,45 @@
 <!-- Start Banner Carousel -->
 @if (Model.FlashList?.Count > 0)
 {
-    <div class="banner-outer">
-        <!-- end single slider -->
-        <div id="jssor_1" style="position:relative;margin:0 auto;top:0px;left:0px;width:1900px;height:800px;overflow:hidden;visibility:hidden;">
-            <!-- Loading Screen -->
-            <div data-u="loading" class="jssorl-009-spin" style="position:absolute;top:0px;left:0px;width:100%;height:100%;text-align:center;background-color:rgba(0,0,0,0.7);">
-                <img src="../../Content/home/images/Spin.png" style="margin-top:-19px;position:relative;top:50%;width:38px;height:38px;" />
-            </div>
-            <div data-u="slides" style="cursor:default;position:relative;top:0px;left:0px;width:1900px;height:800px;overflow:hidden;">
+<div class="banner-outer">
+    <!-- end single slider -->
+    <div id="jssor_1" style="position:relative;margin:0 auto;top:0px;left:0px;width:1900px;height:800px;overflow:hidden;visibility:hidden;">
+        <!-- Loading Screen -->
+        <div data-u="loading" class="jssorl-009-spin" style="position:absolute;top:0px;left:0px;width:100%;height:100%;text-align:center;background-color:rgba(0,0,0,0.7);">
+            <img src="../../Content/home/images/Spin.png" style="margin-top:-19px;position:relative;top:50%;width:38px;height:38px;" />
+        </div>
+        <div data-u="slides" style="cursor:default;position:relative;top:0px;left:0px;width:1900px;height:800px;overflow:hidden;">
 
-                @foreach (var flash in Model.FlashList)
+            @foreach (var flash in Model.FlashList)
                 {
                     string photopath = flash.FLASH_FILEPATH;
-                    <div>
-                        <img src="@photopath" style="width: 1900px; height: 800px;" class="img-responsive" />
-                    </div>
+            <div>
+                <img src="@photopath" style="width: 1900px; height: 800px;" class="img-responsive" />
+            </div>
                 }
-            </div>
-            <!-- Bullet Navigator -->
-            <div data-u="navigator" class="jssorb032" style="position:absolute;bottom:12px;right:12px;" data-autocenter="1" data-scale="0.5" data-scale-bottom="0.75">
-                <div data-u="prototype" class="i" style="width:16px;height:16px;">
-                    <svg viewBox="0 0 16000 16000" style="position:absolute;top:0;left:0;width:100%;height:100%;">
-                        <circle class="b" cx="8000" cy="8000" r="5800"></circle>
-                    </svg>
-                </div>
-            </div>
-            <!--Arrow Navigator -->
-            <div data-u="arrowleft" class="jssora051" style="width:65px;height:65px;top:0px;left:25px;" data-autocenter="2" data-scale="0.75" data-scale-left="0.75">
-                <svg viewbox="0 0 16000 16000" style="position:absolute;top:0;left:0;width:100%;height:100%;">
-                    <polyline class="a" points="11040,1920 4960,8000 11040,14080 "></polyline>
-                </svg>
-            </div>
-            <div data-u="arrowright" class="jssora051" style="width:65px;height:65px;top:0px;right:25px;" data-autocenter="2" data-scale="0.75" data-scale-right="0.75">
-                <svg viewbox="0 0 16000 16000" style="position:absolute;top:0;left:0;width:100%;height:100%;">
-                    <polyline class="a" points="4960,1920 11040,8000 4960,14080 "></polyline>
+        </div>
+        <!-- Bullet Navigator -->
+        <div data-u="navigator" class="jssorb032" style="position:absolute;bottom:12px;right:12px;" data-autocenter="1" data-scale="0.5" data-scale-bottom="0.75">
+            <div data-u="prototype" class="i" style="width:16px;height:16px;">
+                <svg viewBox="0 0 16000 16000" style="position:absolute;top:0;left:0;width:100%;height:100%;">
+                    <circle class="b" cx="8000" cy="8000" r="5800"></circle>
                 </svg>
             </div>
         </div>
-        <!-- #endregion Jssor Slider End -->
+        <!--Arrow Navigator -->
+        <div data-u="arrowleft" class="jssora051" style="width:65px;height:65px;top:0px;left:25px;" data-autocenter="2" data-scale="0.75" data-scale-left="0.75">
+            <svg viewbox="0 0 16000 16000" style="position:absolute;top:0;left:0;width:100%;height:100%;">
+                <polyline class="a" points="11040,1920 4960,8000 11040,14080 "></polyline>
+            </svg>
+        </div>
+        <div data-u="arrowright" class="jssora051" style="width:65px;height:65px;top:0px;right:25px;" data-autocenter="2" data-scale="0.75" data-scale-right="0.75">
+            <svg viewbox="0 0 16000 16000" style="position:absolute;top:0;left:0;width:100%;height:100%;">
+                <polyline class="a" points="4960,1920 11040,8000 4960,14080 "></polyline>
+            </svg>
+        </div>
     </div>
+    <!-- #endregion Jssor Slider End -->
+</div>
 
 }
 <!-- End Banner Carousel -->
@@ -74,36 +74,41 @@
                                 </g>
                             </svg>
                         </h5>
-                        <h2 class="section-title__title">
+
+
+                        <div class="about-two__about-box">
+                            <div class="about-two__about-box__top">
+                                <div class="about-two__about-box__icon"><span class="icon-logical-thinking"></span></div>
+                                <h4 class="about-two__about-box__title">VISION</h4>
+                            </div>
+                            <p class="about-two__about-box__text">
+                                To redefine professional education by nurturing intellectual excellence, personal growth, and ethical values — empowering every student to become a confident, competent, and compassionate professional who contributes meaningfully to society.
+                            </p>
+                        </div><!-- /.icon-box -->
+                        <div class="about-two__about-box">
+                            <div class="about-two__about-box__top">
+                                <div class="about-two__about-box__icon"><span class="icon-vision"></span></div>
+                                <h4 class="about-two__about-box__title">MISSION</h4>
+                            </div>
+                            <p class="about-two__about-box__text">
+                                At Excel, we aim to make learning meaningful, engaging, and empowering. We deliver quality education through modern and student-centered teaching, foster a supportive environment that builds confidence and curiosity, and equip every student with the knowledge, skills, and values to achieve academic excellence and professional success
+                            </p>
+                        </div><!-- /.icon-box -->
+
+
+
+                        <h3 class="section-title__title">
                             ABOUT US
-                        </h2>
+                        </h3>
                     </div><!-- section-title -->
                     <p class="about-two__content__text">
                         Founded in 2007 by visionary Chartered Accountants — CA. B.L. Agrawal, CA. Praveen Golchha, and CA. Sanjay Kumar Goyal — Excel Educational Institute began with a mission to transform potential into performance and education into empowerment.
-                        Over the years, Excel has grown from a single classroom to a powerful educational network with 20+ centers, 25 elite faculties, and a thriving student base of 3,000+ learners annually, offering comprehensive coaching for CA, CS, CMA, and Classes 11th & 12th.
-                        With over 16,500 success stories and 166 All India Rank holders, Excel has become synonymous with quality, commitment, and achievement. Our students’ exceptional accomplishments
-                        At Excel, we believe that “the great aim of education is not knowledge but action.”
-                        We continue to lead the way in CA, CS, CMA, and school education, blending academic excellence, holistic development, and ethical values to prepare confident and competent professionals who soar to new heights.
+                        Over the years, Excel has grown from a single classroom to a powerful educational network with 20+ Classroom, 15 elite faculties, and a thriving student base of 3,000+ learners annually, offering comprehensive coaching for CA, CS, CMA, and Classes 11th & 12th.
+                        With over 16,500 success stories and 166 All India Rank holders, Excel has become synonymous with quality, commitment, and achievement. At Excel, we believe that “the great aim of education is not knowledge but action.”
+                        We achieve this by, blending academic excellence, holistic development, and ethical values to prepare confident and competent professionals who soar to new heights.
 
                     </p>
-                    <div class="about-two__about-box">
-                        <div class="about-two__about-box__top">
-                            <div class="about-two__about-box__icon"><span class="icon-logical-thinking"></span></div>
-                            <h4 class="about-two__about-box__title">VISION</h4>
-                        </div>
-                        <p class="about-two__about-box__text">
-                            To redefine professional education by nurturing intellectual excellence, personal growth, and ethical values — empowering every student to become a confident, competent, and compassionate professional who contributes meaningfully to society.
-                        </p>
-                    </div><!-- /.icon-box -->
-                    <div class="about-two__about-box">
-                        <div class="about-two__about-box__top">
-                            <div class="about-two__about-box__icon"><span class="icon-vision"></span></div>
-                            <h4 class="about-two__about-box__title">MISSION</h4>
-                        </div>
-                        <p class="about-two__about-box__text">
-                            At Excel, we aim to make learning meaningful, engaging, and empowering. We deliver quality education through modern and student-centered teaching, foster a supportive environment that builds confidence and curiosity, and equip every student with the knowledge, skills, and values to achieve academic excellence and professional success
-                        </p>
-                    </div><!-- /.icon-box -->
+
                 </div><!-- about content end -->
             </div>
             <div class="col-xl-6 wow fadeInRight" data-wow-delay="100ms" style="margin-top: 140px;">
@@ -285,14 +290,14 @@
                         <div class="research__content">
                             <h5 style="color: #83221a;text-transform:capitalize">Chartered Accountancy <br />(CA)</h5>
                         </div>
-                        <div style="text-align: left; margin-left: 40px;">
+                        <div style="text-align: left; margin-left: 40px; margin-top: 40px;">
                             <h6> - Foundation</h6>
                             <h6> - Intermediate</h6>
                             <h6> - Final</h6>
                         </div>
                     </div>
                     <div class="blog-two__cats justify-content-center mt-auto">
-                        <a href="https://online.exceledu.co.in/Courses/Courses.aspx">Courses</a>
+                        <a href="https://online.exceledu.co.in/Courses/Courses.aspx">Buy Courses</a>
                     </div>
                 </div>
             </div>
@@ -308,13 +313,13 @@
                         <div class="research__content">
                             <h5 style="color: #83221a;text-transform:capitalize">Company Secretary <br />(CS)</h5>
                         </div>
-                        <div style="text-align: left; margin-left: 40px;">
+                        <div style="text-align: left; margin-left: 40px; margin-top: 40px;">
                             <h6> - EET</h6>
                             <h6> - Executive</h6>
                         </div>
                     </div>
                     <div class="blog-two__cats justify-content-center mt-auto">
-                        <a href="https://online.exceledu.co.in/Courses/Courses.aspx">Courses</a>
+                        <a href="https://online.exceledu.co.in/Courses/Courses.aspx">Buy Courses</a>
                     </div>
                 </div>
             </div>
@@ -330,13 +335,13 @@
                         <div class="research__content">
                             <h5 style="color: #83221a;text-transform:capitalize">Cost Management Accountant <br />(CMA)</h5>
                         </div>
-                        <div style="text-align: left; margin-left: 40px;">
+                        <div style="text-align: left; margin-left: 40px; margin-top: 40px;">
                             <h6> - Foundation</h6>
                             <h6> - Intermediate</h6>
                         </div>
                     </div>
                     <div class="blog-two__cats justify-content-center mt-auto">
-                        <a href="https://online.exceledu.co.in/Courses/Courses.aspx">Courses</a>
+                        <a href="https://online.exceledu.co.in/Courses/Courses.aspx">Buy Courses</a>
                     </div>
                 </div>
             </div>
@@ -352,7 +357,7 @@
                         <div class="research__content">
                             <h5 style="color: #83221a;text-transform:capitalize">class XI and XII <br />(Commerce)</h5>
                         </div>
-                        <div style="text-align: left; margin-left: 40px;">
+                        <div style="text-align: left; margin-left: 40px; margin-top: 40px;">
                             <h6> - Accounts</h6>
                             <h6> - Economics</h6>
                             <h6> - Business Studies</h6>
@@ -360,7 +365,7 @@
                         </div>
                     </div>
                     <div class="blog-two__cats justify-content-center mt-auto">
-                        <a href="https://online.exceledu.co.in/Courses/Courses.aspx">Courses</a>
+                        <a href="https://online.exceledu.co.in/Courses/Courses.aspx">Buy Courses</a>
                     </div>
                 </div>
             </div>
@@ -481,8 +486,8 @@
 
                         <img src="~/Content/home/images/Award/Award.jpeg" alt="eduact" style="width: 541px; height:400px; ">
                     </div><!-- /.about-thumb-one -->
-                   
-                    
+
+
                     <div class="about-three__thumb__shape-three"><span></span><span></span><span></span><span></span><span></span></div><!-- /.about-shape-three -->
                     <div class="about-three__thumb__shape-four"><img src="../../Content/home/images/shapes/about-3-shape-1.png" alt="eduact" /></div><!-- /.about-shape-four -->
                     <div class="about-three__thumb__shape-five"><span></span><span></span><span></span><span></span><span></span></div><!-- /.about-shape-five -->
@@ -491,7 +496,7 @@
                 </div><!-- about thumb end -->
             </div>
 
-            <div class="col-xl-6 wow fadeInRight mt-3" data-wow-delay="100ms" >
+            <div class="col-xl-6 wow fadeInRight mt-3" data-wow-delay="100ms">
                 <div class="about-two__content">
                     <!-- about content start-->
 
@@ -507,7 +512,7 @@
                                 </g>
                             </svg>
                         </h5>
-                        <h2 class="section-title__title fs-2" >
+                        <h2 class="section-title__title fs-2">
                             AWARDED AS BEST INSTITUTE IN CENTRAL INDIA
                         </h2>
                     </div><!-- section-title -->
@@ -517,7 +522,7 @@
                         <ul>⦿  .Best Commerce Coaching Institute in Chhattisgarh by News 18 in the year 2019</ul>
                         <ul>⦿  .Best Commerce Coaching Institute in Chhattisgarh by News18 in the year 2018</ul>
                     </p>
-                    
+
                 </div><!-- about content end -->
             </div>
 
@@ -817,49 +822,49 @@
 <!-- Blog Start -->
 @if (Model.Blogs?.Count > 0)
 {
-    <section class="blog-two" style="padding: 14px 0 14px;">
-        <div class="container">
-            <div class="section-title text-center wow fadeInUp" data-wow-delay="100ms">
-                <h5 class="section-title__tagline">
-                    Latest Blog
-                    <svg class="arrow-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 55 13">
-                        <g clip-path="url(#clip0_324_36194)">
-                            <path d="M10.5406 6.49995L0.700562 12.1799V8.56995L4.29056 6.49995L0.700562 4.42995V0.819946L10.5406 6.49995Z" />
-                            <path d="M25.1706 6.49995L15.3306 12.1799V8.56995L18.9206 6.49995L15.3306 4.42995V0.819946L25.1706 6.49995Z" />
-                            <path d="M39.7906 6.49995L29.9506 12.1799V8.56995L33.5406 6.49995L29.9506 4.42995V0.819946L39.7906 6.49995Z" />
-                            <path d="M54.4206 6.49995L44.5806 12.1799V8.56995L48.1706 6.49995L44.5806 4.42995V0.819946L54.4206 6.49995Z" />
-                        </g>
-                    </svg>
-                </h5>
-                <h2 class="section-title__title">Latest Updates & Articles</h2>
-            </div><!-- section-title -->
-            <div class="row">
-                @foreach (var blog in Model.Blogs)
+<section class="blog-two" style="padding: 14px 0 14px;">
+    <div class="container">
+        <div class="section-title text-center wow fadeInUp" data-wow-delay="100ms">
+            <h5 class="section-title__tagline">
+                Latest Blog
+                <svg class="arrow-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 55 13">
+                    <g clip-path="url(#clip0_324_36194)">
+                        <path d="M10.5406 6.49995L0.700562 12.1799V8.56995L4.29056 6.49995L0.700562 4.42995V0.819946L10.5406 6.49995Z" />
+                        <path d="M25.1706 6.49995L15.3306 12.1799V8.56995L18.9206 6.49995L15.3306 4.42995V0.819946L25.1706 6.49995Z" />
+                        <path d="M39.7906 6.49995L29.9506 12.1799V8.56995L33.5406 6.49995L29.9506 4.42995V0.819946L39.7906 6.49995Z" />
+                        <path d="M54.4206 6.49995L44.5806 12.1799V8.56995L48.1706 6.49995L44.5806 4.42995V0.819946L54.4206 6.49995Z" />
+                    </g>
+                </svg>
+            </h5>
+            <h2 class="section-title__title">Latest Updates & Articles</h2>
+        </div><!-- section-title -->
+        <div class="row">
+            @foreach (var blog in Model.Blogs)
                 {
-                    <div class="col-xl-4 col-md-6 wow fadeInUp" data-wow-delay="200ms">
-                        <div class="blog-two__item">
-                            <div class="blog-two__image">
-                                <img src="@blog.BlogPhoto" alt="eduact" />
-                                <a href="blogdetails?blogid=@blog.BlogId"></a>
-                            </div><!-- /.blog-image -->
-                            <div class="blog-two__content">
-                                <div class="blog-two__top-meta">
-                                    <div class="blog-two__date">@blog.BlogDate</div><!-- /.blog-date -->
-                                </div>
-                                <h3 class="blog-two__title">
-                                    <a href="blogdetails?blogid=@blog.BlogId">@blog.BlogName</a>
-                                </h3><!-- /.blog-title -->
-                                <div class="blog-two__meta">
-                                    <a class="blog-two__rm" href="blogdetails?blogid=@blog.BlogId"><span class="icon-arrow"></span></a><!-- /.read-more-btn -->
-                                </div><!-- /.blog-meta -->
-                            </div><!-- /.blog-content -->
-                        </div><!-- /.blog-card-one -->
-                    </div>
+            <div class="col-xl-4 col-md-6 wow fadeInUp" data-wow-delay="200ms">
+                <div class="blog-two__item">
+                    <div class="blog-two__image">
+                        <img src="~/Content/home/images/blog/blog-2-4.jpg" alt="eduact" />
+                        <a href="blog-details-right.html"></a>
+                    </div><!-- /.blog-image -->
+                    <div class="blog-two__content">
+                        <div class="blog-two__top-meta">
+                            <div class="blog-two__date">@blog.BlogDate</div><!-- /.blog-date -->
+                        </div>
+                        <h3 class="blog-two__title">
+                            <a href="blog-details-right.html">@blog.BlogName</a>
+                        </h3><!-- /.blog-title -->
+                        <div class="blog-two__meta">
+                            <a class="blog-two__rm" href="blog-details-right.html"><span class="icon-arrow"></span></a><!-- /.read-more-btn -->
+                        </div><!-- /.blog-meta -->
+                    </div><!-- /.blog-content -->
+                </div><!-- /.blog-card-one -->
+            </div>
                 }
 
-            </div>
         </div>
-    </section>
+    </div>
+</section>
 }
 
 <!-- Blog End -->
@@ -977,7 +982,6 @@
                 </div>
             </div>
             <!-- /.accordian-item -->
-           
             <!-- /.accordian-item -->
             <div class="accrodion">
                 <span class="accrodion__icon"></span>
