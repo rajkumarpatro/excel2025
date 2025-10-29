@@ -2224,7 +2224,7 @@
         background-color: #84231c;
         color: var(--eduact-white);
         border-radius: 5px;
-        font-size: 18px;
+        font-size: 15px;
         font-weight: bold;
         /* font-weight: 600; */
         text-transform: capitalize;
@@ -3893,7 +3893,7 @@ h6 {
 
 .section-title__tagline {
     font-size: 24px;
-    line-height: 26px;
+    line-height: 40px;
     text-transform: capitalize;
     color: #84231c;
     margin: 0 0 11px;
@@ -6770,7 +6770,7 @@ body.megamenu-popup-active {
 
 @media (max-width: 767px) {
     .service-two {
-        padding: 80px 0 55px;
+        padding: 0px 0 55px;
     }
 }
 
@@ -7091,7 +7091,7 @@ body.megamenu-popup-active {
 
 .service-three__text {
     font-weight: 400;
-    width: 400px;
+    width: 350px;
     margin: 0 auto 32px;
     transition: 500ms ease;
 }
@@ -7715,7 +7715,7 @@ body.megamenu-popup-active {
 
 @media (max-width: 1199px) {
     .about-two__content {
-        padding-top: 70px;
+        padding-top: 0px;
     }
 }
 
@@ -8144,7 +8144,7 @@ body.megamenu-popup-active {
 
 @media (max-width: 767px) {
     .about-three__thumb__one {
-        padding: 40px 0 0;
+        padding: 0px 0 0;
     }
 }
 
@@ -11035,7 +11035,7 @@ body.megamenu-popup-active {
 
 @media (max-width: 767px) {
     .testimonial-two {
-        padding: 75px 0 80px;
+        padding: 1px 0 80px;
     }
 }
 
@@ -14143,7 +14143,7 @@ body.megamenu-popup-active {
 
 @media (max-width: 767px) {
     .accrodion-one {
-        padding: 80px 0 60px;
+        padding: 0px 0 60px;
     }
 }
 
@@ -16237,7 +16237,7 @@ body.megamenu-popup-active {
     .cart-page__buttons .update {
         background-color: var(--eduact-black);
         color: var(--eduact-white);
-        margin-right: 20px;
+        margin-right: 0px;
     }
 
 /*--------------------------------------------------------------
