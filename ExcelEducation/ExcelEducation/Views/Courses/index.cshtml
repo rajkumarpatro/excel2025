@@ -1,20 +1,19 @@
 ﻿@model List<DAL.Models.OnlineCourseModel>
 
-
 @{
     ViewBag.Title = "course-page";
 }
- 
+
 <!-- breadcrumb area start -->
-<section class="breadcrumb__area include-bg breadcrumb__overlay"style="background-image: url('/Content/home/images/breadcrumb-bg-1.jpg'); ">
-    <div class="container">
+<section class="breadcrumb__area include-bg breadcrumb__overlay" style="background-image: url('/Content/home/images/breadcrumb-bg-1.jpg'); ">
+    <div class="container-fluid">
         <div class="row">
             <div class="col-xxl-12">
                 <div class="breadcrumb__content text-center p-relative z-index-1">
                     <p class="breadcrumb-description">
                         <strong>Excel Educational Institute</strong> stands as a beacon of excellence in professional education.
                         Offering top-tier education in <strong>CA, CMA, and CS</strong>, we are proud to be one of Central India’s premier institutes.
-                        With an illustrious track record boasting <strong>164+ AIR</strong> and over <strong>16,500 successful students</strong> & a dedicated team of experienced professionals,
+                        With an illustrious track record boasting <strong>166 AIR</strong> and over <strong>16,500 successful students</strong> & a dedicated team of experienced professionals,
                         we provide comprehensive training to equip students with the knowledge and skills needed to excel in their chosen field.
                         If you aspire to become a Chartered Accountant, CMA, or CS professional, let us guide you towards your goals.
                     </p>
@@ -24,87 +23,185 @@
     </div>
 </section>
 <!-- breadcrumb area end -->
-
-<!-- Course Start -->
+<!-- Course & Filter Section -->
 <section class="course-two position-relative course-two--page" style="background-image: url('/Content/home/images/shapes/service-bg-3.png'); padding-top: -20px ">
-    <div class="course-two__shape-top wow fadeInRight" data-wow-delay="300ms"><img src="/Content/home/images/shapes/banner-2-shape-3.png" alt="eduact"></div>
-    <div class="container">
-        <div class="row justify-content-center">
-
-
-
-            @foreach (var course in Model)
-            {
-                <div class="col-xl-4 col-md-6 wow fadeInUp" data-wow-delay="200ms">
-                    <div class="course-two__item">
-                        <div class="course-two__thumb">
-                            <img src="https://online.exceledu.co.in/@course.THUMBNAIL" alt="@course.COURSE" />
-                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 353 177">
-                                <path d="M37 0C16.5655 0 0 16.5655 0 37V93.4816C0 103.547 4.00259 113.295 11.7361 119.737C54.2735 155.171 112.403 177 176.496 177C240.589 177 298.718 155.171 341.261 119.737C348.996 113.295 353 103.546 353 93.4795V37C353 16.5655 336.435 0 316 0H37Z" />
-                            </svg>
-                        </div>
-
-                        <div class="course-two__content">
-                            <center>
-                                <div class="course-two__time">Duration - <span> @course.VIDEO_HR Months  </span></div>
-                                <div class="course-two__time">No. of Lectures - <span>@course.TOTAL_NO_LECT</span></div>
-                                <div class="course-two__time">Mode of Classes - <span>@course.PRODUCT_TYPE</span></div>
-                            </center>
-
-
-                            <h3 class="course-two__title mt-2">
-                                <a href="https://online.exceledu.co.in/courses/Courses_Details.aspx?pdid=@course.COURSE_ID&Courses=@course.COURSE&Batch=@course.M_COURSE_NAME">
-                                    @course.M_COURSE_NAME
-                                </a>
-                                <br />
-                                <a href="https://online.exceledu.co.in/courses/Courses_Details.aspx?pdid=@course.COURSE_ID&Courses=@course.COURSE&Batch=@course.M_COURSE_NAME">
-                                    @course.COURSE
-                                </a>
-                            </h3>
-
-
-                            <div class="course-two__bottom">
-                                <div class="course-two__author">
-                                    <h5 class="course-two__author__name">Special Discounted Fees</h5>
-                                    @if (!string.IsNullOrEmpty(course.DISCOUNT_SPECIFIC_DATE) && course.PRICE > 0)
-                                    { 
-                                        var discountPercent = Math.Round(((course.PRICE - course.OFFLINE_FEES) * 100) / course.PRICE, 2);
-
-                                        <p class="course-two__author__designation" style="color: red;">
-                                            @discountPercent% DISCOUNT ( Valid upto @course.DISCOUNT_SPECIFIC_DATE )
-                                        </p>
-                                    }
-
-                                </div>
-                                <div class="course-two__meta">
-                                    <h4 class="course-two__meta__price">₹@course.OFFLINE_FEES/-</h4>
-                                    @if (course.DISCOUNT.HasValue && course.DISCOUNT.Value > 0)
-                                    {
-                                        <p class="course-two__meta__class" style="color: red;">
-                                            ₹ <del>@course.PRICE</del> /-
-                                        </p>
-                                    }
-                                </div>
-                            </div>
-
-                            <div class="button-container mt-2">
-                                <a href="@course.COURSE_VIDEODEMOLINK" class="eduact-btn eduact-btn-second same-size-btn" target="_blank">
-                                    <span class="eduact-btn__curve"></span>Watch Demo<i class="fas fa-play-circle"></i>
-                                </a>
-                                <a href="/Course/Details/@course.COURSE_ID" class="eduact-btn eduact-btn-second same-size-btn">
-                                    <span class="eduact-btn__curve"></span>Explore<i class="fas fa-compass"></i>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            }
-
-
-
-        </div>
+    <div class="course-two__shape-top wow fadeInRight" data-wow-delay="300ms">
+        <img src="/Content/home/images/shapes/banner-2-shape-3.png" alt="eduact">
     </div>
 
+    <div class="container-fluid">
+        <div class="row">
+
+            <!-- 🧭 Left Sidebar Filters -->
+            <div class="col-md-3 col-lg-2">
+                <div class="filter-sidebar p-3" style="background: #fff; border-radius: 10px; box-shadow: 0 0 8px rgba(0,0,0,0.1); position: sticky; top: 20px;">
+                    <h5 class="mb-3"><i class="fas fa-filter"></i> Filters</h5>
+
+                    <div class="mb-3">
+                        <label><strong>Batch</strong></label>
+                        <select id="filterCourseName" class="form-control">
+                            <option value="">All</option>
+                            @foreach (var name in Model.Select(x => x.M_COURSE_NAME).Distinct())
+                            {
+                                <option value="@name">@name</option>
+                            }
+                        </select>
+                    </div>
+
+                    <div class="mb-3">
+                        <label><strong>Mode</strong></label>
+                        <select id="filterProductType" class="form-control">
+                            <option value="">All</option>
+                            @foreach (var type in Model.Select(x => x.PRODUCT_TYPE).Distinct())
+                            {
+                                <option value="@type">@type</option>
+                            }
+                        </select>
+                    </div>
+
+                    <div class="mb-3">
+                        <label><strong>Applicable For</strong></label>
+                        <select id="filterApplicableFor" class="form-control">
+                            <option value="">All</option>
+                            @foreach (var applicable in Model.Select(x => x.COURSE_APPLICABLEFOR).Distinct())
+                            {
+                                <option value="@applicable">@applicable</option>
+                            }
+                        </select>
+                    </div>
+
+                    <button id="clearFilters" class="btn btn-outline-secondary w-100 mt-2">Clear Filters</button>
+                </div>
+            </div>
+
+            <!-- 🎓 Course Cards -->
+            <div class="col-md-9 col-lg-10">
+                <div class="row justify-content-center">
+
+                    @foreach (var course in Model)
+                    {
+                        <div class="col-xl-4 col-md-6 wow fadeInUp course-card"
+                             data-name="@course.M_COURSE_NAME"
+                             data-type="@course.PRODUCT_TYPE"
+                             data-applicable="@course.COURSE_APPLICABLEFOR"
+                             data-wow-delay="200ms">
+                            <div class="course-two__item">
+                                <div class="course-two__thumb">
+                                    <img src="https://online.exceledu.co.in/@course.THUMBNAIL" alt="@course.COURSE" />
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 353 177">
+                                        <path d="M37 0C16.5655 0 0 16.5655 0 37V93.4816C0 103.547 4.00259 113.295 11.7361 119.737C54.2735 155.171 112.403 177 176.496 177C240.589 177 298.718 155.171 341.261 119.737C348.996 113.295 353 103.546 353 93.4795V37C353 16.5655 336.435 0 316 0H37Z" />
+                                    </svg>
+                                </div>
+
+                                <div class="course-two__content">
+                                    <center>
+                                        <div class="course-two__time">Duration - <span>@course.VIDEO_HR Months</span></div>
+                                        <div class="course-two__time">No. of Lectures - <span>@course.TOTAL_NO_LECT</span></div>
+                                        <div class="course-two__time">Mode of Classes - <span>@course.PRODUCT_TYPE</span></div>
+                                    </center>
+
+                                    <h3 class="course-two__title mt-2">
+                                        <a href="https://online.exceledu.co.in/courses/Courses_Details.aspx?pdid=@course.COURSE_ID&Courses=@course.COURSE&Batch=@course.M_COURSE_NAME">
+                                            @course.M_COURSE_NAME
+                                        </a><br />
+                                        <a href="https://online.exceledu.co.in/courses/Courses_Details.aspx?pdid=@course.COURSE_ID&Courses=@course.COURSE&Batch=@course.M_COURSE_NAME">
+                                            @course.COURSE
+                                        </a>
+                                    </h3>
+
+                                    <div class="course-two__bottom">
+                                        @{
+                                            bool isDiscountValid = false;
+
+                                            if (!string.IsNullOrEmpty(course.DISCOUNT_SPECIFIC_DATE) && course.DISCOUNT.HasValue && course.DISCOUNT.Value > 0)
+                                            {
+                                                if (DateTime.TryParseExact(course.DISCOUNT_SPECIFIC_DATE, "dd-MM-yyyy",
+                                                    System.Globalization.CultureInfo.InvariantCulture,
+                                                    System.Globalization.DateTimeStyles.None, out DateTime discountDate))
+                                                {
+                                                    if (discountDate >= DateTime.Today)
+                                                    {
+                                                        isDiscountValid = true;
+                                                    }
+
+                                                }
+                                            }
+
+                                            if (isDiscountValid)
+                                            {
+                                                <div class="course-two__author">
+                                                    <h5 class="course-two__author__name">Special Discounted Fees</h5>
+                                                    @if (course.PRICE > 0)
+                                                    {
+                                                        var discountPercent = Math.Round(((course.PRICE - course.OFFLINE_FEES) * 100) / course.PRICE, 2);
+                                                        <p class="course-two__author__designation" style="color: red;">
+                                                            @discountPercent% DISCOUNT ( Valid upto @course.DISCOUNT_SPECIFIC_DATE )
+                                                        </p>
+                                                    }
+                                                </div>
+                                                <div class="course-two__meta">
+                                                    <h4 class="course-two__meta__price">₹@course.OFFLINE_FEES/-</h4>
+                                                    <p class="course-two__meta__class" style="color: red;">₹ <del>@course.PRICE</del> /-</p>
+                                                </div>
+                                            }
+                                            else
+                                            {
+                                                <div class="course-two__author">
+                                                    <h5 class="course-two__author__name">Course Fees</h5>
+                                                </div>
+                                                <div class="course-two__meta">
+                                                    <h4 class="course-two__meta__price">₹@course.PRICE/-</h4>
+                                                </div>
+                                            }
+                                        }
+                                    </div>
+
+                                    <div class="button-container mt-2">
+                                        <a href="@course.COURSE_VIDEODEMOLINK" class="eduact-btn eduact-btn-second same-size-btn" target="_blank">
+                                            <span class="eduact-btn__curve"></span>Watch Demo<i class="fas fa-play-circle"></i>
+                                        </a>
+                                        <a href="/Course/Details/@course.COURSE_ID" class="eduact-btn eduact-btn-second same-size-btn">
+                                            <span class="eduact-btn__curve"></span>Explore<i class="fas fa-compass"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    }
+
+                </div>
+            </div>
+        </div>
+    </div>
 </section>
 
-<!-- Course End -->
+<!-- JS Filter Logic -->
+<script>
+    $(document).ready(function () {
+        function filterCourses() {
+            var nameFilter = $('#filterCourseName').val().toLowerCase();
+            var typeFilter = $('#filterProductType').val().toLowerCase();
+            var applicableFilter = $('#filterApplicableFor').val().toLowerCase();
+
+            $('.course-card').each(function () {
+                var name = $(this).data('name').toLowerCase();
+                var type = $(this).data('type').toLowerCase();
+                var applicable = $(this).data('applicable').toLowerCase();
+
+                var match = true;
+                if (nameFilter && name !== nameFilter) match = false;
+                if (typeFilter && type !== typeFilter) match = false;
+                if (applicableFilter && applicable !== applicableFilter) match = false;
+
+                $(this).toggle(match);
+            });
+        }
+
+        $('#filterCourseName, #filterProductType, #filterApplicableFor').on('change', filterCourses);
+
+        $('#clearFilters').on('click', function () {
+            $('#filterCourseName, #filterProductType, #filterApplicableFor').val('');
+            filterCourses();
+        });
+    });
+</script>
