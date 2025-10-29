@@ -3066,9 +3066,10 @@
 }
 
     .blog-details__img img {
-        width: 100%;
-        height: auto;
+        width: 80%;
+        height: 522px;
         border-radius: 14px;
+        margin-left: 60px;
     }
 
 .blog-details__meta {
@@ -16848,3 +16849,5 @@ body.boxed-wrapper {
     font-size: 14px;
     margin-right: 10px;
 }
+
+

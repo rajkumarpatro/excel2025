@@ -4,53 +4,48 @@
     ViewBag.Title = "Home Page";
 }
 
-
-
-
-
-
 <!-- Start Banner Carousel -->
 @if (Model.FlashList?.Count > 0)
 {
-<div class="banner-outer">
-    <!-- end single slider -->
-    <div id="jssor_1" style="position:relative;margin:0 auto;top:0px;left:0px;width:1900px;height:800px;overflow:hidden;visibility:hidden;">
-        <!-- Loading Screen -->
-        <div data-u="loading" class="jssorl-009-spin" style="position:absolute;top:0px;left:0px;width:100%;height:100%;text-align:center;background-color:rgba(0,0,0,0.7);">
-            <img src="../../Content/home/images/Spin.png" style="margin-top:-19px;position:relative;top:50%;width:38px;height:38px;" />
-        </div>
-        <div data-u="slides" style="cursor:default;position:relative;top:0px;left:0px;width:1900px;height:800px;overflow:hidden;">
+    <div class="banner-outer">
+        <!-- end single slider -->
+        <div id="jssor_1" style="position:relative;margin:0 auto;top:0px;left:0px;width:1900px;height:800px;overflow:hidden;visibility:hidden;">
+            <!-- Loading Screen -->
+            <div data-u="loading" class="jssorl-009-spin" style="position:absolute;top:0px;left:0px;width:100%;height:100%;text-align:center;background-color:rgba(0,0,0,0.7);">
+                <img src="../../Content/home/images/Spin.png" style="margin-top:-19px;position:relative;top:50%;width:38px;height:38px;" />
+            </div>
+            <div data-u="slides" style="cursor:default;position:relative;top:0px;left:0px;width:1900px;height:800px;overflow:hidden;">
 
-            @foreach (var flash in Model.FlashList)
+                @foreach (var flash in Model.FlashList)
                 {
                     string photopath = flash.FLASH_FILEPATH;
-            <div>
-                <img src="@photopath" style="width: 1900px; height: 800px;" class="img-responsive" />
-            </div>
+                    <div>
+                        <img src="@photopath" style="width: 1900px; height: 800px;" class="img-responsive" />
+                    </div>
                 }
-        </div>
-        <!-- Bullet Navigator -->
-        <div data-u="navigator" class="jssorb032" style="position:absolute;bottom:12px;right:12px;" data-autocenter="1" data-scale="0.5" data-scale-bottom="0.75">
-            <div data-u="prototype" class="i" style="width:16px;height:16px;">
-                <svg viewBox="0 0 16000 16000" style="position:absolute;top:0;left:0;width:100%;height:100%;">
-                    <circle class="b" cx="8000" cy="8000" r="5800"></circle>
+            </div>
+            <!-- Bullet Navigator -->
+            <div data-u="navigator" class="jssorb032" style="position:absolute;bottom:12px;right:12px;" data-autocenter="1" data-scale="0.5" data-scale-bottom="0.75">
+                <div data-u="prototype" class="i" style="width:16px;height:16px;">
+                    <svg viewBox="0 0 16000 16000" style="position:absolute;top:0;left:0;width:100%;height:100%;">
+                        <circle class="b" cx="8000" cy="8000" r="5800"></circle>
+                    </svg>
+                </div>
+            </div>
+            <!--Arrow Navigator -->
+            <div data-u="arrowleft" class="jssora051" style="width:65px;height:65px;top:0px;left:25px;" data-autocenter="2" data-scale="0.75" data-scale-left="0.75">
+                <svg viewbox="0 0 16000 16000" style="position:absolute;top:0;left:0;width:100%;height:100%;">
+                    <polyline class="a" points="11040,1920 4960,8000 11040,14080 "></polyline>
+                </svg>
+            </div>
+            <div data-u="arrowright" class="jssora051" style="width:65px;height:65px;top:0px;right:25px;" data-autocenter="2" data-scale="0.75" data-scale-right="0.75">
+                <svg viewbox="0 0 16000 16000" style="position:absolute;top:0;left:0;width:100%;height:100%;">
+                    <polyline class="a" points="4960,1920 11040,8000 4960,14080 "></polyline>
                 </svg>
             </div>
         </div>
-        <!--Arrow Navigator -->
-        <div data-u="arrowleft" class="jssora051" style="width:65px;height:65px;top:0px;left:25px;" data-autocenter="2" data-scale="0.75" data-scale-left="0.75">
-            <svg viewbox="0 0 16000 16000" style="position:absolute;top:0;left:0;width:100%;height:100%;">
-                <polyline class="a" points="11040,1920 4960,8000 11040,14080 "></polyline>
-            </svg>
-        </div>
-        <div data-u="arrowright" class="jssora051" style="width:65px;height:65px;top:0px;right:25px;" data-autocenter="2" data-scale="0.75" data-scale-right="0.75">
-            <svg viewbox="0 0 16000 16000" style="position:absolute;top:0;left:0;width:100%;height:100%;">
-                <polyline class="a" points="4960,1920 11040,8000 4960,14080 "></polyline>
-            </svg>
-        </div>
+        <!-- #endregion Jssor Slider End -->
     </div>
-    <!-- #endregion Jssor Slider End -->
-</div>
 
 }
 <!-- End Banner Carousel -->
@@ -494,7 +489,6 @@
     .service-three__text {
         flex-grow: 1;
     }
-
 </style>
 
 
@@ -574,7 +568,7 @@
 
 
             <div class="row">
-                <div class="col-xxl-2 offset-xxl-1 col-xl-2 offset-xl-1 col-lg-2 offset-lg-1 col-md-2 offset-md-1">
+                <div class="col-6 col-md-2 offset-md-1 text-center mb-3">
                     <div class="research__item research__item-border text-center mb-30 transition-3">
                         <div class="research__thumb mb-35">
                             <img src="../../Content/home/images/Feature Icon/01.png" width="100" height="100">
@@ -586,19 +580,19 @@
                     </div>
                 </div>
 
-                <div class="col-xxl-2 col-xl-2 col-lg-2 col-md-2">
+                <div class="col-6 col-md-2 text-center mb-3">
                     <div class="research__item research__item-border text-center mb-30 transition-3">
                         <div class="research__thumb mb-35">
                             <img src="../../Content/home/images/Feature Icon/02 study material.png" width="100" height="100">
                         </div>
                         <br>
                         <div class="research__content">
-                            <h6 style="color: #83221a;">Exhaustive colored Study Material</h6>
+                            <h6 style="color: #83221a;">Exhaustive Colored Study Material</h6>
                         </div>
                     </div>
                 </div>
 
-                <div class="col-xxl-2 col-xl-2 col-lg-2 col-md-2">
+                <div class="col-6 col-md-2 text-center mb-3">
                     <div class="research__item research__item-border text-center mb-30 transition-3">
                         <div class="research__thumb mb-35">
                             <img src="../../Content/home/images/Feature Icon/04 summer notes.png" width="100" height="100">
@@ -610,33 +604,38 @@
                     </div>
                 </div>
 
-                <div class="col-xxl-2 col-xl-2 col-lg-2 col-md-2">
+                <div class="col-6 col-md-2 text-center mb-3">
                     <div class="research__item research__item-border text-center mb-30 transition-3">
                         <div class="research__thumb mb-35">
                             <img src="../../Content/home/images/Feature Icon/05.png" width="100" height="100">
                         </div>
                         <br>
                         <div class="research__content">
-                            <h6 style="color: #83221a;">Timely Compeletion of Course</h6>
+                            <h6 style="color: #83221a;">Timely Completion of Course</h6>
                         </div>
                     </div>
                 </div>
 
-                <div class="col-xxl-2 col-xl-2 col-lg-2 col-md-2">
+                <div class="col-6 col-md-2 text-center mb-3">
                     <div class="research__item research__item-border text-center mb-30 transition-3">
                         <div class="research__thumb mb-35">
                             <img src="../../Content/home/images/Feature Icon/06 revision.png" width="100" height="100">
                         </div>
                         <br>
                         <div class="research__content">
-                            <h6 style="color: #83221a;">Multiple Revision</h6>
+                            <h6 style="color: #83221a;">Multiple Revisions</h6>
                         </div>
                     </div>
                 </div>
             </div>
 
+
+
+
+
             <div class="row">
-                <div class="col-xxl-2 offset-xxl-1 col-xl-2 offset-xl-1 col-lg-2 offset-lg-1 col-md-2 offset-md-1">
+
+                <div class="col-6 col-md-2 offset-md-1 text-center mb-3">
                     <div class="research__item research__item-border text-center mb-30 transition-3">
                         <div class="research__thumb mb-35">
                             <img src="../../Content/home/images/Feature Icon/07 Weekly test series.png" width="100" height="100">
@@ -648,7 +647,7 @@
                     </div>
                 </div>
 
-                <div class="col-xxl-2 col-xl-2 col-lg-2 col-md-2">
+                <div class="col-6 col-md-2 text-center mb-3">
                     <div class="research__item research__item-border text-center mb-30 transition-3">
                         <div class="research__thumb mb-35">
                             <img src="../../Content/home/images/Feature Icon/07 Mock test series.png" width="100" height="100">
@@ -660,7 +659,7 @@
                     </div>
                 </div>
 
-                <div class="col-xxl-2 col-xl-2 col-lg-2 col-md-2">
+                <div class="col-6 col-md-2 text-center mb-3">
                     <div class="research__item research__item-border text-center mb-30 transition-3">
                         <div class="research__thumb mb-35">
                             <img src="../../Content/home/images/Feature Icon/08 video backup 5545.png" width="100" height="100">
@@ -672,7 +671,7 @@
                     </div>
                 </div>
 
-                <div class="col-xxl-2 col-xl-2 col-lg-2 col-md-2">
+                <div class="col-6 col-md-2 text-center mb-3">
                     <div class="research__item research__item-border text-center mb-30 transition-3">
                         <div class="research__thumb mb-35">
                             <img src="../../Content/home/images/Feature Icon/09 question.png" width="100" height="100">
@@ -684,7 +683,7 @@
                     </div>
                 </div>
 
-                <div class="col-xxl-2 col-xl-2 col-lg-2 col-md-2">
+                <div class="col-6 col-md-2 text-center mb-3">
                     <div class="research__item research__item-border text-center mb-30 transition-3">
                         <div class="research__thumb mb-35">
                             <img src="../../Content/home/images/Feature Icon/03 performation report.png" width="100" height="100">
@@ -696,12 +695,13 @@
                     </div>
                 </div>
             </div>
+
         </div><!-- /.container -->
     </div>
 </section>
 <!-- /.client-carousel -->
-<!-- Call To Action Start -->
 
+<!-- Call To Action Start -->
 <section class="cta-one" style="background-image: url(../../Content/home/images/shapes/service-bg-3.jpg);">
     <div class="cta-one__bg" style="background-image: url(../../Content/home/images/shapes/service-bg-3.png);"></div>
     <div class="container">
@@ -755,10 +755,6 @@
         </div>
     </div>
 </section>
-
-
-
-
 <!-- Call To Action End -->
 <!-- Testimonial Start -->
 <section class="testimonial-two" style=" background-image: url(../../Content/home/images/shapes/testimonial-bg-2.png);">
@@ -846,49 +842,49 @@
 <!-- Blog Start -->
 @if (Model.Blogs?.Count > 0)
 {
-<section class="blog-two" style="padding: 14px 0 14px;">
-    <div class="container">
-        <div class="section-title text-center wow fadeInUp" data-wow-delay="100ms">
-            <h5 class="section-title__tagline">
-                Latest Blog
-                <svg class="arrow-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 55 13">
-                    <g clip-path="url(#clip0_324_36194)">
-                        <path d="M10.5406 6.49995L0.700562 12.1799V8.56995L4.29056 6.49995L0.700562 4.42995V0.819946L10.5406 6.49995Z" />
-                        <path d="M25.1706 6.49995L15.3306 12.1799V8.56995L18.9206 6.49995L15.3306 4.42995V0.819946L25.1706 6.49995Z" />
-                        <path d="M39.7906 6.49995L29.9506 12.1799V8.56995L33.5406 6.49995L29.9506 4.42995V0.819946L39.7906 6.49995Z" />
-                        <path d="M54.4206 6.49995L44.5806 12.1799V8.56995L48.1706 6.49995L44.5806 4.42995V0.819946L54.4206 6.49995Z" />
-                    </g>
-                </svg>
-            </h5>
-            <h2 class="section-title__title">Latest Updates & Articles</h2>
-        </div><!-- section-title -->
-        <div class="row">
-            @foreach (var blog in Model.Blogs)
+    <section class="blog-two" style="padding: 14px 0 14px;">
+        <div class="container">
+            <div class="section-title text-center wow fadeInUp" data-wow-delay="100ms">
+                <h5 class="section-title__tagline">
+                    Latest Blog
+                    <svg class="arrow-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 55 13">
+                        <g clip-path="url(#clip0_324_36194)">
+                            <path d="M10.5406 6.49995L0.700562 12.1799V8.56995L4.29056 6.49995L0.700562 4.42995V0.819946L10.5406 6.49995Z" />
+                            <path d="M25.1706 6.49995L15.3306 12.1799V8.56995L18.9206 6.49995L15.3306 4.42995V0.819946L25.1706 6.49995Z" />
+                            <path d="M39.7906 6.49995L29.9506 12.1799V8.56995L33.5406 6.49995L29.9506 4.42995V0.819946L39.7906 6.49995Z" />
+                            <path d="M54.4206 6.49995L44.5806 12.1799V8.56995L48.1706 6.49995L44.5806 4.42995V0.819946L54.4206 6.49995Z" />
+                        </g>
+                    </svg>
+                </h5>
+                <h2 class="section-title__title">Latest Updates & Articles</h2>
+            </div><!-- section-title -->
+            <div class="row">
+                @foreach (var blog in Model.Blogs)
                 {
-            <div class="col-xl-4 col-md-6 wow fadeInUp" data-wow-delay="200ms">
-                <div class="blog-two__item">
-                    <div class="blog-two__image">
-                        <img src="~/Content/home/images/blog/blog-2-4.jpg" alt="eduact" />
-                        <a href="blog-details-right.html"></a>
-                    </div><!-- /.blog-image -->
-                    <div class="blog-two__content">
-                        <div class="blog-two__top-meta">
-                            <div class="blog-two__date">@blog.BlogDate</div><!-- /.blog-date -->
-                        </div>
-                        <h3 class="blog-two__title">
-                            <a href="blog-details-right.html">@blog.BlogName</a>
-                        </h3><!-- /.blog-title -->
-                        <div class="blog-two__meta">
-                            <a class="blog-two__rm" href="blog-details-right.html"><span class="icon-arrow"></span></a><!-- /.read-more-btn -->
-                        </div><!-- /.blog-meta -->
-                    </div><!-- /.blog-content -->
-                </div><!-- /.blog-card-one -->
-            </div>
+                    <div class="col-xl-4 col-md-6 wow fadeInUp" data-wow-delay="200ms">
+                        <div class="blog-two__item">
+                            <div class="blog-two__image">
+                                <img src="@blog.BlogPhoto" alt="eduact" />
+                                <a href="blogdetails?blogid=@blog.BlogId"></a>
+                            </div><!-- /.blog-image -->
+                            <div class="blog-two__content">
+                                <div class="blog-two__top-meta">
+                                    <div class="blog-two__date">@blog.BlogDate</div><!-- /.blog-date -->
+                                </div>
+                                <h3 class="blog-two__title">
+                                    <a href="blogdetails?blogid=@blog.BlogId">@blog.BlogName</a>
+                                </h3><!-- /.blog-title -->
+                                <div class="blog-two__meta">
+                                    <a class="blog-two__rm" href="blogdetails?blogid=@blog.BlogId"><span class="icon-arrow"></span></a><!-- /.read-more-btn -->
+                                </div><!-- /.blog-meta -->
+                            </div><!-- /.blog-content -->
+                        </div><!-- /.blog-card-one -->
+                    </div>
                 }
 
+            </div>
         </div>
-    </div>
-</section>
+    </section>
 }
 
 <!-- Blog End -->
@@ -1061,7 +1057,7 @@
             <div class="accrodion">
                 <span class="accrodion__icon"></span>
                 <div class="accrodion-title">
-                    <h4>Do you conduct demo classes?</h4> 
+                    <h4>Do you conduct demo classes?</h4>
                 </div>
                 <!-- /.accordian-title -->
                 <div class="accrodion-content">
@@ -1083,15 +1079,15 @@
                 <div class="accrodion-title">
                     <h4>PASSING PERCENTAGE IN CA EXAMS?</h4>
                 </div>-->
-                <!-- /.accordian-title -->
-                <!--<div class="accrodion-content">
-                    <div class="inner">
-                        <p>
-                            ..
-                        </p>
-                    </div>-->
-                    <!-- /.accordian-content -->
-                <!--</div>
+            <!-- /.accordian-title -->
+            <!--<div class="accrodion-content">
+                <div class="inner">
+                    <p>
+                        ..
+                    </p>
+                </div>-->
+            <!-- /.accordian-content -->
+            <!--</div>
             </div>-->
             <!-- /.accordian-item -->
         </div>
@@ -1102,9 +1098,6 @@
         <!-- accrodion-one -->
     </div>
 </section>
-
-
-
 
 <div class="mobile-nav__wrapper">
     <div class="mobile-nav__overlay mobile-nav__toggler"></div>
