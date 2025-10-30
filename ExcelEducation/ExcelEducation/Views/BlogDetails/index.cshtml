@@ -1,0 +1,89 @@
+﻿@using System.Web
+@model DAL.Models.BlogDetails
+
+
+@{
+    ViewBag.Title = "BlogDetails";
+}
+
+
+<section class="page-header page-header--bg-two" style="background: url(/Content/home/images/backgrounds/page-header-bg-1-2.jpg) " data-jarallax data-speed="0.3">
+    <div class="page-header__overlay"></div>
+    <div class="container text-center">
+        <h2 class="page-header__title">BlogDetails</h2>
+        <ul class="page-header__breadcrumb list-unstyled">
+            <li><a href="/">Home</a></li>
+            <li><span>BlogDetails</span></li>
+        </ul>
+    </div>
+</section>
+
+
+
+<section class="blog-details">
+    <div class="container">
+        <div class="row">
+
+            <div class="col-xl-8 col-lg-7">
+
+                <div class="blog-details__content">
+                    <div class="blog-details__img">
+                        <img src="@Model.Blog.BlogPhoto" alt="@Model.Blog.BlogId">
+                    </div><!-- details-image -->
+                    <div class="blog-details__meta">
+                        <div class="blog-details__meta__date"><i class="icon-clock"></i>@DateTime.Parse(Model.Blog.BlogDate).ToString("dd/MM/yyyy")</div>
+                    </div><!-- /.details-meta -->
+                    <h3 class="blog-details__title"> @Model.Blog.BlogName </h3>
+                    <p class="blog-details__text">
+
+
+                        @Html.Raw(HttpUtility.UrlDecode(Model.Blog.BlogDescription))
+
+                    </p>
+                    <p class="blog-details__text">
+
+                    </p>
+                </div><!-- details-content -->
+
+
+            </div>
+
+
+            @if (Model.RecentBlogs?.Count > 0)
+            {
+                <div class="col-xl-4 col-lg-5 wow fadeInRight animated" data-wow-delay="300ms" style="visibility: visible; animation-delay: 300ms; animation-name: fadeInRight;">
+                    <div class="sidebar">
+
+
+                        <div class="sidebar__single sidebar__post">
+                            <h3 class="sidebar__title">Latest posts</h3>
+                            <ul class="sidebar__post__list list-unstyled">
+                                @foreach (var blog in Model.RecentBlogs)
+                                {
+
+                                    <li>
+                                        <div class="sidebar__post__image">
+                                            <img src="@blog.BlogPhoto" alt="@blog.BlogId">
+                                        </div>
+                                        <div class="sidebar__post__content">
+                                            <span class="sidebar__post__content__meta"><i class="icon-clock"></i>@DateTime.Parse(blog.BlogDate).ToString("dd/MM/yyyy")</span>
+                                            <h3 class="sidebar__post__content__title"><a href="blogdetails?blogid=@blog.BlogId">@blog.BlogName</a></h3>
+                                        </div>
+                                    </li>
+                                }
+
+
+                            </ul>
+                        </div><!-- latest-post-widget -->
+
+
+
+
+                    </div>
+                </div>
+            }
+
+
+        </div>
+    </div>
+</section>

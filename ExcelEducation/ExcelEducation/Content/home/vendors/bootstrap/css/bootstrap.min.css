@@ -7316,7 +7316,7 @@ textarea.form-control-lg {
 }
 
 .mb-2 {
-    margin-bottom: .5rem !important
+    margin-bottom: -0.5rem !important
 }
 
 .mb-3 {
@@ -8906,7 +8906,9 @@ textarea.form-control-lg {
     }
 
     .mb-md-0 {
-        margin-bottom: 0 !important
+        margin-bottom: -8px !important;
+        margin-top: 5px;
+        
     }
 
     .mb-md-1 {
