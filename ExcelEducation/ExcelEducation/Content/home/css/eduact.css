@@ -1,4 +1,4 @@
-/*--------------------------------------------------------------
+﻿/*--------------------------------------------------------------
 >>> TABLE OF CONTENTS:
 ----------------------------------------------------------------
 # Variables
@@ -3904,6 +3904,36 @@ h6 {
     margin-top: 95px;
 }
 
+/* Tablet (≤ 992px) */
+@media (max-width: 992px) {
+    .section-title__tagline {
+        font-size: 20px;
+        line-height: 32px;
+        margin-top: 70px;
+        padding: 0 15px;
+    }
+}
+
+/* Mobile (≤ 600px) */
+@media (max-width: 600px) {
+    .section-title__tagline {
+        font-size: 16px;
+        line-height: 39px;
+        margin-top: 25px;
+        padding: 0 10px;
+        text-align: center;
+    }
+}
+
+/* Very small screens (≤ 400px) */
+@media (max-width: 400px) {
+    .section-title__tagline {
+        font-size: 14px;
+        line-height: 22px;
+        margin-top: 20px;
+    }
+}
+
     .section-title__tagline svg {
         position: absolute;
         left: 0;
@@ -4285,7 +4315,7 @@ h6 {
 }
 
 .main-menu__right .mobile-nav__toggler {
-    margin-right: 18px;
+    margin-right: 47px;
 }
 
 .main-menu__login,
@@ -16830,6 +16860,60 @@ body.boxed-wrapper {
     margin-left: 20px;
 }
 
+.feature-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    max-width: 300px;
+    margin-top: 80px;
+    margin-left: 20px;
+}
+
+/* Tablet (≤ 992px) */
+@media (max-width: 992px) {
+    .feature-list {
+        gap: 15px;
+        max-width: 100%;
+        margin-top: 60px;
+        margin-left: 10px;
+        justify-content: flex-start;
+    }
+}
+
+/* Mobile (≤ 600px) */
+@media (max-width: 600px) {
+    .feature-list {
+        flex-direction: column; /* Stack features vertically */
+        gap: 12px;
+        margin-top: 10px;
+        margin-left: 40px;
+        max-width: 100%;
+    }
+
+        /* Make all images the same size */
+        .feature-list img {
+            width: 100px; /* Adjust width as needed */
+            height: 100px; /* Adjust height as needed */
+            object-fit: cover; /* Keeps image aspect ratio and crops if needed */
+        }
+}
+
+/* Very small screens (≤ 400px) */
+@media (max-width: 400px) {
+    .feature-list {
+        gap: 10px;
+        margin-top: 30px;
+    }
+
+        /* Optional: slightly smaller images for very small screens */
+        .feature-list img {
+            width: 80px;
+            height: 80px;
+        }
+}
+
+
+
 .feature-item {
     display: flex;
     align-items: center;
@@ -16850,4 +16934,149 @@ body.boxed-wrapper {
     margin-right: 10px;
 }
 
+
+
+
+
+/* ==== Existing Desktop Styles (unchanged) ==== */
+element.style {
+    background-image: url(Content/home/images/backgrounds/video-bg-2.jpg);
+    object-fit: cover;
+    object-position: 50% 50%;
+    max-width: none;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    width: 4731px;
+    height: 1164.88px;
+    overflow: hidden;
+    pointer-events: none;
+    transform-style: preserve-3d;
+    backface-visibility: hidden;
+    will-change: transform, opacity;
+    margin-top: 163.062px;
+    transform: translate3d(0px, -14.3648px, 0px);
+}
+
+.background-wrapper {
+    background-color: #F7F7F7;
+    padding: 2px 0;
+}
+
+.team-container {
+    max-width: 1150px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+.team-row {
+    display: flex;
+    justify-content: center;
+    gap: 70px;
+    margin-bottom: 10px;
+    flex-wrap: wrap;
+}
+
+.member {
+    background: white;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+    border-radius: 8px;
+    padding: 2px;
+    text-align: center;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    flex: 1 1 200px;
+    max-width: 228px;
+}
+
+    .member img {
+        width: 100%;
+        height: 240px;
+        border-radius: 8px;
+        object-fit: fill;
+    }
+
+.name {
+    font-weight: 600;
+    font-size: 1rem;
+    color: #222;
+    text-transform: math-auto;
+}
+
+.designation {
+    font-size: 0.85rem;
+    color: #666;
+    font-style: italic;
+}
+
+.experience {
+    font-size: 0.85rem;
+    color: #333;
+}
+
+/* ==== Mobile: 2 cards per row ==== */
+@media (max-width: 768px) {
+    .team-row {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 15px; /* spacing between cards */
+    }
+
+    .member {
+        flex: 0 0 calc(50% - 15px); /* 2 per row */
+        max-width: calc(50% - 15px);
+        margin-bottom: 20px;
+    }
+
+        .member img {
+            width: 100%;
+            height: auto; /* keeps aspect ratio */
+            object-fit: cover;
+        }
+
+    .name, .designation, .experience {
+        font-size: 0.9rem;
+    }
+}
+
+
+
+
+/* Section styling */
+.image-section {
+    padding: 20px;
+    background-color: #f4f4f4;
+}
+
+/* Flex container for images */
+.image-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    flex-wrap: wrap; /* allows wrapping on smaller screens */
+}
+
+    /* Image styling */
+    .image-container img {
+        width: 32%; /* roughly one-third for desktop */
+        height: auto;
+        border-radius: 8px;
+        transition: transform 0.3s;
+    }
+
+        .image-container img:hover {
+            transform: scale(1.05); /* simple hover effect */
+        }
+
+/* Responsive for mobile */
+@media (max-width: 768px) {
+    .image-container img {
+        width: 100%; /* stack images vertically on small screens */
+        margin-bottom: 20px;
+    }
+}
+
+
+/*-----------------------*/
 
