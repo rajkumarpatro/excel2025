@@ -9523,7 +9523,7 @@ body.megamenu-popup-active {
 
 .course-two__author {
     position: relative;
-    padding: 0 0 0 54px;
+    padding: 0 0 0 0px;
 }
 
 @media (max-width: 991px) {

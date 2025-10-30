@@ -17,14 +17,40 @@ namespace DAL
             {
                 db.Open(); 
 
-                var query = @"SELECT dbo.TBL_COURSE.COURSE_ID, dbo.TBL_COURSE.M_COURSE_ID, dbo.TBL_COURSE.COURSE, 
-                                    dbo.TBL_COURSE.OFFLINE_FEES, dbo.TBL_COURSE.ISACTIVE , dbo.TBL_COURSE.ISACTIVE_ENQUIRY, dbo.TBL_COURSE.ISACTIVE_OTHER, 
-                                    dbo.TBL_COURSE.PRODUCT_TYPE, dbo.TBL_COURSE.VIDEO_HR, dbo.TBL_COURSE.TOTAL_NO_LECT, CONVERT(VARCHAR(10),dbo.TBL_COURSE.VALIDITY_DAY,105) as VALIDITY_DAY, dbo.TBL_COURSE.PRICE, 
-                                    dbo.TBL_COURSE.DISCOUNT,dbo.TBL_COURSE.DISCOUNT_SPECIFIC_YES_NO_DATE,dbo.TBL_COURSE.COURSE_LANGUAGE,dbo.TBL_COURSE.COURSE_APPLICABLEFOR,
-                                    CONVERT(VARCHAR(10),dbo.TBL_COURSE.DISCOUNT_SPECIFIC_DATE,105) as DISCOUNT_SPECIFIC_DATE, dbo.TBL_COURSE.THUMBNAIL, dbo.TBL_COURSE.PRODUCT_ORDER,
-                                    dbo.TBL_COURSE.PRODUCT_DESC, dbo.TBL_COURSE.PRODUCT_ACHEVEMENT,dbo.TBL_COURSE.COURSE_VIDEODEMOLINK, dbo.TBL_COURSE_MASTER.M_COURSE_NAME
-                                     FROM dbo.TBL_COURSE
-                                     INNER JOIN dbo.TBL_COURSE_MASTER ON dbo.TBL_COURSE.M_COURSE_ID = dbo.TBL_COURSE_MASTER.M_COURSE_ID where dbo.TBL_COURSE.ISACTIVE='Yes' and dbo.TBL_COURSE.PRICE IS NOT NULL order by dbo.TBL_COURSE.COURSE_ID Desc";
+                var query = @"SELECT 
+                    c.COURSE_ID,
+                    c.M_COURSE_ID,
+                    c.COURSE,
+                    c.OFFLINE_FEES,
+                    c.ISACTIVE,
+                    c.ISACTIVE_ENQUIRY,
+                    c.ISACTIVE_OTHER,
+                    c.PRODUCT_TYPE,
+                    c.VIDEO_HR,
+                    c.TOTAL_NO_LECT,
+                    CONVERT(VARCHAR(10), c.VALIDITY_DAY, 105) AS VALIDITY_DAY,
+                    c.PRICE,
+                    c.DISCOUNT,
+                    c.DISCOUNT_SPECIFIC_YES_NO_DATE,
+                    c.COURSE_LANGUAGE,
+                    c.COURSE_APPLICABLEFOR,
+                    CONVERT(VARCHAR(10), c.DISCOUNT_SPECIFIC_DATE, 105) AS DISCOUNT_SPECIFIC_DATE,
+                    c.THUMBNAIL,
+                    c.PRODUCT_ORDER,
+                    c.PRODUCT_DESC,
+                    c.PRODUCT_ACHEVEMENT,
+                    c.COURSE_VIDEODEMOLINK,
+                    m.M_COURSE_NAME
+                FROM 
+                    dbo.TBL_COURSE AS c
+                INNER JOIN 
+                    dbo.TBL_COURSE_MASTER AS m 
+                    ON c.M_COURSE_ID = m.M_COURSE_ID
+                WHERE 
+                    c.ISACTIVE = 'Yes'
+                    AND c.PRICE IS NOT NULL
+                ORDER BY 
+                    m.M_COURSE_ID ASC";
 
                
                 var res = await db.QueryAsync<OnlineCourseModel>(query);
