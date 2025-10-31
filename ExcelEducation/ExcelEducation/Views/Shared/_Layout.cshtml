@@ -79,7 +79,7 @@
                 }
                 else {
                     window.setTimeout(ScaleSlider, 30);
-                } 
+                }
             }
 
             ScaleSlider();
@@ -173,6 +173,23 @@
                 pointer-events: none;
             }
     </style>
+    <style>
+        /* Container for logo */
+        .main-menu__logo-rv {
+            display: flex;
+            align-items: center;
+            justify-content: center; /* centers automatically on all screen sizes */
+            padding: 0.5rem 1rem;
+        }
+
+        /* Responsive logo image  */
+        .logo-img-rv {
+            width: clamp(80px, 20vw, 150px); /* min: 80px, preferred: 20% viewport width, max: 150px */
+            height: auto;
+            max-width: 100%;
+            transition: width 0.3s ease;
+        }
+    </style>
 
     <link rel="stylesheet" href="@Url.Content("~/Content/home/vendors/bootstrap/css/bootstrap.min.css")" />
     <link rel="stylesheet" href="@Url.Content("~/Content/home/vendors/bootstrap-select/bootstrap-select.min.css")" />
@@ -190,7 +207,7 @@
     <link rel="stylesheet" href="@Url.Content("~/Content/home/vendors/owl-carousel/assets/owl.theme.default.min.css")" />
 
     <!-- template styles -->
-    <link rel="stylesheet" href= "@Url.Content("~/Content/home/css/eduact.css")"  />
+    <link rel="stylesheet" href="@Url.Content("~/Content/home/css/eduact.css")" />
 
 
 
@@ -216,11 +233,11 @@
                     </marquee>
                 </div>
 
-               
+
 
                 <!-- Social Media Section -->
-                <div class="col-12 col-md-3 d-flex align-items-center justify-content-start " style="margin-left: 140px;">
-                    <a href="tel:9926821000" class="d-flex align-items-center text-decoration-none" style="margin-right: 60px; margin-left: 20px;">
+                <div class="col-12 col-md-3 d-flex align-items-center justify-content-start " >
+                    <a href="tel:9926821000" class="d-flex align-items-center text-decoration-none" >
                         <i class="fas fa-phone-alt text-white"></i>
                         <strong class="p-2" style="color:#ffffff;">99268 21000</strong>
                     </a>
@@ -245,70 +262,106 @@
                     </a>
                 </div>
             </div>
+            <script>
+                .main - menu__logo {
+                    display: flex;
+                    align - items: center;
+                    justify - content: center; /* center logo automatically */
+                }
+
+/* Responsive behavior without media queries */
+.logo - img {
+                    width: clamp(80px, 20vw, 150px);
+                    height: auto;
+                    max - width: 100 %;
+                }
+
+            </script>
+
             <nav class="main-menu">
                 <div class="container">
-                    <div class="main-menu__logo">
-                        <a href="@Url.Action("Index", "Home")">
-                            <img src="@Url.Content("~/Content/home/images/logo.png")"
-                                 style="width:150px;"
-                                 class="img-fluid"
+                    <div class="main-menu__logo-rv">
+                        <a href="/">
+                            <img src="/Content/home/images/logo.png"
+                                 class="logo-img-rv"
                                  alt="Excel Educational Institution - The Centre of Excellence | Best CA Institute | Best Commerce Institute">
                         </a>
                     </div>
+                    
 
 
-                    <!-- /.main-menu__logo -->
                     <div class="main-menu__nav">
                         <ul class="main-menu__list">
-                            <li><a href="/">Home</a></li>
-                            @*<li><a href="/AboutUs">About Us</a></li>*@
-                            @{
-                                var menus = MenusDB.GetMenu().Result;
-                            }
+                            <li class="current"><a href="/">Home</a></li>
 
-                            @foreach (var menu in menus)
-                            {
-                                if (menu.IS_LINK)
-                                {
-                                    <li><a href="@menu.LINK_URL">@menu.PAGE_HEAD_NAME</a></li>
-                                }
-                                else
-                                {
+                            <li><a href="aboutus">About Us</a></li>
+                            <li><a href="/courses/index">Buy Courses</a></li>
+                            <li class="has-dropdown position-relative">
+                                <a href="#">Achievements</a>
+                                <ul class="submenu position-absolute bg-white shadow p-2">
+                                    <li><a href="/ExcelInfo?page=Rankers">Rankers</a></li>
+                                    <li><a href="/ExcelInfo?page=Results">Results</a></li>
+                                    <li><a href="/ExcelInfo?page=Award%20and%20Honour">Award and Honour</a></li>
+                                    <li><a href="https://goo.gl/photos/45CTg3zrk7m7Tayv5">Excel in News </a></li>
+                                </ul>
+                            </li>
+                            <li class="has-dropdown position-relative">
+                                <a href="#">Gallery</a>
+                                <ul class="submenu position-absolute bg-white shadow p-2">
+                                    <li><a href="/ExcelInfo?page=Campus%20Life%20">Campus Life </a></li>
+                                    <li><a href="/ExcelInfo?page=Photos%20Gallery">Photos Gallery</a></li>
+                                </ul>
+                            </li>
+
+                            <li><a href="/Contact">Contact</a></li>
+
+                            <li class="has-dropdown position-relative">
+                                <a href="#">Testing</a>
+                                <ul class="submenu position-absolute bg-white shadow p-2">
+                                    <li><a href="/Courses/CAFoundation">CA Foundation</a></li>
+
+                                    <!-- 2nd level dropdown -->
                                     <li class="has-dropdown position-relative">
-                                        <a href="#">@menu.PAGE_HEAD_NAME</a>
+                                        <a href="#">CA Intermediate</a>
                                         <ul class="submenu position-absolute bg-white shadow p-2">
-                                            @foreach (var submenu in menu.SUBMENU)
-                                            {
-                                                if (submenu.IS_LINK)
-                                                {
-                                                    <li><a href="@submenu.LINK_URL">@submenu.PAGE_NAME</a></li>
-                                                }
-                                                else
-                                                {
-                                                    <li>@Html.ActionLink(submenu.PAGE_NAME, "index", "ExcelInfo", new { page = submenu.PAGE_NAME }, null)</li>
-                                                }
-                                            }
+                                            <li><a href="/Courses/CAIntermediate/Group1">Group 1</a></li>
+                                            <li><a href="/Courses/CAIntermediate/Group2">Group 2</a></li>
+
+                                            <!-- 3rd level dropdown -->
+                                            <li class="has-dropdown position-relative">
+                                                <a href="#">Advanced Topics</a>
+                                                <ul class="submenu position-absolute bg-white shadow p-2">
+                                                    <li><a href="/Courses/CAIntermediate/AdvancedAccounting">Advanced Accounting</a></li>
+                                                    <li><a href="/Courses/CAIntermediate/Audit">Audit & Assurance</a></li>
+                                                </ul>
+                                            </li>
+                                            <!-- /3rd level -->
                                         </ul>
                                     </li>
-                                }
-                            }
+                                    <!-- /2nd level -->
 
-                            <li>@Html.ActionLink("Contact", "index", "Contact", null, null)</li>
-
+                                    <li><a href="/Courses/CSExecutive">CS Executive</a></li>
+                                    <li><a href="/Courses/Commerce">Commerce Classes</a></li>
+                                </ul>
+                            </li>
 
                         </ul>
-                    </div><!-- /.main-menu__nav -->
+                    </div>
+
                     <div class="main-menu__right">
                         <a href="#" class="main-menu__toggler mobile-nav__toggler">
                             <i class="fa fa-bars"></i>
-                        </a><!-- /.mobile menu btn -->
-                        <!-- /.login btn -->
-
-                        <div class="blog-two__cats"><a href="https://online.exceledu.co.in/StudentLogin.aspx">Login</a></div>&nbsp;
-                        <div class="blog-two__cats"><a href="https://online.exceledu.co.in/Courses/Courses.aspx">Buy Courses</a></div>
-                    </div><!-- /.main-menu__right -->
-                </div><!-- /.container -->
+                        </a>
+                        <div class="blog-two__cats">
+                            <a href="https://online.exceledu.co.in/StudentLogin.aspx">Login</a>
+                        </div>&nbsp;
+                        <div class="blog-two__cats">
+                            <a href="https://online.exceledu.co.in/Courses/Courses.aspx">Buy Courses</a>
+                        </div>
+                    </div>
+                </div>
             </nav>
+
 
 
             <!-- /.container -->

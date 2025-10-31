@@ -2225,13 +2225,11 @@
         color: var(--eduact-white);
         border-radius: 5px;
         font-size: 15px;
-        font-weight: bold;
-        /* font-weight: 600; */
         text-transform: capitalize;
         /* height: 24px; */
-        line-height: 24px;
-        padding: 7px 7px 7px 7px;
-        margin: 0 5px 5px 0;
+        line-height: 20px;
+        padding: 6px 6px 6px 8px;
+        margin: 0 0 0 0;
     }
 
         .blog-two__cats a:hover {
@@ -3893,7 +3891,7 @@ h6 {
 }
 
 .section-title__tagline {
-    font-size: 24px;
+    font-size: 45px;
     line-height: 40px;
     text-transform: capitalize;
     color: #84231c;
@@ -3928,7 +3926,7 @@ h6 {
 /* Very small screens (≤ 400px) */
 @media (max-width: 400px) {
     .section-title__tagline {
-        font-size: 14px;
+        font-size: 26px;
         line-height: 22px;
         margin-top: 20px;
     }
@@ -3961,7 +3959,7 @@ h6 {
 
 @media (max-width: 767px) {
     .section-title__title {
-        font-size: 30px;
+        font-size: 25px;
         line-height: 40px;
     }
 
@@ -7122,7 +7120,7 @@ body.megamenu-popup-active {
 
 .service-three__text {
     font-weight: 400;
-    width: 350px;
+    width: 320px;
     margin: 0 auto 32px;
     transition: 500ms ease;
 }
@@ -7905,7 +7903,7 @@ body.megamenu-popup-active {
 }
 
 .about-two__about-box__icon {
-    font-size: 50px;
+    font-size: 40px;
     line-height: 50px;
     color: #84231c;
     margin-right: 29px;
@@ -7919,7 +7917,7 @@ body.megamenu-popup-active {
     }
 
 .about-two__about-box__title {
-    font-size: 32px;
+    font-size: 25px;
     font-weight: 700;
     line-height: 26px;
     margin: 0;
