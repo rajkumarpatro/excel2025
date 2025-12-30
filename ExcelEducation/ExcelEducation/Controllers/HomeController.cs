@@ -43,13 +43,12 @@ namespace ExcelEducation.Controllers
             return PartialView("_Flash", flash);
         }
 
-
-        public async Task<ActionResult> LoadNews()
+        [ChildActionOnly]
+        public ActionResult LoadNews()
         {
-            List<LatestUpdatesModel> news = await LatestUpdatesDB.LoadLatestUpdates();
+            var news = LatestUpdatesDB.LoadLatestUpdates();
             return PartialView("_News", news);
         }
-
         public async Task<ActionResult> GetBatch(int courseId)
         {
             return Json(await LatestUpdatesDB.GetBatch(courseId), JsonRequestBehavior.AllowGet);

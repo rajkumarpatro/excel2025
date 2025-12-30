@@ -14,7 +14,7 @@ namespace DAL
 {
     public class LatestUpdatesDB
     {
-        public async static Task<List<LatestUpdatesModel>> LoadLatestUpdates()
+        public static List<LatestUpdatesModel> LoadLatestUpdates()
         {
             using (IDbConnection db = new SqlConnection(Connection.MyConnection()))
             {
@@ -27,10 +27,16 @@ namespace DAL
                 dp.Add("NEWS_LINK", "");
                 dp.Add("NEWS_LINKTYPE", "");
                 dp.Add("ACTION", "4");
-                var res = await db.QueryAsync<LatestUpdatesModel>("SP_LATEST_UPDATES", dp, commandType: CommandType.StoredProcedure);
+
+                var res = db.Query<LatestUpdatesModel>(
+                    "SP_LATEST_UPDATES",
+                    dp,
+                    commandType: CommandType.StoredProcedure);
+
                 return res.ToList();
             }
         }
+
 
         public async static Task<bool> AddRecord(LatestUpdatesModel param)
         {

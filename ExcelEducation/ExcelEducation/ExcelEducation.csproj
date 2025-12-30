@@ -146,8 +146,6 @@
     </Compile>
     <Compile Include="Helpers\DDList.cs" />
     <Compile Include="Helpers\FileHandler.cs" />
-    <Compile Include="obj\Debug\.NETFramework,Version=v4.7.2.AssemblyAttributes.cs" />
-    <Compile Include="obj\Release\.NETFramework,Version=v4.7.2.AssemblyAttributes.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

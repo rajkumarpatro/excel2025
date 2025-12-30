@@ -1,8 +1,11 @@
 ﻿using DAL;
 using DAL.Models;
+using Dapper;
 using ExcelEducation.Helpers;
 using System;
 using System.Collections.Generic;
+using System.Data;
+using System.Data.SqlClient;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Web;
@@ -30,10 +33,22 @@ namespace ExcelEducation.Controllers
             return View("LatestUpdates", ob);
         }
 
-        public async Task<ActionResult> loadRecord()
+        public static List<LatestUpdatesModel> LoadLatestUpdates()
         {
-            return Json(new { data = await LatestUpdatesDB.LoadLatestUpdates() }, JsonRequestBehavior.AllowGet);
+            using (IDbConnection db = new SqlConnection(Connection.MyConnection()))
+            {
+                var dp = new DynamicParameters();
+                dp.Add("ACTION", "4");
+
+                return db.Query<LatestUpdatesModel>(
+                    "SP_LATEST_UPDATES",
+                    dp,
+                    commandType: CommandType.StoredProcedure
+                ).ToList();
+            }
         }
+
+
 
         public async Task<bool> addEditRecord(LatestUpdatesModel param)
         {
