@@ -871,7 +871,9 @@
                             </div><!-- /.blog-image -->
                             <div class="blog-two__content">
                                 <div class="blog-two__top-meta">
-                                    <div class="blog-two__date">@blog.BlogDate</div><!-- /.blog-date -->
+                                    <div class="blog-two__date">
+                                        @(Convert.ToDateTime(blog.BlogDate).ToString("dd-MM-yyyy"))
+                                    </div><!-- /.blog-date -->
                                 </div>
                                 <h3 class="blog-two__title">
                                     <a href="blogdetails?blogid=@blog.BlogId">@blog.BlogName</a>
