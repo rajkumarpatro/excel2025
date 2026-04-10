@@ -5,7 +5,7 @@
 }
 
 @* Razor View: Views/Contact/Index.cshtml *@
- 
+
 <section class="page-header page-header--bg-two" style="background: url(/Content/home/images/backgrounds/page-header-bg-1-2.jpg) " data-jarallax data-speed="0.3">
     <div class="page-header__overlay"></div>
     <div class="container text-center">
@@ -24,37 +24,43 @@
             <h5 class="section-title__tagline">Contact with Us</h5>
             <h2 class="section-title__title">Feel Free to Write us Anytime</h2>
         </div>
-
         <div class="contact-one__form-box text-center">
-            <form asp-action="Index" method="post" class="contact-one__form contact-form-validated" novalidate>
+
+            @using (Html.BeginForm("Index", "Contact", FormMethod.Post, new { @class = "contact-one__form contact-form-validated", novalidate = "novalidate" }))
+            {
                 <div class="row">
                     <div class="col-md-6">
                         <div class="contact-one__input-box">
-                            <input asp-for="Name" class="form-control" placeholder="Your Name" />
-                            <span asp-validation-for="Name" class="text-danger"></span>
+                            @Html.TextBoxFor(m => m.Name, new { @class = "form-control", placeholder = "Your Name" })
+                            @Html.ValidationMessageFor(m => m.Name, "", new { @class = "text-danger" })
                         </div>
                     </div>
+
                     <div class="col-md-6">
                         <div class="contact-one__input-box">
-                            <input asp-for="Email" class="form-control" placeholder="Email Address" />
-                            <span asp-validation-for="Email" class="text-danger"></span>
+                            @Html.TextBoxFor(m => m.Email, new { @class = "form-control", placeholder = "Email Address" })
+                            @Html.ValidationMessageFor(m => m.Email, "", new { @class = "text-danger" })
                         </div>
                     </div>
+
                     <div class="col-md-6">
                         <div class="contact-one__input-box">
-                            <input asp-for="Phone" class="form-control" placeholder="Phone" />
+                            @Html.TextBoxFor(m => m.Phone, new { @class = "form-control", placeholder = "Phone" })
                         </div>
                     </div>
+
                     <div class="col-md-6">
                         <div class="contact-one__input-box">
-                            <input asp-for="Subject" class="form-control" placeholder="Subject" />
+                            @Html.TextBoxFor(m => m.Subject, new { @class = "form-control", placeholder = "Subject" })
                         </div>
                     </div>
+
                     <div class="col-md-12">
                         <div class="contact-one__input-box text-message-box">
-                            <textarea asp-for="Message" class="form-control" placeholder="Write a Message"></textarea>
-                            <span asp-validation-for="Message" class="text-danger"></span>
+                            @Html.TextAreaFor(m => m.Message, new { @class = "form-control", placeholder = "Write a Message" })
+                            @Html.ValidationMessageFor(m => m.Message, "", new { @class = "text-danger" })
                         </div>
+
                         <div class="contact-one__btn-box mt-3">
                             <button type="submit" class="eduact-btn eduact-btn-second">
                                 <span class="eduact-btn__curve"></span>
@@ -63,12 +69,10 @@
                         </div>
                     </div>
                 </div>
-            </form>
-
-            @if (ViewBag.MessageSent == true)
-            {
-                <div class="alert alert-success mt-3">Your message has been sent successfully!</div>
             }
+
+
+
         </div>
     </div>
 </section>
@@ -94,12 +98,32 @@
                     </a>
                 </h4>
             </li>
- 
+
         </ul>
     </div>
 </section>
 
-
-
 @section Scripts {
+    <script>
+        $("#btnSubmit").click(function () {
+
+            $.ajax({
+                url: '/Contact/SaveData',
+                type: 'POST',
+                data: {},
+
+                success: function (res) {
+                    console.log(res); // 👈 check karo console me kya aa raha
+                    alert(res.message);
+                },
+
+                error: function (err) {
+                    console.log(err);
+                    alert("Error aa gaya");
+                }
+            });
+
+        });
+    </script>
 }
+

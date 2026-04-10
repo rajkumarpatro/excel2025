@@ -1,0 +1,61 @@
+﻿@{
+    ViewBag.Title = "Contact List";
+    Layout = "~/Views/Shared/_LayoutHome.cshtml";
+}
+
+<!-- DataTable CSS -->
+<link rel="stylesheet" href="@Url.Content("~/Content/admin/assets/css/plugins/dataTables.bootstrap4.min.css")">
+
+<div class="row">
+    <div class="col-sm-12">
+        <div class="card">
+
+            <div class="card-header">
+                <h5>Contact List</h5>
+            </div>
+
+            <div class="card-body">
+                <div class="dt-responsive table-responsive">
+                    <table id="gridtable" class="table table-bordered">
+                        <thead>
+                            <tr>
+                                <th>Name</th>
+                                <th>Email</th>
+                                <th>Phone</th>
+                                <th>Subject</th>
+                                <th>Message</th>
+                            </tr>
+                        </thead>
+                    </table>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+<!-- Scripts -->
+<script src="@Url.Content("~/Content/admin/assets/js/plugins/jquery.dataTables.min.js")"></script>
+<script src="@Url.Content("~/Content/admin/assets/js/plugins/dataTables.bootstrap4.min.js")"></script>
+
+<script>
+    $(document).ready(function () {
+
+        $('#gridtable').DataTable({
+            "ajax": {
+                "url": "/Contact/LoadContactList",
+                "type": "GET",
+                "datatype": "json"
+            },
+
+            "columns": [
+                { "data": "Name" },
+                { "data": "Email" },
+                { "data": "Phone" },
+                { "data": "Subject" },
+                { "data": "Message" }
+            ]
+        });
+
+    });
+</script>
