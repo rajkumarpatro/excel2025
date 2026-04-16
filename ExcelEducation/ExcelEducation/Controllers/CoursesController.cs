@@ -15,5 +15,34 @@ namespace ExcelEducation.Controllers
             var courses = await OnlineCourseDB.LoadAllCoursesAsync();
             return View(courses);
         }
+
+
+        public ActionResult CaFoundationRaipur()
+        {
+            return View();
+        }
+        public ActionResult CaFoundationChhattisgarh()
+        {
+            return View();
+        }
+        public ActionResult CaIntermediateRaipur()
+        {
+            return View();
+        }
+        public ActionResult CsCoachingRaipur()
+        {
+            return View();
+        }
+        public ActionResult Results()
+        {
+            return View();
+        }
+
+        public ActionResult About()
+        {
+            return View();
+        }
     }
-}
+     
+
+    }

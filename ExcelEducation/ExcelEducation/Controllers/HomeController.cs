@@ -8,6 +8,7 @@ using System.Web.Services.Description;
 using DAL;
 using DAL.Models;
 
+
 namespace ExcelEducation.Controllers
 {
     public class HomeController : Controller
@@ -49,6 +50,11 @@ namespace ExcelEducation.Controllers
             var news = LatestUpdatesDB.LoadLatestUpdates();
             return PartialView("_News", news);
         }
+        public ActionResult FAQS()
+        {
+            return View();
+        }
+        
         public async Task<ActionResult> GetBatch(int courseId)
         {
             return Json(await LatestUpdatesDB.GetBatch(courseId), JsonRequestBehavior.AllowGet);

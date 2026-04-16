@@ -12,7 +12,7 @@ namespace ExcelEducation.Controllers
         private readonly object blogRepository;
 
         // GET: BlogDetails
-        public async Task<ActionResult> Index()
+        public async Task<ActionResult> Index() 
         { 
             var blogid = Request.QueryString["blogid"];
             var recentblogs = await ExcelInfoDB.GetBlogsAsync();
