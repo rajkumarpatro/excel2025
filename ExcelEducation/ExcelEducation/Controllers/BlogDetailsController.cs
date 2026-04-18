@@ -10,8 +10,7 @@ namespace ExcelEducation.Controllers
     public class BlogDetailsController : Controller
     {
         private readonly object blogRepository;
-
-        // GET: BlogDetails
+         
         public async Task<ActionResult> Index() 
         { 
             var blogid = Request.QueryString["blogid"];
