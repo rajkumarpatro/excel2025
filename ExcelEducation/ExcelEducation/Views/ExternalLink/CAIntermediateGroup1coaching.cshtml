@@ -1,0 +1,230 @@
+﻿@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    ViewData["Title"] = "Best CA Intermediate Group 1 Coaching in Raipur | Top CA Inter Classes";
+    ViewData["Description"] = "Join the best CA Intermediate Group 1 coaching in Raipur with expert faculty, mock tests, mentorship, and highest pass rate. Result-oriented classes for May/Nov 2026.";
+    ViewData["Keywords"] = "CA Intermediate Group 1 coaching, CA Inter Group 1 classes in Raipur, Best CA Inter coaching, CA coaching institute, Expert CA Inter classes, Trusted CA coaching";
+}
+
+<!-- Google Fonts & Bootstrap Icons -->
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+
+<style>
+    :root {
+        --primary-color: #2575fc;
+        --secondary-color: #6a11cb;
+        --accent-color: #ff9800;
+        --glass-bg: rgba(255, 255, 255, 0.1);
+        --glass-border: rgba(255, 255, 255, 0.2);
+    }
+
+    body {
+        font-family: 'Poppins', sans-serif;
+        background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+        color: #333;
+    }
+
+    /* Hero Section with Glassmorphism */
+    .hero-section {
+        background: linear-gradient(to right, var(--secondary-color), var(--primary-color));
+        padding: 60px 0;
+        color: white;
+        border-radius: 0 0 50px 50px;
+        margin-bottom: 50px;
+        box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    }
+
+    .badge-premium {
+        background: var(--accent-color);
+        color: #fff;
+        padding: 5px 15px;
+        border-radius: 20px;
+        font-size: 0.9rem;
+        text-transform: uppercase;
+        font-weight: 700;
+        margin-bottom: 15px;
+        display: inline-block;
+    }
+
+    .glass-card {
+        background: white;
+        border: 1px solid var(--glass-border);
+        border-radius: 20px;
+        padding: 30px;
+        transition: transform 0.3s ease;
+        height: 100%;
+        position: relative;
+        overflow: hidden;
+    }
+
+        .glass-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 35px rgba(0,0,0,0.1);
+        }
+
+    .subject-icon {
+        font-size: 2.5rem;
+        margin-bottom: 20px;
+        display: block;
+    }
+
+    .btn-enroll {
+        background: #fff;
+        color: var(--primary-color);
+        font-weight: 700;
+        border-radius: 30px;
+        padding: 15px 40px;
+        border: none;
+        transition: all 0.3s ease;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+    }
+
+        .btn-enroll:hover {
+            background: #f8f9fa;
+            color: var(--secondary-color);
+            transform: scale(1.05);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+        }
+
+    .section-title {
+        font-weight: 700;
+        margin-bottom: 40px;
+        position: relative;
+    }
+
+        .section-title::after {
+            content: '';
+            width: 60px;
+            height: 4px;
+            background: var(--primary-color);
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+    .highlight-text {
+        color: var(--primary-color);
+        font-weight: 600;
+    }
+</style>
+
+<div class="container-fluid p-0">
+    <!-- Hero Section -->
+    <section class="hero-section text-center">
+        <div class="container">
+            <span class="badge-premium">Premium Learning Experience</span>
+            <h1 class="display-4 text-white fw-bold mb-3">Best CA Intermediate Group 1 Coaching</h1>
+            <p class="lead mb-4">India’s <span class="fw-bold">Top</span> Expert Faculty for <span class="fw-bold text-warning">AIR Rankers</span>. May/Nov 2026 Attempt ke liye <span class="fw-bold">Proven</span> Structured Preparation.</p>
+
+            <div class="d-flex flex-wrap justify-content-center gap-3">
+                <button class="btn btn-enroll shadow" onclick="location.href='#enroll'">Enroll Today</button>
+                <button class="btn btn-outline-light rounded-pill px-4" onclick="location.href='#demo'">Book Free Demo</button>
+            </div>
+
+            <div class="mt-4">
+                <span class="me-3"><i class="bi bi-check-circle-fill"></i> Highest Pass Rate</span>
+                <span><i class="bi bi-check-circle-fill"></i> Guaranteed Syllabus Completion</span>
+            </div>
+        </div>
+    </section>
+
+    <div class="container mb-5">
+        <div class="row text-center mb-5">
+            <div class="col-12">
+                <h2 class="section-title">Hamare <span class="highlight-text">Advanced</span> Subjects</h2>
+                <p class="text-muted">Smart Learning approach jo aapki Career-Focused taiyari ko asaan banaye.</p>
+            </div>
+
+            <!-- Subject 1 -->
+            <div class="col-md-4 mb-4">
+                <div class="glass-card shadow-sm">
+                    <div class="subject-icon">📊</div>
+                    <h4 class="fw-bold">Advanced Accounting</h4>
+                    <p class="text-muted">Professional standards ke saath <span class="highlight-text">Result-Oriented</span> coaching.</p>
+                    <ul class="list-unstyled text-start">
+                        <li>✅ <span class="fw-bold">Proven</span> Practice Sessions</li>
+                        <li>✅ Full ICAI Module Coverage</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Subject 2 -->
+            <div class="col-md-4 mb-4">
+                <div class="glass-card shadow-sm">
+                    <div class="subject-icon">⚖️</div>
+                    <h4 class="fw-bold">Corporate & Laws</h4>
+                    <p class="text-muted"><span class="highlight-text">Interactive</span> classes complex provisions ko samjhne ke liye.</p>
+                    <ul class="list-unstyled text-start">
+                        <li>✅ <span class="fw-bold">Expert</span> Case Study Analysis</li>
+                        <li>✅ Daily Writing Practice</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Subject 3 -->
+            <div class="col-md-4 mb-4">
+                <div class="glass-card shadow-sm">
+                    <div class="subject-icon">💰</div>
+                    <h4 class="fw-bold">Taxation</h4>
+                    <p class="text-muted"><span class="highlight-text">Personalized</span> guidance latest amendments ke saath.</p>
+                    <ul class="list-unstyled text-start">
+                        <li>✅ Conceptual Clarity Guaranteed</li>
+                        <li>✅ Weekly <span class="fw-bold">Top</span> Mock Tests</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- Features Section -->
+        <div class="row mt-5 g-4 text-center">
+            <div class="col-12 mb-2">
+                <h2 class="fw-bold">Trusted by Thousands of Students</h2>
+                <p>Humari <span class="highlight-text">Live & Interactive</span> coaching ki visheshitayein</p>
+            </div>
+
+            <div class="col-md-3">
+                <div class="p-4 border rounded-4 bg-white h-100">
+                    <i class="bi bi-play-circle-fill text-primary mb-3 d-block" style="font-size: 2.5rem;"></i>
+                    <h5 class="fw-bold">Live Classes</h5>
+                    <p class="small text-muted">Join Live classes with 24/7 Recorded Backup.</p>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="p-4 border rounded-4 bg-white h-100">
+                    <i class="bi bi-mortarboard-fill text-primary mb-3 d-block" style="font-size: 2.5rem;"></i>
+                    <h5 class="fw-bold">Scholarship</h5>
+                    <p class="small text-muted">Affordable fees with merit-based scholarship options.</p>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="p-4 border rounded-4 bg-white h-100">
+                    <i class="bi bi-person-workspace text-primary mb-3 d-block" style="font-size: 2.5rem;"></i>
+                    <h5 class="fw-bold">Expert Guidance</h5>
+                    <p class="small text-muted">Talk to Counselor for free career roadmap.</p>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="p-4 border rounded-4 bg-white h-100">
+                    <i class="bi bi-trophy-fill text-primary mb-3 d-block" style="font-size: 2.5rem;"></i>
+                    <h5 class="fw-bold">Successful Path</h5>
+                    <p class="small text-muted">Join New Batch & start your journey to CA.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Call to Action Section -->
+        <div class="row mt-5">
+            <div class="col-12 text-center p-5 bg-dark text-white rounded-5 shadow-lg">
+                <h2 class="fw-bold mb-3">Ready to Start Preparation?</h2>
+                <p class="mb-4">Reserve Your Seat today and get access to exclusive study material.</p>
+                <div class="d-flex flex-wrap justify-content-center gap-3">
+                    <a href="#" class="btn btn-primary btn-lg px-5 rounded-pill">Successful Apply Now</a>
+                    <a href="#" class="btn btn-outline-light btn-lg px-5 rounded-pill">Download Brochure</a>
+                </div>
+                <p class="mt-4 mb-0"><i class="bi bi-telephone-outbound"></i> Need help? <span class="text-warning">Get Free Guidance</span> from our mentors.</p>
+            </div>
+        </div>
+    </div>
+</div>

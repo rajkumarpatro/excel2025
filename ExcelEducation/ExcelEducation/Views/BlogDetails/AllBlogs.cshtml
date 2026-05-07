@@ -1,0 +1,75 @@
+﻿@model DAL.Models.BlogModel
+
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    ViewBag.Title = "All Blogs";
+}
+
+@if (Model?.Blogs != null && Model.Blogs.Any())
+{
+    <section class="blog-two py-5">
+        <div class="container"> 
+            <div class="section-title text-center mb-5">
+                <h5 class="section-title__tagline">All Blog</h5>
+                
+            </div>
+
+            <div class="row">
+
+                @foreach (var blog in Model.Blogs)
+                {
+                    <div class="col-xl-4 col-md-6 mb-4">
+                        <div class="blog-two__item shadow-sm rounded overflow-hidden h-100">
+
+                            <div class="blog-two__image position-relative">
+                                <img src="@blog.BlogPhoto"
+                                     alt="@blog.BlogName"
+                                     class="img-fluid w-100"
+                                     style="height:250px; object-fit:cover;" />
+
+                                <a href="@Url.Action("BlogDetails", "Home", new { blogid = blog.BlogId })"
+                                   class="stretched-link"></a>
+                            </div>
+
+                            <div class="blog-two__content p-3">
+
+                                <div class="blog-two__top-meta mb-2">
+                                    <div class="blog-two__date text-muted small">
+                                        @DateTime.Parse(blog.BlogDate).ToString("dd/MM/yyyy")
+                                    </div>
+                                </div>
+
+                                <h3 class="blog-two__title h5 mb-3">
+                                    <a href="@Url.Action("BlogDetails", "Home", new { blogid = blog.BlogId })"
+                                       class="text-dark text-decoration-none">
+                                        @blog.BlogName
+                                    </a>
+                                </h3>
+
+                                <div class="blog-two__meta">
+                                    <a class="btn btn-sm btn-primary"
+                                       href="@Url.Action("BlogDetails", "Home", new { blogid = blog.BlogId })">
+                                        Read More
+                                    </a>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                }
+
+            </div>
+        </div>
+    </section>
+}
+else
+{
+    <div class="container text-center py-5">
+        <h3>No blogs found.</h3>
+    </div>
+}
+
+@section Scripts{
+    <script src="@Url.Content("~/Scripts/custom/Home/Home.js")"></script>
+}
+ 

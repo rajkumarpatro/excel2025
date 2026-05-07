@@ -7,7 +7,7 @@
 }
 
 
-<section class="page-header page-header--bg-two" style="background: url(/Content/home/images/backgrounds/page-header-bg-1-2.jpg) " data-jarallax data-speed="0.3">
+@*<section class="page-header page-header--bg-two" style="background: url(/Content/home/images/backgrounds/page-header-bg-1-2.jpg) " data-jarallax data-speed="0.3">
     <div class="page-header__overlay"></div>
     <div class="container text-center">
         <h2 class="page-header__title">BlogDetails</h2>
@@ -16,7 +16,7 @@
             <li><span>BlogDetails</span></li>
         </ul>
     </div>
-</section>
+</section>*@
  
 
 
@@ -28,7 +28,7 @@
 
                 <div class="blog-details__content">
                     <div class="blog-details__img">
-                        <img src="@Model.Blog.BlogPhoto" alt="@Model.Blog.BlogId">
+                        @*<img src="@Model.Blog.BlogPhoto" alt="@Model.Blog.BlogId">*@
                     </div><!-- details-image -->
                     <div class="blog-details__meta">
                         <div class="blog-details__meta__date"><i class="icon-clock"></i>@DateTime.Parse(Model.Blog.BlogDate).ToString("dd/MM/yyyy")</div>

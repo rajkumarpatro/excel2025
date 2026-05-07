@@ -1,16 +1,18 @@
 ﻿using DAL;
 using DAL.Models;
 using System;
+using System.Linq;
 using System.Threading.Tasks;
 using System.Web;
 using System.Web.Mvc;
+using System.Collections.Generic; 
 
 namespace ExcelEducation.Controllers
 {
     public class BlogDetailsController : Controller
     {
-        private readonly object blogRepository;
-         
+        private readonly object blogRepository; 
+
         public async Task<ActionResult> Index() 
         { 
             var blogid = Request.QueryString["blogid"];
@@ -24,5 +26,24 @@ namespace ExcelEducation.Controllers
             };
             return View("index",blogDetailsViewModel);
         }
+
+
+        public async Task<ActionResult> AllBlogs()
+        {
+            var blogs = await ExcelInfoDB.GetBlogsAsync();
+
+            var sortedBlogs = blogs?
+                .OrderByDescending(b => b.BlogDate)
+                .ToList();
+
+            BlogModel model = new BlogModel
+            {
+                Blogs = sortedBlogs
+            };
+
+            return View(model);
+        }
+
+
     }
 }

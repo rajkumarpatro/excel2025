@@ -1,0 +1,192 @@
+﻿@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    ViewData["Title"] = "Best CA Foundation Coaching in Jabalpur | Top CA Institute";
+    ViewData["Description"] = "Searching for the Best CA Foundation coaching in Jabalpur? Excel Educational Institution offers expert mentorship, smart classes, and top results for CA aspirants. Join Now!";
+    ViewData["Keywords"] = "Best CA Foundation coaching in Jabalpur, CA classes in Jabalpur, Top CA Institute Jabalpur, CA coaching near me, Jabalpur CA Foundation classes";
+}
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+
+<style>
+    :root {
+        --jbp-blue: #002b5b; /* Deep Professional Blue */
+        --jbp-gold: #e1b12c; /* Marble City Gold Accent */
+        --glass-bg: rgba(255, 255, 255, 0.1);
+        --glass-border: rgba(255, 255, 255, 0.2);
+    }
+
+    body {
+        font-family: 'Poppins', sans-serif;
+        background-color: #f1f2f6;
+        color: #2f3542;
+    }
+
+    /* Animated Hero Section */
+    .hero-jabalpur {
+        background: linear-gradient(135deg, var(--jbp-blue) 0%, #001a33 100%);
+        padding: 100px 0;
+        color: white;
+        border-radius: 0 0 100px 0;
+        position: relative;
+        overflow: hidden;
+    }
+
+        .hero-jabalpur::before {
+            content: "";
+            position: absolute;
+            top: -50%;
+            left: -10%;
+            width: 100%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(225, 177, 44, 0.1) 0%, transparent 60%);
+            animation: rotate-bg 25s linear infinite;
+        }
+
+    @@keyframes rotate-bg {
+        from {
+            transform: rotate(0deg);
+        }
+
+        to {
+            transform: rotate(360deg);
+        }
+    }
+
+    /* Glassmorphism Feature Cards */
+    .glass-card-jbp {
+        background: rgba(255, 255, 255, 0.8);
+        backdrop-filter: blur(15px);
+        -webkit-backdrop-filter: blur(15px);
+        border: 1px solid var(--glass-border);
+        border-radius: 30px;
+        padding: 40px;
+        transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        height: 100%;
+        box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+    }
+
+        .glass-card-jbp:hover {
+            transform: translateY(-15px);
+            background: #ffffff;
+            box-shadow: 0 25px 50px rgba(0, 43, 91, 0.1);
+            border-color: var(--jbp-gold);
+        }
+
+    .icon-circle-jbp {
+        width: 70px;
+        height: 70px;
+        background: var(--jbp-blue);
+        color: white;
+        border-radius: 22px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 25px;
+        font-size: 1.8rem;
+        transition: 0.5s;
+    }
+
+    .glass-card-jbp:hover .icon-circle-jbp {
+        background: var(--jbp-gold);
+        transform: scale(1.1) rotate(10deg);
+    }
+
+    /* Action Buttons */
+    .btn-jbp {
+        background: var(--jbp-gold);
+        color: #000;
+        font-weight: 700;
+        padding: 15px 40px;
+        border-radius: 50px;
+        text-transform: uppercase;
+        border: none;
+        transition: 0.3s;
+        letter-spacing: 1px;
+    }
+
+        .btn-jbp:hover {
+            background: #c99c1f;
+            box-shadow: 0 10px 20px rgba(225, 177, 44, 0.4);
+            transform: translateY(-3px);
+            color: #000;
+        }
+
+    .quick-link-jbp {
+        background: #f8f9fa;
+        border-radius: 15px;
+        padding: 15px 25px;
+        margin-bottom: 10px;
+        display: flex;
+        align-items: center;
+        text-decoration: none;
+        color: var(--jbp-blue);
+        font-weight: 600;
+        transition: 0.3s;
+    }
+
+        .quick-link-jbp:hover {
+            background: var(--jbp-blue);
+            color: white;
+            transform: translateX(10px);
+        }
+</style>
+
+<div class="container-fluid p-0">
+    <section class="hero-jabalpur text-center text-lg-start">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-7">
+                    <span class="badge bg-light text-dark mb-3 px-3 py-2 rounded-pill fw-bold shadow-sm">
+                        <i class="bi bi-geo-alt-fill text-danger"></i> Jabalpur's #1 Choice for CA Foundation
+                    </span>
+                    <h1 class="display-3 text-white fw-bold mb-3">Best CA Foundation Coaching in Jabalpur</h1>
+                    <p class="lead mb-4 opacity-75">Start your journey toward the CA prefix with <span class="fw-bold">Excel Educational Institution</span>. Experience Jabalpur's most <span class="fw-bold text-warning">Rank-Oriented</span> coaching.</p>
+
+                    <div class="d-flex flex-wrap justify-content-center justify-content-lg-start gap-3">
+                        <a href="https://wa.me/919926821000" class="btn btn-jbp shadow-lg">WhatsApp Inquiry</a>
+                        <a href="tel:07714095300" class="btn btn-outline-light rounded-pill px-4 fw-bold">Call Counselor</a>
+                    </div>
+                </div>
+                <div class="col-lg-5 mt-5 mt-lg-0">
+                    <div class="glass-card-jbp bg-white p-4">
+                        <h4 class="fw-bold mb-4 text-center">Contact Details</h4>
+                        <a href="tel:919926821000" class="quick-link-jbp">
+                            <i class="bi bi-telephone-outbound-fill me-3 fs-4"></i> 9926821000
+                        </a>
+                        <a href="mailto:eeiraipur@gmail.com" class="quick-link-jbp">
+                            <i class="bi bi-envelope-paper-fill me-3 fs-4"></i> eeiraipur@gmail.com
+                        </a>
+                        <a href="https://www.exceledu.co.in" class="quick-link-jbp">
+                            <i class="bi bi-globe2 me-3 fs-4"></i> www.exceledu.co.in
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="container my-5 py-5">
+        <div class="text-center mb-5">
+            <h2 class="fw-bold display-5">Kyun Chunein <span class="text-primary">Excel</span> in Jabalpur?</h2>
+            <p class="text-muted">A legacy of excellence in professional commerce education.</p>
+        </div>
+
+        <div class="row g-4">
+            <div class="col-md-4">
+                <div class="glass-card-jbp">
+                    <div class="icon-circle-jbp"><i class="bi bi-book-half"></i></div>
+                    <h4 class="fw-bold">Quality Materials</h4>
+                    <p class="text-muted">Jabalpur ke students ke liye simplified notes aur ICAI pattern par based updated curriculum.</p>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="glass-card-jbp">
+                    <div class="icon-circle-jbp"><i class="bi bi-person-video3"></i></div>
+                    <h4 class="fw-bold">Smart Classes</h4>
+                    <p class="text-muted">Live interactive sessions ke saath recorded backup support, taaki koi topic na choote.</p>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="glass-card-jbp">
+                    <div class="icon-circle-jbp">

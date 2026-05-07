@@ -858,7 +858,7 @@
                 <h2 class="section-title__title">Latest Updates & Articles</h2>
             </div><!-- section-title -->
             <div class="row">
-                @foreach (var blog in Model.Blogs)
+                @foreach (var blog in Model.Blogs.Take(6))
                 {
                     <div class="col-xl-4 col-md-6 wow fadeInUp" data-wow-delay="200ms">
                         <div class="blog-two__item">

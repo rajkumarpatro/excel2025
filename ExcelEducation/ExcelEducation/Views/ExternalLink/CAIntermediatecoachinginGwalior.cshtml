@@ -1,0 +1,140 @@
+﻿@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    ViewData["Title"] = "Best CA Intermediate Coaching in Gwalior | Top CA Institute";
+    ViewData["Description"] = "Searching for the Best CA Intermediate coaching in Gwalior? Excel Educational Institution offers expert mentorship for Group 1 & 2, smart classes, and top results. Enroll Today!";
+    ViewData["Keywords"] = "CA Intermediate coaching in Gwalior, CA Inter classes Gwalior, Best CA Institute Gwalior, CA coaching near me, Gwalior CA Intermediate classes";
+}
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+
+<style>
+    :root {
+        --gwalior-blue: #003366;
+        --gwalior-gold: #d4af37;
+        --glass-bg: rgba(255, 255, 255, 0.8);
+        --glass-border: rgba(255, 255, 255, 0.4);
+    }
+
+    body {
+        font-family: 'Poppins', sans-serif;
+        background-color: #f8f9fa;
+        color: #333;
+    }
+
+    /* Animated Hero Section */
+    .hero-gwalior {
+        background: linear-gradient(135deg, var(--gwalior-blue) 0%, #001a33 100%);
+        padding: 100px 0;
+        color: white;
+        border-radius: 0 0 100px 0;
+        position: relative;
+        overflow: hidden;
+    }
+
+        .hero-gwalior::before {
+            content: "";
+            position: absolute;
+            top: -50%;
+            left: -10%;
+            width: 100%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(212, 175, 55, 0.15) 0%, transparent 60%);
+            animation: rotate-bg 20s linear infinite;
+        }
+
+    @@keyframes rotate-bg {
+        from {
+            transform: rotate(0deg);
+        }
+
+        to {
+            transform: rotate(360deg);
+        }
+    }
+
+    /* Glassmorphism Feature Cards */
+    .glass-card-gwalior {
+        background: var(--glass-bg);
+        backdrop-filter: blur(15px);
+        -webkit-backdrop-filter: blur(15px);
+        border: 1px solid var(--glass-border);
+        border-radius: 30px;
+        padding: 40px;
+        transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        height: 100%;
+        box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+    }
+
+        .glass-card-gwalior:hover {
+            transform: translateY(-15px);
+            background: #ffffff;
+            box-shadow: 0 25px 50px rgba(0, 51, 102, 0.1);
+            border-color: var(--gwalior-gold);
+        }
+
+    .icon-circle-gwalior {
+        width: 70px;
+        height: 70px;
+        background: var(--gwalior-blue);
+        color: white;
+        border-radius: 20px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 25px;
+        font-size: 1.8rem;
+        transition: 0.5s;
+    }
+
+    .glass-card-gwalior:hover .icon-circle-gwalior {
+        background: var(--gwalior-gold);
+        transform: scale(1.1) rotate(360deg);
+        color: #000;
+    }
+
+    /* Action Buttons */
+    .btn-gwalior {
+        background: var(--gwalior-gold);
+        color: #000;
+        font-weight: 700;
+        padding: 15px 40px;
+        border-radius: 50px;
+        text-transform: uppercase;
+        border: none;
+        transition: 0.3s;
+        letter-spacing: 1px;
+    }
+
+        .btn-gwalior:hover {
+            background: #b38b2d;
+            box-shadow: 0 10px 20px rgba(212, 175, 55, 0.4);
+            transform: translateY(-3px);
+            color: #fff;
+        }
+
+    .contact-item-blp {
+        background: rgba(255, 255, 255, 0.1);
+        padding: 15px 25px;
+        border-radius: 15px;
+        margin-bottom: 15px;
+        display: flex;
+        align-items: center;
+        border: 1px solid rgba(255, 255, 255, 0.2);
+        transition: 0.3s;
+        cursor: pointer;
+    }
+
+        .contact-item-blp:hover {
+            background: rgba(255, 255, 255, 0.2);
+            transform: translateX(10px);
+            border-color: var(--gwalior-gold);
+        }
+</style>
+
+<div class="container-fluid p-0">
+    <section class="hero-gwalior text-center text-lg-start">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-7">
+                    <span class="badge bg-gold text-dark mb-3 px-3 py-2 rounded-

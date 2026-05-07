@@ -15,6 +15,22 @@ namespace ExcelEducation.Controllers
 {
     public class LatestUpdatesController : Controller
     {
+
+        [HttpGet]
+        public ActionResult loadRecord()  
+        {
+            try
+            { 
+                var data = LoadLatestUpdates();
+                 
+                return Json(new { data = data }, JsonRequestBehavior.AllowGet);
+            }
+            catch (Exception ex)
+            { 
+                return Json(new { error = ex.Message }, JsonRequestBehavior.AllowGet);
+            }
+        }
+
         // GET: LatestUpdates
         public ActionResult Index()
         {

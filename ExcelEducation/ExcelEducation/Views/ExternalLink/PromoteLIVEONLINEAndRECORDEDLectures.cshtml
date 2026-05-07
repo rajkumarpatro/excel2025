@@ -1,0 +1,199 @@
+﻿@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    ViewData["Title"] = "Live Online & Recorded Lectures | Excel Educational Institution";
+    ViewData["Description"] = "Experience the future of CA, CS, and CMA coaching with our Live Online & HD Recorded Lectures. Flexible, interactive, and result-oriented learning anywhere in India.";
+    ViewData["Keywords"] = "Live Online Coaching CA CS CMA, Recorded Lectures for CA CS CMA, Best Online Classes India, Hybrid Professional Education, Video Classes for Students";
+}
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+
+<style>
+    :root {
+        --tech-blue: #0ea5e9; /* Cyber Blue */
+        --tech-purple: #8b5cf6; /* Tech Purple */
+        --glass-bg: rgba(255, 255, 255, 0.05);
+        --glass-border: rgba(255, 255, 255, 0.1);
+    }
+
+    body {
+        font-family: 'Poppins', sans-serif;
+        background-color: #0f172a; /* Midnight Blue Background */
+        color: #f1f5f9;
+    }
+
+    /* Animated Hero Section */
+    .hero-online {
+        background: radial-gradient(circle at 50% 50%, #1e293b 0%, #0f172a 100%);
+        padding: 120px 0;
+        position: relative;
+        overflow: hidden;
+        border-bottom: 1px solid var(--glass-border);
+    }
+
+        .hero-online::after {
+            content: "";
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            background-image: linear-gradient(rgba(14, 165, 233, 0.05) 1px, transparent 1px), linear-gradient(90deg, rgba(14, 165, 233, 0.05) 1px, transparent 1px);
+            background-size: 50px 50px;
+        }
+
+    /* Glass Learning Cards */
+    .glass-learn-card {
+        background: var(--glass-bg);
+        backdrop-filter: blur(20px);
+        -webkit-backdrop-filter: blur(20px);
+        border: 1px solid var(--glass-border);
+        border-radius: 30px;
+        padding: 40px;
+        transition: all 0.4s ease;
+        height: 100%;
+    }
+
+        .glass-learn-card:hover {
+            transform: translateY(-10px);
+            background: rgba(255, 255, 255, 0.08);
+            border-color: var(--tech-blue);
+            box-shadow: 0 0 30px rgba(14, 165, 233, 0.2);
+        }
+
+    .icon-glow {
+        width: 80px;
+        height: 80px;
+        background: linear-gradient(135deg, var(--tech-blue), var(--tech-purple));
+        color: white;
+        border-radius: 20px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 25px;
+        font-size: 2rem;
+        box-shadow: 0 0 20px rgba(14, 165, 233, 0.4);
+    }
+
+    /* Pulse Button */
+    .btn-live {
+        background: var(--tech-blue);
+        color: #fff;
+        font-weight: 700;
+        padding: 16px 40px;
+        border-radius: 50px;
+        border: none;
+        box-shadow: 0 0 15px rgba(14, 165, 233, 0.3);
+        transition: 0.3s;
+        text-transform: uppercase;
+    }
+
+        .btn-live:hover {
+            background: #0284c7;
+            box-shadow: 0 0 25px rgba(14, 165, 233, 0.5);
+            transform: scale(1.05);
+            color: #fff;
+        }
+
+    .live-dot {
+        height: 12px;
+        width: 12px;
+        background-color: #ef4444;
+        border-radius: 50%;
+        display: inline-block;
+        margin-right: 8px;
+        animation: pulse-red 1.5s infinite;
+    }
+
+    @@keyframes pulse-red {
+        0% {
+            transform: scale(0.95);
+            box-shadow: 0 0 0 0 rgba(239, 68, 68, 0.7);
+        }
+
+        70% {
+            transform: scale(1);
+            box-shadow: 0 0 0 10px rgba(239, 68, 68, 0);
+        }
+
+        100% {
+            transform: scale(0.95);
+            box-shadow: 0 0 0 0 rgba(239, 68, 68, 0);
+        }
+    }
+</style>
+
+<div class="container-fluid p-0">
+    <section class="hero-online text-center">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-10">
+                    <span class="badge border border-info text-info mb-4 px-4 py-2 rounded-pill fw-bold" style="background: rgba(14, 165, 233, 0.1);">
+                        <span class="live-dot"></span> LIVE & RECORDED HYBRID MODEL
+                    </span>
+                    <h1 class="display-3 fw-bold mb-4">Ghar Baithe Banen Professional CA, CS, CMA</h1>
+                    <p class="lead mb-5 text-secondary px-lg-5">India's most <span class="text-info fw-bold">Interactive</span> digital platform. Join live sessions to clear doubts or watch HD recorded lectures for unlimited revision.</p>
+
+                    <div class="d-flex flex-wrap justify-content-center gap-4">
+                        <a href="https://wa.me/919926821000?text=I%20want%20to%20know%20about%20Online%20Lectures" class="btn btn-live shadow-lg">Start Free Trial</a>
+                        <a href="tel:07714095300" class="btn btn-outline-light rounded-pill px-5 fw-bold">Call Counselor</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="container my-5 py-5">
+        <div class="row g-4 justify-content-center">
+            <div class="col-md-5">
+                <div class="glass-learn-card">
+                    <div class="icon-glow"><i class="bi bi-broadcast"></i></div>
+                    <h3 class="fw-bold text-info">Live Interactive Classes</h3>
+                    <ul class="list-unstyled mt-3 text-secondary">
+                        <li class="mb-3"><i class="bi bi-check2-circle text-info me-2"></i> Real-time Doubt Clearing</li>
+                        <li class="mb-3"><i class="bi bi-check2-circle text-info me-2"></i> Face-to-Face Virtual Interaction</li>
+                        <li class="mb-3"><i class="bi bi-check2-circle text-info me-2"></i> Daily Study Discipline</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="col-md-5">
+                <div class="glass-learn-card">
+                    <div class="icon-glow"><i class="bi bi-play-circle-fill"></i></div>
+                    <h3 class="fw-bold text-purple" style="color: var(--tech-purple);">HD Recorded Lectures</h3>
+                    <ul class="list-unstyled mt-3 text-secondary">
+                        <li class="mb-3"><i class="bi bi-check2-circle text-purple me-2" style="color: var(--tech-purple);"></i> Watch Anytime, Anywhere</li>
+                        <li class="mb-3"><i class="bi bi-check2-circle text-purple me-2" style="color: var(--tech-purple);"></i> Unlimited Revision Support</li>
+                        <li class="mb-3"><i class="bi bi-check2-circle text-purple me-2" style="color: var(--tech-purple);"></i> Offline Download Option</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container mb-5">
+        <div class="p-5 glass-learn-card border-info text-center">
+            <h2 class="fw-bold mb-4">Any Technical or Admission Query?</h2>
+            <div class="row g-4 justify-content-center mt-3">
+                <div class="col-md-3">
+                    <a href="tel:919926821000" class="text-decoration-none">
+                        <div class="p-3 bg-dark rounded-4 mb-2"><i class="bi bi-headset fs-2 text-info"></i></div>
+                        <h6 class="text-white">99268-21000</h6>
+                    </a>
+                </div>
+                <div class="col-md-3">
+                    <a href="mailto:eeiraipur@gmail.com" class="text-decoration-none">
+                        <div class="p-3 bg-dark rounded-4 mb-2"><i class="bi bi-envelope-fill fs-2 text-info"></i></div>
+                        <h6 class="text-white">eeiraipur@gmail.com</h6>
+                    </a>
+                </div>
+                <div class="col-md-3">
+                    <a href="https://www.exceledu.co.in" target="_blank" class="text-decoration-none">
+                        <div class="p-3 bg-dark rounded-4 mb-2"><i class="bi bi-globe fs-2 text-info"></i></div>
+                        <h6 class="text-white">Portal Access</h6>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

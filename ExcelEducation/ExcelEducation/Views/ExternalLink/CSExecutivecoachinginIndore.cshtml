@@ -1,0 +1,218 @@
+﻿@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    ViewData["Title"] = "Best CMA Foundation Coaching in Cuttack | Excel Educational Institution";
+    ViewData["Description"] = "Kickstart your CMA journey with the best Foundation coaching in Cuttack. Expert mentors, updated study material, and 100% success rate for CMA Foundation.";
+    ViewData["Keywords"] = "CMA Foundation coaching Cuttack, Best CMA Institute Cuttack, CMA Foundation classes near me, ICMAI Cuttack coaching, Excel Education Cuttack";
+}
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+
+<style>
+    :root {
+        --cma-orange: #f37021; /* ICMAI Brand Color */
+        --cma-navy: #002b5b;
+        --glass-bg: rgba(255, 255, 255, 0.85);
+        --glass-border: rgba(255, 255, 255, 0.4);
+    }
+
+    body {
+        font-family: 'Poppins', sans-serif;
+        background-color: #f0f2f5;
+        color: #333;
+    }
+
+    /* Professional Hero Section */
+    .hero-cma {
+        background: linear-gradient(135deg, var(--cma-navy) 0%, #001a33 100%);
+        padding: 100px 0;
+        color: white;
+        border-radius: 0 0 120px 0;
+        position: relative;
+        overflow: hidden;
+    }
+
+        .hero-cma::before {
+            content: "";
+            position: absolute;
+            top: -50px;
+            right: -50px;
+            width: 300px;
+            height: 300px;
+            background: rgba(243, 112, 33, 0.2);
+            border-radius: 50%;
+            filter: blur(80px);
+        }
+
+    /* Structured Glass Cards */
+    .glass-feature {
+        background: var(--glass-bg);
+        backdrop-filter: blur(12px);
+        -webkit-backdrop-filter: blur(12px);
+        border: 1px solid var(--glass-border);
+        border-radius: 25px;
+        padding: 35px;
+        transition: all 0.4s ease;
+        height: 100%;
+        box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+    }
+
+        .glass-feature:hover {
+            transform: translateY(-12px);
+            background: #ffffff;
+            border-color: var(--cma-orange);
+            box-shadow: 0 20px 40px rgba(243, 112, 33, 0.1);
+        }
+
+    .icon-circle {
+        width: 65px;
+        height: 65px;
+        background: var(--cma-orange);
+        color: white;
+        border-radius: 20px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 20px;
+        font-size: 1.6rem;
+    }
+
+    /* Action Buttons */
+    .btn-cma {
+        background: var(--cma-orange);
+        color: white;
+        font-weight: 700;
+        padding: 15px 40px;
+        border-radius: 50px;
+        text-transform: uppercase;
+        border: none;
+        transition: 0.3s;
+    }
+
+        .btn-cma:hover {
+            background: #d65a12;
+            box-shadow: 0 10px 20px rgba(243, 112, 33, 0.4);
+            transform: scale(1.05);
+            color: white;
+        }
+
+    .contact-card {
+        background: rgba(255, 255, 255, 0.1);
+        border: 1px solid rgba(255, 255, 255, 0.2);
+        padding: 20px;
+        border-radius: 20px;
+        margin-bottom: 15px;
+        transition: 0.3s;
+        cursor: pointer;
+    }
+
+        .contact-card:hover {
+            background: rgba(255, 255, 255, 0.2);
+            transform: translateX(10px);
+        }
+</style>
+
+<div class="container-fluid p-0">
+    <section class="hero-cma text-center text-lg-start">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-7">
+                    <span class="badge bg-light text-dark mb-3 px-3 py-2 rounded-pill fw-bold shadow-sm">
+                        <i class="bi bi-mortarboard-fill text-orange"></i> #1 CMA Institute in Cuttack
+                    </span>
+                    <h1 class="display-3 text-white fw-bold mb-3">Best CMA Foundation Coaching in Cuttack</h1>
+                    <p class="lead mb-4 opacity-75">Start your professional career with <span class="fw-bold">Excel Educational Institution</span>. We offer the best Foundation mentorship to help you clear in the <span class="fw-bold text-warning">First Attempt</span>.</p>
+
+                    <div class="d-flex flex-wrap justify-content-center justify-content-lg-start gap-3">
+                        <a href="https://wa.me/919926821000?text=CMA%20Foundation%20Cuttack%20Inquiry" class="btn btn-cma shadow-lg">WhatsApp Inquiry</a>
+                        <a href="tel:07714095300" class="btn btn-outline-light rounded-pill px-4 fw-bold">Call Counselor</a>
+                    </div>
+                </div>
+                <div class="col-lg-5 mt-5 mt-lg-0">
+                    <div class="p-2">
+                        <div class="contact-card" onclick="location.href='tel:919926821000'">
+                            <div class="d-flex align-items-center">
+                                <i class="bi bi-phone-vibrate-fill fs-2 me-3 text-warning"></i>
+                                <div><h6 class="mb-0 text-white">Admissions</h6><small class="text-white-50">99268-21000</small></div>
+                            </div>
+                        </div>
+                        <div class="contact-card" onclick="location.href='mailto:eeiraipur@gmail.com'">
+                            <div class="d-flex align-items-center">
+                                <i class="bi bi-envelope-at-fill fs-2 me-3 text-warning"></i>
+                                <div><h6 class="mb-0 text-white">Email Us</h6><small class="text-white-50">eeiraipur@gmail.com</small></div>
+                            </div>
+                        </div>
+                        <div class="contact-card" onclick="window.open('https://www.exceledu.co.in')">
+                            <div class="d-flex align-items-center">
+                                <i class="bi bi-geo-alt-fill fs-2 me-3 text-warning"></i>
+                                <div><h6 class="mb-0 text-white">Official Site</h6><small class="text-white-50">www.exceledu.co.in</small></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="container my-5 py-5">
+        <div class="text-center mb-5">
+            <h2 class="fw-bold display-5">Modern Learning <span class="text-primary">Structure</span></h2>
+            <p class="text-muted">Janiye kyun hum Cuttack ke sabse best CMA mentors hain.</p>
+        </div>
+
+        <div class="row g-4">
+            <div class="col-md-4">
+                <div class="glass-feature">
+                    <div class="icon-circle"><i class="bi bi-journal-text"></i></div>
+                    <h4 class="fw-bold">Full Syllabus Coverage</h4>
+                    <p class="text-muted small">Papers 1 to 4 (Business Laws, Accounting, Taxation & Costing) ka deep-level analysis aur coaching.</p>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="glass-feature">
+                    <div class="icon-circle"><i class="bi bi-clock-history"></i></div>
+                    <h4 class="fw-bold">Flexible Batches</h4>
+                    <p class="text-muted small">Early morning aur evening batches, specially designed for college students in Cuttack.</p>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="glass-feature">
+                    <div class="icon-circle"><i class="bi bi-graph-up"></i></div>
+                    <h4 class="fw-bold">Test Series</h4>
+                    <p class="text-muted small">Chapter-wise Unit Tests aur Full Mock Exams jo bilkul ICMAI Foundation pattern par hote hain.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container mb-5">
+        <div class="p-5 glass-feature bg-light">
+            <h3 class="fw-bold text-navy mb-4 border-bottom pb-2">CMA Foundation Syllabus Details</h3>
+            <div class="row">
+                <div class="col-md-6">
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item bg-transparent"><i class="bi bi-check-circle-fill text-orange me-2"></i> Paper 1: Fundamentals of Business Laws</li>
+                        <li class="list-group-item bg-transparent"><i class="bi bi-check-circle-fill text-orange me-2"></i> Paper 2: Fundamentals of Financial Accounting</li>
+                    </ul>
+                </div>
+                <div class="col-md-6">
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item bg-transparent"><i class="bi bi-check-circle-fill text-orange me-2"></i> Paper 3: Fundamentals of Business Maths & Stats</li>
+                        <li class="list-group-item bg-transparent"><i class="bi bi-check-circle-fill text-orange me-2"></i> Paper 4: Fundamentals of Business Economics</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container mb-5">
+        <div class="p-5 rounded-5 bg-dark text-white text-center shadow-lg">
+            <h2 class="fw-bold mb-3">Join the Cuttack Success Batch</h2>
+            <p class="mb-4 opacity-75">Limited seats available for the upcoming session. Reserve your spot today!</p>
+            <div class="d-flex flex-wrap justify-content-center gap-3">
+                <a href="https://wa.me/919926821000" class="btn btn-cma px-5">Apply Now</a>
+                <a href="tel:07714095300" class="btn btn-outline-warning rounded-pill px-5 fw-bold">Call Now</a>
+            </div>
+        </div>
+    </div>
+</div>
