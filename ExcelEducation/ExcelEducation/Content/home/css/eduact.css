@@ -2173,7 +2173,7 @@
 .blog-two__content {
     position: relative;
     background-color: var(--eduact-white);
-    margin: -158px 0 0;
+   /* margin: -158px 0 0;*/
     padding: 20px 20px 30px;
     border-radius: 0 0 50px 50px;
     box-shadow: 0px 0px 60px 0px rgba(2, 2, 2, 0.07);

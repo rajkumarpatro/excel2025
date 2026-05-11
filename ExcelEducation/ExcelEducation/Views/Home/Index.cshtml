@@ -864,7 +864,7 @@
                         <div class="blog-two__item">
                             <div class="blog-two__image">
                                 <img src="@blog.BlogPhoto" alt="eduact" />
-                                <a href="blogdetails?blogid=@blog.BlogId"></a>
+                                <a href="/blogdetails?blogid=@blog.BlogId"></a>
                             </div><!-- /.blog-image -->
                             <div class="blog-two__content">
                                 <div class="blog-two__top-meta">
@@ -873,16 +873,23 @@
                                     </div><!-- /.blog-date -->
                                 </div>
                                 <h3 class="blog-two__title">
-                                    <a href="blogdetails?blogid=@blog.BlogId">@blog.BlogName</a>
+                                    <a href="/blogdetails?blogid=@blog.BlogId">@blog.BlogName</a>
                                 </h3><!-- /.blog-title -->
                                 <div class="blog-two__meta">
-                                    <a class="blog-two__rm" href="blogdetails?blogid=@blog.BlogId"><span class="icon-arrow"></span></a><!-- /.read-more-btn -->
+                                    <a class="blog-two__rm" href="/blogdetails?blogid=@blog.BlogId"><span class="icon-arrow"></span></a><!-- /.read-more-btn -->
                                 </div><!-- /.blog-meta -->
                             </div><!-- /.blog-content -->
                         </div><!-- /.blog-card-one -->
                     </div>
                 }
 
+            <div class="col-12 justify-content-center">
+                <a href="@Url.Action("AllBlogs", "BlogDetails")" class="eduact-btn eduact-btn-second text-center">
+                    <span class="eduact-btn__curve"></span>
+                    View More Blogs<br />
+                    <i class="icon-arrow"></i>
+                </a>
+            </div>
             </div>
         </div>
     </section>

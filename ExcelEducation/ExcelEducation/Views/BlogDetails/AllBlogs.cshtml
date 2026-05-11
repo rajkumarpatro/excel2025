@@ -27,7 +27,7 @@
                                      class="img-fluid w-100"
                                      style="height:250px; object-fit:cover;" />
 
-                                <a href="@Url.Action("BlogDetails", "Home", new { blogid = blog.BlogId })"
+                                <a href="/blogdetails?blogid=@blog.BlogId"
                                    class="stretched-link"></a>
                             </div>
 
@@ -40,7 +40,7 @@
                                 </div>
 
                                 <h3 class="blog-two__title h5 mb-3">
-                                    <a href="@Url.Action("BlogDetails", "Home", new { blogid = blog.BlogId })"
+                                    <a href="/blogdetails?blogid=@blog.BlogId"
                                        class="text-dark text-decoration-none">
                                         @blog.BlogName
                                     </a>
@@ -48,7 +48,7 @@
 
                                 <div class="blog-two__meta">
                                     <a class="btn btn-sm btn-primary"
-                                       href="@Url.Action("BlogDetails", "Home", new { blogid = blog.BlogId })">
+                                       href="/blogdetails?blogid=@blog.BlogId">
                                         Read More
                                     </a>
                                 </div>
