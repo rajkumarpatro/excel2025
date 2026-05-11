@@ -33,6 +33,10 @@ namespace ExcelEducation.Controllers
         {
             return View();
         }
+        public ActionResult CMACoachinginRaipur()
+        {
+            return View();
+        }
         public ActionResult Results()
         {
             return View();
