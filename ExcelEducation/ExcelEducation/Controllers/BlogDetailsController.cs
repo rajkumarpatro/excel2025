@@ -11,20 +11,38 @@ namespace ExcelEducation.Controllers
 {
     public class BlogDetailsController : Controller
     {
-        private readonly object blogRepository; 
+        private readonly object blogRepository;
 
-        public async Task<ActionResult> Index() 
-        { 
+        //public async Task<ActionResult> Index() 
+        //{ 
+        //    var blogid = Request.QueryString["blogid"];
+        //    var recentblogs = await ExcelInfoDB.GetBlogsAsync();
+        //    var blogdetails = await ExcelInfoDB.GetBlogDetailsAsync(Convert.ToInt32(blogid));
+
+        //    var blogDetailsViewModel = new BlogDetails
+        //    {
+        //        Blog = blogdetails,
+        //        RecentBlogs = recentblogs
+        //    };
+        //    return View("index",blogDetailsViewModel);
+        //}
+
+        public async Task<ActionResult> Index()
+        {
             var blogid = Request.QueryString["blogid"];
+
             var recentblogs = await ExcelInfoDB.GetBlogsAsync();
-            var blogdetails = await ExcelInfoDB.GetBlogDetailsAsync(Convert.ToInt32(blogid));
-             
+
+            var blogdetails = await ExcelInfoDB
+                .GetBlogDetailsAsync(Convert.ToInt32(blogid));
+
             var blogDetailsViewModel = new BlogDetails
             {
                 Blog = blogdetails,
                 RecentBlogs = recentblogs
             };
-            return View("index",blogDetailsViewModel);
+
+            return View("Index", blogDetailsViewModel);
         }
 
 

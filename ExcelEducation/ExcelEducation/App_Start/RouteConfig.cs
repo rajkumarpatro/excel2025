@@ -13,11 +13,25 @@ namespace ExcelEducation
         {
             routes.IgnoreRoute("{resource}.axd/{*pathInfo}");
 
+            routes.MapMvcAttributeRoutes();
+
+            // BLOG ROUTE
+            routes.MapRoute(
+                name: "Blog",
+                url: "blog/{title}",
+                defaults: new
+                {
+                    controller = "BlogDetails", action = "Index", title = UrlParameter.Optional
+                }
+            );
+
             routes.MapRoute(
                 name: "Default",
                 url: "{controller}/{action}/{id}",
                 defaults: new { controller = "Home", action = "Index", id = UrlParameter.Optional }
             );
+             
+
         }
     }
 }
