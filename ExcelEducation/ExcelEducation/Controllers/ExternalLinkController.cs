@@ -173,74 +173,76 @@ namespace ExcelEducation.Controllers
         [Route("CA-Foundation-coaching-in-Bhubaneswar")]
         public ActionResult CAFoundationcoachinginBhubaneswar()
         {
-            return View("BestCAFoundationCoachingInRaipur");
+            return View();
         }
 
         [Route("CS-Executive-Module-2-coaching")]
         public ActionResult CSExecutiveModule2coaching()
         {
-            return View("BestCAFoundationCoachingInRaipur");
+            return View();
         }
 
         [Route("Best-CA-Foundation-coaching-in-Bilaspur")]
         public ActionResult BestCAFoundationcoachinginBilaspur()
         {
-            return View("BestCAFoundationCoachingInRaipur");
+            return View();
         }
 
         [Route("CA-Intermediate-coaching-in-Indore")]
         public ActionResult CAIntermediatecoachinginIndore()
         {
-            return View("BestCAFoundationCoachingInRaipur");
+            return View();
         }
 
         [Route("CS-Foundation-classes-in-Cuttack")]
         public ActionResult CSFoundationclassesinCuttack()
         {
-            return View("BestCAFoundationCoachingInRaipur");
+            return View();
         }
 
         [Route("CMA-Foundation-coaching-in-Bhilai")]
         public ActionResult CMAFoundationcoachinginBhilai()
         {
-            return View("BestCAFoundationCoachingInRaipur");
+            return View();
         }
 
         [Route("Best-CS-Executive-classes-in-Bhilai")]
         public ActionResult BestCSExecutiveclassesinBhilai()
         {
-            return View("BestCAFoundationCoachingInRaipur");
+            return View();
         }
 
         [Route("CMA-Intermediate-classes-in-Bhopal")]
         public ActionResult CMAIntermediateclassesinBhopal()
         {
-            return View("BestCAFoundationCoachingInRaipur");
+            return View();
         }
 
         [Route("CA-Intermediate-coaching-in-Cuttack")]
         public ActionResult CAIntermediatecoachinginCuttack()
         {
-            return View("BestCAFoundationCoachingInRaipur");
+            return View();
         }
 
         [Route("CS-Executive-coaching-in-Durg")]
         public ActionResult CSExecutivecoachinginDurg()
         {
-            return View("BestCAFoundationCoachingInRaipur");
+            return View();
         }
 
         [Route("Class-XI-and-XII-Commerce-coaching")]
         public ActionResult ClassXIandXIICommercecoaching()
         {
-            return View("BestCAFoundationCoachingInRaipur");
+            return View();
         }
 
         [Route("Best-commerce-coaching-institute")]
         public ActionResult Bestcommercecoachinginstitute()
         {
-            return View("BestCAFoundationCoachingInRaipur");
+            return View();
         }
+
+
         //Col 3 start
         [Route("Best-CA-Foundation-Coaching-In-Jabalpur")]
         public ActionResult BestCAFoundationcoachinginJabalpur()
@@ -281,79 +283,79 @@ namespace ExcelEducation.Controllers
         [Route("CS-Executive-Module-1-And-2-Coaching")]
         public ActionResult CSExecutiveModule1And2coaching()
         {
-            return View("BestCAFoundationCoachingInRaipur");
+            return View();
         }
 
          [Route("Online-CA-Foundation-coaching-India")]
         public ActionResult OnlineCAFoundationcoachingIndia()
         {
-            return View("BestCAFoundationCoachingInRaipur");
+            return View();
         }
 
         [Route("Best-CA-coaching-for-commerce-students")]
         public ActionResult BestCAcoachingforcommercestudents()
         {
-            return View("BestCAFoundationCoachingInRaipur");
+            return View();
         }
 
         [Route("Best-CA-Foundation-coaching-in-Bhopal")]
         public ActionResult BestCAFoundationcoachinginBhopal()
         {
-            return View("BestCAFoundationCoachingInRaipur");
+            return View();
         }
 
         [Route("CA-Intermediate-coaching-in-Bhubaneswar")]
         public ActionResult CAIntermediatecoachinginBhubaneswar()
         {
-            return View("BestCAFoundationCoachingInRaipur");
+            return View();
         }
 
         [Route("CS-Foundation-classes-in-Indore")]
         public ActionResult CSFoundationclassesinIndore()
         {
-            return View("BestCAFoundationCoachingInRaipur");
+            return View();
         }
 
         [Route("CMA-Foundation-coaching-in-Indore")]
         public ActionResult CMAFoundationcoachinginIndore()
         {
-            return View("BestCAFoundationCoachingInRaipur");
+            return View();
         }
 
         [Route("Best-CS-Executive-coaching-in-Bhopal")]
         public ActionResult BestCSExecutivecoachinginBhopal()
         {
-            return View("BestCAFoundationCoachingInRaipur");
+            return View();
         }
 
         [Route("CMA-Intermediate-classes-in-Durg")]
         public ActionResult CMAIntermediateclassesinDurg()
         {
-            return View("BestCAFoundationCoachingInRaipur");
+            return View();
         }
 
         [Route("CA-Final-test-series-coaching")]
         public ActionResult CAFinaltestseriescoaching()
         {
-            return View("BestCAFoundationCoachingInRaipur");
+            return View();
         }
 
         [Route("CS-Foundation-coaching-near-me")]
         public ActionResult CSFoundationcoachingnearme()
         {
-            return View("BestCAFoundationCoachingInRaipur");
+            return View();
         }
 
         [Route("Online-CMA-coaching-classes")]
         public ActionResult OnlineCMAcoachingclasses()
         {
-            return View("BestCAFoundationCoachingInRaipur");
+            return View();
         }
 
         [Route("Commerce-coaching-after-12th")]
         public ActionResult Commercecoachingafter12th()
         {
-            return View("BestCAFoundationCoachingInRaipur");
+            return View();
         }
 
 
