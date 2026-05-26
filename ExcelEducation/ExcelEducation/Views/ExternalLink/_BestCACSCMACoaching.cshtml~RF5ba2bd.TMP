@@ -1,8 +1,8 @@
 ﻿
 @{
-    ViewData["Title"] = "Best CA Foundation Coaching in Jabalpur | CA Intermediate Coaching in Gwalior | Commerce Classes ";
-    ViewData["Description"] = "Excel Educational Institution offers CMA Intermediate, CS Foundation, CA Foundation, CS Executive & Commerce coaching classes with LIVE online and recorded lectures. Join the best coaching institute for CA, CS, CMA and Class XI & XII Commerce students across India.";
-    ViewData["Keywords"] = "CMA Intermediate classes in Raipur, CS Foundation classes in Raipur, Class XI & XII Commerce coaching,  CMA Intermediate classes in Bhopal,  Best CA Foundation coaching in Jabalpur, Best CA coaching for commerce students, CS Foundation classes in Bilaspur,  CMA Foundation coaching in Indore, CMA Intermediate Group 2 coaching, CS Executive coaching in Jabalpur, CS Executive Module 1 & 2 coaching, CA Intermediate coaching in Gwalior, CS Executive coaching in Durg";
+    ViewData["Title"] = "Best CA Intermediate Group 1 Coaching in Raipur | Top CA Inter Classes";
+    ViewData["Description"] = "Join the best CA Intermediate Group 1 coaching in Raipur with expert faculty, mock tests, mentorship, and highest pass rate. Result-oriented classes for May/Nov 2026.";
+    ViewData["Keywords"] = "CA Intermediate Group 1 coaching, CA Inter Group 1 classes in Raipur, Best CA Inter coaching, CA coaching institute, Expert CA Inter classes, Trusted CA coaching";
 }
 
 <!-- Google Fonts & Icons -->
@@ -41,6 +41,8 @@
         .hero-section::after {
             content: '';
             position: absolute;
+           
+
             background: rgba(250, 204, 21, 0.12);
             border-radius: 50%;
             bottom: -150px;
@@ -163,7 +165,7 @@
             </p>
 
         </div>
-
+         
 
         <div class="d-flex flex-wrap justify-content-center gap-3 mt-4">
             <button class="btn btn-enroll"
@@ -172,7 +174,7 @@
             </button>
         </div>
     </section>
-
+     
     <section class="container-fluid py-2">
 
         <!-- Courses Section -->
@@ -244,16 +246,12 @@
                 <div class="p-4 border rounded-4 shadow-sm h-100 bg-white">
 
                     <h2 class="fw-bold mb-4">
-                        <a href="https://www.exceledu.co.in/CMA-Intermediate-classes-in-Raipur" title="CMA Intermediate Classes in Raipur">
-                            CMA Intermediate Classes in
-                            <span class="text-primary">Raipur</span>
-                        </a>
+                        CMA Intermediate Classes in
+                        <span class="text-primary">Raipur</span>
                     </h2>
 
                     <p class="text-muted">
-                        Join our result-oriented  <a href="https://www.exceledu.co.in/CMA-Intermediate-classes-in-Raipur" title="CMA Intermediate Classes in Raipur-Excel-Educational-Institution">
-                            CMA Intermediate coaching programM
-                        </a>
+                        Join our result-oriented CMA Intermediate coaching program
                         designed for Commerce students who want strong conceptual
                         learning and exam success.
                     </p>
@@ -306,16 +304,12 @@
                 <div class="p-4 border rounded-4 shadow-sm h-100 bg-white">
 
                     <h2 class="fw-bold mb-4">
-                        <a href="https://www.exceledu.co.in/CS-Foundation-Classes-In-Raipur" title="CS Foundation Classes in Raipur">
-                            CS Foundation Classes in
-                            <span class="text-primary">Raipur</span>
-                        </a>
+                        CS Foundation Classes in
+                        <span class="text-primary">Raipur</span>
                     </h2>
 
                     <p class="text-muted">
-                        Our <a href="https://www.exceledu.co.in" title="CS Foundation Classes in Raipur-Excel-Educational-Institution">
-                            CS Foundation coaching program
-                        </a>is specially designed
+                        Our CS Foundation coaching program is specially designed
                         for students who want to build a strong foundation
                         in Company Secretary studies and professional Commerce education.
                     </p>
@@ -389,12 +383,12 @@
                 <div class="p-4 border rounded-4 shadow-sm h-100 bg-white">
 
                     <h2 class="fw-bold mb-4">
-                        <a href="https://www.exceledu.co.in/Class-XI-and-XII-Commerce-coaching" title="Class-XI-and-XII-Commerce-coaching">Class XI & XII Commerce Coaching</a>
+                        Class XI & XII Commerce Coaching
                     </h2>
 
                     <p class="text-muted">
                         Excel Educational Institution provides advanced
-                        Commerce  <a href="https://www.exceledu.co.in" title="Class-XI-and-XII-Commerce-coaching-Excel-Educational-Institution"> coaching for Class XI & XII students</a>
+                        Commerce coaching for Class XI & XII students
                         preparing for Board examinations and future
                         professional Commerce careers.
                     </p>
@@ -476,14 +470,12 @@
                     </span>
 
                     <h2 class="fw-bold mb-4">
-                        <a href="https://www.exceledu.co.in/CMA-Intermediate-classes-in-Bhopal" title="CMA-Intermediate-classes-in-Bhopal">
-                            CMA Intermediate Classes in
-                            <span class="text-primary">Bhopal</span>
-                        </a>
+                        CMA Intermediate Classes in
+                        <span class="text-primary">Bhopal</span>
                     </h2>
 
                     <p class="text-muted">
-                        Searching online for quality <a href="https://www.exceledu.co.in" title="CMA-Intermediate-classes-in-Bhopal-Excel-Educational-Institution">CMA Intermediate classes in Bhopal?</a>
+                        Searching online for quality CMA Intermediate classes in Bhopal?
                         Our coaching programs are specially designed for students
                         who want professional guidance, strategic exam preparation,
                         and strong conceptual learning support.
@@ -527,16 +519,12 @@
                     </span>
 
                     <h2 class="fw-bold mb-4">
-                        <a href="https://www.exceledu.co.in/Best-CA-Foundation-Coaching-In-Jabalpur" title="Best-CA-Foundation-Coaching-In-Jabalpur">
-                            Best CA Foundation Coaching in
-                            <span class="text-success">Jabalpur</span>
-                        </a>
+                        Best CA Foundation Coaching in
+                        <span class="text-success">Jabalpur</span>
                     </h2>
 
                     <p class="text-muted">
-                        Students searching for the<a href="https://www.exceledu.co.in" title="Best-CA-Foundation-Coaching-In-Jabalpur-Excel-Educational-Institution">
-                            best CA Foundation coaching in Jabalpur
-                        </a>
+                        Students searching for the best CA Foundation coaching in Jabalpur
                         can benefit from our modern teaching methodology,
                         practical learning approach, and exam-oriented preparation system.
                     </p>
@@ -594,9 +582,7 @@
                     </span>
 
                     <h2 class="fw-bold mb-4">
-                        <a href="https://www.exceledu.co.in/Best-CA-coaching-for-commerce-students" title="Best-CA-coaching-for-commerce-students">
-                            Best CA Coaching for Commerce Students
-                        </a>
+                        Best CA Coaching for Commerce Students
                     </h2>
 
                     <p class="text-muted">
@@ -655,16 +641,12 @@
                     </span>
 
                     <h2 class="fw-bold mb-4">
-                        <a href="https://www.exceledu.co.in/CS-Foundation-Classes-In-Bilaspur" title="CS-Foundation-Classes-In-Bilaspur">
-                            CS Foundation Classes in
-                            <span class="text-info">Bilaspur</span>
-                        </a>
+                        CS Foundation Classes in
+                        <span class="text-info">Bilaspur</span>
                     </h2>
 
                     <p class="text-muted">
-                        Our <a href="https://www.exceledu.co.in" title="CS-Foundation-Classes-In-Bilaspur-Excel-Educational-Institution">
-                            CS Foundation classes in Bilaspur
-                        </a>help students
+                        Our CS Foundation classes in Bilaspur help students
                         prepare confidently for Company Secretary entrance-level examinations
                         through structured learning and exam-focused preparation.
                     </p>
@@ -712,18 +694,14 @@
                     </span>
 
                     <h2 class="fw-bold mb-4">
-                        <a href="https://www.exceledu.co.in/CMA-Foundation-coaching-in-Indore" title="CMA-Foundation-coaching-in-Indore">
-                            CMA Foundation Coaching in
-                            <span class="text-danger">Indore</span>
-                        </a>
+                        CMA Foundation Coaching in
+                        <span class="text-danger">Indore</span>
                     </h2>
 
                     <p class="text-muted">
-                        Excel Educational Institution provides trusted
-                        <a href="https://www.exceledu.co.in" title="CMA-Foundation-coaching-in-Indore-Excel-Educational-Institution">
-                            CMA Foundation coaching</a>
-                            in Indore with professional mentorship, practical Commerce education,
-                            and exam-focused learning support.
+                        Excel Educational Institution provides trusted CMA Foundation coaching
+                        in Indore with professional mentorship, practical Commerce education,
+                        and exam-focused learning support.
                     </p>
 
                     <p class="text-muted">
@@ -787,15 +765,15 @@
                 <div class="p-4 bg-white border rounded-4 shadow-sm h-100">
 
                     <span class="badge bg-primary px-3 py-2 mb-3">
-                           CMA Intermediate Coaching
+                        CMA Intermediate Coaching
                     </span>
 
                     <h2 class="fw-bold mb-4">
-                        <a href="https://www.exceledu.co.in/CMA-Intermediate-Group-2-coaching" title="CMA-Intermediate-Group-2-coaching">CMA Intermediate Group 2 Coaching</a>
+                        CMA Intermediate Group 2 Coaching
                     </h2>
 
                     <p class="text-muted">
-                        Our <a href="https://www.exceledu.co.in" title="CMA-Intermediate-Group-2-coaching-Excel-Educational-Institution">CMA Intermediate Group 2 Coaching</a> program is specially
+                        Our CMA Intermediate Group 2 coaching program is specially
                         designed for students aiming for strong exam performance,
                         practical understanding, and professional Commerce skills.
                     </p>
@@ -858,18 +836,15 @@
                     </span>
 
                     <h2 class="fw-bold mb-4">
-                        <a href="https://www.exceledu.co.in/CS-Executive-Coaching-In-Jabalpur" title="CS-Executive-Coaching-In-Jabalpur">
-                            CS Executive Coaching in
-                            <span class="text-success">Jabalpur</span>
-                        </a>
+                        CS Executive Coaching in
+                        <span class="text-success">Jabalpur</span>
                     </h2>
 
                     <p class="text-muted">
-                        Students searching for professional <a href="https://www.exceledu.co.in" title="CS-Executive-Coaching-In-Jabalpur-Excel-Educational-Institution">
-    CS Executive coaching</a>
-    in Jabalpur can join Excel Educational Institution
-    for complete ICSI exam preparation and professional guidance.
-</p>
+                        Students searching for professional CS Executive coaching
+                        in Jabalpur can join Excel Educational Institution
+                        for complete ICSI exam preparation and professional guidance.
+                    </p>
 
                     <p class="text-muted">
                         Our coaching system combines practical learning,
@@ -920,12 +895,12 @@
                     </span>
 
                     <h2 class="fw-bold mb-4">
-                        <a href="https://www.exceledu.co.in/CS-Executive-Module-1-And-2-Coaching" title="CS-Executive-Module-1-And-2-Coaching"> CS Executive Module 1 & 2 Coaching</a>
+                        CS Executive Module 1 & 2 Coaching
                     </h2>
 
                     <p class="text-muted">
                         Excel Educational Institution offers complete
-                        <a href="https://www.exceledu.co.in" title="CS-Executive-Module-1-And-2-Coaching-Excel-Educational-Institution"> CS Executive Module 1 & 2 Coaching</a>
+                        CS Executive Module 1 & 2 coaching
                         for students preparing for advanced Company Secretary examinations.
                     </p>
 
@@ -985,18 +960,15 @@
                     </span>
 
                     <h2 class="fw-bold mb-4">
-                        <a href="https://www.exceledu.co.in/CA-Intermediate-Coaching-In-Gwalior" title="CA-Intermediate-Coaching-In-Gwalior">
-                            CA Intermediate Coaching in
-                            <span class="text-danger">Gwalior</span>
-                        </a>
+                        CA Intermediate Coaching in
+                        <span class="text-danger">Gwalior</span>
                     </h2>
 
                     <p class="text-muted">
-                        Our <a href="https://www.exceledu.co.in" title="CA-Intermediate-Coaching-In-Gwalior-Excel-Educational-Institution">
-     CA Intermediate coaching in Gwalior</a> helps students
-    prepare effectively for ICAI examinations
-    through practical learning and strategic preparation methods.
-</p>
+                        Our CA Intermediate coaching in Gwalior helps students
+                        prepare effectively for ICAI examinations
+                        through practical learning and strategic preparation methods.
+                    </p>
 
                     <p class="text-muted">
                         We provide experienced mentorship,
@@ -1045,18 +1017,15 @@
                     </span>
 
                     <h2 class="fw-bold mb-4">
-                        <a href="https://www.exceledu.co.in/CS-Executive-coaching-in-Durg" title="CS-Executive-coaching-in-Durg">
-                            CS Executive Coaching in
-                            <span class="text-info">Durg</span>
-                        </a>
+                        CS Executive Coaching in
+                        <span class="text-info">Durg</span>
                     </h2>
 
                     <p class="text-muted">
-                        Looking for reliable <a href="https://www.exceledu.co.in" title="CS-Executive-coaching-in-Durg-Excel-Educational-Institution">
-    CS Executive coaching in Durg?</a>
-    Excel Educational Institution provides complete Commerce coaching support
-    for students preparing for CS professional courses.
-</p>
+                        Looking for reliable CS Executive coaching in Durg?
+                        Excel Educational Institution provides complete Commerce coaching support
+                        for students preparing for CS professional courses.
+                    </p>
 
                     <p class="text-muted">
                         Our coaching programs are designed with modern learning methods,
@@ -1131,10 +1100,10 @@
                         </span>
 
                         <h2 class="fw-bold">
-                            <a href="https://www.exceledu.co.in" title="Excel-Educational-Institution">  Courses Offered at
+                            Courses Offered at
                             <span class="text-primary">
                                 Excel Educational Institution
-                            </span></a>
+                            </span>
                         </h2>
 
                         <p class="text-muted mt-3">
@@ -1263,8 +1232,8 @@
                     </span>
 
                     <h2 class="fw-bold mb-4">
-                        <a href="https://www.exceledu.co.in" title="Excel Educational Institution"> Online Commerce Coaching
-                        Available Across India</a>
+                        Online Commerce Coaching
+                        Available Across India
                     </h2>
 
                     <p class="text-muted">
@@ -1325,8 +1294,8 @@
                     </span>
 
                     <h2 class="fw-bold mb-4">
-                        <a href="https://www.exceledu.co.in" title="Excel Educational Institution">  Why Our Students
-                        Achieve Better Results?</a>
+                        Why Our Students
+                        Achieve Better Results?
                     </h2>
 
                     <p class="text-muted">
@@ -1388,7 +1357,7 @@
                             </span>
 
                             <h3 class="fw-bold mb-4">
-                                <a href="https://www.exceledu.co.in" title="Excel Educational Institution"> Contact Excel Educational Institution</a>
+                                Contact Excel Educational Institution
                             </h3>
 
                             <p class="mb-3">
@@ -1461,5 +1430,5 @@
         </div>
 
     </section>
-
+ 
 </div>
