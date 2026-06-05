@@ -24,6 +24,15 @@
     <script src="@Url.Content("/Content/admin/assets/js/plugins/bootstrap-notify.min.js")"></script>
     <script src="@Url.Content("~/Scripts/custom/gbl.js")"></script>
     @RenderSection("scripts", required: false)
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-BX165RLGNP"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'G-BX165RLGNP');
+    </script>
 </head>
 <body style="background-color: #ecf0f5">
     <nav class="pcoded-navbar theme-horizontal menu-light brand-blue" style="position: relative">

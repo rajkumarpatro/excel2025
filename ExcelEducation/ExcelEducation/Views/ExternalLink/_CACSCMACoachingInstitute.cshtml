@@ -1,5 +1,12 @@
-﻿ 
+﻿<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-BX165RLGNP"></script>
+<script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
 
+    gtag('config', 'G-BX165RLGNP');
+</script>
 <!-- Google Fonts & Icons -->
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
@@ -8,110 +15,107 @@
 
 <style>
     .hero-cma {
-    position: relative;
-    background: linear-gradient(135deg, #0f172a, #1e293b, #334155);
-    padding: 100px 0;
-    overflow: hidden;
-}
+        position: relative;
+        background: linear-gradient(135deg, #0f172a, #1e293b, #334155);
+        padding: 100px 0;
+        overflow: hidden;
+    }
 
-.hero-cma::before {
-    content: "";
-    position: absolute;
-    top: -100px;
-    right: -100px;
-    width: 350px;
-    height: 350px;
-    background: rgba(255, 193, 7, 0.15);
-    border-radius: 50%;
-    filter: blur(30px);
-}
+        .hero-cma::before {
+            content: "";
+            position: absolute;
+            top: -100px;
+            right: -100px;
+            width: 350px;
+            height: 350px;
+            background: rgba(255, 193, 7, 0.15);
+            border-radius: 50%;
+            filter: blur(30px);
+        }
 
-.hero-cma::after {
-    content: "";
-    position: absolute;
-    bottom: -120px;
-    left: -120px;
-    width: 300px;
-    height: 300px;
-    background: rgba(255, 255, 255, 0.08);
-    border-radius: 50%;
-    filter: blur(40px);
-}
+        .hero-cma::after {
+            content: "";
+            position: absolute;
+            bottom: -120px;
+            left: -120px;
+            width: 300px;
+            height: 300px;
+            background: rgba(255, 255, 255, 0.08);
+            border-radius: 50%;
+            filter: blur(40px);
+        }
 
-.hero-cma .container {
-    position: relative;
-    z-index: 2;
-}
+        .hero-cma .container {
+            position: relative;
+            z-index: 2;
+        }
 
-.text-orange {
-    color: #ff9800;
-}
+    .text-orange {
+        color: #ff9800;
+    }
 
-.hero-cma h1 {
-    line-height: 1.3;
-    letter-spacing: -1px;
-}
+    .hero-cma h1 {
+        line-height: 1.3;
+        letter-spacing: -1px;
+    }
 
-.hero-cma .lead {
-    color: rgba(255, 255, 255, 0.85);
-    font-size: 1.2rem;
-}
+    .hero-cma .lead {
+        color: rgba(255, 255, 255, 0.85);
+        font-size: 1.2rem;
+    }
 
-.btn-cma {
-    background: linear-gradient(135deg, #ff9800, #ffb300);
-    color: #fff;
-    border: none;
-    padding: 14px 32px;
-    border-radius: 50px;
-    font-weight: 700;
-    transition: all 0.3s ease;
-}
+    .btn-cma {
+        background: linear-gradient(135deg, #ff9800, #ffb300);
+        color: #fff;
+        border: none;
+        padding: 14px 32px;
+        border-radius: 50px;
+        font-weight: 700;
+        transition: all 0.3s ease;
+    }
 
-.btn-cma:hover {
-    transform: translateY(-3px);
-    background: linear-gradient(135deg, #fb8c00, #ffa000);
-    color: #fff;
-    box-shadow: 0 10px 25px rgba(255, 152, 0, 0.4);
-}
+        .btn-cma:hover {
+            transform: translateY(-3px);
+            background: linear-gradient(135deg, #fb8c00, #ffa000);
+            color: #fff;
+            box-shadow: 0 10px 25px rgba(255, 152, 0, 0.4);
+        }
 
-.contact-card {
-    background: rgba(255, 255, 255, 0.08);
-    backdrop-filter: blur(12px);
-    -webkit-backdrop-filter: blur(12px);
-    border: 1px solid rgba(255, 255, 255, 0.12);
-    border-radius: 20px;
-    padding: 18px 22px;
-    margin-bottom: 18px;
-    cursor: pointer;
-    transition: all 0.35s ease;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
-}
+    .contact-card {
+        background: rgba(255, 255, 255, 0.08);
+        backdrop-filter: blur(12px);
+        -webkit-backdrop-filter: blur(12px);
+        border: 1px solid rgba(255, 255, 255, 0.12);
+        border-radius: 20px;
+        padding: 18px 22px;
+        margin-bottom: 18px;
+        cursor: pointer;
+        transition: all 0.35s ease;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+    }
 
-.contact-card:hover {
-    transform: translateY(-5px) scale(1.02);
-    background: rgba(255, 255, 255, 0.12);
-    border-color: rgba(255, 193, 7, 0.4);
-}
+        .contact-card:hover {
+            transform: translateY(-5px) scale(1.02);
+            background: rgba(255, 255, 255, 0.12);
+            border-color: rgba(255, 193, 7, 0.4);
+        }
 
-.contact-card i {
-    transition: 0.3s ease;
-}
+        .contact-card i {
+            transition: 0.3s ease;
+        }
 
-.contact-card:hover i {
-    transform: rotate(-8deg) scale(1.1);
-}
+        .contact-card:hover i {
+            transform: rotate(-8deg) scale(1.1);
+        }
 
-.contact-card h6 {
-    font-weight: 700;
-    font-size: 1rem;
-}
+        .contact-card h6 {
+            font-weight: 700;
+            font-size: 1rem;
+        }
 
-.contact-card small {
-    font-size: 0.9rem;
-}
-
- 
- 
+        .contact-card small {
+            font-size: 0.9rem;
+        }
 </style>
 
 <div>
@@ -399,7 +403,7 @@
                             </h3>
 
                             <p class="text-muted">
-                                Students searching for <a href="https://www.exceledu.co.in"  title="CS Foundation classes in Bhilai" > CS Foundation classes in Bhilai</a> can join
+                                Students searching for <a href="https://www.exceledu.co.in" title="CS Foundation classes in Bhilai"> CS Foundation classes in Bhilai</a> can join
                                 <strong>Excel Educational Institution</strong> for beginner-friendly
                                 and result-oriented coaching.
                             </p>
@@ -461,11 +465,11 @@
                             </span>
 
                             <h3 class="fw-bold mb-3">
-                                <a href="https://www.exceledu.co.in/CS-Executive-Coaching-In-Indore"  title="CS Executive Coaching in Indore" > CS Executive Coaching in Indore</a>
-</h3>
+                                <a href="https://www.exceledu.co.in/CS-Executive-Coaching-In-Indore" title="CS Executive Coaching in Indore"> CS Executive Coaching in Indore</a>
+                            </h3>
 
                             <p class="text-muted">
-                                Our <a href="https://www.exceledu.co.in/CS-Executive-Coaching-In-Indore"  title="CS Executive Coaching in Indore" >CS Executive coaching in Indore </a>program is designed
+                                Our <a href="https://www.exceledu.co.in/CS-Executive-Coaching-In-Indore" title="CS Executive Coaching in Indore">CS Executive coaching in Indore </a>program is designed
                                 for students preparing seriously for ICSI examinations.
                             </p>
 
@@ -526,11 +530,11 @@
                             </span>
 
                             <h3 class="fw-bold mb-3">
-                                <a href="https://www.exceledu.co.in/Best-CS-Executive-coaching-in-Bhubaneswar" title="Best CS Executive Coaching in Bhubaneswar" > Best CS Executive Coaching in Bhubaneswar</a>
+                                <a href="https://www.exceledu.co.in/Best-CS-Executive-coaching-in-Bhubaneswar" title="Best CS Executive Coaching in Bhubaneswar"> Best CS Executive Coaching in Bhubaneswar</a>
                             </h3>
 
                             <p class="text-muted">
-                                Searching online for the <a href="https://www.exceledu.co.in" title="Best CS Executive Coaching in Bhubaneswar" > Best CS Executive Coaching in Bhubaneswar ?</a>
+                                Searching online for the <a href="https://www.exceledu.co.in" title="Best CS Executive Coaching in Bhubaneswar"> Best CS Executive Coaching in Bhubaneswar ?</a>
                                 Excel Educational Institution offers advanced Commerce coaching
                                 with experienced mentors and structured preparation plans.
                             </p>
@@ -665,11 +669,11 @@
                             </span>
 
                             <h3 class="fw-bold mb-3">
-                                <a href="https://www.exceledu.co.in/Best-CMA-Foundation-Coaching-In-Durg" title="Best CMA Foundation Coaching in Durg" >Best CMA Foundation Coaching in Durg</a>
+                                <a href="https://www.exceledu.co.in/Best-CMA-Foundation-Coaching-In-Durg" title="Best CMA Foundation Coaching in Durg">Best CMA Foundation Coaching in Durg</a>
                             </h3>
 
                             <p class="text-muted">
-                                Students looking for the best <a href="https://www.exceledu.co.in" title="Best CMA Foundation Coaching in Durg" >Best CMA Foundation Coaching in Durg</a>
+                                Students looking for the best <a href="https://www.exceledu.co.in" title="Best CMA Foundation Coaching in Durg">Best CMA Foundation Coaching in Durg</a>
                                 can benefit from our professional teaching methods and
                                 student-focused learning environment.
                             </p>
@@ -736,11 +740,11 @@
                             </span>
 
                             <h3 class="fw-bold mb-3">
-                                <a href="https://www.exceledu.co.in/CA-Foundation-coaching-in-Bhubaneswar" title="CA Foundation Coaching in Bhubaneswar" > CA Foundation Coaching in Bhubaneswar</a>
+                                <a href="https://www.exceledu.co.in/CA-Foundation-coaching-in-Bhubaneswar" title="CA Foundation Coaching in Bhubaneswar"> CA Foundation Coaching in Bhubaneswar</a>
                             </h3>
 
                             <p class="text-muted">
-                                Our <a href="https://www.exceledu.co.in" title="CA Foundation Coaching in Bhubaneswar" > CA Foundation Coaching in Bhubaneswar</a> program helps
+                                Our <a href="https://www.exceledu.co.in" title="CA Foundation Coaching in Bhubaneswar"> CA Foundation Coaching in Bhubaneswar</a> program helps
                                 Commerce students prepare confidently for ICAI examinations.
                             </p>
 
@@ -811,11 +815,11 @@
                             </span>
 
                             <h3 class="fw-bold mb-3">
-                                <a href="https://www.exceledu.co.in/CA-Final-test-series-coaching" title="CS Executive Module 2 Coaching" >CS Executive Module 2 Coaching</a>
+                                <a href="https://www.exceledu.co.in/CA-Final-test-series-coaching" title="CS Executive Module 2 Coaching">CS Executive Module 2 Coaching</a>
                             </h3>
 
                             <p class="text-muted">
-                                Excel Educational Institution offers focused <a href="https://www.exceledu.co.in" title="CS Executive Module 2 Coaching" >CS Executive Module 2 Coaching</a>
+                                Excel Educational Institution offers focused <a href="https://www.exceledu.co.in" title="CS Executive Module 2 Coaching">CS Executive Module 2 Coaching</a>
                                 with complete preparation support for ICSI aspirants.
                             </p>
 
@@ -912,8 +916,10 @@
                             </h3>
 
                             <p class="text-muted">
-                                Preparing for <a href="https://www.exceledu.co.in" title="CA Final exams?"> CA Final exams? 
-                                Join our professional CA Final test series coaching </a>program
+                                Preparing for <a href="https://www.exceledu.co.in" title="CA Final exams?">
+                                    CA Final exams?
+                                    Join our professional CA Final test series coaching
+                                </a>program
                                 for advanced preparation and exam practice.
                             </p>
 
@@ -1018,11 +1024,11 @@
                             </span>
 
                             <h3 class="fw-bold mb-3">
-                                <a href="https://www.exceledu.co.in/Class-XII-Commerce-coaching"  title="Class XII Commerce Coaching" >Class XII Commerce Coaching</a>
+                                <a href="https://www.exceledu.co.in/Class-XII-Commerce-coaching" title="Class XII Commerce Coaching">Class XII Commerce Coaching</a>
                             </h3>
 
                             <p class="text-muted">
-                                Our <a href="https://www.exceledu.co.in"  title="Class XII Commerce Coaching" >Class XII Commerce Coaching</a> classes help students
+                                Our <a href="https://www.exceledu.co.in" title="Class XII Commerce Coaching">Class XII Commerce Coaching</a> classes help students
                                 achieve excellent academic performance and prepare for
                                 professional Commerce careers.
                             </p>
@@ -1113,11 +1119,11 @@
                             </span>
 
                             <h3 class="fw-bold mb-3">
-                                <a href="https://www.exceledu.co.in/CS-Foundation-coaching-near-me"  title="CS Foundation Coaching Near Me" >CS Foundation Coaching Near Me</a>
+                                <a href="https://www.exceledu.co.in/CS-Foundation-coaching-near-me" title="CS Foundation Coaching Near Me">CS Foundation Coaching Near Me</a>
                             </h3>
 
                             <p class="text-muted">
-                                Students searching on Google for <a href="https://www.exceledu.co.in"  title="CS Foundation Coaching Near Me" >CS Foundation Coaching Near Me</a>
+                                Students searching on Google for <a href="https://www.exceledu.co.in" title="CS Foundation Coaching Near Me">CS Foundation Coaching Near Me</a>
                                 can connect with Excel Educational Institution for quality
                                 coaching support from anywhere in India.
                             </p>
@@ -1186,11 +1192,11 @@
                             </span>
 
                             <h3 class="fw-bold mb-3">
-                                <a href="https://www.exceledu.co.in/Online-CMA-coaching-classes"  title="Online CMA Coaching Classes" >Online CMA Coaching Classes</a>
+                                <a href="https://www.exceledu.co.in/Online-CMA-coaching-classes" title="Online CMA Coaching Classes">Online CMA Coaching Classes</a>
                             </h3>
 
                             <p class="text-muted">
-                                Our <a href="https://www.exceledu.co.in"  title="Online CMA Coaching Classes" >Online CMA Coaching Classes</a> are specially designed
+                                Our <a href="https://www.exceledu.co.in" title="Online CMA Coaching Classes">Online CMA Coaching Classes</a> are specially designed
                                 for students who want flexible and professional Commerce
                                 learning from home.
                             </p>
@@ -1270,12 +1276,12 @@
                             </span>
 
                             <h3 class="fw-bold mb-3">
-                                <a href="https://www.exceledu.co.in/Commerce-coaching-after-12th"  title="Commerce Coaching After 12th" >Commerce Coaching After 12th </a>
+                                <a href="https://www.exceledu.co.in/Commerce-coaching-after-12th" title="Commerce Coaching After 12th">Commerce Coaching After 12th </a>
                             </h3>
 
                             <p class="text-muted">
                                 Choosing the right career after Class 12 is very important.
-                                Our <a href="https://www.exceledu.co.in"  title="Commerce Coaching After 12th" >Commerce Coaching After 12th </a> helps students select
+                                Our <a href="https://www.exceledu.co.in" title="Commerce Coaching After 12th">Commerce Coaching After 12th </a> helps students select
                                 and prepare for professional Commerce courses.
                             </p>
 
@@ -1370,8 +1376,8 @@
                 </span>
 
                 <h1 class="display-4 fw-bold mb-4">
-                    <a href="https://www.exceledu.co.in"  title="Best CA, CS, CMA & Commerce Coaching Institute" >Best CA, CS, CMA & Commerce Coaching Institute</a>
-</h1>
+                    <a href="https://www.exceledu.co.in" title="Best CA, CS, CMA & Commerce Coaching Institute">Best CA, CS, CMA & Commerce Coaching Institute</a>
+                </h1>
 
                 <p class="lead text-muted mx-auto" style="max-width:900px;">
                     Excel Educational Institution is one of the trusted names in Commerce education
@@ -1396,8 +1402,8 @@
 
                     <div class="d-flex justify-content-between align-items-center flex-wrap mb-4">
                         <h2 class="fw-bold mb-0">
-                            <a href="https://www.exceledu.co.in"  title="" > Courses Available at Excel Educational Institution</a>
-</h2>
+                            <a href="https://www.exceledu.co.in" title=""> Courses Available at Excel Educational Institution</a>
+                        </h2>
 
                         <span class="badge bg-success px-3 py-2 rounded-pill">
                             Admission Open
@@ -1520,8 +1526,8 @@
                         <div class="card-body p-4">
 
                             <span class="badge bg-primary px-3 py-2 rounded-pill mb-3">
-                                <a href="https://www.exceledu.co.in"  title="Student Success System" >Student Success System</a>
-</span>
+                                <a href="https://www.exceledu.co.in" title="Student Success System">Student Success System</a>
+                            </span>
 
                             <h3 class="fw-bold mb-4">
                                 Why Our Coaching Method Delivers Better Results?
@@ -1600,8 +1606,8 @@
                             </span>
 
                             <h3 class="fw-bold mb-4">
-                                <a href="https://www.exceledu.co.in"  title="Build a Successful Commerce Career with Expert Guidance" > Build a Successful Commerce Career with Expert Guidance</a>
-</h3>
+                                <a href="https://www.exceledu.co.in" title="Build a Successful Commerce Career with Expert Guidance"> Build a Successful Commerce Career with Expert Guidance</a>
+                            </h3>
 
                             <p class="text-muted">
                                 Our mission is to help students succeed in Commerce and
@@ -1655,8 +1661,8 @@
                             </span>
 
                             <h2 class="fw-bold mb-4">
-                                <a href="https://www.exceledu.co.in"  title="Admission Guidance & Student Support" >Admission Guidance & Student Support</a>
-</h2>
+                                <a href="https://www.exceledu.co.in" title="Admission Guidance & Student Support">Admission Guidance & Student Support</a>
+                            </h2>
 
                             <p class="text-muted mb-4">
                                 Contact our admission team for course details,
@@ -1709,8 +1715,8 @@
                         <div class="p-5 h-100 d-flex flex-column justify-content-center">
 
                             <h3 class="fw-bold mb-4">
-                                <a href="https://www.exceledu.co.in"  title="Start Your Commerce Career Today" > Start Your Commerce Career Today</a>
-</h3>
+                                <a href="https://www.exceledu.co.in" title="Start Your Commerce Career Today"> Start Your Commerce Career Today</a>
+                            </h3>
 
                             <p class="mb-4 text-light">
                                 🎯 CA | CS | CMA | Commerce Coaching
