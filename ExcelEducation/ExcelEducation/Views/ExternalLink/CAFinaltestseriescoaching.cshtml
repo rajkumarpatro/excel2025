@@ -3,5 +3,1768 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
     ViewData["Title"] = "CA Final test series coaching";
 }
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-BX165RLGNP"></script>
+<script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
 
-@Html.Partial("_CACSCMACoachingInstitute")
+    gtag('config', 'G-BX165RLGNP');
+</script>
+<!-- Google Fonts & Icons -->
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+<style>
+    .hero-cma {
+        position: relative;
+        background: linear-gradient(135deg, #0f172a, #1e293b, #334155);
+        padding: 100px 0;
+        overflow: hidden;
+    }
+
+        .hero-cma::before {
+            content: "";
+            position: absolute;
+            top: -100px;
+            right: -100px;
+            width: 350px;
+            height: 350px;
+            background: rgba(255, 193, 7, 0.15);
+            border-radius: 50%;
+            filter: blur(30px);
+        }
+
+        .hero-cma::after {
+            content: "";
+            position: absolute;
+            bottom: -120px;
+            left: -120px;
+            width: 300px;
+            height: 300px;
+            background: rgba(255, 255, 255, 0.08);
+            border-radius: 50%;
+            filter: blur(40px);
+        }
+
+        .hero-cma .container {
+            position: relative;
+            z-index: 2;
+        }
+
+    .text-orange {
+        color: #ff9800;
+    }
+
+    .hero-cma h1 {
+        line-height: 1.3;
+        letter-spacing: -1px;
+    }
+
+    .hero-cma .lead {
+        color: rgba(255, 255, 255, 0.85);
+        font-size: 1.2rem;
+    }
+
+    .btn-cma {
+        background: linear-gradient(135deg, #ff9800, #ffb300);
+        color: #fff;
+        border: none;
+        padding: 14px 32px;
+        border-radius: 50px;
+        font-weight: 700;
+        transition: all 0.3s ease;
+    }
+
+        .btn-cma:hover {
+            transform: translateY(-3px);
+            background: linear-gradient(135deg, #fb8c00, #ffa000);
+            color: #fff;
+            box-shadow: 0 10px 25px rgba(255, 152, 0, 0.4);
+        }
+
+    .contact-card {
+        background: rgba(255, 255, 255, 0.08);
+        backdrop-filter: blur(12px);
+        -webkit-backdrop-filter: blur(12px);
+        border: 1px solid rgba(255, 255, 255, 0.12);
+        border-radius: 20px;
+        padding: 18px 22px;
+        margin-bottom: 18px;
+        cursor: pointer;
+        transition: all 0.35s ease;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+    }
+
+        .contact-card:hover {
+            transform: translateY(-5px) scale(1.02);
+            background: rgba(255, 255, 255, 0.12);
+            border-color: rgba(255, 193, 7, 0.4);
+        }
+
+        .contact-card i {
+            transition: 0.3s ease;
+        }
+
+        .contact-card:hover i {
+            transform: rotate(-8deg) scale(1.1);
+        }
+
+        .contact-card h6 {
+            font-weight: 700;
+            font-size: 1rem;
+        }
+
+        .contact-card small {
+            font-size: 0.9rem;
+        }
+</style>
+
+<div>
+
+    <section class="hero-cma text-center text-lg-start">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-12">
+                    <h1 class="display-3 text-white fw-bold mb-3">Best CA, CS & CMA Coaching Institute for Commerce Students in India</h1>
+                    <p class="lead mb-4 opacity-75">Your Trusted  <span class="fw-bold">Destination for Professional </span>  <span class="fw-bold text-warning">Commerce Coaching</span>.</p>
+                </div>
+                <div class="col-lg-4 mt-5 mt-lg-0">
+                    <div class="p-2">
+                        <div class="contact-card" onclick="location.href='tel:919926821000'">
+                            <div class="d-flex align-items-center">
+                                <i class="bi bi-phone-vibrate-fill fs-2 me-3 text-warning"></i>
+                                <div><h6 class="mb-0 text-white">Admissions</h6><small class="text-white-50">99268-21000</small></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 mt-5 mt-lg-0">
+                    <div class="p-2">
+                        <div class="contact-card" onclick="location.href='mailto:eeiraipur@gmail.com'">
+                            <div class="d-flex align-items-center">
+                                <i class="bi bi-envelope-at-fill fs-2 me-3 text-warning"></i>
+                                <div><h6 class="mb-0 text-white">Email Us</h6><small class="text-white-50">eeiraipur@gmail.com</small></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 mt-5 mt-lg-0">
+                    <div class="p-2">
+                        <div class="contact-card" onclick="window.open('https://www.exceledu.co.in')">
+                            <div class="d-flex align-items-center">
+                                <i class="bi bi-geo-alt-fill fs-2 me-3 text-warning"></i>
+                                <div><h6 class="mb-0 text-white">Official Site</h6><small class="text-white-50">www.exceledu.co.in</small></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-5 bg-light">
+        <div class="container">
+
+            <div class="row align-items-center g-5">
+
+                <!-- Left Content -->
+                <div class="col-lg-7">
+
+                    <span class="badge bg-warning text-dark px-4 py-2 rounded-pill fw-bold mb-3">
+                        India’s Trusted Commerce Coaching Institute
+                    </span>
+
+                    <h1 class="display-5 fw-bold mb-4">
+                        Best Institute for
+                        <span class="text-warning">CA, CS, CMA & Commerce Coaching</span>
+                    </h1>
+
+                    <p class="lead text-secondary mb-4">
+                        Looking for the best institute for CA, CS, CMA, and Commerce coaching?
+                        Welcome to <strong>Excel Educational Institution</strong> — a trusted name
+                        for Commerce education and professional exam preparation.
+                    </p>
+
+                    <p class="text-muted mb-4">
+                        We provide expert coaching for:
+                    </p>
+
+                    <!-- Course List -->
+                    <div class="row g-3 mb-4">
+
+                        <div class="col-md-6">
+                            <div class="card border-0 shadow-sm h-100 rounded-4">
+                                <div class="card-body d-flex align-items-center">
+                                    <i class="bi bi-book text-warning fs-3 me-3"></i>
+                                    <span class="fw-semibold">CA Foundation</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-md-6">
+                            <div class="card border-0 shadow-sm h-100 rounded-4">
+                                <div class="card-body d-flex align-items-center">
+                                    <i class="bi bi-award text-warning fs-3 me-3"></i>
+                                    <span class="fw-semibold">CA Intermediate</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-md-6">
+                            <div class="card border-0 shadow-sm h-100 rounded-4">
+                                <div class="card-body d-flex align-items-center">
+                                    <i class="bi bi-mortarboard text-warning fs-3 me-3"></i>
+                                    <span class="fw-semibold">CA Final</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-md-6">
+                            <div class="card border-0 shadow-sm h-100 rounded-4">
+                                <div class="card-body d-flex align-items-center">
+                                    <i class="bi bi-journal-bookmark text-warning fs-3 me-3"></i>
+                                    <span class="fw-semibold">CS Foundation</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-md-6">
+                            <div class="card border-0 shadow-sm h-100 rounded-4">
+                                <div class="card-body d-flex align-items-center">
+                                    <i class="bi bi-file-earmark-check text-warning fs-3 me-3"></i>
+                                    <span class="fw-semibold">CS Executive</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-md-6">
+                            <div class="card border-0 shadow-sm h-100 rounded-4">
+                                <div class="card-body d-flex align-items-center">
+                                    <i class="bi bi-calculator text-warning fs-3 me-3"></i>
+                                    <span class="fw-semibold">CMA Foundation</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-md-6">
+                            <div class="card border-0 shadow-sm h-100 rounded-4">
+                                <div class="card-body d-flex align-items-center">
+                                    <i class="bi bi-graph-up-arrow text-warning fs-3 me-3"></i>
+                                    <span class="fw-semibold">CMA Intermediate</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-md-6">
+                            <div class="card border-0 shadow-sm h-100 rounded-4">
+                                <div class="card-body d-flex align-items-center">
+                                    <i class="bi bi-people text-warning fs-3 me-3"></i>
+                                    <span class="fw-semibold">Class XI & XII Commerce</span>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <!-- Features -->
+                    <div class="card border-0 shadow rounded-4 mb-4">
+                        <div class="card-body p-4">
+
+                            <h4 class="fw-bold mb-4">
+                                Why Students Choose Excel Educational Institution?
+                            </h4>
+
+                            <div class="row g-3">
+
+                                <div class="col-md-6">
+                                    <div class="bg-light rounded-3 p-3 fw-medium">
+                                        ✅ Experienced Faculty Team
+                                    </div>
+                                </div>
+
+                                <div class="col-md-6">
+                                    <div class="bg-light rounded-3 p-3 fw-medium">
+                                        ✅ Updated ICAI / ICSI / CMA Syllabus
+                                    </div>
+                                </div>
+
+                                <div class="col-md-6">
+                                    <div class="bg-light rounded-3 p-3 fw-medium">
+                                        ✅ LIVE + Recorded Classes
+                                    </div>
+                                </div>
+
+                                <div class="col-md-6">
+                                    <div class="bg-light rounded-3 p-3 fw-medium">
+                                        ✅ Regular Mock Tests
+                                    </div>
+                                </div>
+
+                                <div class="col-md-6">
+                                    <div class="bg-light rounded-3 p-3 fw-medium">
+                                        ✅ Personal Doubt Solving
+                                    </div>
+                                </div>
+
+                                <div class="col-md-6">
+                                    <div class="bg-light rounded-3 p-3 fw-medium">
+                                        ✅ Career Guidance Sessions
+                                    </div>
+                                </div>
+
+                                <div class="col-md-6">
+                                    <div class="bg-light rounded-3 p-3 fw-medium">
+                                        ✅ Smart Revision Techniques
+                                    </div>
+                                </div>
+
+                                <div class="col-md-6">
+                                    <div class="bg-light rounded-3 p-3 fw-medium">
+                                        ✅ Affordable Fees Structure
+                                    </div>
+                                </div>
+
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <!-- CTA -->
+                    <div class="d-flex flex-wrap gap-3">
+                        <a href="tel:+919926821000"
+                           class="btn btn-warning btn-lg rounded-pill px-4 fw-bold shadow-sm">
+                            📞 Call Now
+                        </a>
+
+                        <a href="https://wa.me/919926821000"
+                           class="btn btn-dark btn-lg rounded-pill px-4 fw-bold">
+                            WhatsApp Inquiry
+                        </a>
+                    </div>
+
+                </div>
+
+                <!-- Right Side -->
+                <div class="col-lg-5">
+
+                    <div class="card border-0 shadow-lg rounded-4 overflow-hidden">
+
+                        <div class="card-body p-5 text-center">
+
+                            <div class="bg-warning text-white rounded-circle d-inline-flex align-items-center justify-content-center mb-4"
+                                 style="width:90px;height:90px;">
+                                <i class="bi bi-mortarboard-fill fs-1"></i>
+                            </div>
+
+                            <h3 class="fw-bold mb-3">
+                                Start Your Commerce Career with Experts
+                            </h3>
+
+                            <p class="text-muted mb-4">
+                                Join thousands of successful students preparing for
+                                CA, CS, CMA, and Commerce exams through professional mentoring.
+                            </p>
+
+                            <div class="bg-light rounded-4 p-4">
+                                <h5 class="fw-bold mb-2">Admission Helpline</h5>
+
+                                <a href="tel:+919926821000"
+                                   class="text-decoration-none fs-4 fw-bold text-warning">
+                                    +91 9926821000
+                                </a>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+    <section class="py-5 bg-light">
+        <div class="container">
+
+            <div class="row g-4">
+
+                <!-- Card 1 -->
+                <div class="col-lg-6">
+                    <div class="card border-0 shadow-sm rounded-4 h-100">
+                        <div class="card-body p-4">
+
+                            <span class="badge bg-warning text-dark mb-3 px-3 py-2 rounded-pill">
+                                CS Coaching
+                            </span>
+
+                            <h3 class="fw-bold mb-3">
+                                <a href="https://www.exceledu.co.in/CS-Foundation-Classes-In-Bhilai" title="CS Foundation classes in Bhilai"> CS Foundation classes in Bhilai</a>
+                            </h3>
+
+                            <p class="text-muted">
+                                Students searching for <a href="https://www.exceledu.co.in" title="CS Foundation classes in Bhilai"> CS Foundation classes in Bhilai</a> can join
+                                <strong>Excel Educational Institution</strong> for beginner-friendly
+                                and result-oriented coaching.
+                            </p>
+
+                            <h5 class="fw-bold mt-4 mb-3">What Students Get:</h5>
+
+                            <div class="row g-3 mb-4">
+
+                                <div class="col-12">
+                                    <div class="bg-light rounded-3 p-3">
+                                        ✅ Strong Concept Building
+                                    </div>
+                                </div>
+
+                                <div class="col-12">
+                                    <div class="bg-light rounded-3 p-3">
+                                        ✅ Subject Wise Practice
+                                    </div>
+                                </div>
+
+                                <div class="col-12">
+                                    <div class="bg-light rounded-3 p-3">
+                                        ✅ Regular Assessments
+                                    </div>
+                                </div>
+
+                                <div class="col-12">
+                                    <div class="bg-light rounded-3 p-3">
+                                        ✅ Recorded Lecture Access
+                                    </div>
+                                </div>
+
+                            </div>
+
+                            <h5 class="fw-bold mb-3">Ideal For:</h5>
+
+                            <ul class="list-group list-group-flush mb-4">
+                                <li class="list-group-item">• Class 12 Commerce Students</li>
+                                <li class="list-group-item">• CS Aspirants</li>
+                                <li class="list-group-item">• Commerce Beginners</li>
+                            </ul>
+
+                            <a href="https://wa.me/919926821000"
+                               class="btn btn-warning rounded-pill px-4 fw-bold">
+                                WhatsApp Support
+                            </a>
+
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="col-lg-6">
+                    <div class="card border-0 shadow-sm rounded-4 h-100">
+                        <div class="card-body p-4">
+
+                            <span class="badge bg-dark mb-3 px-3 py-2 rounded-pill">
+                                CS Executive
+                            </span>
+
+                            <h3 class="fw-bold mb-3">
+                                <a href="https://www.exceledu.co.in/CS-Executive-Coaching-In-Indore" title="CS Executive Coaching in Indore"> CS Executive Coaching in Indore</a>
+                            </h3>
+
+                            <p class="text-muted">
+                                Our <a href="https://www.exceledu.co.in/CS-Executive-Coaching-In-Indore" title="CS Executive Coaching in Indore">CS Executive coaching in Indore </a>program is designed
+                                for students preparing seriously for ICSI examinations.
+                            </p>
+
+                            <h5 class="fw-bold mt-4 mb-3">Key Features:</h5>
+
+                            <div class="row g-3 mb-4">
+
+                                <div class="col-12">
+                                    <div class="bg-light rounded-3 p-3">
+                                        ✅ Expert Faculty Guidance
+                                    </div>
+                                </div>
+
+                                <div class="col-12">
+                                    <div class="bg-light rounded-3 p-3">
+                                        ✅ Module Wise Preparation
+                                    </div>
+                                </div>
+
+                                <div class="col-12">
+                                    <div class="bg-light rounded-3 p-3">
+                                        ✅ Test Series & Revision
+                                    </div>
+                                </div>
+
+                                <div class="col-12">
+                                    <div class="bg-light rounded-3 p-3">
+                                        ✅ Online Learning Support
+                                    </div>
+                                </div>
+
+                            </div>
+
+                            <h5 class="fw-bold mb-3">Why Join Us?</h5>
+
+                            <ul class="list-group list-group-flush mb-4">
+                                <li class="list-group-item">✔ Exam-Oriented Teaching</li>
+                                <li class="list-group-item">✔ Practical Learning Approach</li>
+                                <li class="list-group-item">✔ Performance Tracking</li>
+                            </ul>
+
+                            <a href="tel:+919926821000"
+                               class="btn btn-dark rounded-pill px-4 fw-bold">
+                                Contact Us Today
+                            </a>
+
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="col-lg-6">
+                    <div class="card border-0 shadow-sm rounded-4 h-100">
+                        <div class="card-body p-4">
+
+                            <span class="badge bg-primary mb-3 px-3 py-2 rounded-pill">
+                                Bhubaneswar Coaching
+                            </span>
+
+                            <h3 class="fw-bold mb-3">
+                                <a href="https://www.exceledu.co.in/Best-CS-Executive-coaching-in-Bhubaneswar" title="Best CS Executive Coaching in Bhubaneswar"> Best CS Executive Coaching in Bhubaneswar</a>
+                            </h3>
+
+                            <p class="text-muted">
+                                Searching online for the <a href="https://www.exceledu.co.in" title="Best CS Executive Coaching in Bhubaneswar"> Best CS Executive Coaching in Bhubaneswar ?</a>
+                                Excel Educational Institution offers advanced Commerce coaching
+                                with experienced mentors and structured preparation plans.
+                            </p>
+
+                            <h5 class="fw-bold mt-4 mb-3">Student Benefits:</h5>
+
+                            <div class="row g-3">
+
+                                <div class="col-12">
+                                    <div class="bg-light rounded-3 p-3">
+                                        ✅ Updated Study Material
+                                    </div>
+                                </div>
+
+                                <div class="col-12">
+                                    <div class="bg-light rounded-3 p-3">
+                                        ✅ Interactive LIVE Classes
+                                    </div>
+                                </div>
+
+                                <div class="col-12">
+                                    <div class="bg-light rounded-3 p-3">
+                                        ✅ Doubt Clearing Sessions
+                                    </div>
+                                </div>
+
+                                <div class="col-12">
+                                    <div class="bg-light rounded-3 p-3">
+                                        ✅ Flexible Learning Schedule
+                                    </div>
+                                </div>
+
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 4 -->
+                <div class="col-lg-6">
+                    <div class="card border-0 shadow-sm rounded-4 h-100">
+                        <div class="card-body p-4">
+
+                            <span class="badge bg-success mb-3 px-3 py-2 rounded-pill">
+                                CMA Coaching
+                            </span>
+
+                            <h3 class="fw-bold mb-3">
+                                CMA Foundation Coaching in Durg
+                            </h3>
+
+                            <p class="text-muted">
+                                Excel Educational Institution provides trusted CMA Foundation
+                                coaching in Durg for students who want strong preparation
+                                in Cost and Management Accounting.
+                            </p>
+
+                            <h5 class="fw-bold mt-4 mb-3">Course Highlights:</h5>
+
+                            <div class="row g-3 mb-4">
+
+                                <div class="col-12">
+                                    <div class="bg-light rounded-3 p-3">
+                                        ✅ Complete Syllabus Coverage
+                                    </div>
+                                </div>
+
+                                <div class="col-12">
+                                    <div class="bg-light rounded-3 p-3">
+                                        ✅ Expert Commerce Faculty
+                                    </div>
+                                </div>
+
+                                <div class="col-12">
+                                    <div class="bg-light rounded-3 p-3">
+                                        ✅ Mock Test Practice
+                                    </div>
+                                </div>
+
+                                <div class="col-12">
+                                    <div class="bg-light rounded-3 p-3">
+                                        ✅ Online + Offline Support
+                                    </div>
+                                </div>
+
+                            </div>
+
+                            <a href="tel:+919926821000"
+                               class="btn btn-success rounded-pill px-4 fw-bold">
+                                Admission Open
+                            </a>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+    <section class="py-5 bg-light">
+        <div class="container">
+
+            <!-- Heading -->
+            <div class="text-center mb-5">
+                <span class="badge bg-warning text-dark px-4 py-2 rounded-pill fw-bold mb-3">
+                    Professional Commerce Coaching Programs
+                </span>
+
+                <h2 class="display-5 fw-bold">
+                    CA, CS & CMA Coaching Programs Across India
+                </h2>
+
+                <p class="lead text-muted mt-3">
+                    Excel Educational Institution provides professional coaching support
+                    for Commerce students preparing for CA, CS, CMA, and other career-oriented programs.
+                    Our institute focuses on conceptual learning, practical preparation,
+                    exam-oriented teaching methods, and long-term career success.
+                </p>
+            </div>
+
+            <div class="row g-4">
+
+                <!-- Card 1 -->
+                <div class="col-lg-6">
+                    <div class="card border-0 shadow-sm rounded-4 h-100">
+                        <div class="card-body p-4">
+
+                            <span class="badge bg-success px-3 py-2 rounded-pill mb-3">
+                                CMA Coaching
+                            </span>
+
+                            <h3 class="fw-bold mb-3">
+                                <a href="https://www.exceledu.co.in/Best-CMA-Foundation-Coaching-In-Durg" title="Best CMA Foundation Coaching in Durg">Best CMA Foundation Coaching in Durg</a>
+                            </h3>
+
+                            <p class="text-muted">
+                                Students looking for the best <a href="https://www.exceledu.co.in" title="Best CMA Foundation Coaching in Durg">Best CMA Foundation Coaching in Durg</a>
+                                can benefit from our professional teaching methods and
+                                student-focused learning environment.
+                            </p>
+
+                            <p class="text-muted">
+                                At Excel Educational Institution, we help students build strong
+                                fundamentals in Cost and Management Accounting through structured
+                                classes, revision sessions, mock tests, and simplified concept explanations.
+                            </p>
+
+                            <h5 class="fw-bold mt-4 mb-3">
+                                Why Students Prefer Our CMA Coaching?
+                            </h5>
+
+                            <div class="row g-3 mb-4">
+
+                                <div class="col-12">
+                                    <div class="bg-light rounded-3 p-3">
+                                        ✅ Personalized Attention
+                                    </div>
+                                </div>
+
+                                <div class="col-12">
+                                    <div class="bg-light rounded-3 p-3">
+                                        ✅ Practice Based Learning
+                                    </div>
+                                </div>
+
+                                <div class="col-12">
+                                    <div class="bg-light rounded-3 p-3">
+                                        ✅ Easy Commerce Concepts
+                                    </div>
+                                </div>
+
+                                <div class="col-12">
+                                    <div class="bg-light rounded-3 p-3">
+                                        ✅ Career Guidance Support
+                                    </div>
+                                </div>
+
+                            </div>
+
+                            <p class="text-secondary">
+                                Our expert faculty members ensure that students understand
+                                both theoretical and practical concepts required for CMA examinations.
+                            </p>
+
+                            <a href="tel:+919926821000"
+                               class="btn btn-success rounded-pill px-4 fw-bold mt-3">
+                                Call Now to Enroll
+                            </a>
+
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="col-lg-6">
+                    <div class="card border-0 shadow-sm rounded-4 h-100">
+                        <div class="card-body p-4">
+
+                            <span class="badge bg-primary px-3 py-2 rounded-pill mb-3">
+                                CA Foundation
+                            </span>
+
+                            <h3 class="fw-bold mb-3">
+                                <a href="https://www.exceledu.co.in/CA-Foundation-coaching-in-Bhubaneswar" title="CA Foundation Coaching in Bhubaneswar"> CA Foundation Coaching in Bhubaneswar</a>
+                            </h3>
+
+                            <p class="text-muted">
+                                Our <a href="https://www.exceledu.co.in" title="CA Foundation Coaching in Bhubaneswar"> CA Foundation Coaching in Bhubaneswar</a> program helps
+                                Commerce students prepare confidently for ICAI examinations.
+                            </p>
+
+                            <p class="text-muted">
+                                We provide complete academic support through structured learning,
+                                conceptual teaching, regular practice tests, and strategic exam preparation.
+                                Students receive both theoretical knowledge and practical exam guidance.
+                            </p>
+
+                            <h5 class="fw-bold mt-4 mb-3">
+                                Coaching Advantages
+                            </h5>
+
+                            <div class="row g-3 mb-4">
+
+                                <div class="col-12">
+                                    <div class="bg-light rounded-3 p-3">
+                                        ✅ Chapter Wise Learning
+                                    </div>
+                                </div>
+
+                                <div class="col-12">
+                                    <div class="bg-light rounded-3 p-3">
+                                        ✅ Experienced CA Faculty
+                                    </div>
+                                </div>
+
+                                <div class="col-12">
+                                    <div class="bg-light rounded-3 p-3">
+                                        ✅ Revision Sessions
+                                    </div>
+                                </div>
+
+                                <div class="col-12">
+                                    <div class="bg-light rounded-3 p-3">
+                                        ✅ Exam Strategy Guidance
+                                    </div>
+                                </div>
+
+                            </div>
+
+                            <h5 class="fw-bold mb-3">
+                                Best For:
+                            </h5>
+
+                            <ul class="list-group list-group-flush mb-4">
+                                <li class="list-group-item">• Class 12 Commerce Students</li>
+                                <li class="list-group-item">• B.Com Students</li>
+                                <li class="list-group-item">• Future Chartered Accountants</li>
+                            </ul>
+
+                            <p class="text-secondary">
+                                Our goal is to help students build confidence and perform well
+                                in professional Commerce examinations through disciplined preparation.
+                            </p>
+
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="col-lg-6">
+                    <div class="card border-0 shadow-sm rounded-4 h-100">
+                        <div class="card-body p-4">
+
+                            <span class="badge bg-dark px-3 py-2 rounded-pill mb-3">
+                                CS Executive
+                            </span>
+
+                            <h3 class="fw-bold mb-3">
+                                <a href="https://www.exceledu.co.in/CA-Final-test-series-coaching" title="CS Executive Module 2 Coaching">CS Executive Module 2 Coaching</a>
+                            </h3>
+
+                            <p class="text-muted">
+                                Excel Educational Institution offers focused <a href="https://www.exceledu.co.in" title="CS Executive Module 2 Coaching">CS Executive Module 2 Coaching</a>
+                                with complete preparation support for ICSI aspirants.
+                            </p>
+
+                            <p class="text-muted">
+                                Our structured coaching approach helps students understand complex legal,
+                                financial, and management concepts through interactive learning methods
+                                and practical examples.
+                            </p>
+
+                            <h5 class="fw-bold mt-4 mb-3">
+                                Subjects Included
+                            </h5>
+
+                            <div class="row g-3 mb-4">
+
+                                <div class="col-md-6">
+                                    <div class="bg-light rounded-3 p-3">
+                                        📘 Company Law
+                                    </div>
+                                </div>
+
+                                <div class="col-md-6">
+                                    <div class="bg-light rounded-3 p-3">
+                                        📘 Securities Laws
+                                    </div>
+                                </div>
+
+                                <div class="col-md-6">
+                                    <div class="bg-light rounded-3 p-3">
+                                        📘 Tax Laws
+                                    </div>
+                                </div>
+
+                                <div class="col-md-6">
+                                    <div class="bg-light rounded-3 p-3">
+                                        📘 Financial Management
+                                    </div>
+                                </div>
+
+                            </div>
+
+                            <h5 class="fw-bold mb-3">
+                                Learning Features
+                            </h5>
+
+                            <div class="row g-3 mb-4">
+
+                                <div class="col-12">
+                                    <div class="bg-light rounded-3 p-3">
+                                        ✅ LIVE Interactive Classes
+                                    </div>
+                                </div>
+
+                                <div class="col-12">
+                                    <div class="bg-light rounded-3 p-3">
+                                        ✅ Recorded Backup Lectures
+                                    </div>
+                                </div>
+
+                                <div class="col-12">
+                                    <div class="bg-light rounded-3 p-3">
+                                        ✅ Mock Test Discussions
+                                    </div>
+                                </div>
+
+                                <div class="col-12">
+                                    <div class="bg-light rounded-3 p-3">
+                                        ✅ Expert Faculty Support
+                                    </div>
+                                </div>
+
+                            </div>
+
+                            <a href="tel:+919926821000"
+                               class="btn btn-dark rounded-pill px-4 fw-bold">
+                                Contact Us for Batch Details
+                            </a>
+
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 4 -->
+                <div class="col-lg-6">
+                    <div class="card border-0 shadow-sm rounded-4 h-100">
+                        <div class="card-body p-4">
+
+                            <span class="badge bg-danger px-3 py-2 rounded-pill mb-3">
+                                CA Final
+                            </span>
+
+                            <h3 class="fw-bold mb-3">
+                                <a href="https://www.exceledu.co.in/CA-Final-test-series-coaching" title="CA Final Test Series Coaching"> CA Final Test Series Coaching</a>
+                            </h3>
+
+                            <p class="text-muted">
+                                Preparing for <a href="https://www.exceledu.co.in" title="CA Final exams?">
+                                    CA Final exams?
+                                    Join our professional CA Final test series coaching
+                                </a>program
+                                for advanced preparation and exam practice.
+                            </p>
+
+                            <p class="text-muted">
+                                Our CA Final test series is specially designed for students who want
+                                real exam practice, better answer presentation skills, and improved
+                                time management before ICAI examinations.
+                            </p>
+
+                            <h5 class="fw-bold mt-4 mb-3">
+                                Test Series Benefits
+                            </h5>
+
+                            <div class="row g-3 mb-4">
+
+                                <div class="col-12">
+                                    <div class="bg-light rounded-3 p-3">
+                                        ✅ Real Exam Environment
+                                    </div>
+                                </div>
+
+                                <div class="col-12">
+                                    <div class="bg-light rounded-3 p-3">
+                                        ✅ Time Management Training
+                                    </div>
+                                </div>
+
+                                <div class="col-12">
+                                    <div class="bg-light rounded-3 p-3">
+                                        ✅ Answer Writing Improvement
+                                    </div>
+                                </div>
+
+                                <div class="col-12">
+                                    <div class="bg-light rounded-3 p-3">
+                                        ✅ Performance Evaluation
+                                    </div>
+                                </div>
+
+                            </div>
+
+                            <h5 class="fw-bold mb-3">
+                                Suitable For:
+                            </h5>
+
+                            <ul class="list-group list-group-flush mb-4">
+                                <li class="list-group-item">• CA Final Students</li>
+                                <li class="list-group-item">• Self Study Aspirants</li>
+                                <li class="list-group-item">• Revision Batch Students</li>
+                            </ul>
+
+                            <p class="text-secondary">
+                                Our experienced mentors provide performance analysis,
+                                revision planning, and strategic preparation guidance
+                                to help students maximize their CA Final exam scores.
+                            </p>
+
+                            <a href="tel:+919926821000"
+                               class="btn btn-danger rounded-pill px-4 fw-bold">
+                                Start Your CA Final Preparation Today
+                            </a>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+    <section class="py-5 bg-white">
+        <div class="container">
+
+            <!-- Section Heading -->
+            <div class="text-center mb-5">
+                <span class="badge bg-warning text-dark px-4 py-2 rounded-pill fw-bold mb-3">
+                    Commerce Coaching Programs
+                </span>
+
+                <h2 class="display-5 fw-bold">
+                    Professional Commerce Coaching & Career Guidance
+                </h2>
+
+                <p class="lead text-muted mt-3">
+                    Excel Educational Institution provides quality Commerce education
+                    for school students, professional course aspirants, and online learners
+                    through structured coaching programs and experienced faculty guidance.
+                </p>
+            </div>
+
+            <div class="row g-4">
+
+                <!-- Card 1 -->
+                <div class="col-lg-6">
+                    <div class="card border-0 shadow-sm rounded-4 h-100">
+
+                        <div class="card-body p-4">
+
+                            <span class="badge bg-primary px-3 py-2 rounded-pill mb-3">
+                                School Commerce Coaching
+                            </span>
+
+                            <h3 class="fw-bold mb-3">
+                                <a href="https://www.exceledu.co.in/Class-XII-Commerce-coaching" title="Class XII Commerce Coaching">Class XII Commerce Coaching</a>
+                            </h3>
+
+                            <p class="text-muted">
+                                Our <a href="https://www.exceledu.co.in" title="Class XII Commerce Coaching">Class XII Commerce Coaching</a> classes help students
+                                achieve excellent academic performance and prepare for
+                                professional Commerce careers.
+                            </p>
+
+                            <p class="text-muted">
+                                We focus on concept clarity, board exam preparation,
+                                revision techniques, and subject-wise practice sessions
+                                to improve student confidence and academic results.
+                            </p>
+
+                            <h5 class="fw-bold mt-4 mb-3">
+                                Subjects Covered
+                            </h5>
+
+                            <div class="row g-3 mb-4">
+
+                                <div class="col-md-6">
+                                    <div class="bg-light rounded-3 p-3">
+                                        📘 Accountancy
+                                    </div>
+                                </div>
+
+                                <div class="col-md-6">
+                                    <div class="bg-light rounded-3 p-3">
+                                        📘 Economics
+                                    </div>
+                                </div>
+
+                                <div class="col-md-6">
+                                    <div class="bg-light rounded-3 p-3">
+                                        📘 Business Studies
+                                    </div>
+                                </div>
+
+                                <div class="col-md-6">
+                                    <div class="bg-light rounded-3 p-3">
+                                        📘 Mathematics
+                                    </div>
+                                </div>
+
+                            </div>
+
+                            <h5 class="fw-bold mb-3">
+                                Student Benefits
+                            </h5>
+
+                            <div class="row g-3">
+
+                                <div class="col-12">
+                                    <div class="bg-light rounded-3 p-3">
+                                        ✅ Board Exam Preparation
+                                    </div>
+                                </div>
+
+                                <div class="col-12">
+                                    <div class="bg-light rounded-3 p-3">
+                                        ✅ Strong Commerce Foundation
+                                    </div>
+                                </div>
+
+                                <div class="col-12">
+                                    <div class="bg-light rounded-3 p-3">
+                                        ✅ Career Counseling
+                                    </div>
+                                </div>
+
+                                <div class="col-12">
+                                    <div class="bg-light rounded-3 p-3">
+                                        ✅ Regular Class Tests
+                                    </div>
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="col-lg-6">
+                    <div class="card border-0 shadow-sm rounded-4 h-100">
+
+                        <div class="card-body p-4">
+
+                            <span class="badge bg-dark px-3 py-2 rounded-pill mb-3">
+                                CS Coaching
+                            </span>
+
+                            <h3 class="fw-bold mb-3">
+                                <a href="https://www.exceledu.co.in/CS-Foundation-coaching-near-me" title="CS Foundation Coaching Near Me">CS Foundation Coaching Near Me</a>
+                            </h3>
+
+                            <p class="text-muted">
+                                Students searching on Google for <a href="https://www.exceledu.co.in" title="CS Foundation Coaching Near Me">CS Foundation Coaching Near Me</a>
+                                can connect with Excel Educational Institution for quality
+                                coaching support from anywhere in India.
+                            </p>
+
+                            <p class="text-muted">
+                                Our institute offers both classroom and online learning support
+                                with professional mentoring, recorded lectures, and regular assessments
+                                to help students prepare confidently for CS Foundation examinations.
+                            </p>
+
+                            <h5 class="fw-bold mt-4 mb-3">
+                                Available Learning Options
+                            </h5>
+
+                            <div class="row g-3 mb-4">
+
+                                <div class="col-12">
+                                    <div class="bg-light rounded-3 p-3">
+                                        ✔ Classroom Coaching
+                                    </div>
+                                </div>
+
+                                <div class="col-12">
+                                    <div class="bg-light rounded-3 p-3">
+                                        ✔ LIVE Online Classes
+                                    </div>
+                                </div>
+
+                                <div class="col-12">
+                                    <div class="bg-light rounded-3 p-3">
+                                        ✔ Recorded Video Lectures
+                                    </div>
+                                </div>
+
+                                <div class="col-12">
+                                    <div class="bg-light rounded-3 p-3">
+                                        ✔ Online Test Series
+                                    </div>
+                                </div>
+
+                            </div>
+
+                            <p class="text-secondary">
+                                We help students build strong legal and Commerce fundamentals
+                                through simplified teaching methods and structured preparation plans.
+                            </p>
+
+                            <a href="https://wa.me/919926821000"
+                               class="btn btn-dark rounded-pill px-4 fw-bold mt-3">
+                                WhatsApp Support Available
+                            </a>
+
+                        </div>
+
+                    </div>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="col-lg-6">
+                    <div class="card border-0 shadow-sm rounded-4 h-100">
+
+                        <div class="card-body p-4">
+
+                            <span class="badge bg-success px-3 py-2 rounded-pill mb-3">
+                                Online CMA Coaching
+                            </span>
+
+                            <h3 class="fw-bold mb-3">
+                                <a href="https://www.exceledu.co.in/Online-CMA-coaching-classes" title="Online CMA Coaching Classes">Online CMA Coaching Classes</a>
+                            </h3>
+
+                            <p class="text-muted">
+                                Our <a href="https://www.exceledu.co.in" title="Online CMA Coaching Classes">Online CMA Coaching Classes</a> are specially designed
+                                for students who want flexible and professional Commerce
+                                learning from home.
+                            </p>
+
+                            <p class="text-muted">
+                                Students can attend LIVE sessions, access recorded classes,
+                                submit assignments online, and participate in mock tests
+                                from any location using mobile or desktop devices.
+                            </p>
+
+                            <h5 class="fw-bold mt-4 mb-3">
+                                Online Course Features
+                            </h5>
+
+                            <div class="row g-3 mb-4">
+
+                                <div class="col-md-6">
+                                    <div class="bg-light rounded-3 p-3">
+                                        💻 LIVE Faculty Interaction
+                                    </div>
+                                </div>
+
+                                <div class="col-md-6">
+                                    <div class="bg-light rounded-3 p-3">
+                                        🎥 Recorded Lectures
+                                    </div>
+                                </div>
+
+                                <div class="col-md-6">
+                                    <div class="bg-light rounded-3 p-3">
+                                        📱 Mobile Friendly Learning
+                                    </div>
+                                </div>
+
+                                <div class="col-md-6">
+                                    <div class="bg-light rounded-3 p-3">
+                                        📝 Online Assignments
+                                    </div>
+                                </div>
+
+                                <div class="col-12">
+                                    <div class="bg-light rounded-3 p-3">
+                                        ✅ Mock Tests & Evaluation
+                                    </div>
+                                </div>
+
+                            </div>
+
+                            <h5 class="fw-bold mb-3">
+                                Perfect For:
+                            </h5>
+
+                            <ul class="list-group list-group-flush mb-4">
+                                <li class="list-group-item">• College Students</li>
+                                <li class="list-group-item">• Working Aspirants</li>
+                                <li class="list-group-item">• Distance Learning Students</li>
+                            </ul>
+
+                            <a href="https://wa.me/919926821000"
+                               class="btn btn-success rounded-pill px-4 fw-bold">
+                                Join Online Classes from Anywhere
+                            </a>
+
+                        </div>
+
+                    </div>
+                </div>
+
+                <!-- Card 4 -->
+                <div class="col-lg-6">
+                    <div class="card border-0 shadow-sm rounded-4 h-100">
+
+                        <div class="card-body p-4">
+
+                            <span class="badge bg-warning text-dark px-3 py-2 rounded-pill mb-3">
+                                Career Guidance
+                            </span>
+
+                            <h3 class="fw-bold mb-3">
+                                <a href="https://www.exceledu.co.in/Commerce-coaching-after-12th" title="Commerce Coaching After 12th">Commerce Coaching After 12th </a>
+                            </h3>
+
+                            <p class="text-muted">
+                                Choosing the right career after Class 12 is very important.
+                                Our <a href="https://www.exceledu.co.in" title="Commerce Coaching After 12th">Commerce Coaching After 12th </a> helps students select
+                                and prepare for professional Commerce courses.
+                            </p>
+
+                            <p class="text-muted">
+                                We guide students toward successful career paths in
+                                Chartered Accountancy, Company Secretaryship,
+                                Cost & Management Accounting, and higher Commerce education.
+                            </p>
+
+                            <h5 class="fw-bold mt-4 mb-3">
+                                Career Options Available
+                            </h5>
+
+                            <div class="row g-3 mb-4">
+
+                                <div class="col-md-6">
+                                    <div class="bg-light rounded-3 p-3">
+                                        📘 CA Foundation
+                                    </div>
+                                </div>
+
+                                <div class="col-md-6">
+                                    <div class="bg-light rounded-3 p-3">
+                                        📘 CS Executive
+                                    </div>
+                                </div>
+
+                                <div class="col-md-6">
+                                    <div class="bg-light rounded-3 p-3">
+                                        📘 CMA Foundation
+                                    </div>
+                                </div>
+
+                                <div class="col-md-6">
+                                    <div class="bg-light rounded-3 p-3">
+                                        📘 B.Com Support Coaching
+                                    </div>
+                                </div>
+
+                            </div>
+
+                            <h5 class="fw-bold mb-3">
+                                Why Join Excel Educational Institution?
+                            </h5>
+
+                            <div class="row g-3">
+
+                                <div class="col-12">
+                                    <div class="bg-light rounded-3 p-3">
+                                        ✅ Professional Career Guidance
+                                    </div>
+                                </div>
+
+                                <div class="col-12">
+                                    <div class="bg-light rounded-3 p-3">
+                                        ✅ Expert Commerce Faculty
+                                    </div>
+                                </div>
+
+                                <div class="col-12">
+                                    <div class="bg-light rounded-3 p-3">
+                                        ✅ Structured Learning System
+                                    </div>
+                                </div>
+
+                                <div class="col-12">
+                                    <div class="bg-light rounded-3 p-3">
+                                        ✅ Long-Term Career Support
+                                    </div>
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+    <section class="py-5 bg-light">
+        <div class="container">
+
+            <!-- Hero Heading -->
+            <div class="text-center mb-5">
+
+                <span class="badge bg-warning text-dark px-4 py-2 rounded-pill fw-bold mb-3">
+                    Excel Educational Institution
+                </span>
+
+                <h1 class="display-4 fw-bold mb-4">
+                    <a href="https://www.exceledu.co.in" title="Best CA, CS, CMA & Commerce Coaching Institute">Best CA, CS, CMA & Commerce Coaching Institute</a>
+                </h1>
+
+                <p class="lead text-muted mx-auto" style="max-width:900px;">
+                    Excel Educational Institution is one of the trusted names in Commerce education
+                    and professional coaching in India. We provide complete academic guidance,
+                    exam preparation support, and career-focused mentoring for students preparing
+                    for CA, CS, CMA, and Commerce examinations.
+                </p>
+
+                <p class="text-secondary mx-auto" style="max-width:950px;">
+                    Our coaching programs are designed to help students build strong conceptual
+                    understanding, improve problem-solving skills, and achieve success in
+                    professional Commerce careers. With experienced faculty members,
+                    structured learning plans, regular assessments, and online learning support,
+                    students receive complete preparation assistance under one roof.
+                </p>
+
+            </div>
+
+            <!-- Courses Table -->
+            <div class="card border-0 shadow-sm rounded-4 mb-5">
+                <div class="card-body p-4">
+
+                    <div class="d-flex justify-content-between align-items-center flex-wrap mb-4">
+                        <h2 class="fw-bold mb-0">
+                            <a href="https://www.exceledu.co.in" title=""> Courses Available at Excel Educational Institution</a>
+                        </h2>
+
+                        <span class="badge bg-success px-3 py-2 rounded-pill">
+                            Admission Open
+                        </span>
+                    </div>
+
+                    <div class="table-responsive">
+
+                        <table class="table table-bordered align-middle table-hover">
+
+                            <thead class="table-dark">
+                                <tr>
+                                    <th>Courses Offered</th>
+                                    <th width="150">Availability</th>
+                                </tr>
+                            </thead>
+
+                            <tbody>
+
+                                <tr>
+                                    <td>CA Foundation</td>
+                                    <td><span class="badge bg-success">Yes</span></td>
+                                </tr>
+
+                                <tr>
+                                    <td>CA Intermediate</td>
+                                    <td><span class="badge bg-success">Yes</span></td>
+                                </tr>
+
+                                <tr>
+                                    <td>CA Intermediate Group 1</td>
+                                    <td><span class="badge bg-success">Yes</span></td>
+                                </tr>
+
+                                <tr>
+                                    <td>CA Intermediate Group 2</td>
+                                    <td><span class="badge bg-success">Yes</span></td>
+                                </tr>
+
+                                <tr>
+                                    <td>CS EET</td>
+                                    <td><span class="badge bg-success">Yes</span></td>
+                                </tr>
+
+                                <tr>
+                                    <td>CS Executive</td>
+                                    <td><span class="badge bg-success">Yes</span></td>
+                                </tr>
+
+                                <tr>
+                                    <td>CS Executive Module 1</td>
+                                    <td><span class="badge bg-success">Yes</span></td>
+                                </tr>
+
+                                <tr>
+                                    <td>CS Executive Module 2</td>
+                                    <td><span class="badge bg-success">Yes</span></td>
+                                </tr>
+
+                                <tr>
+                                    <td>CMA Foundation</td>
+                                    <td><span class="badge bg-success">Yes</span></td>
+                                </tr>
+
+                                <tr>
+                                    <td>CMA Intermediate</td>
+                                    <td><span class="badge bg-success">Yes</span></td>
+                                </tr>
+
+                                <tr>
+                                    <td>CMA Intermediate Group 1</td>
+                                    <td><span class="badge bg-success">Yes</span></td>
+                                </tr>
+
+                                <tr>
+                                    <td>CMA Intermediate Group 2</td>
+                                    <td><span class="badge bg-success">Yes</span></td>
+                                </tr>
+
+                                <tr>
+                                    <td>Class XI Commerce Coaching</td>
+                                    <td><span class="badge bg-success">Yes</span></td>
+                                </tr>
+
+                                <tr>
+                                    <td>Class XII Commerce Coaching</td>
+                                    <td><span class="badge bg-success">Yes</span></td>
+                                </tr>
+
+                                <tr>
+                                    <td>CA Final Coaching</td>
+                                    <td><span class="badge bg-success">Yes</span></td>
+                                </tr>
+
+                                <tr>
+                                    <td>LIVE Online Lectures</td>
+                                    <td><span class="badge bg-success">Yes</span></td>
+                                </tr>
+
+                                <tr>
+                                    <td>Recorded Lectures</td>
+                                    <td><span class="badge bg-success">Yes</span></td>
+                                </tr>
+
+                            </tbody>
+
+                        </table>
+
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- Coaching Method -->
+            <div class="row g-4 mb-5">
+
+                <div class="col-lg-6">
+
+                    <div class="card border-0 shadow-sm rounded-4 h-100">
+                        <div class="card-body p-4">
+
+                            <span class="badge bg-primary px-3 py-2 rounded-pill mb-3">
+                                <a href="https://www.exceledu.co.in" title="Student Success System">Student Success System</a>
+                            </span>
+
+                            <h3 class="fw-bold mb-4">
+                                Why Our Coaching Method Delivers Better Results?
+                            </h3>
+
+                            <p class="text-muted">
+                                At Excel Educational Institution, our coaching methodology focuses
+                                on practical learning, consistent revision, concept clarity,
+                                and exam-oriented preparation strategies.
+                            </p>
+
+                            <p class="text-muted">
+                                We understand that every student learns differently.
+                                Therefore, our faculty members provide personalized guidance,
+                                motivation, and academic support to help students improve
+                                their confidence and performance in examinations.
+                            </p>
+
+                            <h5 class="fw-bold mt-4 mb-3">
+                                Students Receive
+                            </h5>
+
+                            <div class="row g-3">
+
+                                <div class="col-12">
+                                    <div class="bg-light rounded-3 p-3">
+                                        ✅ Regular Practice Sessions
+                                    </div>
+                                </div>
+
+                                <div class="col-12">
+                                    <div class="bg-light rounded-3 p-3">
+                                        ✅ Exam-Oriented Study Plans
+                                    </div>
+                                </div>
+
+                                <div class="col-12">
+                                    <div class="bg-light rounded-3 p-3">
+                                        ✅ Motivation & Mentorship
+                                    </div>
+                                </div>
+
+                                <div class="col-12">
+                                    <div class="bg-light rounded-3 p-3">
+                                        ✅ Time Management Training
+                                    </div>
+                                </div>
+
+                                <div class="col-12">
+                                    <div class="bg-light rounded-3 p-3">
+                                        ✅ Continuous Performance Reviews
+                                    </div>
+                                </div>
+
+                                <div class="col-12">
+                                    <div class="bg-light rounded-3 p-3">
+                                        ✅ Smart Revision Techniques
+                                    </div>
+                                </div>
+
+                            </div>
+
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- Right Side -->
+                <div class="col-lg-6">
+
+                    <div class="card border-0 shadow-sm rounded-4 h-100">
+                        <div class="card-body p-4">
+
+                            <span class="badge bg-warning text-dark px-3 py-2 rounded-pill mb-3">
+                                Career Development
+                            </span>
+
+                            <h3 class="fw-bold mb-4">
+                                <a href="https://www.exceledu.co.in" title="Build a Successful Commerce Career with Expert Guidance"> Build a Successful Commerce Career with Expert Guidance</a>
+                            </h3>
+
+                            <p class="text-muted">
+                                Our mission is to help students succeed in Commerce and
+                                professional examinations with confidence and strong conceptual understanding.
+                            </p>
+
+                            <p class="text-muted">
+                                Through LIVE classes, recorded lectures, mock tests,
+                                doubt-solving sessions, revision programs, and mentorship support,
+                                students receive complete preparation assistance from beginner level
+                                to professional level Commerce courses.
+                            </p>
+
+                            <p class="text-muted">
+                                Whether you are preparing for CA Foundation, CS Executive,
+                                CMA Intermediate, or Class XI/XII Commerce subjects,
+                                our experienced faculty team helps students achieve academic excellence
+                                through structured preparation and continuous guidance.
+                            </p>
+
+                            <div class="alert alert-warning border-0 rounded-4 mt-4">
+                                <h5 class="fw-bold">
+                                    🎯 Start Your Commerce Career with Confidence
+                                </h5>
+
+                                <p class="mb-0">
+                                    Join one of the trusted Commerce coaching institutions
+                                    for professional courses and academic preparation in India.
+                                </p>
+                            </div>
+
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+
+            <!-- Contact Section -->
+            <div class="card border-0 shadow-lg rounded-4 overflow-hidden">
+
+                <div class="row g-0">
+
+                    <!-- Left -->
+                    <div class="col-lg-7">
+
+                        <div class="p-5">
+
+                            <span class="badge bg-dark px-3 py-2 rounded-pill mb-3">
+                                Contact Excel Educational Institution
+                            </span>
+
+                            <h2 class="fw-bold mb-4">
+                                <a href="https://www.exceledu.co.in" title="Admission Guidance & Student Support">Admission Guidance & Student Support</a>
+                            </h2>
+
+                            <p class="text-muted mb-4">
+                                Contact our admission team for course details,
+                                batch timings, online classes, recorded lectures,
+                                fee structure, and career guidance support.
+                            </p>
+
+                            <div class="row g-3">
+
+                                <div class="col-12">
+                                    <div class="bg-light rounded-3 p-3">
+                                        📍 <strong>Address:</strong>
+                                        Excel Tower, Pachpedi Naka, Raipur (C.G.), India
+                                    </div>
+                                </div>
+
+                                <div class="col-md-6">
+                                    <div class="bg-light rounded-3 p-3">
+                                        📞 <strong>Mobile:</strong> 9926821000
+                                    </div>
+                                </div>
+
+                                <div class="col-md-6">
+                                    <div class="bg-light rounded-3 p-3">
+                                        ☎️ <strong>Phone:</strong> 0771-4095300
+                                    </div>
+                                </div>
+
+                                <div class="col-md-6">
+                                    <div class="bg-light rounded-3 p-3">
+                                        📧 <strong>Email:</strong> eeiraipur@gmail.com
+                                    </div>
+                                </div>
+
+                                <div class="col-md-6">
+                                    <div class="bg-light rounded-3 p-3">
+                                        🌐 <strong>Website:</strong> www.exceledu.co.in
+                                    </div>
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                    <!-- Right -->
+                    <div class="col-lg-5 bg-dark text-white">
+
+                        <div class="p-5 h-100 d-flex flex-column justify-content-center">
+
+                            <h3 class="fw-bold mb-4">
+                                <a href="https://www.exceledu.co.in" title="Start Your Commerce Career Today"> Start Your Commerce Career Today</a>
+                            </h3>
+
+                            <p class="mb-4 text-light">
+                                🎯 CA | CS | CMA | Commerce Coaching
+                            </p>
+
+                            <p class="mb-4 text-light">
+                                📚 Online + Offline Learning Support
+                            </p>
+
+                            <p class="mb-4 text-light">
+                                🚀 Professional Faculty + Test Series
+                            </p>
+
+                            <p class="mb-4 text-light">
+                                📈 Career Guidance + Mentorship Support
+                            </p>
+
+                            <div class="d-flex flex-wrap gap-3 mt-3">
+
+                                <a href="tel:+919926821000"
+                                   class="btn btn-warning rounded-pill px-4 fw-bold">
+                                    Call Now
+                                </a>
+
+                                <a href="https://wa.me/919926821000"
+                                   class="btn btn-outline-light rounded-pill px-4 fw-bold">
+                                    WhatsApp Support
+                                </a>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+</div>
+
+
+
+

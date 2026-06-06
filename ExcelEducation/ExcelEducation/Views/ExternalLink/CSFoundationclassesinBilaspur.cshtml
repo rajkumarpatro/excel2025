@@ -2,6 +2,1485 @@
 @{
     Layout = "~/Views/Shared/_Layout.cshtml";
     ViewData["Title"] = "CS Foundation Classes In Bilaspur";
+ 
+    ViewData["Description"] = "Excel Educational Institution offers CMA Intermediate, CS Foundation, CA Foundation, CS Executive & Commerce coaching classes with LIVE online and recorded lectures. Join the best coaching institute for CA, CS, CMA and Class XI & XII Commerce students across India.";
+    ViewData["Keywords"] = "CMA Intermediate classes in Raipur, CS Foundation classes in Raipur, Class XI & XII Commerce coaching,  CMA Intermediate classes in Bhopal,  Best CA Foundation coaching in Jabalpur, Best CA coaching for commerce students, CS Foundation classes in Bilaspur,  CMA Foundation coaching in Indore, CMA Intermediate Group 2 coaching, CS Executive coaching in Jabalpur, CS Executive Module 1 & 2 coaching, CA Intermediate coaching in Gwalior, CS Executive coaching in Durg";
 }
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-BX165RLGNP"></script>
+<script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
 
-@Html.Partial("_BestCACSCMACoaching")
+    gtag('config', 'G-BX165RLGNP');
+</script>
+<!-- Google Fonts & Icons -->
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+<style>
+
+    body {
+        font-family: 'Poppins', sans-serif;
+    }
+
+    /* Modern Hero Section */
+    .hero-section {
+        background: linear-gradient(135deg, #020617 0%, #0f172a 40%, #1e293b 100%);
+        padding: 90px 0;
+        color: white;
+        position: relative;
+        overflow: hidden;
+        border-radius: 0 0 40px 40px;
+    }
+
+        .hero-section::before {
+            content: '';
+            position: absolute;
+            width: 500px;
+            height: 500px;
+            background: rgba(56, 189, 248, 0.15);
+            border-radius: 50%;
+            top: -200px;
+            right: -150px;
+            filter: blur(80px);
+        }
+
+        .hero-section::after {
+            content: '';
+            position: absolute;
+            background: rgba(250, 204, 21, 0.12);
+            border-radius: 50%;
+            bottom: -150px;
+            left: -120px;
+            filter: blur(80px);
+        }
+
+    .badge-premium {
+        background: rgba(255,255,255,0.08);
+        border: 1px solid rgba(255,255,255,0.15);
+        backdrop-filter: blur(10px);
+        color: #f8fafc;
+        padding: 10px 22px;
+        border-radius: 40px;
+        font-size: 0.85rem;
+        font-weight: 600;
+        letter-spacing: 1px;
+        display: inline-block;
+        margin-bottom: 20px;
+    }
+
+    .hero-title {
+        font-size: 3.5rem;
+        font-weight: 800;
+        line-height: 1.2;
+        margin-bottom: 20px;
+    }
+
+    .highlight {
+        color: var(--accent-color);
+    }
+
+    .gold-text {
+        color: var(--gold-color);
+    }
+
+    .hero-subtitle {
+        font-size: 1.15rem;
+        color: var(--light-text);
+        max-width: 850px;
+        margin: auto;
+        line-height: 1.8;
+    }
+
+    /* Buttons */
+    .btn-enroll {
+        background: linear-gradient(135deg, #38bdf8, #2563eb);
+        color: #fff;
+        font-weight: 600;
+        border: none;
+        padding: 14px 36px;
+        border-radius: 50px;
+        transition: all 0.3s ease;
+        box-shadow: 0 10px 25px rgba(37, 99, 235, 0.35);
+    }
+
+        .btn-enroll:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 15px 30px rgba(37, 99, 235, 0.45);
+            color: #fff;
+        }
+
+    .btn-demo {
+        border: 1px solid rgba(255,255,255,0.25);
+        color: #fff;
+        padding: 14px 36px;
+        border-radius: 50px;
+        backdrop-filter: blur(10px);
+        background: rgba(255,255,255,0.05);
+        transition: 0.3s ease;
+    }
+
+        .btn-demo:hover {
+            background: rgba(255,255,255,0.12);
+            color: #fff;
+        }
+
+    /* Feature Box */
+    .feature-box {
+        margin-top: 45px;
+        display: flex;
+        justify-content: center;
+        gap: 25px;
+        flex-wrap: wrap;
+    }
+
+    .feature-item {
+        background: rgba(255,255,255,0.06);
+        border: 1px solid rgba(255,255,255,0.08);
+        padding: 12px 22px;
+        border-radius: 50px;
+        backdrop-filter: blur(10px);
+        font-size: 0.95rem;
+    }
+
+        .feature-item i {
+            color: #22c55e;
+            margin-right: 8px;
+        }
+</style>
+
+<div class="container-fluid p-0">
+    <section class="hero-section text-center">
+        <div class="container position-relative" style="z-index:1;">
+
+            <h1 class="hero-title">
+                Best <span class="highlight">CA, CS & CMA</span><br />
+                Coaching Institute for Commerce Students
+            </h1>
+
+            <p class="hero-subtitle">
+                Professional
+                <span class="gold-text fw-bold">
+                    Commerce Coaching with Modern Learning Support
+                </span>
+                for
+                <span class="highlight fw-semibold">
+                    Commerce Students & Future Professionals
+                </span>.
+            </p>
+
+        </div>
+
+
+        <div class="d-flex flex-wrap justify-content-center gap-3 mt-4">
+            <button class="btn btn-enroll"
+                    onclick="location.href='/Contact'">
+                Enroll Today
+            </button>
+        </div>
+    </section>
+
+    <section class="container-fluid py-2">
+
+        <!-- Courses Section -->
+        <div class="row">
+            <div class="col-lg-12">
+
+                <div class="p-2 bg-white border rounded-4 shadow-sm">
+                    <p class="p-2 mt-3">
+                        Welcome to <a href="https://www.exceledu.co.in/"> Excel Educational Institution </a> — a leading institute for
+                        CA, CS, CMA, and Commerce coaching classes.
+                        We help Commerce students build successful careers through expert teaching,
+                        practical learning methods, LIVE classes, recorded lectures,
+                        and exam-oriented preparation.
+                    </p>
+
+                    <p class="p-2">
+                        Whether you are preparing for Board Exams, CA, CS, or CMA professional courses,
+                        our structured coaching programs are designed to improve concepts,
+                        confidence, and exam performance.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="container py-5">
+
+        <div class="row g-4">
+
+            <div class="col-lg-6">
+                <div class="p-4 border rounded-4 shadow-sm h-100 bg-white">
+
+                    <h2 class="fw-bold mb-4">
+                        Why <span class="text-primary">
+                            Excel Educational Institution
+                        </span> is Trusted by Commerce Students?
+                    </h2>
+
+                    <p class="text-muted">
+                        Excel Educational Institution provides quality Commerce coaching
+                        for CA, CS, CMA, and Board students with expert guidance,
+                        modern teaching methods, and exam-focused preparation.
+                    </p>
+
+                    <div class="mt-4">
+
+                        <p>✅ Strong Concept Clarity</p>
+                        <p>✅ Professional Faculty Guidance</p>
+                        <p>✅ Updated ICAI / ICSI / CMA Syllabus</p>
+                        <p>✅ Regular Test Series & Practice Sessions</p>
+                        <p>✅ LIVE + Recorded Lecture Support</p>
+                        <p>✅ Student Performance Monitoring</p>
+                        <p>✅ Smart Revision Strategy</p>
+                        <p>✅ Career Guidance for Commerce Students</p>
+
+                    </div>
+
+                    <div class="mt-4">
+                        <a href="tel:+919926821000"
+                           class="btn btn-primary rounded-pill px-4">
+                            📞 Call Now
+                        </a>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="col-lg-6">
+                <div class="p-4 border rounded-4 shadow-sm h-100 bg-white">
+
+                    <h2 class="fw-bold mb-4">
+                        <a href="https://www.exceledu.co.in/CMA-Intermediate-classes-in-Raipur" title="CMA Intermediate Classes in Raipur">
+                            CMA Intermediate Classes in
+                            <span class="text-primary">Raipur</span>
+                        </a>
+                    </h2>
+
+                    <p class="text-muted">
+                        Join our result-oriented  <a href="https://www.exceledu.co.in/CMA-Intermediate-classes-in-Raipur" title="CMA Intermediate Classes in Raipur-Excel-Educational-Institution">
+                            CMA Intermediate coaching programM
+                        </a>
+                        designed for Commerce students who want strong conceptual
+                        learning and exam success.
+                    </p>
+
+                    <h5 class="fw-bold mt-4">
+                        What Makes Our Coaching Effective?
+                    </h5>
+
+                    <ul class="mt-3">
+                        <li>Experienced Faculty Team</li>
+                        <li>Practical Accounting Concepts</li>
+                        <li>Exam-Focused Preparation</li>
+                        <li>Regular Mock Tests</li>
+                        <li>Doubt Solving Sessions</li>
+                        <li>Performance Analysis</li>
+                    </ul>
+
+                    <h5 class="fw-bold mt-4">
+                        Student Learning Support
+                    </h5>
+
+                    <div class="row mt-3">
+                        <div class="col-6 mb-2">✔ Online Coaching</div>
+                        <div class="col-6 mb-2">✔ Offline Coaching</div>
+                        <div class="col-6 mb-2">✔ Recorded Lectures</div>
+                        <div class="col-6 mb-2">✔ Mock Tests</div>
+                    </div>
+
+                    <div class="mt-4">
+                        <a href="/Contact"
+                           class="btn btn-primary rounded-pill px-4">
+                            Contact Us
+                        </a>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+
+    </section>
+
+    <section class="container py-5">
+
+        <!-- Row 1 -->
+        <div class="row g-4 mb-4">
+
+            <!-- CS Foundation -->
+            <div class="col-lg-12">
+                <div class="p-4 border rounded-4 shadow-sm h-100 bg-white">
+
+                    <h2 class="fw-bold mb-4">
+                        <a href="https://www.exceledu.co.in/CS-Foundation-Classes-In-Raipur" title="CS Foundation Classes in Raipur">
+                            CS Foundation Classes in
+                            <span class="text-primary">Raipur</span>
+                        </a>
+                    </h2>
+
+                    <p class="text-muted">
+                        Our <a href="https://www.exceledu.co.in" title="CS Foundation Classes in Raipur-Excel-Educational-Institution">
+                            CS Foundation coaching program
+                        </a>is specially designed
+                        for students who want to build a strong foundation
+                        in Company Secretary studies and professional Commerce education.
+                    </p>
+
+                    <p class="text-muted">
+                        We focus on conceptual understanding, chapter-wise preparation,
+                        exam-oriented teaching methods, and regular practice sessions
+                        to help students achieve better academic performance.
+                    </p>
+
+                    <p class="text-muted">
+                        Students receive guidance from experienced Commerce faculty,
+                        updated study material, revision support, and continuous
+                        performance monitoring throughout the course duration.
+                    </p>
+
+                    <h5 class="fw-bold mt-4 mb-3">
+                        Course Benefits
+                    </h5>
+
+                    <div class="row">
+
+                        <div class="col-md-4">
+                            <ul>
+                                <li>Beginner Friendly Teaching Method</li>
+                                <li>Professional Commerce Guidance</li>
+                                <li>Chapter Wise Preparation</li>
+                            </ul>
+                        </div>
+
+                        <div class="col-md-4">
+                            <ul>
+                                <li>Regular Practice Sessions</li>
+                                <li>Updated Study Material & Notes</li>
+                                <li>Weekly Assessment Tests</li>
+                            </ul>
+                        </div>
+
+                        <div class="col-md-4">
+                            <ul>
+                                <li>Doubt Solving Support</li>
+                                <li>Exam-Oriented Preparation Strategy</li>
+                            </ul>
+                        </div>
+
+                    </div>
+
+                    <h5 class="fw-bold mt-4 mb-3">
+                        Perfect For
+                    </h5>
+
+                    <div class="row">
+                        <div class="col-3 mb-2">✔ Commerce Students</div>
+                        <div class="col-3 mb-2">✔ Class 12 Aspirants</div>
+                        <div class="col-3 mb-2">✔ Future CS Professionals</div>
+                        <div class="col-3 mb-2">✔ Foundation Learners</div>
+                    </div>
+
+                    <div class="mt-4">
+                        <a href="https://wa.me/919926821000"
+                           class="btn btn-primary rounded-pill px-4">
+                            WhatsApp Support
+                        </a>
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- XI XII Commerce -->
+            <div class="col-lg-12">
+                <div class="p-4 border rounded-4 shadow-sm h-100 bg-white">
+
+                    <h2 class="fw-bold mb-4">
+                        <a href="https://www.exceledu.co.in/Class-XI-and-XII-Commerce-coaching" title="Class-XI-and-XII-Commerce-coaching">Class XI & XII Commerce Coaching</a>
+                    </h2>
+
+                    <p class="text-muted">
+                        Excel Educational Institution provides advanced
+                        Commerce  <a href="https://www.exceledu.co.in" title="Class-XI-and-XII-Commerce-coaching-Excel-Educational-Institution"> coaching for Class XI & XII students</a>
+                        preparing for Board examinations and future
+                        professional Commerce careers.
+                    </p>
+
+                    <p class="text-muted">
+                        Our teaching approach focuses on building strong
+                        conceptual understanding in Accountancy, Economics,
+                        Business Studies, and Mathematics through
+                        practical examples and easy explanation methods.
+                    </p>
+
+                    <p class="text-muted">
+                        We help students improve confidence,
+                        academic performance, and preparation strategies
+                        required for school examinations and competitive
+                        Commerce entrance opportunities.
+                    </p>
+
+                    <p class="text-muted">
+                        Regular revision classes, chapter-wise tests,
+                        doubt solving support, and performance analysis
+                        help students stay consistent throughout the academic year.
+                    </p>
+                    <div class="row">
+                        <div class="col-6 mb-2">
+                            <h5 class="fw-bold mt-4 mb-3">
+                                Subjects Covered
+                            </h5>
+
+                            <ul>
+                                <li>Accountancy</li>
+                                <li>Economics</li>
+                                <li>Business Studies</li>
+                                <li>Mathematics</li>
+                                <li>Statistics</li>
+                                <li>Commercial Organization</li>
+                            </ul>
+                        </div>
+                        <div class="col-6 mb-2">
+                            <h5 class="fw-bold mt-4 mb-3">
+                                Why Students Join Our Commerce Classes?
+                            </h5>
+
+                            <div class="row">
+                                <div class="col-12 mb-2">✔ Easy Concept Explanation</div>
+                                <div class="col-12 mb-2">✔ Board Exam Preparation</div>
+                                <div class="col-12 mb-2">✔ Strong Commerce Foundation</div>
+                                <div class="col-12 mb-2">✔ Career Counseling Sessions</div>
+                                <div class="col-12 mb-2">✔ Regular Test Series</div>
+                                <div class="col-12 mb-2">✔ Experienced Faculty Team</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mt-4">
+                        <a href="/Contact"
+                           class="btn btn-primary rounded-pill px-4">
+                            Enroll Today
+                        </a>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+
+    </section>
+
+    <section class="container py-5">
+
+        <!-- Row 1 -->
+        <div class="row g-4 mb-4">
+
+            <!-- CMA Intermediate Bhopal -->
+            <div class="col-lg-4">
+                <div class="p-4 bg-white border rounded-4 shadow-sm h-100">
+
+                    <span class="badge bg-primary mb-3 px-3 py-2">
+                        Professional Commerce Coaching
+                    </span>
+
+                    <h2 class="fw-bold mb-4">
+                        <a href="https://www.exceledu.co.in/CMA-Intermediate-classes-in-Bhopal" title="CMA-Intermediate-classes-in-Bhopal">
+                            CMA Intermediate Classes in
+                            <span class="text-primary">Bhopal</span>
+                        </a>
+                    </h2>
+
+                    <p class="text-muted">
+                        Searching online for quality <a href="https://www.exceledu.co.in" title="CMA-Intermediate-classes-in-Bhopal-Excel-Educational-Institution">CMA Intermediate classes in Bhopal?</a>
+                        Our coaching programs are specially designed for students
+                        who want professional guidance, strategic exam preparation,
+                        and strong conceptual learning support.
+                    </p>
+
+                    <p class="text-muted">
+                        We provide practical Commerce education, updated study material,
+                        revision strategies, and regular assessments that help students
+                        improve confidence and exam performance.
+                    </p>
+
+                    <h5 class="fw-bold mt-4 mb-3">
+                        Key Highlights
+                    </h5>
+
+                    <div class="row">
+                        <div class="col-md-6">
+                            <ul>
+                                <li>Updated Study Material</li>
+                                <li>Expert Commerce Faculty</li>
+                            </ul>
+                        </div>
+
+                        <div class="col-md-6">
+                            <ul>
+                                <li>LIVE Interactive Classes</li>
+                                <li>Revision & Test Series Programs</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- CA Foundation Jabalpur -->
+            <div class="col-lg-8">
+                <div class="p-4 bg-white border rounded-4 shadow-sm h-100">
+
+                    <span class="badge bg-success mb-3 px-3 py-2">
+                        CA Foundation Preparation
+                    </span>
+
+                    <h2 class="fw-bold mb-4">
+                        <a href="https://www.exceledu.co.in/Best-CA-Foundation-Coaching-In-Jabalpur" title="Best-CA-Foundation-Coaching-In-Jabalpur">
+                            Best CA Foundation Coaching in
+                            <span class="text-success">Jabalpur</span>
+                        </a>
+                    </h2>
+
+                    <p class="text-muted">
+                        Students searching for the<a href="https://www.exceledu.co.in" title="Best-CA-Foundation-Coaching-In-Jabalpur-Excel-Educational-Institution">
+                            best CA Foundation coaching in Jabalpur
+                        </a>
+                        can benefit from our modern teaching methodology,
+                        practical learning approach, and exam-oriented preparation system.
+                    </p>
+
+                    <p class="text-muted">
+                        Our experienced CA faculty helps students strengthen concepts,
+                        improve time management skills, and prepare confidently
+                        for professional Commerce examinations.
+                    </p>
+
+                    <h5 class="fw-bold mt-4 mb-3">
+                        Why Our Coaching Stands Out?
+                    </h5>
+
+                    <ul>
+                        <li>Concept-Based Learning</li>
+                        <li>Experienced CA Faculty</li>
+                        <li>Practice-Based Preparation</li>
+                        <li>Time Management Guidance</li>
+                        <li>Regular Mock Tests</li>
+                        <li>Student Performance Monitoring</li>
+                    </ul>
+
+                    <h5 class="fw-bold mt-4 mb-3">
+                        Suitable For
+                    </h5>
+
+                    <div class="row">
+                        <div class="col-6 mb-2">✔ Class 12 Commerce Students</div>
+                        <div class="col-6 mb-2">✔ B.Com Students</div>
+                        <div class="col-6 mb-2">✔ Future Chartered Accountants</div>
+                    </div>
+
+                    <div class="mt-4">
+                        <a href="tel:+919926821000"
+                           class="btn btn-success rounded-pill px-4">
+                            👉 Call Now to Join
+                        </a>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+
+        <!-- Row 2 -->
+        <div class="row g-4 mb-4">
+
+            <!-- Best CA Coaching -->
+            <div class="col-lg-7">
+                <div class="p-4 bg-white border rounded-4 shadow-sm h-100">
+
+                    <span class="badge bg-warning text-dark mb-3 px-3 py-2">
+                        Career Focused CA Coaching
+                    </span>
+
+                    <h2 class="fw-bold mb-4">
+                        <a href="https://www.exceledu.co.in/Best-CA-coaching-for-commerce-students" title="Best-CA-coaching-for-commerce-students">
+                            Best CA Coaching for Commerce Students
+                        </a>
+                    </h2>
+
+                    <p class="text-muted">
+                        Excel Educational Institution is known among Commerce students
+                        for professional teaching methods, modern learning systems,
+                        and strong academic support for CA preparation.
+                    </p>
+
+                    <p class="text-muted">
+                        Our coaching programs focus on concept clarity,
+                        exam-oriented preparation, regular assessments,
+                        and practical learning support.
+                    </p>
+
+                    <h5 class="fw-bold mt-4 mb-3">
+                        Our CA Coaching Includes
+                    </h5>
+
+                    <div class="row">
+                        <div class="col-md-6">
+                            <ul>
+                                <li>CA Foundation</li>
+                                <li>CA Intermediate</li>
+                                <li>CA Intermediate Group 1</li>
+                            </ul>
+                        </div>
+
+                        <div class="col-md-6">
+                            <ul>
+                                <li>CA Intermediate Group 2</li>
+                                <li>CA Final Coaching</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <h5 class="fw-bold mt-4 mb-3">
+                        Student Advantages
+                    </h5>
+
+                    <ul>
+                        <li>Regular Mock Tests</li>
+                        <li>Personalized Attention</li>
+                        <li>Career Guidance</li>
+                        <li>Online Learning Flexibility</li>
+                    </ul>
+
+                </div>
+            </div>
+
+            <!-- CS Foundation Bilaspur -->
+            <div class="col-lg-5">
+                <div class="p-4 bg-white border rounded-4 shadow-sm h-100">
+
+                    <span class="badge bg-info text-dark mb-3 px-3 py-2">
+                        CS Entrance Preparation
+                    </span>
+
+                    <h2 class="fw-bold mb-4">
+                        <a href="https://www.exceledu.co.in/CS-Foundation-Classes-In-Bilaspur" title="CS-Foundation-Classes-In-Bilaspur">
+                            CS Foundation Classes in
+                            <span class="text-info">Bilaspur</span>
+                        </a>
+                    </h2>
+
+                    <p class="text-muted">
+                        Our <a href="https://www.exceledu.co.in" title="CS-Foundation-Classes-In-Bilaspur-Excel-Educational-Institution">
+                            CS Foundation classes in Bilaspur
+                        </a>help students
+                        prepare confidently for Company Secretary entrance-level examinations
+                        through structured learning and exam-focused preparation.
+                    </p>
+
+                    <p class="text-muted">
+                        We provide subject-wise preparation, revision classes,
+                        doubt solving support, and updated notes to help students
+                        improve confidence and academic performance.
+                    </p>
+
+                    <h5 class="fw-bold mt-4 mb-3">
+                        Course Features
+                    </h5>
+
+                    <ul>
+                        <li>Subject Wise Preparation</li>
+                        <li>Exam-Oriented Notes</li>
+                        <li>Revision Classes</li>
+                        <li>Doubt Clearing Sessions</li>
+                        <li>Weekly Practice Tests</li>
+                        <li>Performance Analysis</li>
+                    </ul>
+
+                    <div class="mt-4">
+                        <a href="/Contact"
+                           class="btn btn-info rounded-pill px-4 text-white">
+                            👉 Admission Open
+                        </a>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+
+        <!-- Row 3 -->
+        <div class="row g-4">
+
+            <!-- CMA Foundation Indore -->
+            <div class="col-lg-12">
+                <div class="p-5 bg-white border rounded-4 shadow-sm">
+
+                    <span class="badge bg-danger mb-3 px-3 py-2">
+                        CMA Foundation Coaching
+                    </span>
+
+                    <h2 class="fw-bold mb-4">
+                        <a href="https://www.exceledu.co.in/CMA-Foundation-coaching-in-Indore" title="CMA-Foundation-coaching-in-Indore">
+                            CMA Foundation Coaching in
+                            <span class="text-danger">Indore</span>
+                        </a>
+                    </h2>
+
+                    <p class="text-muted">
+                        Excel Educational Institution provides trusted
+                        <a href="https://www.exceledu.co.in" title="CMA-Foundation-coaching-in-Indore-Excel-Educational-Institution">
+                            CMA Foundation coaching
+                        </a>
+                        in Indore with professional mentorship, practical Commerce education,
+                        and exam-focused learning support.
+                    </p>
+
+                    <p class="text-muted">
+                        Our coaching programs are designed to help students strengthen
+                        accounting concepts, improve problem-solving skills,
+                        and prepare strategically for CMA examinations.
+                    </p>
+
+                    <p class="text-muted">
+                        Students receive support through classroom coaching,
+                        LIVE online classes, recorded lectures,
+                        revision sessions, and test series programs.
+                    </p>
+
+                    <div class="row mt-4">
+
+                        <div class="col-md-6">
+                            <h5 class="fw-bold mb-3">
+                                Why Students Prefer Our Coaching?
+                            </h5>
+
+                            <ul>
+                                <li>Simplified Teaching Method</li>
+                                <li>Experienced Commerce Faculty</li>
+                                <li>Full Syllabus Completion</li>
+                                <li>Test Series Support</li>
+                                <li>Revision Sessions</li>
+                            </ul>
+                        </div>
+
+                        <div class="col-md-6">
+                            <h5 class="fw-bold mb-3">
+                                Learning Modes
+                            </h5>
+
+                            <ul>
+                                <li>✅ Classroom Coaching</li>
+                                <li>✅ LIVE Online Classes</li>
+                                <li>✅ Recorded Lectures</li>
+                                <li>✅ Digital Notes & Assignments</li>
+                                <li>✅ Flexible Learning Support</li>
+                            </ul>
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+
+    </section>
+
+    <section class="container py-5">
+
+        <!-- Row 1 -->
+        <div class="row g-4 mb-4">
+
+            <!-- CMA Intermediate Group 2 -->
+            <div class="col-lg-6">
+                <div class="p-4 bg-white border rounded-4 shadow-sm h-100">
+
+                    <span class="badge bg-primary px-3 py-2 mb-3">
+                        CMA Intermediate Coaching
+                    </span>
+
+                    <h2 class="fw-bold mb-4">
+                        <a href="https://www.exceledu.co.in/CMA-Intermediate-Group-2-coaching" title="CMA-Intermediate-Group-2-coaching">CMA Intermediate Group 2 Coaching</a>
+                    </h2>
+
+                    <p class="text-muted">
+                        Our <a href="https://www.exceledu.co.in" title="CMA-Intermediate-Group-2-coaching-Excel-Educational-Institution">CMA Intermediate Group 2 Coaching</a> program is specially
+                        designed for students aiming for strong exam performance,
+                        practical understanding, and professional Commerce skills.
+                    </p>
+
+                    <p class="text-muted">
+                        We focus on conceptual clarity, numerical problem-solving,
+                        chapter-wise practice, and strategic exam preparation
+                        to help students perform confidently in CMA examinations.
+                    </p>
+
+                    <h5 class="fw-bold mt-4 mb-3">
+                        Subjects Included
+                    </h5>
+
+                    <div class="row">
+                        <div class="col-md-6">
+                            <ul>
+                                <li>Cost Management</li>
+                                <li>Financial Management</li>
+                            </ul>
+                        </div>
+
+                        <div class="col-md-6">
+                            <ul>
+                                <li>Operations Management</li>
+                                <li>Taxation</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <h5 class="fw-bold mt-4 mb-3">
+                        Coaching Support
+                    </h5>
+
+                    <ul>
+                        <li>Chapter Wise Tests</li>
+                        <li>Performance Evaluation</li>
+                        <li>Smart Revision Classes</li>
+                        <li>Practical Problem Solving</li>
+                        <li>Mock Test Practice</li>
+                        <li>Doubt Solving Sessions</li>
+                    </ul>
+
+                    <div class="mt-4">
+                        <a href="/Contact"
+                           class="btn btn-primary rounded-pill px-4">
+                            👉 Contact Us for Batch Details
+                        </a>
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- CS Executive Jabalpur -->
+            <div class="col-lg-6">
+                <div class="p-4 bg-white border rounded-4 shadow-sm h-100">
+
+                    <span class="badge bg-success px-3 py-2 mb-3">
+                        CS Executive Coaching
+                    </span>
+
+                    <h2 class="fw-bold mb-4">
+                        <a href="https://www.exceledu.co.in/CS-Executive-Coaching-In-Jabalpur" title="CS-Executive-Coaching-In-Jabalpur">
+                            CS Executive Coaching in
+                            <span class="text-success">Jabalpur</span>
+                        </a>
+                    </h2>
+
+                    <p class="text-muted">
+                        Students searching for professional <a href="https://www.exceledu.co.in" title="CS-Executive-Coaching-In-Jabalpur-Excel-Educational-Institution">
+                            CS Executive coaching
+                        </a>
+                        in Jabalpur can join Excel Educational Institution
+                        for complete ICSI exam preparation and professional guidance.
+                    </p>
+
+                    <p class="text-muted">
+                        Our coaching system combines practical learning,
+                        module-wise preparation, revision support,
+                        and expert mentorship programs to improve exam readiness.
+                    </p>
+
+                    <h5 class="fw-bold mt-4 mb-3">
+                        Why Choose Our Coaching?
+                    </h5>
+
+                    <div class="row">
+                        <div class="col-md-6">
+                            <ul>
+                                <li>Expert Faculty Support</li>
+                                <li>Module Wise Preparation</li>
+                            </ul>
+                        </div>
+
+                        <div class="col-md-6">
+                            <ul>
+                                <li>Online + Offline Learning</li>
+                                <li>Student Mentorship Programs</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <p class="text-muted mt-3">
+                        Students receive complete learning support,
+                        updated study material, revision guidance,
+                        and regular assessment sessions for better performance.
+                    </p>
+
+                </div>
+            </div>
+
+        </div>
+
+        <!-- Row 2 -->
+        <div class="row g-4 mb-4">
+
+            <!-- CS Executive Module 1 & 2 -->
+            <div class="col-lg-6">
+                <div class="p-4 bg-white border rounded-4 shadow-sm h-100">
+
+                    <span class="badge bg-warning text-dark px-3 py-2 mb-3">
+                        Advanced CS Preparation
+                    </span>
+
+                    <h2 class="fw-bold mb-4">
+                        <a href="https://www.exceledu.co.in/CS-Executive-Module-1-And-2-Coaching" title="CS-Executive-Module-1-And-2-Coaching"> CS Executive Module 1 & 2 Coaching</a>
+                    </h2>
+
+                    <p class="text-muted">
+                        Excel Educational Institution offers complete
+                        <a href="https://www.exceledu.co.in" title="CS-Executive-Module-1-And-2-Coaching-Excel-Educational-Institution"> CS Executive Module 1 & 2 Coaching</a>
+                        for students preparing for advanced Company Secretary examinations.
+                    </p>
+
+                    <p class="text-muted">
+                        Our coaching focuses on professional Commerce concepts,
+                        exam-oriented learning, strategic revision,
+                        and practical case-study preparation.
+                    </p>
+
+                    <h5 class="fw-bold mt-4 mb-3">
+                        What Students Receive
+                    </h5>
+
+                    <ul>
+                        <li>✔ Updated ICSI Syllabus Coverage</li>
+                        <li>✔ LIVE Interactive Classes</li>
+                        <li>✔ Recorded Lecture Access</li>
+                        <li>✔ Professional Guidance</li>
+                    </ul>
+
+                    <h5 class="fw-bold mt-4 mb-3">
+                        Additional Support
+                    </h5>
+
+                    <div class="row">
+                        <div class="col-md-6">
+                            <ul>
+                                <li>Test Series</li>
+                                <li>Mock Interviews</li>
+                            </ul>
+                        </div>
+
+                        <div class="col-md-6">
+                            <ul>
+                                <li>Doubt Sessions</li>
+                                <li>Revision Programs</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="mt-4">
+                        <a href="/Contact"
+                           class="btn btn-warning rounded-pill px-4 text-dark">
+                            👉 Join Today for Smart Preparation
+                        </a>
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- CA Intermediate Gwalior -->
+            <div class="col-lg-6">
+                <div class="p-4 bg-white border rounded-4 shadow-sm h-100">
+
+                    <span class="badge bg-danger px-3 py-2 mb-3">
+                        CA Intermediate Coaching
+                    </span>
+
+                    <h2 class="fw-bold mb-4">
+                        <a href="https://www.exceledu.co.in/CA-Intermediate-Coaching-In-Gwalior" title="CA-Intermediate-Coaching-In-Gwalior">
+                            CA Intermediate Coaching in
+                            <span class="text-danger">Gwalior</span>
+                        </a>
+                    </h2>
+
+                    <p class="text-muted">
+                        Our <a href="https://www.exceledu.co.in" title="CA-Intermediate-Coaching-In-Gwalior-Excel-Educational-Institution">
+                            CA Intermediate coaching in Gwalior
+                        </a> helps students
+                        prepare effectively for ICAI examinations
+                        through practical learning and strategic preparation methods.
+                    </p>
+
+                    <p class="text-muted">
+                        We provide experienced mentorship,
+                        complete syllabus coverage,
+                        mock test practice, and time management strategies
+                        for better exam performance.
+                    </p>
+
+                    <h5 class="fw-bold mt-4 mb-3">
+                        Course Advantages
+                    </h5>
+
+                    <ul>
+                        <li>Experienced CA Mentors</li>
+                        <li>Mock Test Practice</li>
+                        <li>Time Management Techniques</li>
+                        <li>Complete Syllabus Coverage</li>
+                        <li>Revision Sessions</li>
+                        <li>Performance Monitoring</li>
+                    </ul>
+
+                    <h5 class="fw-bold mt-4 mb-3">
+                        Ideal For
+                    </h5>
+
+                    <div class="row">
+                        <div class="col-6 mb-2">✔ CA Intermediate Students</div>
+                        <div class="col-6 mb-2">✔ Commerce Graduates</div>
+                        <div class="col-6 mb-2">✔ Working Aspirants</div>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+
+        <!-- Row 3 -->
+        <div class="row g-4">
+
+            <!-- CS Executive Durg -->
+            <div class="col-lg-12">
+                <div class="p-5 bg-white border rounded-4 shadow-sm">
+
+                    <span class="badge bg-info text-dark px-3 py-2 mb-3">
+                        Professional CS Coaching
+                    </span>
+
+                    <h2 class="fw-bold mb-4">
+                        <a href="https://www.exceledu.co.in/CS-Executive-coaching-in-Durg" title="CS-Executive-coaching-in-Durg">
+                            CS Executive Coaching in
+                            <span class="text-info">Durg</span>
+                        </a>
+                    </h2>
+
+                    <p class="text-muted">
+                        Looking for reliable <a href="https://www.exceledu.co.in" title="CS-Executive-coaching-in-Durg-Excel-Educational-Institution">
+                            CS Executive coaching in Durg?
+                        </a>
+                        Excel Educational Institution provides complete Commerce coaching support
+                        for students preparing for CS professional courses.
+                    </p>
+
+                    <p class="text-muted">
+                        Our coaching programs are designed with modern learning methods,
+                        expert faculty support, flexible learning options,
+                        and strategic exam preparation systems.
+                    </p>
+
+                    <p class="text-muted">
+                        Students receive professional guidance,
+                        practical learning support,
+                        revision classes, and recorded lecture access
+                        for continuous preparation.
+                    </p>
+
+                    <div class="row mt-4">
+
+                        <div class="col-md-6">
+                            <h5 class="fw-bold mb-3">
+                                Key Features
+                            </h5>
+
+                            <ul>
+                                <li>Industry Experienced Faculty</li>
+                                <li>Interactive Learning Environment</li>
+                                <li>Flexible Online Coaching</li>
+                                <li>Recorded Video Lectures</li>
+                                <li>LIVE Doubt Solving Sessions</li>
+                            </ul>
+                        </div>
+
+                        <div class="col-md-6">
+                            <h5 class="fw-bold mb-3">
+                                Student Support
+                            </h5>
+
+                            <ul>
+                                <li>Regular Practice Sessions</li>
+                                <li>Performance Analysis</li>
+                                <li>Revision Programs</li>
+                                <li>Updated Study Materials</li>
+                                <li>WhatsApp Learning Support</li>
+                            </ul>
+                        </div>
+
+                    </div>
+
+                    <div class="mt-4">
+                        <a href="https://wa.me/919926821000"
+                           class="btn btn-info rounded-pill px-4 text-white">
+                            👉 WhatsApp Support Available
+                        </a>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+
+    </section>
+
+    <section class="container py-5">
+
+        <!-- Courses Section -->
+        <div class="row mb-5">
+            <div class="col-lg-12">
+
+                <div class="p-5 bg-white border rounded-4 shadow-sm">
+
+                    <div class="text-center mb-5">
+                        <span class="badge bg-primary px-4 py-2 mb-3">
+                            Professional Commerce Courses
+                        </span>
+
+                        <h2 class="fw-bold">
+                            <a href="https://www.exceledu.co.in" title="Excel-Educational-Institution">
+                                Courses Offered at
+                                <span class="text-primary">
+                                    Excel Educational Institution
+                                </span>
+                            </a>
+                        </h2>
+
+                        <p class="text-muted mt-3">
+                            We provide professional Commerce coaching programs
+                            for CA, CS, CMA, and Board students with modern
+                            learning support and exam-oriented preparation.
+                        </p>
+                    </div>
+
+                    <div class="table-responsive">
+                        <table class="table table-bordered align-middle text-center">
+
+                            <thead class="table-primary">
+                                <tr>
+                                    <th>Professional Courses</th>
+                                    <th>Available</th>
+                                </tr>
+                            </thead>
+
+                            <tbody>
+
+                                <tr>
+                                    <td>CA Foundation</td>
+                                    <td>✅ Yes</td>
+                                </tr>
+
+                                <tr>
+                                    <td>CA Intermediate</td>
+                                    <td>✅ Yes</td>
+                                </tr>
+
+                                <tr>
+                                    <td>CA Intermediate Group 1</td>
+                                    <td>✅ Yes</td>
+                                </tr>
+
+                                <tr>
+                                    <td>CA Intermediate Group 2</td>
+                                    <td>✅ Yes</td>
+                                </tr>
+
+                                <tr>
+                                    <td>CS EET</td>
+                                    <td>✅ Yes</td>
+                                </tr>
+
+                                <tr>
+                                    <td>CS Executive</td>
+                                    <td>✅ Yes</td>
+                                </tr>
+
+                                <tr>
+                                    <td>CS Executive Module 1</td>
+                                    <td>✅ Yes</td>
+                                </tr>
+
+                                <tr>
+                                    <td>CS Executive Module 2</td>
+                                    <td>✅ Yes</td>
+                                </tr>
+
+                                <tr>
+                                    <td>CMA Foundation</td>
+                                    <td>✅ Yes</td>
+                                </tr>
+
+                                <tr>
+                                    <td>CMA Intermediate</td>
+                                    <td>✅ Yes</td>
+                                </tr>
+
+                                <tr>
+                                    <td>CMA Intermediate Group 1</td>
+                                    <td>✅ Yes</td>
+                                </tr>
+
+                                <tr>
+                                    <td>CMA Intermediate Group 2</td>
+                                    <td>✅ Yes</td>
+                                </tr>
+
+                                <tr>
+                                    <td>Class XIth Coaching</td>
+                                    <td>✅ Yes</td>
+                                </tr>
+
+                                <tr>
+                                    <td>Class XIIth Coaching</td>
+                                    <td>✅ Yes</td>
+                                </tr>
+
+                                <tr>
+                                    <td>CA Final Coaching</td>
+                                    <td>✅ Yes</td>
+                                </tr>
+
+                                <tr>
+                                    <td>LIVE Online Lectures</td>
+                                    <td>✅ Yes</td>
+                                </tr>
+
+                                <tr>
+                                    <td>Recorded Lectures</td>
+                                    <td>✅ Yes</td>
+                                </tr>
+
+                            </tbody>
+
+                        </table>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+
+        <!-- Online Coaching -->
+        <div class="row g-4 mb-5">
+
+            <div class="col-lg-6">
+
+                <div class="p-5 bg-white border rounded-4 shadow-sm h-100">
+
+                    <span class="badge bg-success px-4 py-2 mb-3">
+                        Online Commerce Coaching
+                    </span>
+
+                    <h2 class="fw-bold mb-4">
+                        <a href="https://www.exceledu.co.in" title="Excel Educational Institution">
+                            Online Commerce Coaching
+                            Available Across India
+                        </a>
+                    </h2>
+
+                    <p class="text-muted">
+                        Students from Raipur, Bilaspur, Indore, Jabalpur,
+                        Durg, Gwalior, Bhopal, and many other cities
+                        can join our online coaching programs.
+                    </p>
+
+                    <p class="text-muted">
+                        Our digital learning platform provides LIVE classes,
+                        recorded lecture access, online mock tests,
+                        and flexible learning support for Commerce students.
+                    </p>
+
+                    <h5 class="fw-bold mt-4 mb-3">
+                        Online Learning Benefits
+                    </h5>
+
+                    <div class="row">
+
+                        <div class="col-md-6 mb-2">
+                            ✅ Study from Home
+                        </div>
+
+                        <div class="col-md-6 mb-2">
+                            ✅ Flexible Learning Schedule
+                        </div>
+
+                        <div class="col-md-6 mb-2">
+                            ✅ Mobile Friendly Classes
+                        </div>
+
+                        <div class="col-md-6 mb-2">
+                            ✅ Recorded Lecture Backup
+                        </div>
+
+                        <div class="col-md-6 mb-2">
+                            ✅ Online Mock Tests
+                        </div>
+
+                        <div class="col-md-6 mb-2">
+                            ✅ Digital Assignments
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <!-- Why Students Achieve Better Results -->
+            <div class="col-lg-6">
+
+                <div class="p-5 bg-white border rounded-4 shadow-sm h-100">
+
+                    <span class="badge bg-warning text-dark px-4 py-2 mb-3">
+                        Student Success System
+                    </span>
+
+                    <h2 class="fw-bold mb-4">
+                        <a href="https://www.exceledu.co.in" title="Excel Educational Institution">
+                            Why Our Students
+                            Achieve Better Results?
+                        </a>
+                    </h2>
+
+                    <p class="text-muted">
+                        Our mission is to help Commerce students achieve success
+                        in Board Exams, ICAI, ICSI, and CMA professional examinations
+                        through structured learning systems and smart preparation methods.
+                    </p>
+
+                    <p class="text-muted">
+                        We focus on academic growth, confidence building,
+                        regular practice, and personalized student support
+                        for consistent performance improvement.
+                    </p>
+
+                    <h5 class="fw-bold mt-4 mb-3">
+                        We Focus On
+                    </h5>
+
+                    <div class="row">
+
+                        <div class="col-md-6">
+                            <ul>
+                                <li>Concept Clarity</li>
+                                <li>Exam Strategy</li>
+                                <li>Confidence Building</li>
+                            </ul>
+                        </div>
+
+                        <div class="col-md-6">
+                            <ul>
+                                <li>Continuous Practice</li>
+                                <li>Smart Learning Techniques</li>
+                                <li>Individual Student Attention</li>
+                            </ul>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <!-- Contact Section -->
+        <div class="row">
+
+            <div class="col-lg-12">
+
+                <div class="p-5 rounded-4 shadow-sm text-white"
+                     style="background: linear-gradient(135deg,#0d6efd,#084298);">
+
+                    <div class="row align-items-center">
+
+                        <div class="col-lg-6">
+
+                            <span class="badge bg-light text-primary px-4 py-2 mb-3">
+                                Contact Information
+                            </span>
+
+                            <h3 class="fw-bold mb-4">
+                                <a href="https://www.exceledu.co.in" title="Excel Educational Institution"> Contact Excel Educational Institution</a>
+                            </h3>
+
+                            <p class="mb-3">
+                                📍 Excel Tower, Pachpedi Naka, Raipur (C.G.), India
+                            </p>
+
+                            <p class="mb-3">
+                                📞 Mobile: 9926821000
+                            </p>
+
+                            <p class="mb-3">
+                                ☎️ Phone: 0771-4095300
+                            </p>
+
+                            <p class="mb-3">
+                                📧 Email: eeiraipur@gmail.com
+                            </p>
+
+                            <p class="mb-0">
+                                🌐 Website: www.exceledu.co.in
+                            </p>
+
+                        </div>
+
+                        <div class="col-lg-6 text-lg-end mt-4 mt-lg-0">
+
+                            <h3 class="fw-bold mb-4">
+                                Start Your Commerce Career
+                                with Expert Coaching
+                            </h3>
+
+                            <p class="mb-3">
+                                🎯 CA | CS | CMA | Commerce Coaching
+                            </p>
+
+                            <p class="mb-3">
+                                📚 Online + Offline Classes Available
+                            </p>
+
+                            <p class="mb-4">
+                                🚀 Expert Faculty + Test Series Support
+                            </p>
+
+                            <div class="d-grid gap-3">
+
+                                <a href="tel:+919926821000"
+                                   class="btn btn-light rounded-pill fw-bold">
+                                    👉 Call Now
+                                </a>
+
+                                <a href="/Contact"
+                                   class="btn btn-outline-light rounded-pill">
+                                    👉 Contact Us
+                                </a>
+
+                                <a href="https://wa.me/919926821000"
+                                   class="btn btn-success rounded-pill">
+                                    👉 WhatsApp Support
+                                </a>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+
+    </section>
+
+</div>
+

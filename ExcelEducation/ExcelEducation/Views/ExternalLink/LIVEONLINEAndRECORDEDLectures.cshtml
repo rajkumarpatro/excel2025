@@ -4,92 +4,170 @@
 }
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
 
-<section class="mb-5 position-relative">
+<style>
+    .hero-section {
+        background: linear-gradient(135deg,#0f172a,#1e3a8a,#2563eb);
+        padding: 30px 0;
+        position: relative;
+        overflow: hidden;
+        border-radius: 0 0 50px 50px;
+    }
 
-    <!-- Banner Image -->
-    <img src="~/ADS Img/LIVE ONLINE And RECORDED Lectures.png"
-         class=" w-100"
-         alt="Live Online & Recorded Lectures"
-         style="max-height:500px; object-fit:cover;">
+        .hero-section::before {
+            content: '';
+            position: absolute;
+            width: 400px;
+            height: 400px;
+            background: rgba(255,255,255,.08);
+            border-radius: 50%;
+            top: -150px;
+            right: -100px;
+        }
 
-    <!-- Optional Overlay Content -->
-    <!--<div class="position-absolute top-50 start-50 translate-middle text-center text-white">
-        <h1 class="display-4 fw-bold">
-            LIVE ONLINE & RECORDED LECTURES
-        </h1>
-        <p class="lead">
-            Learn Anytime, Anywhere with Excel Educational Institution
-        </p>
+        .hero-section::after {
+            content: '';
+            position: absolute;
+            width: 300px;
+            height: 300px;
+            background: rgba(255,255,255,.05);
+            border-radius: 50%;
+            bottom: -100px;
+            left: -100px;
+        }
 
-        <a href="#" class="btn btn-warning btn-lg px-4">
-            Enroll Now
-        </a>
-    </div>-->
+    .hero-badge {
+        display: inline-block;
+        background: #ffffff;
+        color: #0d6efd;
+        padding: 10px 22px;
+        border-radius: 50px;
+        font-size: 14px;
+        font-weight: 600;
+        letter-spacing: 1px;
+        box-shadow: 0 10px 25px rgba(0,0,0,.15);
+    }
 
+    .hero-title {
+        color: #fff;
+        font-size: 30px;
+        font-weight: 700;
+        line-height: 1.2;
+    }
+
+        .hero-title span {
+            color: #fbbf24;
+        }
+
+    .hero-subtitle {
+        color: rgba(255,255,255,.85);
+        font-size: 22px;
+        max-width: 800px;
+        margin: auto;
+        line-height: 1.8;
+    }
+
+    .min-vh-75 {
+        min-height: 75vh;
+    }
+</style>
+
+<section class="hero-section">
+    <div class="container-fluid">
+        <div class="row align-items-center">
+
+            <div class="col-lg-11 mx-auto text-center">
+
+
+                <h1 class="hero-title mt-2">
+                    🎓 LIVE ONLINE & RECORDED LECTURES  Learn Anytime, Anywhere with
+                    <span>Excel Educational Institution</span>
+                </h1>
+
+                <p class="hero-subtitle mt-2">
+                    Experience the Future of Learning with Interactive Live Classes,
+                    Expert Faculty, Recorded Lectures, Study Material & Complete Exam Preparation.
+                </p>
+
+                <div class="mt-2">
+
+                    <a href="/contact" class="btn btn-outline-light btn-lg px-4">
+                        Enquire Now
+                    </a>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
 </section>
 
+<section class="py-5">
+    <div class="container">
+        <div class="text-center mb-5">
+            <h2 class="fw-bold text-primary">
+                Why Choose Live Online & Recorded Classes?
+            </h2>
+            <p class="lead text-muted">
+                Flexible Learning, Expert Guidance & Unlimited Revision Support
+            </p>
+            <p class="text-secondary">
+                In today's fast-paced academic environment, students need
+                flexibility, expert guidance, and uninterrupted learning support.
+                Excel Educational Institution brings a powerful learning ecosystem
+                through Live Online & Recorded Lectures, allowing students to learn
+                from experienced faculty members regardless of their location.
+            </p>
+
+            <p class="text-secondary">
+                Whether you are preparing for
+                <strong>
+                    CA, CS, CMA, CUET, CLAT, IPMAT, Banking, SSC,
+                    Railway, MBA Entrance Exams
+                </strong> or other competitive
+                examinations, our online learning platform ensures that quality
+                education is always within your reach.
+            </p>
+
+            <p class="text-secondary">
+                Students can attend classes in real time and revisit recorded
+                lectures whenever they need revision, concept clarity, or
+                additional practice.
+            </p>
+
+            <p class="text-secondary">
+                Our goal is simple – provide high-quality education that fits every
+                student's schedule while maintaining the same academic excellence
+                that Excel Educational Institution is known for.
+            </p>
+
+            <div class="mt-4">
+                <a href="#" class="btn btn-primary btn-lg px-4 me-2">
+                    Enroll Now
+                </a>
+
+                <a href="#" class="btn btn-outline-primary btn-lg px-4">
+                    Watch Demo
+                </a>
+            </div>
+
+        </div>
+
+    </div>
+</section>
 <section class="py-3 bg-light">
     <div class="container-fluid">
         <div class="row align-items-center">
 
-            <!-- Left Content -->
-            <div class="col-lg-8">
 
-                <h1 class="display-5 fw-bold text-dark mb-3">
-                    <span class="badge bg-primary px-3 py-2 mb-3 fs-6">
-                        LIVE ONLINE & RECORDED LECTURES
-                    </span>
-                    Learn Anytime, Anywhere with
-                    <span class="text-danger">Excel Educational Institution</span>
-                </h1>
-
-                <p class="lead text-muted">
-                    The Future of Learning with Live Online & Recorded Lectures
-                </p>
-
-                <p class="text-secondary">
-                    In today's fast-paced academic environment, students need
-                    flexibility, expert guidance, and uninterrupted learning support.
-                    Excel Educational Institution brings a powerful learning ecosystem
-                    through Live Online & Recorded Lectures, allowing students to learn
-                    from experienced faculty members regardless of their location.
-                </p>
-
-                <p class="text-secondary">
-                    Whether you are preparing for
-                    <strong>
-                        CA, CS, CMA, CUET, CLAT, IPMAT, Banking, SSC,
-                        Railway, MBA Entrance Exams
-                    </strong> or other competitive
-                    examinations, our online learning platform ensures that quality
-                    education is always within your reach.
-                </p>
-
-                <p class="text-secondary">
-                    Students can attend classes in real time and revisit recorded
-                    lectures whenever they need revision, concept clarity, or
-                    additional practice.
-                </p>
-
-                <p class="text-secondary">
-                    Our goal is simple – provide high-quality education that fits every
-                    student's schedule while maintaining the same academic excellence
-                    that Excel Educational Institution is known for.
-                </p>
-
-                <div class="mt-4">
-                    <a href="#" class="btn btn-primary btn-lg px-4 me-2">
-                        Enroll Now
-                    </a>
-
-                    <a href="#" class="btn btn-outline-primary btn-lg px-4">
-                        Watch Demo
-                    </a>
-                </div>
+            <div class="col-lg-7">
+                <!-- Banner Image -->
+                <img src="~/ADS Img/LIVE ONLINE And RECORDED Lectures.png"
+                     class=" w-100"
+                     alt="Live Online & Recorded Lectures" title="LIVE ONLINE And RECORDED Lectures"
+                     style="max-height:500px; object-fit:cover;">
             </div>
-
             <!-- Right Side Card -->
-            <div class="col-lg-4 mt-4 mt-lg-0">
+            <div class="col-lg-5 mt-4 mt-lg-0">
                 <div class="card border-0 shadow-lg rounded-4">
                     <div class="card-body p-4">
 
@@ -150,18 +228,9 @@
         </div>
     </div>
 </section>
-
 <section class="py-5">
     <div class="container">
 
-        <div class="text-center mb-5">
-            <h2 class="fw-bold text-primary">
-                Why Choose Live Online & Recorded Classes?
-            </h2>
-            <p class="lead text-muted">
-                Flexible Learning, Expert Guidance & Unlimited Revision Support
-            </p>
-        </div>
 
         <!-- Live Online Classes -->
         <div class="card border-0 shadow-sm mb-4">
@@ -424,6 +493,9 @@
 
     </div>
 </section>
+
+
+
 
 
 <section class="py-5 bg-light">
@@ -715,55 +787,195 @@
 
         </div>
 
-        <!-- Popular Online Courses -->
-        <div class="card border-0 shadow mb-5">
+
+
+    </div>
+</section>
+
+<section><div class="row">
+    <!-- 1. Online Commerce Classes & Recorded Lectures -->
+             <div class="col-lg-4 mb-4">
+                 <div class="card border-0 shadow mb-3">
+                     <div class="card-body p-4 ">
+                         <h4 class="fw-bold text-danger mb-3">
+                             Online Commerce Classes & Recorded Lectures
+                         </h4>
+                         <ul class="list-group list-group-flush">
+                             <li class="list-group-item"><a href="#" title="Class 12th Commerce Coaching Online">Class 12th Commerce Coaching Online</a></li>
+                             <li class="list-group-item"><a href="#" title="Class 12th Commerce Recorded Lectures Online - Excel Educational Institution">Class 12th Commerce Recorded Lectures Online</a></li>
+                             <li class="list-group-item"><a href="#" title="Class 11 Commerce Recorded Lectures">Class 11 Commerce Recorded Lectures</a></li>
+                             <li class="list-group-item"><a href="#" title="Commerce Class 11 Recorded Classes Online - Excel Educational Institution">Commerce Class 11 Recorded Classes Online</a></li>
+                             <li class="list-group-item"><a href="#" title="Commerce Class 11 Coaching Online - Excel Educational Institution">Commerce Class 11 Coaching Online</a></li>
+                             <li class="list-group-item"><a href="#" title="Class 11 Commerce Coaching Online - Excel Educational Institution">Class 11 Commerce Coaching Online</a></li>
+                         </ul>
+                     </div>
+                 </div>
+
+                 <div class="card border-0 shadow">
+                     <div class="card-body p-4">
+                         <h4 class="fw-bold text-warning mb-3">
+                             CA Foundation Live & Recorded Classes
+                         </h4>
+                         <ul class="list-group list-group-flush">
+                             <li class="list-group-item"><a href="#" title="CA Foundation Live Online Classes">CA Foundation Live Online Classes</a></li>
+                             <li class="list-group-item"><a href="#" title="CA Foundation Recorded Classes - Excel Educational Institution">CA Foundation Recorded Classes</a></li>
+                             <li class="list-group-item"><a href="#" title="CA Foundation Online Recorded Classes">CA Foundation Online Recorded Classes</a></li>
+                         </ul>
+                     </div>
+                 </div>
+             </div>
+
+     
+
+    <!-- 3. CA Intermediate Online Classes & Study Material -->
+    <div class="col-lg-4 mb-4">
+        <div class="card border-0 shadow h-100">
+            <div class="card-body  p-4">
+                <h4 class="fw-bold text-success mb-3">
+                    CA Intermediate Online Classes & Study Material
+                </h4>
+                <ul class="list-group  bg-success-subtle text-success-emphasis list-group-flush">
+                    <li class="list-group-item"><a href="#" title="CA Intermediate Online Course - Excel Educational Institution">CA Intermediate Online Course</a></li>
+                    <li class="list-group-item"><a href="#" title="CA Intermediate Recorded Classes">CA Intermediate Recorded Classes</a></li>
+                    <li class="list-group-item"><a href="#" title="CA Intermediate Live Classes - Excel Educational Institution">CA Intermediate Live Classes</a></li>
+                    <li class="list-group-item"><a href="#" title="CA Intermediate Study Material">CA Intermediate Study Material</a></li>
+                    <li class="list-group-item"><a href="#" title="CA Intermediate Group 1 Study Material - Excel Educational Institution">CA Intermediate Group 1 Study Material</a></li>
+                    <li class="list-group-item"><a href="#" title="CA Intermediate Group 1 Live Classes Online - Excel Educational Institution">CA Intermediate Group 1 Live Classes Online</a></li>
+                    <li class="list-group-item"><a href="#" title="CA Inter Group 1 Recorded Lectures">CA Inter Group 1 Recorded Lectures</a></li>
+                    <li class="list-group-item"><a href="#" title="CA Intermediate Group 2 Subjects - Excel Educational Institution">CA Intermediate Group 2 Subjects</a></li>
+                    <li class="list-group-item"><a href="#" title="CA Inter Group 2 Live Classes">CA Inter Group 2 Live Classes</a></li>
+                    <li class="list-group-item"><a href="#" title="CA Inter Group 2 Recorded Classes - Excel Educational Institution">CA Inter Group 2 Recorded Classes</a></li>
+                    <li class="list-group-item"><a href="#" title="CA Intermediate Online Classes - Excel Educational Institution">CA Intermediate Online Classes</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- 4. CA Final Live Classes & Recorded Lectures -->
+    <div class="col-lg-4 mb-4">
+        <div class="card border-0 shadow mb-3">
             <div class="card-body p-4">
-
-                <h3 class="fw-bold text-primary mb-4">
-                    Popular Online Courses
-                </h3>
-
-                <div class="row">
-
-                    <div class="col-lg-4">
-                        <h5 class="fw-bold">CA Courses</h5>
-
-                        <ul class="list-unstyled">
-                            <li><a href="/ca-foundation-online-classes" class="text-decoration-none">CA Foundation Live Classes</a></li>
-                            <li><a href="/ca-foundation-recorded-classes" class="text-decoration-none">CA Foundation Recorded Classes</a></li>
-                            <li><a href="/ca-intermediate-online-course" class="text-decoration-none">CA Intermediate Online Course</a></li>
-                            <li><a href="/ca-intermediate-live-classes" class="text-decoration-none">CA Intermediate Live Classes</a></li>
-                            <li><a href="/ca-final-live-classes" class="text-decoration-none">CA Final Live Classes</a></li>
-                        </ul>
-                    </div>
-
-                    <div class="col-lg-4">
-                        <h5 class="fw-bold">CMA Courses</h5>
-
-                        <ul class="list-unstyled">
-                            <li><a href="/cma-foundation-online-classes" class="text-decoration-none">CMA Foundation Classes</a></li>
-                            <li><a href="/cma-foundation-recorded-classes" class="text-decoration-none">CMA Foundation Recorded Classes</a></li>
-                            <li><a href="/cma-intermediate-online-classes" class="text-decoration-none">CMA Intermediate Classes</a></li>
-                            <li><a href="/cma-study-material" class="text-decoration-none">CMA Study Material</a></li>
-                        </ul>
-                    </div>
-
-                    <div class="col-lg-4">
-                        <h5 class="fw-bold">CS & Commerce</h5>
-
-                        <ul class="list-unstyled">
-                            <li><a href="/cseet-live-classes" class="text-decoration-none">CSEET Live Classes</a></li>
-                            <li><a href="/cs-executive-live-classes" class="text-decoration-none">CS Executive Live Classes</a></li>
-                            <li><a href="/class-11-commerce-online" class="text-decoration-none">Class 11 Commerce</a></li>
-                            <li><a href="/class-12-commerce-online" class="text-decoration-none">Class 12 Commerce</a></li>
-                        </ul>
-                    </div>
-
-                </div>
-
+                <h4 class="fw-bold text-info mb-3">
+                    CA Final Live Classes & Recorded Lectures
+                </h4>
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-item"><a href="#" title="CA Final Live Classes - Excel Educational Institution">CA Final Live Classes</a></li>
+                    <li class="list-group-item"><a href="#" title="CA Final Recorded Lectures - Excel Educational Institution">CA Final Recorded Lectures</a></li>
+                    <li class="list-group-item"><a href="#" title="CA Final Recorded Classes">CA Final Recorded Classes</a></li>
+                </ul>
             </div>
         </div>
 
+        <div class="card border-0 shadow mb-3">
+            <div class="card-body p-4">
+                <h4 class="fw-bold text-danger-emphasis mb-3">
+                    CMA Foundation Online Classes
+                </h4>
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-item"><a href="#" title="CMA Foundation Classes Online - Excel Educational Institution">CMA Foundation Classes Online</a></li>
+                    <li class="list-group-item"><a href="#" title="CMA Foundation Recorded Classes">CMA Foundation Recorded Classes</a></li>
+                </ul>
+            </div>
+        </div>
+
+
+        <div class="card border-0 shadow mb-3">
+            <div class="card-body p-4">
+                <h4 class="fw-bold text-primary mb-3">
+                    CSEET Online Classes & Recorded Lectures
+                </h4>
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-item"><a href="#" title="CSEET Live Classes - Excel Educational Institution">CSEET Live Classes</a></li>
+                    <li class="list-group-item"><a href="#" title="CSEET Recorded Lectures">CSEET Recorded Lectures</a></li>
+                    <li class="list-group-item"><a href="#" title="CS EET Recorded Lectures - Excel Educational Institution">CS EET Recorded Lectures</a></li>
+                </ul>
+            </div>
+        </div>
+
+
+    </div>
+
+     
+
+    <!-- 6. CMA Intermediate Live Classes, Recorded Lectures & Study Material -->
+    <div class="col-lg-4 mb-4">
+        <div class="card border-0 shadow h-100">
+            <div class="card-body p-4">
+                <h4 class="fw-bold text-success-emphasis mb-3">
+                    CMA Intermediate Live Classes, Recorded Lectures & Study Material
+                </h4>
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-item"><a href="#" title="CMA Intermediate Classes Online - Excel Educational Institution">CMA Intermediate Classes Online</a></li>
+                    <li class="list-group-item"><a href="#" title="CMA Intermediate Group 1 Study Material">CMA Intermediate Group 1 Study Material</a></li>
+                    <li class="list-group-item"><a href="#" title="CMA Intermediate Group 1 Live Classes Online - Excel Educational Institution">CMA Intermediate Group 1 Live Classes Online</a></li>
+                    <li class="list-group-item"><a href="#" title="CMA Inter Group 1 Recorded Classes">CMA Inter Group 1 Recorded Classes</a></li>
+                    <li class="list-group-item"><a href="#" title="CMA Intermediate Group 2 Study Material - Excel Educational Institution">CMA Intermediate Group 2 Study Material</a></li>
+                    <li class="list-group-item"><a href="#" title="CMA Intermediate Group 2 Live Classes - Excel Educational Institution">CMA Intermediate Group 2 Live Classes</a></li>
+                    <li class="list-group-item"><a href="#" title="CMA Inter Group 2 Recorded Classes">CMA Inter Group 2 Recorded Classes</a></li>
+                    <li class="list-group-item"><a href="#" title="CMA Inter Recorded Classes - Excel Educational Institution">CMA Inter Recorded Classes</a></li>
+                    <li class="list-group-item"><a href="#" title="CMA Inter Recorded Classes in English">CMA Inter Recorded Classes in English</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+ 
+
+    <!-- 8. CS Executive Live Classes, Study Material & Recorded Lectures -->
+    <div class="col-lg-4 mb-4">
+        <div class="card border-0 shadow h-100">
+            <div class="card-body p-4">
+                <h4 class="fw-bold text-secondary mb-3">
+                    CS Executive Live Classes, Study Material & Recorded Lectures
+                </h4>
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-item"><a href="#" title="CS Executive Recorded Classes - Excel Educational Institution">CS Executive Recorded Classes</a></li>
+                    <li class="list-group-item"><a href="#" title="CS Executive Study Material">CS Executive Study Material</a></li>
+                    <li class="list-group-item"><a href="#" title="CS Executive Module 1 Study Material">CS Executive Module 1 Study Material</a></li>
+                    <li class="list-group-item"><a href="#" title="CS Executive Module 1 Live Classes - Excel Educational Institution">CS Executive Module 1 Live Classes</a></li>
+                    <li class="list-group-item"><a href="#" title="CS Executive Module 1 Recorded Lectures">CS Executive Module 1 Recorded Lectures</a></li>
+                    <li class="list-group-item"><a href="#" title="CS Executive Module 1 Recorded Live Classes - Excel Educational Institution">CS Executive Module 1 Recorded Live Classes</a></li>
+                    <li class="list-group-item"><a href="#" title="CS Executive Module 2 Study Material">CS Executive Module 2 Study Material</a></li>
+                    <li class="list-group-item"><a href="#" title="CS Executive Module 2 Live Classes Online - Excel Educational Institution">CS Executive Module 2 Live Classes Online</a></li>
+                    <li class="list-group-item"><a href="#" title="CS Executive Module 2 Recorded Classes Online">CS Executive Module 2 Recorded Classes Online</a></li>
+                    <li class="list-group-item"><a href="#" title="CS Executive Module 2 Live Classes">CS Executive Module 2 Live Classes</a></li>
+                    <li class="list-group-item"><a href="#" title="CS Executive Module 2 Recorded Lectures - Excel Educational Institution">CS Executive Module 2 Recorded Lectures</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- 9. Explore More Online Courses -->
+    <div class="col-lg-4 mb-4">
+        <div class="card border-0 shadow h-100">
+            <div class="card-body p-4">
+                <h4 class="fw-bold text-info-emphasis mb-3">
+                    Explore More Online Courses
+                </h4>
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-item"><a href="#" title="Class 12th Commerce Coaching Online - Excel Educational Institution">Class 12th Commerce Coaching Online</a></li>
+                    <li class="list-group-item"><a href="#" title="Class 11 Commerce Coaching Online - Excel Educational Institution">Class 11 Commerce Coaching Online</a></li>
+                    <li class="list-group-item"><a href="#" title="CA Foundation Live Online Classes - Excel Educational Institution">CA Foundation Live Online Classes</a></li>
+                    <li class="list-group-item"><a href="#" title="CA Foundation Recorded Classes - Excel Educational Institution">CA Foundation Recorded Classes</a></li>
+                    <li class="list-group-item"><a href="#" title="CA Intermediate Online Course - Excel Educational Institution">CA Intermediate Online Course</a></li>
+                    <li class="list-group-item"><a href="#" title="CA Intermediate Live Classes - Excel Educational Institution">CA Intermediate Live Classes</a></li>
+                    <li class="list-group-item"><a href="#" title="CA Final Live Classes - Excel Educational Institution">CA Final Live Classes</a></li>
+                    <li class="list-group-item"><a href="#" title="CMA Foundation Classes Online - Excel Educational Institution">CMA Foundation Classes Online</a></li>
+                    <li class="list-group-item"><a href="#" title="CMA Intermediate Classes Online - Excel Educational Institution">CMA Intermediate Classes Online</a></li>
+                    <li class="list-group-item"><a href="#" title="CSEET Live Classes - Excel Educational Institution">CSEET Live Classes</a></li>
+                    <li class="list-group-item"><a href="#" title="CS Executive Live Classes - Excel Educational Institution">CS Executive Live Classes</a></li>
+                    <li class="list-group-item"><a href="#" title="CS Executive Study Material - Excel Educational Institution">CS Executive Study Material</a></li>
+                    <li class="list-group-item"><a href="#" title="CMA Intermediate Study Material - Excel Educational Institution">CMA Intermediate Study Material</a></li>
+                    <li class="list-group-item"><a href="#" title="CA Intermediate Study Material - Excel Educational Institution">CA Intermediate Study Material</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+</div>
+</section>
+<section>
+    <div>
         <!-- Admission CTA -->
         <div class="bg-primary text-white rounded-4 p-5 text-center shadow-lg">
 
@@ -814,6 +1026,5 @@
             </a>
 
         </div>
-
     </div>
 </section>
