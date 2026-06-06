@@ -264,6 +264,13 @@ namespace ExcelEducation.Controllers
         {
             return View();
         }
+
+        [Route("LIVE-ONLINE-And-RECORDED-Lectures")]
+        public ActionResult LIVEONLINEAndRECORDEDLectures()
+        {
+            return View();
+        }
+
         [Route("CS-Executive-Coaching-In-Cuttack")]
         public ActionResult CSExecutivecoachinginCuttack()
         {
