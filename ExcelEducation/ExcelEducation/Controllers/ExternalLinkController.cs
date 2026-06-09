@@ -13,11 +13,27 @@ namespace ExcelEducation.Controllers
         {
             return View();
         }
+         
+        
+        [Route("CA-Classes-In-Raipur")]
+        public ActionResult CAClassesInRaipur()
+        {
+            return View("");
+        }
+
+        [Route("CA-Coaching-In-Raipur")]
+        public ActionResult CACoachingInRaipur()
+        {
+            return View("");
+        }
+         
         [Route("Best-CA-Foundation-Coaching-In-Raipur")]
         public ActionResult BestCAFoundationCoachingInRaipur()
         {
             return View("");
         }
+
+
         [Route("CA-Intermediate-Group-1-Coaching")]
         public ActionResult CAIntermediateGroup1coaching()
         {
