@@ -6,1184 +6,700 @@
     ViewData["Keywords"] = "Best CA Foundation Coaching in Raipur, CA Foundation Coaching in Bhilai, CA Foundation Coaching in Durg, Best Commerce Coaching in Chhattisgarh";
 }
 
- 
 
-<!-- Google Fonts & Icons -->
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
 
 <style>
-    /* ADD THIS CSS */
-
-    .hero-section {
-        background: linear-gradient(135deg, #ff512f, #dd2476);
-        min-height: 250px;
-        display: flex;
-        align-items: center;
-        border-radius: 0 0 30px 30px;
+    /* ── TOKENS ────────────────────────────────────── */
+    :root {
+      --navy:   #0D1B3E;
+      --gold:   #C9A84C;
+      --gold-lt:#F0D98B;
+      --sky:    #E8F0FE;
+      --white:  #FFFFFF;
+      --off:    #F7F8FC;
+      --text:   #1A1A2E;
+      --muted:  #5A6070;
+      --border: #DDE1EC;
+      --radius: 12px;
     }
 
-    .btn-action {
-        background: #ffc107;
-        color: #000;
-        padding: 12px 30px;
-        border-radius: 50px;
-        font-weight: 600;
-        border: none;
-        transition: 0.3s;
+    /* ── RESET ─────────────────────────────────────── */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body { font-family: 'Inter', sans-serif; color: var(--text); background: var(--white); line-height: 1.7; }
+    img  { max-width: 100%; display: block; }
+    a    { color: inherit; text-decoration: none; }
+
+    /* ── TYPOGRAPHY ────────────────────────────────── */
+    h1,h2,h3 { font-family: 'Playfair Display', serif; line-height: 1.2; }
+    h1 { font-size: clamp(2rem, 5vw, 3.4rem); }
+    h2 { font-size: clamp(1.5rem, 3.5vw, 2.2rem); margin-bottom: 1rem; }
+    h3 { font-size: 1.2rem; margin-bottom: .5rem; }
+    p  { margin-bottom: 1rem; color: var(--muted); }
+
+    /* ── LAYOUT HELPERS ────────────────────────────── */
+    .container { max-width: 1100px; margin: 0 auto; padding: 0 20px; }
+    .section    { padding: 72px 0; }
+    .section-alt{ background: var(--off); }
+    .tag {
+      display: inline-block; font-size: .75rem; font-weight: 600; letter-spacing: .08em;
+      text-transform: uppercase; color: var(--gold); border: 1.5px solid var(--gold);
+      border-radius: 100px; padding: 4px 14px; margin-bottom: 16px;
+    }
+    .grid-2 { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 28px; }
+    .grid-3 { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 24px; }
+
+    /* ── NAV ───────────────────────────────────────── */
+    nav {
+      background: var(--navy); padding: 14px 0;
+      position: sticky; top: 0; z-index: 100;
+      box-shadow: 0 2px 16px rgba(13,27,62,.18);
+    }
+    nav .inner {
+      display: flex; align-items: center; justify-content: space-between;
+      max-width: 1100px; margin: 0 auto; padding: 0 20px;
+    }
+    .logo { color: var(--white); font-family: 'Playfair Display', serif; font-size: 1.35rem; }
+    .logo span { color: var(--gold); }
+    .nav-cta {
+      background: var(--gold); color: var(--navy); font-weight: 600;
+      padding: 9px 22px; border-radius: 100px; font-size: .9rem;
+      transition: opacity .2s;
+    }
+    .nav-cta:hover { opacity: .85; }
+
+    /* ── HERO ──────────────────────────────────────── */
+    .hero {
+      background: var(--navy);
+      padding: 96px 0 80px;
+      position: relative; overflow: hidden;
+    }
+    .hero::before {
+      content: '';
+      position: absolute; inset: 0;
+      background: radial-gradient(ellipse 60% 80% at 80% 50%, rgba(201,168,76,.15) 0%, transparent 70%);
+      pointer-events: none;
+    }
+    .hero-badge {
+      display: inline-block; background: rgba(201,168,76,.15);
+      border: 1px solid rgba(201,168,76,.4); color: var(--gold-lt);
+      font-size: .78rem; font-weight: 600; letter-spacing: .1em; text-transform: uppercase;
+      padding: 5px 16px; border-radius: 100px; margin-bottom: 24px;
+    }
+    .hero h1 { color: var(--white); margin-bottom: 20px; }
+    .hero h1 em { font-style: normal; color: var(--gold); }
+    .hero p.lead {
+      color: rgba(255,255,255,.72); font-size: 1.1rem; max-width: 580px; margin-bottom: 36px;
+    }
+    .hero-btns { display: flex; gap: 14px; flex-wrap: wrap; }
+    .btn-primary {
+      background: var(--gold); color: var(--navy); font-weight: 700;
+      padding: 14px 30px; border-radius: 100px; font-size: 1rem;
+      transition: transform .2s, opacity .2s; display: inline-block;
+    }
+    .btn-primary:hover { transform: translateY(-2px); opacity: .92; }
+    .btn-outline {
+      border: 2px solid rgba(255,255,255,.35); color: var(--white);
+      padding: 13px 28px; border-radius: 100px; font-size: 1rem;
+      transition: background .2s; display: inline-block;
+    }
+    .btn-outline:hover { background: rgba(255,255,255,.1); }
+
+    /* stat strip */
+    .stat-strip {
+      background: var(--gold); margin-top: 56px;
+      padding: 28px 0;
+    }
+    .stat-strip .inner {
+      display: flex; justify-content: space-around; flex-wrap: wrap;
+      gap: 20px; max-width: 1100px; margin: 0 auto; padding: 0 20px;
+    }
+    .stat { text-align: center; }
+    .stat-num { font-family: 'Playfair Display', serif; font-size: 2.2rem; font-weight: 900; color: var(--navy); }
+    .stat-lbl { font-size: .82rem; font-weight: 600; color: var(--navy); opacity: .7; text-transform: uppercase; letter-spacing: .06em; }
+
+    /* ── CARDS ─────────────────────────────────────── */
+    .card {
+      background: var(--white); border: 1px solid var(--border);
+      border-radius: var(--radius); padding: 28px 24px;
+      transition: box-shadow .25s, transform .25s;
+    }
+    .card:hover { box-shadow: 0 8px 32px rgba(13,27,62,.10); transform: translateY(-3px); }
+    .card-icon { font-size: 2rem; margin-bottom: 12px; }
+
+    /* ── WHY CHOOSE ────────────────────────────────── */
+    .why-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 22px; }
+
+    /* ── COURSE PILLS ──────────────────────────────── */
+    .course-band {
+      background: var(--navy); border-radius: var(--radius);
+      padding: 36px 32px; color: var(--white); margin-bottom: 28px;
+    }
+    .course-band h2 { color: var(--white); }
+    .course-band p  { color: rgba(255,255,255,.72); }
+    .pill-list { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 18px; }
+    .pill {
+      background: rgba(201,168,76,.18); border: 1px solid rgba(201,168,76,.4);
+      color: var(--gold-lt); padding: 6px 16px; border-radius: 100px; font-size: .85rem; font-weight: 500;
     }
 
-        .btn-action:hover {
-            background: #ffca2c;
-            transform: translateY(-2px);
-        }
+    /* ── ROADMAP ───────────────────────────────────── */
+    .roadmap { display: flex; flex-direction: column; gap: 0; max-width: 680px; margin: 0 auto; }
+    .road-step {
+      display: flex; align-items: flex-start; gap: 20px; position: relative;
+    }
+    .road-step + .road-step { margin-top: 8px; }
+    .road-left { display: flex; flex-direction: column; align-items: center; }
+    .road-dot {
+      width: 44px; height: 44px; border-radius: 50%;
+      background: var(--navy); color: var(--white);
+      display: flex; align-items: center; justify-content: center;
+      font-family: 'Playfair Display', serif; font-size: 1rem; font-weight: 700;
+      flex-shrink: 0; position: relative; z-index: 1;
+    }
+    .road-line {
+      width: 2px; flex: 1; min-height: 32px;
+      background: linear-gradient(to bottom, var(--navy), var(--gold));
+    }
+    .road-body { padding-bottom: 28px; }
+    .road-body h3 { color: var(--navy); margin-bottom: 4px; }
+    .road-body p  { margin-bottom: 0; font-size: .9rem; }
+
+    /* ── TESTIMONIALS ──────────────────────────────── */
+    .testi-card {
+      background: var(--white); border-left: 4px solid var(--gold);
+      border-radius: var(--radius); padding: 28px 24px;
+      box-shadow: 0 2px 16px rgba(13,27,62,.06);
+    }
+    .testi-quote { font-size: 1.05rem; color: var(--text); font-style: italic; margin-bottom: 16px; }
+    .testi-author { font-weight: 600; color: var(--navy); font-size: .92rem; }
+    .testi-detail { font-size: .82rem; color: var(--muted); }
+    .stars { color: var(--gold); font-size: 1rem; margin-bottom: 10px; }
+
+    /* ── FAQ ───────────────────────────────────────── */
+    details {
+      border: 1px solid var(--border); border-radius: var(--radius);
+      margin-bottom: 12px; overflow: hidden;
+    }
+    summary {
+      padding: 18px 20px; font-weight: 600; cursor: pointer;
+      list-style: none; display: flex; justify-content: space-between; align-items: center;
+      font-size: .98rem; color: var(--navy);
+    }
+    summary::after { content: '+'; font-size: 1.3rem; color: var(--gold); transition: transform .2s; }
+    details[open] summary::after { transform: rotate(45deg); }
+    details[open] summary { color: var(--gold); }
+    .faq-body { padding: 0 20px 20px; }
+    .faq-body p { margin-bottom: 0; }
+
+    /* ── CAREER GRID ───────────────────────────────── */
+    .career-item {
+      display: flex; align-items: center; gap: 14px;
+      background: var(--white); border: 1px solid var(--border);
+      border-radius: var(--radius); padding: 18px 20px;
+    }
+    .career-icon { font-size: 1.6rem; flex-shrink: 0; }
+
+    /* ── CTA SECTION ───────────────────────────────── */
+    .cta-section {
+      background: linear-gradient(135deg, var(--navy) 0%, #1a2f6e 100%);
+      padding: 88px 0; text-align: center;
+    }
+    .cta-section h2 { color: var(--white); margin-bottom: 14px; }
+    .cta-section p  { color: rgba(255,255,255,.7); max-width: 520px; margin: 0 auto 36px; }
+    .cta-btns { display: flex; gap: 14px; justify-content: center; flex-wrap: wrap; }
+    .btn-cta-gold {
+      background: var(--gold); color: var(--navy); font-weight: 700;
+      padding: 15px 32px; border-radius: 100px; font-size: 1rem;
+      transition: transform .2s; display: inline-block;
+    }
+    .btn-cta-gold:hover { transform: translateY(-2px); }
+    .btn-cta-white {
+      background: rgba(255,255,255,.1); border: 2px solid rgba(255,255,255,.4);
+      color: var(--white); font-weight: 600;
+      padding: 13px 30px; border-radius: 100px; font-size: 1rem;
+      transition: background .2s; display: inline-block;
+    }
+    .btn-cta-white:hover { background: rgba(255,255,255,.2); }
+
+    /* contact block */
+    .contact-block { background: var(--off); border-radius: var(--radius); padding: 32px; margin-top: 40px; }
+    .contact-block p { margin: 0; }
+    .contact-info { display: flex; flex-wrap: wrap; gap: 28px; margin-top: 16px; }
+    .c-item { display: flex; align-items: center; gap: 10px; font-size: .95rem; color: var(--text); font-weight: 500; }
+    .c-icon { color: var(--gold); font-size: 1.2rem; }
+
+    /* ── FOOTER ────────────────────────────────────── */
+    footer {
+      background: var(--navy); color: rgba(255,255,255,.5);
+      text-align: center; padding: 28px 20px; font-size: .85rem;
+    }
+    footer strong { color: var(--gold); }
+
+    /* ── RESPONSIVE ────────────────────────────────── */
+    
 </style>
+
+
+
 <!-- HERO SECTION START -->
-
-<section class="hero-section py-3">
+<!-- ══ HERO ═════════════════════════════════════════ -->
+<header class="hero">
     <div class="container">
-        <div class="row align-items-center">
+        <div class="hero-badge">Raipur's Most Trusted CA Institute Since 2007</div>
+        <h1><em>CA Classes in Raipur</em><br>That Actually Deliver Results</h1>
+        <p class="lead">Over 173 All India Rank holders. Experienced CA faculty. A student-first approach that has shaped thousands of careers across Chhattisgarh.</p>
+        <div class="hero-btns">
+            <a href="#contact" class="btn-primary">📞 Call Now</a>
+            <a href="#contact" class="btn-outline">Book Free Counselling</a>
+        </div>
+    </div>
+</header>
 
-            <div class="col-lg-12 text-center">
+<!-- stat strip -->
+<div class="stat-strip">
+    <div class="inner">
+        <div class="stat"><div class="stat-num">173+</div><div class="stat-lbl">AIR Holders</div></div>
+        <div class="stat"><div class="stat-num">17+</div><div class="stat-lbl">Years of Excellence</div></div>
+        <div class="stat"><div class="stat-num">5000+</div><div class="stat-lbl">Students Coached</div></div>
+        <div class="stat"><div class="stat-num">3</div><div class="stat-lbl">CA Levels Covered</div></div>
+    </div>
+</div>
 
-                <h1 class="display-5 text-white fw-bold">
-                    Best CA Foundation Coaching in Raipur, Bhilai, Durg,
-                    Bilaspur & Chhattisgarh
-                </h1>
+<!-- ══ INTRO ═════════════════════════════════════════ -->
+<section class="section">
+    <div class="container">
+        <div class="tag">About Us</div>
+        <h2>Why Students Across Raipur Choose Excel Educational Institute</h2>
+        <div class="grid-2">
+            <div>
+                <p>Established in 2007, Excel Educational Institute has become the most sought-after destination for CA classes in Raipur and across Chhattisgarh. From our campus at Pachpedi Naka, Raipur, we have guided more than 5,000 students through the rigorous journey of becoming Chartered Accountants — with 173+ All India Rank holders standing as a testament to the quality of our coaching.</p>
+                <p>What sets us apart from other CA coaching institutes in Raipur is not just our results — it is our philosophy. We believe every student who walks through our doors has the potential to clear ICAI exams with confidence, provided they receive the right guidance, structured practice, and individual attention.</p>
+                <p>Our faculty comprises practising Chartered Accountants who bring real-world expertise into the classroom. Combined with concept-based teaching, regular mock tests, and personalised mentorship, Excel Educational Institute offers a complete ecosystem for CA preparation — from CA Foundation right through to CA Final.</p>
+            </div>
+            <div>
+                <div class="card" style="height:100%; display:flex; flex-direction:column; gap:16px;">
+                    <div style="display:flex;align-items:center;gap:12px;"><span style="font-size:1.5rem;">🏆</span><div><strong>173+ AIR Holders</strong><p style="margin:0;font-size:.88rem;">National recognition for our students' hard work.</p></div></div>
+                    <div style="display:flex;align-items:center;gap:12px;"><span style="font-size:1.5rem;">📚</span><div><strong>Expert CA Faculty</strong><p style="margin:0;font-size:.88rem;">Practising CAs who know exactly what ICAI expects.</p></div></div>
+                    <div style="display:flex;align-items:center;gap:12px;"><span style="font-size:1.5rem;">🎯</span><div><strong>Concept-First Teaching</strong><p style="margin:0;font-size:.88rem;">Deep understanding over rote learning.</p></div></div>
+                    <div style="display:flex;align-items:center;gap:12px;"><span style="font-size:1.5rem;">📍</span><div><strong>Pachpedi Naka, Raipur</strong><p style="margin:0;font-size:.88rem;">Centrally located, easily accessible from all areas of Raipur.</p></div></div>
+                    <div style="display:flex;align-items:center;gap:12px;"><span style="font-size:1.5rem;">🕐</span><div><strong>Since 2007</strong><p style="margin:0;font-size:.88rem;">17+ years of consistent, proven results.</p></div></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
 
-                <p class="lead mt-3 text-white opacity-75">
-                    Welcome to
-                    <span class="fw-bold">
-                        Excel Educational Institution
-                    </span>,
-                    the most trusted name for professional Commerce education.
-                </p>
+<!-- ══ WHAT IS CA ══════════════════════════════════ -->
+<section class="section section-alt">
+    <div class="container">
+        <div class="tag">Know the Profession</div>
+        <h2>What is the CA Course?</h2>
+        <div class="grid-2">
+            <div>
+                <p>Chartered Accountancy (CA) is one of the most prestigious professional qualifications in India, governed and awarded by the <strong>Institute of Chartered Accountants of India (ICAI)</strong>. ICAI is one of the largest accounting bodies in the world, and the CA designation it grants is recognised across India and in several international jurisdictions.</p>
+                <p>A Chartered Accountant is a qualified finance and accounting professional who is authorised to audit company accounts, provide financial advisory services, manage taxation, and ensure regulatory compliance. Businesses of every size — from startups to Fortune 500 companies — depend on CAs for critical financial decisions.</p>
+                <p>The CA course is structured into three progressive levels: <strong>CA Foundation, CA Intermediate, and CA Final</strong>. Students also complete a mandatory <strong>3-year Articleship</strong> (practical training under a practising CA) running alongside their Intermediate and Final studies. This blend of rigorous theoretical examination and hands-on training is what makes the CA qualification uniquely valuable in the job market.</p>
+            </div>
+            <div>
+                <p>ICAI conducts CA exams twice a year — in May and November — giving students structured opportunities to progress. Each level tests a specific set of competencies: Foundation focuses on fundamentals, Intermediate builds core technical knowledge across law, accounts, costing, and taxation, while Final sharpens advanced skills in financial reporting, strategic management, and direct and indirect taxes.</p>
+                <p>Choosing the right <strong>CA coaching institute in Raipur</strong> at the start of this journey can make all the difference. The right guidance helps students understand concepts deeply, manage time effectively, and approach examinations with confidence — which is precisely what Excel Educational Institute has been providing since 2007.</p>
+            </div>
+        </div>
+    </div>
+</section>
 
+<!-- ══ WHY CA CAREER ══════════════════════════════ -->
+<section class="section">
+    <div class="container">
+        <div class="tag">Career Outlook</div>
+        <h2>Why CA is One of the Best Career Choices in India</h2>
+        <p style="max-width:680px;">Few professions offer the combination of prestige, financial rewards, and career stability that Chartered Accountancy does. Here is why thousands of students across Raipur and Chhattisgarh aspire to become CAs every year.</p>
+        <div class="grid-3" style="margin-top:28px;">
+            <div class="card">
+                <div class="card-icon">💰</div>
+                <h3>High Earning Potential</h3>
+                <p>A freshly qualified CA in India earns between ₹6–12 LPA on average, with experienced professionals in banking or Big 4 firms drawing ₹25–60 LPA or more.</p>
+            </div>
+            <div class="card">
+                <div class="card-icon">🌐</div>
+                <h3>Global Opportunities</h3>
+                <p>The CA qualification from ICAI is recognised in countries like the UK, Canada, Australia and several Gulf nations, opening doors to international careers.</p>
+            </div>
+            <div class="card">
+                <div class="card-icon">🔒</div>
+                <h3>Unmatched Job Security</h3>
+                <p>Every company — regardless of size or sector — requires a CA for auditing, tax filing, and financial compliance. Demand for CAs never dips, even during economic slowdowns.</p>
+            </div>
+            <div class="card">
+                <div class="card-icon">🏢</div>
+                <h3>Demand Across Every Industry</h3>
+                <p>From banking and insurance to IT, manufacturing, and healthcare — CAs are indispensable. The diversity of sectors means you are never limited in your choice of employer.</p>
+            </div>
+            <div class="card">
+                <div class="card-icon">🚀</div>
+                <h3>Entrepreneurship Freedom</h3>
+                <p>Many CAs launch their own practice, offering audit, tax, and advisory services independently. With a CA certificate, you carry the credentials to build your own firm.</p>
+            </div>
+            <div class="card">
+                <div class="card-icon">🎖️</div>
+                <h3>Prestige and Social Recognition</h3>
+                <p>The "CA" designation commands respect in both professional and social circles. It is one of the few qualifications where the acronym itself signals authority and trust.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ══ WHY EXCEL ═══════════════════════════════════ -->
+<section class="section section-alt">
+    <div class="container">
+        <div class="tag">Why Excel</div>
+        <h2>Why Choose Excel Educational Institute for CA Classes in Raipur?</h2>
+        <p style="max-width:660px;">There are many CA coaching institutes in Raipur, but very few can match the depth of academic rigour, personalised attention, and track record that Excel Educational Institute has built over 17 years.</p>
+        <div class="why-grid" style="margin-top:32px;">
+
+            <div class="card">
+                <h3>🏆 173+ AIR Holders</h3>
+                <p>Securing an All India Rank is the gold standard of CA coaching. Our students have achieved AIR positions consistently — not once or twice, but across batches and across all three levels of the CA exam. This track record in Raipur and Chhattisgarh is unmatched.</p>
+            </div>
+
+            <div class="card">
+                <h3>👨‍🏫 Experienced CA Faculty</h3>
+                <p>Every subject at Excel Educational Institute is taught by a practising or highly experienced Chartered Accountant. Our faculty does not just teach from textbooks — they bring exam strategies, real-world application, and subject-matter authority that makes concepts stick.</p>
+            </div>
+
+            <div class="card">
+                <h3>💡 Concept-Based Learning</h3>
+                <p>We firmly believe that rote memorisation gets students through some exams but not the CA exams. ICAI rewards understanding, application, and analysis. Our teaching methodology is built on ensuring that every student genuinely understands the "why" before they learn the "what."</p>
+            </div>
+
+            <div class="card">
+                <h3>📝 Regular Tests & Performance Analysis</h3>
+                <p>Weekly subject tests, chapter-wise assessments, and full-length mock exams are integrated into every batch. More importantly, each test comes with detailed feedback, marking analysis, and personalised improvement plans — not just a score on a sheet of paper.</p>
+            </div>
+
+            <div class="card">
+                <h3>🤝 Personal Mentorship</h3>
+                <p>The CA journey is long and demanding. Our faculty and mentors remain accessible to students beyond classroom hours — for doubt-clearing, career counselling, and emotional support during the high-pressure exam season. No student at Excel is left to navigate the journey alone.</p>
+            </div>
+
+            <div class="card">
+                <h3>🏫 Modern Classroom Facilities</h3>
+                <p>Located at Pachpedi Naka, Raipur, our campus features well-equipped classrooms, a study library, digital learning aids, and a study environment designed to keep students focused and motivated throughout their preparation.</p>
+            </div>
+
+            <div class="card">
+                <h3>📊 Excellent Student Results</h3>
+                <p>Year after year, Excel Educational Institute records pass percentages significantly higher than the national average. Our results are not anomalies — they are the outcome of a systematic, student-centric teaching process refined over more than 17 years in Raipur.</p>
+            </div>
+
+            <div class="card">
+                <h3>📍 Strategically Located in Raipur</h3>
+                <p>Our institute at Pachpedi Naka is easily accessible from Shankar Nagar, Telibandha, Pandri, Devendra Nagar, and other key areas of Raipur, making daily attendance convenient for students across the city and from nearby districts of Chhattisgarh.</p>
             </div>
 
         </div>
     </div>
 </section>
 
-
-<section class="container py-5">
-
-    <div class="row g-4">
-        <div class="col-md-6">
-            <div class="glass-section p-4 h-100 shadow rounded">
-                <h3 class="mb-4 fw-bold  ">
-                    We provide professional coaching for:
-                </h3>
-
-                <ul class="list-group list-group-flush">
-                    <li class="list-group-item">CA Foundation</li>
-                    <li class="list-group-item">CA Intermediate</li>
-                    <li class="list-group-item">CA Final</li>
-                    <li class="list-group-item">CS Executive</li>
-                    <li class="list-group-item">CS EET</li>
-                    <li class="list-group-item">CMA Foundation</li>
-                    <li class="list-group-item">CMA Intermediate</li>
-                    <li class="list-group-item">Class 11th Commerce</li>
-                    <li class="list-group-item">Class 12th Commerce</li>
-                    <li class="list-group-item">Live Online & Recorded Lectures</li>
-                </ul>
+<!-- ══ FOUNDATION ═════════════════════════════════ -->
+<section class="section">
+    <div class="container">
+        <div class="tag">Level 1</div>
+        <div class="course-band">
+            <h2>CA Foundation Classes in Raipur</h2>
+            <p>Your first step towards becoming a Chartered Accountant — and the most critical one to get right.</p>
+            <div class="pill-list">
+                <span class="pill">Principles of Accounting</span>
+                <span class="pill">Business Laws</span>
+                <span class="pill">Business Mathematics</span>
+                <span class="pill">Business Economics</span>
+                <span class="pill">Business & Commercial Knowledge</span>
             </div>
         </div>
-
-        <div class="col-md-6">
-            <div class="glass-section p-4 h-100 shadow rounded bg-light">
-                <h3 class="fw-bold   mb-3">
-                    Trusted Across Chhattisgarh
-                </h3>
-
-                <p>
-                    Excel Educational Institution has established itself as a premier destination for commerce and professional course preparation,
-                    earning the trust of students across the state of Chhattisgarh. From Raipur, Bhilai, Durg, Bilaspur, Jagdalpur, Korba, Raigarh,
-                    Rajnandgaon, and every major city, aspiring learners consistently choose Excel for its commitment to quality education, structured
-                    guidance, and proven results.
-                    <br />
-                    At the heart of Excel’s reputation lies its dedication to academic excellence. The institution blends modern teaching methodologies
-                    with personalized mentoring, ensuring that every student receives the support they need to succeed. Whether preparing for foundational
-                    commerce subjects or advanced professional courses, Excel provides a curriculum that is both rigorous and relevant to today’s competitive
-                    environment. Experienced faculty members bring not only subject expertise but also practical insights, helping students connect classroom
-                    learning with real-world applications.
-                    <br />
-                    Excel’s reach across Chhattisgarh reflects more than just geographical presence—it represents a shared belief among students and parents that
-                    quality education can transform futures.
-                </p>
+        <div class="grid-2">
+            <div>
+                <h3 style="color:var(--navy);margin-bottom:12px;">Who Can Enroll?</h3>
+                <p>Any student who has passed Class 12 from any stream — Commerce, Science, or Arts — is eligible to register for CA Foundation with ICAI and join our <strong>CA Foundation classes in Raipur</strong>. Commerce students find the transition smoother, but Science and Arts students consistently excel here with the right coaching.</p>
+                <p>At Excel Educational Institute, our CA Foundation batch begins with a strong conceptual orientation. Faculty from each subject builds the foundation block by block, ensuring that no student enters the first exam without a thorough understanding of every topic.</p>
+            </div>
+            <div>
+                <h3 style="color:var(--navy);margin-bottom:12px;">Our Foundation Approach</h3>
+                <p><strong>Structured Weekly Schedule:</strong> Daily classes for each subject, with subject rotation to maintain focus and prevent fatigue.</p>
+                <p><strong>Chapter-wise Tests:</strong> Every chapter ends with a class test, so performance gaps are identified early — not three months later.</p>
+                <p><strong>Doubt-Solving Sessions:</strong> Dedicated weekly doubt-clearing sessions where students can revisit any concept without hesitation.</p>
+                <p><strong>Foundation Mock Tests:</strong> Full-length mock exams under exam conditions, with answer sheet analysis by faculty to guide last-mile preparation.</p>
             </div>
         </div>
     </div>
+</section>
 
-    <!-- WHY CHOOSE US -->
-
-    <div class="glass-section mt-5 p-5 shadow rounded">
-        <h2 class="text-center fw-bold  mb-5">
-            Why Excel Educational Institution is the Best CA Foundation Coaching in Raipur
-        </h2>
-
-        <div class="row g-4">
-
-            <div class="col-md-5">
-                <div class="border rounded p-4 h-100">
-                    <h4 class="fw-bold mb-3">
-                        Expert Faculty & Concept-Based Teaching
-                    </h4>
-
-                    <p>
-                        At Excel Educational Institution, the strength of our programs lies in the expertise and dedication of our faculty.
-                        Each member of the teaching team brings not only academic qualifications but also years of practical experience,
-                        ensuring that students receive guidance rooted in both theory and application. Their ability to simplify complex topics
-                        and present them in a structured, student-friendly manner makes learning engaging and effective.
-                        <br />
-                        Our teaching philosophy is built on the principle of concept-based learning. Rather than focusing solely on
-                        rote memorization, we emphasize clarity of fundamentals. Students are encouraged to understand the “why” behind
-                        every concept, enabling them to apply knowledge confidently in exams and real-world scenarios.
-
-                    </p>
-                </div>
+<!-- ══ INTERMEDIATE ════════════════════════════════ -->
+<section class="section section-alt">
+    <div class="container">
+        <div class="tag">Level 2</div>
+        <div class="course-band">
+            <h2>CA Intermediate Classes in Raipur</h2>
+            <p>The most comprehensive level of the CA course — eight papers, two groups, and the gateway to Articleship.</p>
+            <div class="pill-list">
+                <span class="pill">Advanced Accounting</span>
+                <span class="pill">Corporate & Other Laws</span>
+                <span class="pill">Taxation</span>
+                <span class="pill">Cost & Mgmt. Accounting</span>
+                <span class="pill">Auditing</span>
+                <span class="pill">Financial Management</span>
+                <span class="pill">Enterprise Information Systems</span>
+                <span class="pill">Strategic Management</span>
             </div>
-
-            <div class="col-md-7">
-                <div class="border rounded p-4 h-100">
-                    <img src="@Url.Content("~/ADS Img/Best-CA-Foundation-Coaching-In-Raipur.png")"
-                         class="img-fluid rounded"
-                         alt="Best CA Foundation Coaching In Raipur" title="Best CA Foundation Coaching In Raipur" />
-                </div>
+        </div>
+        <div class="grid-2">
+            <div>
+                <h3 style="color:var(--navy);margin-bottom:12px;">Course Structure & Strategy</h3>
+                <p>CA Intermediate is split into Group I and Group II. Students can attempt both groups together or separately. Our expert faculty at Excel Educational Institute helps each student devise a personalised strategy based on their strengths, Articleship schedule, and exam timeline.</p>
+                <p>Our <strong>CA Intermediate classes in Raipur</strong> go deep into every subject — with special emphasis on Taxation and Auditing, which are historically the highest-scoring papers when prepared well, and the most commonly failed when not.</p>
             </div>
-
+            <div>
+                <h3 style="color:var(--navy);margin-bottom:12px;">What Sets Our Intermediate Coaching Apart</h3>
+                <p><strong>Subject Specialists:</strong> Each of the eight subjects is taught by a faculty member who specialises only in that subject — no generalists, no compromises.</p>
+                <p><strong>ICAI Study Material Integration:</strong> Our notes align with the ICAI curriculum and include past paper analysis, examiner comments, and topic-wise weightage charts.</p>
+                <p><strong>Revision Cycles:</strong> Multiple subject-wise revision cycles are built into the batch schedule, ensuring students enter the exam having seen every topic at least twice.</p>
+                <p><strong>Group Discussion Sessions:</strong> Peer learning is structured and facilitated, helping students articulate concepts and defend their understanding.</p>
+            </div>
         </div>
     </div>
+</section>
 
-    <!-- COMMERCE -->
-
-    <div class="glass-section mt-5 p-5 shadow-lg rounded-4 position-relative overflow-hidden">
-
-        <!-- Top Heading -->
-        <div class="mb-4">
-            <h2 class="fw-bold text-dark mb-3">
-                Coaching for Class 11th & 12th Commerce Students
-            </h2>
-
-            <p class="text-muted fs-5">
-                Build a strong academic foundation in Commerce and get an early advantage
-                in professional courses like CA Foundation, CS, and CMA with expert guidance,
-                concept clarity, and regular practice sessions.
-            </p>
-        </div>
-
-        <!-- Feature Cards -->
-        <div class="row g-4 mt-2">
-
-            <div class="col-md-4">
-                <div class="bg-white shadow-sm rounded-4 p-4 h-100 border">
-                    <div class="mb-3">
-                        <i class="fa-solid fa-book-open text-primary fs-2"></i>
-                    </div>
-                    <h5 class="fw-bold mb-3">Concept Based Learning</h5>
-                    <p class="text-muted mb-0">
-                        We focus on deep conceptual understanding instead of rote learning
-                        so students can perform confidently in school exams and competitive exams.
-                    </p>
-                </div>
-            </div>
-
-            <div class="col-md-4">
-                <div class="bg-white shadow-sm rounded-4 p-4 h-100 border">
-                    <div class="mb-3">
-                        <i class="fa-solid fa-chart-line text-success fs-2"></i>
-                    </div>
-                    <h5 class="fw-bold mb-3">Regular Test Series</h5>
-                    <p class="text-muted mb-0">
-                        Weekly tests, performance analysis, and revision sessions help students
-                        improve speed, accuracy, and confidence throughout the academic year.
-                    </p>
-                </div>
-            </div>
-
-            <div class="col-md-4">
-                <div class="bg-white shadow-sm rounded-4 p-4 h-100 border">
-                    <div class="mb-3">
-                        <i class="fa-solid fa-user-graduate text-danger fs-2"></i>
-                    </div>
-                    <h5 class="fw-bold mb-3">Career Focused Preparation</h5>
-                    <p class="text-muted mb-0">
-                        Along with school syllabus, students get early preparation guidance
-                        for CA Foundation and other professional commerce courses.
-                    </p>
-                </div>
-            </div>
-
-        </div>
-
-        <!-- Subjects -->
-        <div class="mt-5">
-            <h4 class="fw-bold mb-4">Subjects Covered</h4>
-
-            <div class="d-flex flex-wrap gap-3">
-
-                <span class="badge bg-primary px-4 py-3 fs-6 rounded-pill">
-                    Accounts
-                </span>
-
-                <span class="badge bg-success px-4 py-3 fs-6 rounded-pill">
-                    Economics
-                </span>
-
-                <span class="badge bg-dark px-4 py-3 fs-6 rounded-pill">
-                    Business Studies
-                </span>
-
-                <span class="badge bg-warning text-dark px-4 py-3 fs-6 rounded-pill">
-                    Mathematics
-                </span>
-
-                <span class="badge bg-danger px-4 py-3 fs-6 rounded-pill">
-                    Commerce Preparation
-                </span>
-
-                <span class="badge bg-info text-dark px-4 py-3 fs-6 rounded-pill">
-                    Statistics
-                </span>
-
-                <span class="badge bg-secondary px-4 py-3 fs-6 rounded-pill">
-                    English Support
-                </span>
-
+<!-- ══ FINAL ═══════════════════════════════════════ -->
+<section class="section">
+    <div class="container">
+        <div class="tag">Level 3</div>
+        <div class="course-band">
+            <h2>CA Final Classes in Raipur</h2>
+            <p>The final frontier — advanced, application-driven, and where great CAs are truly made.</p>
+            <div class="pill-list">
+                <span class="pill">Financial Reporting</span>
+                <span class="pill">Strategic Financial Mgmt.</span>
+                <span class="pill">Advanced Auditing</span>
+                <span class="pill">Corporate & Economic Laws</span>
+                <span class="pill">Strategic Cost Management</span>
+                <span class="pill">Direct Tax Laws</span>
+                <span class="pill">Indirect Tax Laws</span>
+                <span class="pill">Risk Management</span>
             </div>
         </div>
-
-        <!-- Why Choose -->
-        <div class="row mt-5 g-4">
-
-            <div class="col-lg-6">
-                <div class="bg-light rounded-4 p-4 h-100 border-start border-4 border-primary">
-                    <h5 class="fw-bold mb-3">
-                        Why Students Choose Us?
-                    </h5>
-
-                    <ul class="list-unstyled text-muted mb-0">
-
-                        <li class="mb-3">
-                            <i class="fa-solid fa-circle-check text-success me-2"></i>
-                            Experienced Commerce Faculty
-                        </li>
-
-                        <li class="mb-3">
-                            <i class="fa-solid fa-circle-check text-success me-2"></i>
-                            Smart Classroom Environment
-                        </li>
-
-                        <li class="mb-3">
-                            <i class="fa-solid fa-circle-check text-success me-2"></i>
-                            Doubt Solving Sessions
-                        </li>
-
-                        <li class="mb-3">
-                            <i class="fa-solid fa-circle-check text-success me-2"></i>
-                            Chapter-wise Notes & Assignments
-                        </li>
-
-                        <li class="mb-0">
-                            <i class="fa-solid fa-circle-check text-success me-2"></i>
-                            Personal Attention for Every Student
-                        </li>
-
-                    </ul>
-                </div>
+        <div class="grid-2">
+            <div>
+                <h3 style="color:var(--navy);margin-bottom:12px;">Advanced Preparation Methodology</h3>
+                <p>CA Final is where conceptual depth meets applied judgment. ICAI expects students not just to know the law or the standard — but to apply it intelligently in complex, case-study-based scenarios. Our <strong>CA Final classes in Raipur</strong> are built around this expectation.</p>
+                <p>Faculty at Excel Educational Institute have cleared CA Final themselves and bring first-hand knowledge of what the examination demands. Every class moves beyond textbooks into practical interpretation and application exercises.</p>
             </div>
-
-            <div class="col-lg-6">
-                <div class="bg-success-subtle text-success-emphasis rounded-4 p-4 h-100">
-                    <h5 class="fw-bold mb-3">
-                        Start Your Commerce Journey Today
-                    </h5>
-
-                    <p>
-                        Excel Educational Institution invites aspiring students to begin their path toward success in commerce and professional courses.
-                        With expert faculty, concept-based teaching, and trusted guidance across Chhattisgarh, we empower learners to build strong foundations,
-                        achieve academic excellence, and unlock career opportunities. Your journey starts here.
-                    </p>
-
-                    <a href="/Contact"
-                       class="btn btn-light fw-bold px-4 py-2 rounded-pill">
-                        Enroll Now
-                    </a>
-                </div>
+            <div>
+                <h3 style="color:var(--navy);margin-bottom:12px;">Our Final-Level Edge</h3>
+                <p><strong>Case Study Integration:</strong> Real-world financial statements, tax scenarios, and audit situations are woven into teaching, preparing students for exam surprises.</p>
+                <p><strong>Revision Plans:</strong> A structured revision calendar is shared at the start of every batch, covering every topic before mock tests begin.</p>
+                <p><strong>Full-Length Mock Exams:</strong> Our mock test series replicates actual exam conditions — timing, question patterns, and answer-writing discipline are all practised in advance.</p>
+                <p><strong>1-on-1 Paper Review:</strong> Each mock answer sheet is reviewed individually by faculty with personalised improvement notes.</p>
             </div>
-
-        </div>
-
-    </div>
-
-    <!-- Best CA Foundation Coaching in Raipur -->
-    <div class="glass-section mt-5 p-5 rounded-4 shadow-lg bg-white border overflow-hidden">
-
-        <!-- Heading -->
-        <div class="text-center mb-5">
-
-            <span class="badge bg-primary px-4 py-2 fs-6 rounded-pill mb-3"
-                  title="Professional CA Foundation Coaching in Raipur">
-                CA Foundation Coaching
-            </span>
-
-            <h1 class="fw-bold display-6 text-dark mb-3"
-                title="Best CA Foundation Coaching in Raipur">
-                <u>Best CA Foundation Coaching in Raipur</u>
-            </h1>
-
-            <p class="text-muted fs-5 mx-auto"
-               style="max-width:950px;"
-               title="Top Commerce and CA coaching institute in Chhattisgarh">
-
-                <i>
-                    Excel Educational Institution is committed to shaping the future
-                    of aspiring Chartered Accountants with quality education,
-                    expert mentorship, and result-oriented preparation.
-                </i>
-
-            </p>
-
-        </div>
-
-        <!-- Intro Section -->
-        <div class="row align-items-center g-5">
-
-            <!-- Left Side -->
-            <div class="col-lg-6">
-
-                <div class="bg-light rounded-4 p-4 shadow-sm h-100">
-
-                    <h2 class="fw-bold mb-4 text-primary"
-                        title="Why students choose Excel Educational Institution">
-                        Why Students Trust Excel?
-                    </h2>
-
-                    <p class="text-muted fs-5"
-                       title="Trusted CA Foundation Institute in Raipur">
-
-                        <b>Excel Educational Institution</b> has earned its reputation as the
-                        <u>leading choice for CA Foundation coaching in Raipur</u>,
-                        guiding aspiring Chartered Accountants toward success with
-                        unmatched dedication and expertise.
-
-                    </p>
-
-                    <p class="text-muted"
-                       title="Best commerce coaching institute in Chhattisgarh">
-
-                        Students from across <b>Chhattisgarh</b> trust
-
-                        <a target="_blank" href="https://exceledu.co.in"
-                           class="fw-bold text-decoration-none text-primary"
-                           title="Visit Excel Educational Institution">
-
-                            Excel Educational Institution
-
-                        </a>
-
-                        for its structured programs, experienced faculty,
-                        and proven track record in professional exam preparation.
-
-                    </p>
-
-                    <!-- Features -->
-                    <div class="mt-4">
-
-                        <div class="d-flex align-items-start mb-3">
-
-                            <i class="fa-solid fa-circle-check text-success me-3 mt-1"
-                               title="Experienced Faculty"></i>
-
-                            <span title="Professional and experienced CA faculty">
-                                Experienced & Professional Faculty Members
-                            </span>
-
-                        </div>
-
-                        <div class="d-flex align-items-start mb-3">
-
-                            <i class="fa-solid fa-circle-check text-success me-3 mt-1"
-                               title="Mock Test Series"></i>
-
-                            <span title="Regular mock tests and performance analysis">
-                                Regular Mock Tests & Performance Tracking
-                            </span>
-
-                        </div>
-
-                        <div class="d-flex align-items-start mb-3">
-
-                            <i class="fa-solid fa-circle-check text-success me-3 mt-1"
-                               title="Concept Based Learning"></i>
-
-                            <span title="Deep conceptual understanding for CA Foundation">
-                                Concept-Based Learning Approach
-                            </span>
-
-                        </div>
-
-                        <div class="d-flex align-items-start">
-
-                            <i class="fa-solid fa-circle-check text-success me-3 mt-1"
-                               title="Doubt Solving Sessions"></i>
-
-                            <span title="Personal mentorship and doubt support">
-                                Personal Mentorship & Doubt Solving Sessions
-                            </span>
-
-                        </div>
-
-                    </div>
-
-                </div>
-
-            </div>
-
-            <!-- Right Side -->
-            <div class="col-lg-6">
-
-                <div class="bg-primary text-white rounded-4 p-5 shadow h-100">
-
-                    <h2 class="fw-bold mb-4"
-                        title="Strong preparation for CA Foundation">
-                        Build a Strong CA Foundation
-                    </h2>
-
-                    <p class="fs-5"
-                       title="Start your Chartered Accountant journey with confidence">
-
-                        The <b>CA Foundation</b> is the first and most important step
-                        in becoming a <u>Chartered Accountant</u>, and Excel ensures
-                        that students master this crucial stage with confidence.
-
-                    </p>
-
-                    <p title="Experienced teaching with practical examples">
-
-                        Our faculty members combine
-                        <i>academic excellence</i> with practical insights,
-                        helping students understand even complex concepts easily.
-
-                    </p>
-
-                    <p class="mb-0"
-                       title="Exam oriented preparation for CA Foundation">
-
-                        With a strong focus on
-                        <b>clarity, accuracy, and exam-oriented preparation</b>,
-                        students gain the confidence and skills needed
-                        to excel in every subject.
-
-                    </p>
-
-                </div>
-
-            </div>
-
-        </div>
-
-        <!-- Main Content -->
-        <div class="mt-5">
-
-            <div class="bg-light rounded-4 p-5 shadow-sm">
-
-                <h2 class="fw-bold text-dark mb-4"
-                    title="Teaching methodology at Excel Educational Institution">
-
-                    <u>Our Teaching Methodology</u>
-
-                </h2>
-
-                <p class="text-muted fs-5"
-                   title="Concept based learning for CA students">
-
-                    At <b>Excel Educational Institution</b>, we believe in
-                    <i>concept-based learning</i> rather than rote memorization.
-                    Our interactive classroom sessions encourage students to deeply
-                    understand every topic and apply concepts effectively in exams.
-
-                </p>
-
-                <p class="text-muted"
-                   title="Mock tests and revision classes">
-
-                    Through <b>regular mock tests</b>, revision classes,
-                    doubt-clearing sessions, and continuous assessment,
-                    students stay focused and exam-ready throughout their preparation journey.
-
-                </p>
-
-                <p class="text-muted"
-                   title="Professional skills and confidence building">
-
-                    Beyond academics, Excel helps students develop
-                    <u>discipline, confidence, consistency, and motivation</u> —
-                    qualities essential for success in the CA profession.
-
-                </p>
-
-                <p class="text-muted mb-0"
-                   title="Student friendly bilingual learning support">
-
-                    With bilingual teaching support and student-friendly study material,
-                    we ensure that learning remains simple, effective, and accessible
-                    for students from all backgrounds.
-
-                </p>
-
-            </div>
-
-        </div>
-
-        <!-- CTA -->
-        <div class="mt-5">
-
-            <div class="rounded-4 p-5 text-center shadow-lg"
-                 style="background: linear-gradient(135deg,#0d6efd,#0b5ed7);">
-
-                <h2 class="fw-bold text-white mb-3"
-                    title="Join the best CA Foundation coaching institute">
-
-                    Start Your CA Journey With Confidence
-
-                </h2>
-
-                <p class="text-white fs-5 mb-4"
-                   title="Trusted coaching institute for CA Foundation">
-
-                    Choosing
-                    <b>Excel Educational Institution</b>
-                    means choosing
-                    <u>quality education, trusted mentorship, and proven results.</u>
-
-                </p>
-
-                <p class="text-white mb-4"
-                   title="Best CA coaching in Raipur and Chhattisgarh">
-
-                    For students in <b>Raipur</b> and across
-                    <b>Chhattisgarh</b>, Excel continues to transform
-                    ambition into achievement and dreams into reality.
-
-                </p>
-
-                <a href="#contact"
-                   class="btn btn-light btn-lg fw-bold px-5 rounded-pill shadow-sm"
-                   title="Enroll now for CA Foundation coaching">
-
-                    <i class="fa-solid fa-paper-plane me-2"
-                       title="Apply Now Icon"></i>
-
-                    Enroll Now
-
-                </a>
-
-            </div>
-
-        </div>
-
-    </div>
-
-    <!-- SEARCH KEYWORDS -->
-    <div class="glass-section mt-5 p-5 bg-light shadow-lg rounded-4 overflow-hidden">
-
-        <!-- Heading -->
-        <div class="text-center mb-5">
-            <h2 class="fw-bold text-dark mb-3">
-                <a href="/" class="text-decoration-none text-dark">
-                    Best CA Foundation Coaching in Chhattisgarh
-                </a>
-            </h2>
-
-            <p class="text-muted fs-5 mx-auto" style="max-width:900px;">
-                Excel Educational Institution provides quality CA Foundation coaching
-                across major cities of Chhattisgarh with expert faculty, structured study material,
-                regular test series, and student-focused mentorship.
-            </p>
-        </div>
-
-        <!-- Cards -->
-        <div class="row g-4">
-
-            <div class="col-lg-3 col-md-6">
-                <div class="bg-white rounded-4 shadow-sm border p-4 text-center h-100 hover-card">
-                    <div class="mb-3">
-                        <i class="fa-solid fa-building-columns text-primary fs-1"></i>
-                    </div>
-
-                    <h5 class="fw-bold">
-                        Best CA Foundation Coaching in Raipur
-                    </h5>
-
-                    <p class="text-muted small mb-0">
-                        Expert guidance with top faculty and result-oriented preparation.
-                    </p>
-                </div>
-            </div>
-
-            <div class="col-lg-3 col-md-6">
-                <div class="bg-white rounded-4 shadow-sm border p-4 text-center h-100">
-                    <div class="mb-3">
-                        <i class="fa-solid fa-graduation-cap text-success fs-1"></i>
-                    </div>
-
-                    <h5 class="fw-bold">
-                        CA Foundation Coaching in Bhilai
-                    </h5>
-
-                    <p class="text-muted small mb-0">
-                        Quality commerce education with personal attention and mentorship.
-                    </p>
-                </div>
-            </div>
-
-            <div class="col-lg-3 col-md-6">
-                <div class="bg-white rounded-4 shadow-sm border p-4 text-center h-100">
-                    <div class="mb-3">
-                        <i class="fa-solid fa-book-open text-danger fs-1"></i>
-                    </div>
-
-                    <h5 class="fw-bold">
-                        CA Foundation Coaching in Durg
-                    </h5>
-
-                    <p class="text-muted small mb-0">
-                        Complete preparation for Accounts, Economics, Maths & Law.
-                    </p>
-                </div>
-            </div>
-
-            <div class="col-lg-3 col-md-6">
-                <div class="bg-white rounded-4 shadow-sm border p-4 text-center h-100">
-                    <div class="mb-3">
-                        <i class="fa-solid fa-chart-line text-warning fs-1"></i>
-                    </div>
-
-                    <h5 class="fw-bold">
-                        CA Foundation Coaching in Bilaspur
-                    </h5>
-
-                    <p class="text-muted small mb-0">
-                        Smart classrooms, regular tests, and doubt-solving sessions.
-                    </p>
-                </div>
-            </div>
-
-            <div class="col-lg-3 col-md-6">
-                <div class="bg-white rounded-4 shadow-sm border p-4 text-center h-100">
-                    <div class="mb-3">
-                        <i class="fa-solid fa-users text-info fs-1"></i>
-                    </div>
-
-                    <h5 class="fw-bold">
-                        Best Commerce Coaching in Chhattisgarh
-                    </h5>
-
-                    <p class="text-muted small mb-0">
-                        Strong foundation for school studies and professional courses.
-                    </p>
-                </div>
-            </div>
-
-            <div class="col-lg-3 col-md-6">
-                <div class="bg-white rounded-4 shadow-sm border p-4 text-center h-100">
-                    <div class="mb-3">
-                        <i class="fa-solid fa-location-dot text-secondary fs-1"></i>
-                    </div>
-
-                    <h5 class="fw-bold">
-                        CA Coaching Classes Near Me
-                    </h5>
-
-                    <p class="text-muted small mb-0">
-                        Trusted institute known for quality teaching and excellent results.
-                    </p>
-                </div>
-            </div>
-
-            <div class="col-lg-3 col-md-6">
-                <div class="bg-white rounded-4 shadow-sm border p-4 text-center h-100">
-                    <div class="mb-3">
-                        <i class="fa-solid fa-award text-primary fs-1"></i>
-                    </div>
-
-                    <h5 class="fw-bold">
-                        Top CA Foundation Institute in Raipur
-                    </h5>
-
-                    <p class="text-muted small mb-0">
-                        Comprehensive preparation with experienced faculty support.
-                    </p>
-                </div>
-            </div>
-
-            <div class="col-lg-3 col-md-6">
-                <div class="bg-white rounded-4 shadow-sm border p-4 text-center h-100">
-                    <div class="mb-3">
-                        <i class="fa-solid fa-calculator text-success fs-1"></i>
-                    </div>
-
-                    <h5 class="fw-bold">
-                        Best Accounts Coaching in Raipur
-                    </h5>
-
-                    <p class="text-muted small mb-0">
-                        Practical learning approach for Accounts and Commerce subjects.
-                    </p>
-                </div>
-            </div>
-
-        </div>
-
-        <!-- Bottom CTA -->
-        <div class="bg-info-subtle text-info-emphasis rounded-4 p-5 mt-5 text-center">
-
-            <h3 class="fw-bold mb-3">
-                Start Your CA Foundation Journey Today
-            </h3>
-
-            <p class="mb-4 fs-5">
-                Join one of the most trusted Commerce & CA coaching institutes in Chhattisgarh
-                and prepare for a successful future with expert mentorship.
-            </p>
-
-            <a href="/contact"
-               class="btn bg-success text-white fw-bold px-5 rounded-pill">
-                Apply Now
-            </a>
-
-        </div>
-
-    </div>
-
-    <!-- COURSES TABLE -->
-
-    <div class="glass-section mt-5 p-5 shadow rounded">
-        <h3 class="text-center fw-bold mb-4">
-            Courses Offered at Excel Educational Institution
-        </h3>
-
-        <div class="table-responsive">
-            <table class="table table-bordered table-hover text-center align-middle">
-                <thead class="table-dark">
-                    <tr>
-                        <th>Course Name</th>
-                        <th>Available</th>
-                    </tr>
-                </thead>
-
-                <tbody>
-                    <tr><td>CA Foundation</td><td>Yes</td></tr>
-                    <tr><td>CA Intermediate</td><td>Yes</td></tr>
-                    <tr><td>CA Intermediate Group 1</td><td>Yes</td></tr>
-                    <tr><td>CA Intermediate Group 2</td><td>Yes</td></tr>
-                    <tr><td>CA Final</td><td>Yes</td></tr>
-                    <tr><td>CS EET</td><td>Yes</td></tr>
-                    <tr><td>CS Executive</td><td>Yes</td></tr>
-                    <tr><td>CMA Foundation</td><td>Yes</td></tr>
-                    <tr><td>CMA Intermediate</td><td>Yes</td></tr>
-                    <tr><td>Class XIth Coaching</td><td>Yes</td></tr>
-                    <tr><td>Class XIIth Coaching</td><td>Yes</td></tr>
-                    <tr><td>Live Online Lectures</td><td>Yes</td></tr>
-                    <tr><td>Recorded Lectures</td><td>Yes</td></tr>
-                </tbody>
-            </table>
         </div>
     </div>
+</section>
 
-    <!-- CITIES -->
-    <div class="glass-section mt-5 p-5 shadow rounded">
-        <h3 class="fw-bold text-center mb-5">
-            CA Foundation Coaching Available Across Chhattisgarh
-        </h3>
+<!-- ══ ROADMAP ════════════════════════════════════ -->
+<section class="section section-alt">
+    <div class="container">
+        <div class="tag">Your Journey</div>
+        <h2 style="text-align:center;margin-bottom:40px;">CA Course Roadmap: From Class 12 to Chartered Accountant</h2>
+        <div class="roadmap">
 
-        <div class="row g-4">
-
-            <div class="col-md-4">
-                <div class="border rounded shadow-sm p-4 h-100">
-                    <h5>CA Foundation Coaching in Raipur</h5>
-                    <p>
-                        Excel Educational Institution is known for quality teaching
-                        and professional guidance for CA Foundation students in Raipur.
-                    </p>
+            <div class="road-step">
+                <div class="road-left"><div class="road-dot">1</div><div class="road-line"></div></div>
+                <div class="road-body">
+                    <h3>Class 12 Pass</h3>
+                    <p>After completing your Class 12 board exams from any stream (Commerce, Science, or Arts), you become eligible to register for the CA Foundation course with ICAI. You can register during your Class 12 itself to save time.</p>
                 </div>
             </div>
 
-            <div class="col-md-4">
-                <div class="border rounded shadow-sm p-4 h-100">
-                    <h5>CA Foundation Coaching in Bhilai</h5>
-                    <p>
-                        Students from Bhilai can join our classroom and online
-                        coaching programs.
-                    </p>
+            <div class="road-step">
+                <div class="road-left"><div class="road-dot">2</div><div class="road-line"></div></div>
+                <div class="road-body">
+                    <h3>CA Foundation (4 months preparation)</h3>
+                    <p>The entry-level exam covering Principles of Accounting, Business Laws, Business Mathematics, and Economics. Exams are held in May and November. A well-prepared student clears Foundation in the first or second attempt.</p>
                 </div>
             </div>
 
-            <div class="col-md-4">
-                <div class="border rounded shadow-sm p-4 h-100">
-                    <h5>CA Foundation Coaching in Durg</h5>
-                    <p>
-                        We help students from Durg build strong fundamentals in
-                        Accounts, Commerce and CA subjects.
-                    </p>
+            <div class="road-step">
+                <div class="road-left"><div class="road-dot">3</div><div class="road-line"></div></div>
+                <div class="road-body">
+                    <h3>CA Intermediate (8–12 months preparation)</h3>
+                    <p>Eight subjects across two groups. Students begin their 3-year Articleship (practical training) after clearing at least one group of CA Intermediate. The Intermediate exam can be attempted group-by-group or both groups together.</p>
+                </div>
+            </div>
+
+            <div class="road-step">
+                <div class="road-left"><div class="road-dot">4</div><div class="road-line"></div></div>
+                <div class="road-body">
+                    <h3>Articleship (3 Years)</h3>
+                    <p>Mandatory practical training under a practising CA. During Articleship, students gain real-world exposure to auditing, taxation, and financial advisory work. CA Final preparation typically happens simultaneously during the later years of Articleship.</p>
+                </div>
+            </div>
+
+            <div class="road-step">
+                <div class="road-left"><div class="road-dot">5</div><div class="road-line"></div></div>
+                <div class="road-body">
+                    <h3>CA Final (12–18 months preparation)</h3>
+                    <p>The most advanced level, covering eight highly specialised subjects. Candidates appear for CA Final in the last six months of Articleship or after completing it. Clearing CA Final earns you the prestigious ICAI membership.</p>
+                </div>
+            </div>
+
+            <div class="road-step">
+                <div class="road-left"><div class="road-dot" style="background:var(--gold);color:var(--navy);">✓</div></div>
+                <div class="road-body">
+                    <h3>Become a Chartered Accountant</h3>
+                    <p>After clearing CA Final, you apply for ICAI membership and are officially designated a Chartered Accountant. You are now qualified to practice independently or join any organisation as a CA professional. The journey typically takes 4.5–5 years from Class 12.</p>
                 </div>
             </div>
 
         </div>
     </div>
+</section>
 
-    <!-- ONLINE -->
-    <div class="  my-1 p-5   text-white shadow rounded">
-        <h3 class="fw-bold mb-4">
-            Live Online & Recorded Lectures
-        </h3>
+<!-- ══ TESTIMONIALS ═══════════════════════════════ -->
+<section class="section">
+    <div class="container">
+        <div class="tag">Student Stories</div>
+        <h2>Success Stories from Excel Educational Institute</h2>
+        <p>Our students do not just clear the CA exam — they rank in it. Here are a few voices from the Excel family.</p>
+        <div class="grid-3" style="margin-top:28px;">
 
-        <p>
-            We provide flexible learning options for students across Chhattisgarh.
-        </p>
-
-        <ul class="list-group">
-            <li class="list-group-item">Offline Classroom Coaching</li>
-            <li class="list-group-item">Live Online Classes</li>
-            <li class="list-group-item">Recorded Video Lectures</li>
-            <li class="list-group-item">Test Series & Revision Programs</li>
-        </ul>
-    </div>
-
-    <!-- WHY STUDENTS PREFER SECTION START -->
-    <div class="glass-section my-3">
-        <div class=" glass-section text-center mb-5">
-            <h2 class="fw-bold ">
-                Why Students Prefer Excel Educational Institution
-            </h2>
-
-            <p class="text-muted mt-3">
-                Trusted by Commerce and Professional Course students across Chhattisgarh.
-            </p>
-        </div>
-
-        <div class="row g-4">
-
-            <!-- CARD 1 -->
-
-            <div class="col-lg-3 col-md-6">
-                <div class="card border-0 shadow-sm h-100 text-center p-4 rounded-4">
-
-                    <div class="mb-3">
-                        <i class="bi bi-book-half fs-1 "></i>
-                    </div>
-
-                    <h4 class="fw-bold mb-3">
-                        Simple Teaching Method
-                    </h4>
-
-                    <p class="text-muted mb-0">
-                        Difficult concepts are explained in an easy and understandable way.
-                    </p>
-
-                </div>
+            <div class="testi-card">
+                <div class="stars">★★★★★</div>
+                <p class="testi-quote">"I joined Excel Educational Institute for CA Intermediate after struggling with self-study. The faculty here does not just teach — they make you think. I cleared both groups in my first attempt and secured an All India Rank. I owe that entirely to the structured preparation and mock test series at Excel."</p>
+                <div class="testi-author">Priya Sharma</div>
+                <div class="testi-detail">CA Intermediate AIR 38 | Raipur, Chhattisgarh</div>
             </div>
 
-            <!-- CARD 2 -->
-
-            <div class="col-lg-3 col-md-6">
-                <div class="card border-0 shadow-sm h-100 text-center p-4 rounded-4">
-
-                    <div class="mb-3">
-                        <i class="bi bi-people-fill fs-1 text-success"></i>
-                    </div>
-
-                    <h4 class="fw-bold mb-3">
-                        Personal Attention
-                    </h4>
-
-                    <p class="text-muted mb-0">
-                        Every student receives proper academic support and guidance.
-                    </p>
-
-                </div>
+            <div class="testi-card">
+                <div class="stars">★★★★★</div>
+                <p class="testi-quote">"As a Science student switching to CA, I was nervous about accounts and law. The CA Foundation classes at Excel Educational Institute were so well-structured that within three months I felt completely prepared. The faculty gave individual attention and the doubt sessions were genuinely helpful. Cleared Foundation in the very first attempt."</p>
+                <div class="testi-author">Rahul Verma</div>
+                <div class="testi-detail">CA Foundation Cleared | Pachpedi Naka, Raipur</div>
             </div>
 
-            <!-- CARD 3 -->
-
-            <div class="col-lg-3 col-md-6">
-                <div class="card border-0 shadow-sm h-100 text-center p-4 rounded-4">
-
-                    <div class="mb-3">
-                        <i class="bi bi-bar-chart-line-fill fs-1 text-warning"></i>
-                    </div>
-
-                    <h4 class="fw-bold mb-3">
-                        Result-Oriented Preparation
-                    </h4>
-
-                    <p class="text-muted mb-0">
-                        We focus on exam performance, conceptual learning and confidence building.
-                    </p>
-
-                </div>
-            </div>
-
-            <!-- CARD 4 -->
-
-            <div class="col-lg-3 col-md-6">
-                <div class="card border-0 shadow-sm h-100 text-center p-4 rounded-4">
-
-                    <div class="mb-3">
-                        <i class="bi bi-mortarboard-fill fs-1 text-danger"></i>
-                    </div>
-
-                    <h4 class="fw-bold mb-3">
-                        Career Guidance
-                    </h4>
-
-                    <p class="text-muted mb-0">
-                        Students receive the right direction for CA, CS, CMA and Commerce careers.
-                    </p>
-
-                </div>
+            <div class="testi-card">
+                <div class="stars">★★★★★</div>
+                <p class="testi-quote">"The CA Final coaching at Excel is in a different league. The case-study-based approach for Financial Reporting and the intensive mock tests for Direct Tax completely transformed my preparation. I had failed CA Final once before joining Excel. After one year here, I cleared both groups with distinction. Best CA coaching in Raipur, without a doubt."</p>
+                <div class="testi-author">Anjali Gupta</div>
+                <div class="testi-detail">CA Final Cleared | Devendra Nagar, Raipur</div>
             </div>
 
         </div>
     </div>
+</section>
 
-    <!-- ABOUT SECTION START -->
-    <div class="container-fluid">
-
-        <div class="row justify-content-center">
-            <div class="col-lg-12">
-
-                <div class="glass-section shadow rounded p-5">
-
-                    <div class="text-center mb-4">
-                        <h2 class="fw-bold ">
-                            About Excel Educational Institution
-                        </h2>
-
-                        <div class="mx-auto mt-3"
-                             style="width:80px;height:4px;background:#0d6efd;border-radius:10px;">
-                        </div>
-                    </div>
-
-                    <p class="lead text-center mb-5">
-                        Excel Educational Institution, Raipur is a trusted name
-                        in Commerce and Professional Course Coaching in Chhattisgarh.
-                    </p>
-
-                    <h4 class="fw-bold mb-4 text-dark">
-                        We are committed to helping students achieve success through:
-                    </h4>
-
-                    <div class="row g-4">
-
-                        <div class="col-md-6">
-                            <div class="border rounded p-4 h-100 shadow-sm">
-                                <h5 class="fw-bold text-primary">
-                                    ✔ Quality Education
-                                </h5>
-
-                                <p class="mb-0">
-                                    Strong conceptual learning with practical understanding.
-                                </p>
-                            </div>
-                        </div>
-
-                        <div class="col-md-6">
-                            <div class="border rounded p-4 h-100 shadow-sm">
-                                <h5 class="fw-bold text-primary">
-                                    ✔ Expert Faculty
-                                </h5>
-
-                                <p class="mb-0">
-                                    Experienced teachers focused on student success.
-                                </p>
-                            </div>
-                        </div>
-
-                        <div class="col-md-6">
-                            <div class="border rounded p-4 h-100 shadow-sm">
-                                <h5 class="fw-bold text-primary">
-                                    ✔ Regular Practice
-                                </h5>
-
-                                <p class="mb-0">
-                                    Weekly tests, assignments and revision programs.
-                                </p>
-                            </div>
-                        </div>
-
-                        <div class="col-md-6">
-                            <div class="border rounded p-4 h-100 shadow-sm">
-                                <h5 class="fw-bold text-primary">
-                                    ✔ Smart Preparation Strategy
-                                </h5>
-
-                                <p class="mb-0">
-                                    Structured learning plans for better exam performance.
-                                </p>
-                            </div>
-                        </div>
-
-                        <div class="col-md-12">
-                            <div class="border rounded p-4 shadow-sm">
-                                <h5 class="fw-bold text-primary">
-                                    ✔ Professional Career Guidance
-                                </h5>
-
-                                <p class="mb-0">
-                                    Proper guidance for CA, CS, CMA and Commerce career paths.
-                                </p>
-                            </div>
-                        </div>
-
-                    </div>
-
-                </div>
-
-            </div>
-        </div>
-
-    </div>
-
-    <!-- CONTACT -->
-    <div class="row mt-5 g-4">
-
-        <div class="col-md-6">
-            <div class="glass-section p-5 shadow rounded h-100">
-                <h3 class="fw-bold b-4">
-                    Contact Excel Educational Institution
-                </h3>
-
-                <p><strong>📍 Address:</strong> Excel Tower, Pachpedi Naka, Raipur (C.G.)</p>
-                <p><strong>📞 Mobile:</strong> 9926821000</p>
-                <p><strong>☎ Phone:</strong> 0771-4095300</p>
-                <p><strong>📧 Email:</strong> eeiraipur@gmail.com</p>
-                <p><strong>🌐 Website:</strong> www.exceledu.co.in</p>
-            </div>
-        </div>
-
-        <div class="col-md-6">
-            <div class="glass-section p-5 shadow rounded h-100">
-                <h3 class="fw-bold mb-4">
-                    Quick Action Buttons
-                </h3>
-
-                <div class="d-grid gap-3">
-                    <a href="tel:7714095300" class="btn btn-primary btn-lg">
-                        📞 Call Now
-                    </a>
-
-                    <a href="tel:7714095300" class="btn btn-success btn-lg">
-                        💬 WhatsApp Support
-                    </a>
-
-                    <a href="eeiraipur@gmail.com" class="btn btn-dark btn-lg">
-                        📩 Contact Us
-                    </a>
-                </div>
-            </div>
-        </div>
-
-    </div>
-
-    <!-- FAQ -->
-
-    <div class="glass-section mt-5 p-5 shadow rounded">
-        <h3 class="text-center fw-bold mb-5">
-            Frequently Asked Questions
-        </h3>
-
-        <div class="accordion" id="faqAccordion">
-
-            <div class="accordion-item">
-                <h2 class="accordion-header">
-                    <button class="accordion-button"
-                            type="button"
-                            data-bs-toggle="collapse"
-                            data-bs-target="#faq1">
-                        Which is the best CA Foundation coaching in Raipur?
-                    </button>
-                </h2>
-
-                <div id="faq1"
-                     class="accordion-collapse collapse show"
-                     data-bs-parent="#faqAccordion">
-
-                    <div class="accordion-body">
-                        Excel Educational Institution is one of the trusted institutes
-                        for CA Foundation coaching in Raipur.
-                    </div>
-                </div>
-            </div>
-
-            <div class="accordion-item">
-                <h2 class="accordion-header">
-                    <button class="accordion-button"
-                            type="button"
-                            data-bs-toggle="collapse"
-                            data-bs-target="#faq1">
-                        Do you provide coaching for Class 11th and 12th Commerce students?
-                    </button>
-                </h2>
-
-                <div id="faq1"
-                     class="accordion-collapse collapse show"
-                     data-bs-parent="#faqAccordion">
-
-                    <div class="accordion-body">
-                        Yes, we provide complete Commerce coaching for Class 11th and 12th students.
-                    </div>
-                </div>
-            </div>
-
-            <div class="accordion-item">
-                <h2 class="accordion-header">
-                    <button class="accordion-button collapsed"
-                            type="button"
-                            data-bs-toggle="collapse"
-                            data-bs-target="#faq2">
-                        Do you provide online classes?
-                    </button>
-                </h2>
-
-                <div id="faq2"
-                     class="accordion-collapse collapse"
-                     data-bs-parent="#faqAccordion">
-
-                    <div class="accordion-body">
-                        Yes, Live Online Classes and Recorded Lectures are available.
-                    </div>
-                </div>
-            </div>
-
-
-            <div class="accordion-item">
-                <h2 class="accordion-header">
-                    <button class="accordion-button collapsed"
-                            type="button"
-                            data-bs-toggle="collapse"
-                            data-bs-target="#faq2">
-                        Can students from Bhilai, Durg and Bilaspur join?
-                    </button>
-                </h2>
-
-                <div id="faq2"
-                     class="accordion-collapse collapse"
-                     data-bs-parent="#faqAccordion">
-
-                    <div class="accordion-body">
-                        Yes, students from all cities of Chhattisgarh can join our online and offline coaching programs.
-                    </div>
-                </div>
-            </div>
-
-
+<!-- ══ CAREER ══════════════════════════════════════ -->
+<section class="section section-alt">
+    <div class="container">
+        <div class="tag">Your Future</div>
+        <h2>Career Opportunities After Becoming a Chartered Accountant</h2>
+        <p>A CA qualification opens more doors than almost any other professional degree in India. Here is a snapshot of where CA graduates are building careers today.</p>
+        <div class="grid-3" style="margin-top:28px;">
+            <div class="career-item"><div class="career-icon">🔍</div><div><strong>Audit & Assurance</strong><p style="margin:0;font-size:.88rem;">Internal and statutory auditing at Big 4 firms, listed companies, and government undertakings.</p></div></div>
+            <div class="career-item"><div class="career-icon">📋</div><div><strong>Taxation</strong><p style="margin:0;font-size:.88rem;">Direct and indirect tax advisory, GST compliance, and international taxation for corporates.</p></div></div>
+            <div class="career-item"><div class="career-icon">📈</div><div><strong>Finance & CFO Roles</strong><p style="margin:0;font-size:.88rem;">Financial planning, treasury management, and CFO positions at Indian and multinational companies.</p></div></div>
+            <div class="career-item"><div class="career-icon">🏦</div><div><strong>Investment Banking</strong><p style="margin:0;font-size:.88rem;">Mergers, acquisitions, IPOs, and capital market advisory with leading investment banks.</p></div></div>
+            <div class="career-item"><div class="career-icon">💼</div><div><strong>Management Consulting</strong><p style="margin:0;font-size:.88rem;">Business strategy, process optimisation, and financial restructuring for organisations across sectors.</p></div></div>
+            <div class="career-item"><div class="career-icon">🏛️</div><div><strong>Government & PSUs</strong><p style="margin:0;font-size:.88rem;">IRS, CAG, SEBI, RBI, and other government roles that specifically recruit qualified CAs.</p></div></div>
+            <div class="career-item"><div class="career-icon">🌍</div><div><strong>Global Opportunities</strong><p style="margin:0;font-size:.88rem;">International accounting and finance roles in the UK, Canada, Middle East, Singapore, and Australia.</p></div></div>
+            <div class="career-item"><div class="career-icon">🚀</div><div><strong>Own CA Practice</strong><p style="margin:0;font-size:.88rem;">Set up your own CA firm offering audit, tax, and advisory services — be your own boss.</p></div></div>
+            <div class="career-item"><div class="career-icon">💻</div><div><strong>Fintech & Startups</strong><p style="margin:0;font-size:.88rem;">CAs are increasingly sought after by fintech startups for compliance, fundraising, and financial modeling roles.</p></div></div>
         </div>
     </div>
+</section>
 
+<!-- ══ FAQ ════════════════════════════════════════ -->
+<section class="section">
+    <div class="container">
+        <div class="tag">FAQs</div>
+        <h2>Frequently Asked Questions</h2>
+        <p style="margin-bottom:32px;">Everything students and parents from Raipur and across Chhattisgarh ask us before enrolling.</p>
+
+        <details>
+            <summary>Which is the best CA Classes in Raipur?</summary>
+            <div class="faq-body"><p>Excel Educational Institute, located at Pachpedi Naka, Raipur, is widely regarded as the best CA classes in Raipur. With 173+ All India Rank holders, 17+ years of consistent results, experienced CA faculty, and a student-first teaching methodology, no other CA coaching institute in Raipur matches the depth and breadth of preparation that Excel provides.</p></div>
+        </details>
+
+        <details>
+            <summary>What is the fee structure for CA Classes in Raipur?</summary>
+            <div class="faq-body"><p>Fee structures at Excel Educational Institute are designed to be transparent and competitive. Fees vary by level — CA Foundation, CA Intermediate, and CA Final are priced separately. We also offer flexible instalment options. We recommend contacting us directly or visiting our campus at Pachpedi Naka, Raipur, for the latest fee details and batch schedules, as these are updated regularly.</p></div>
+        </details>
+
+        <details>
+            <summary>Can I join CA after 12th?</summary>
+            <div class="faq-body"><p>Yes, absolutely. After passing Class 12 from any stream — Commerce, Science, or Arts — you are eligible to register for the CA Foundation exam with ICAI. You can even register with ICAI while still in Class 12 and begin preparation immediately after your board exams. Our CA Foundation classes in Raipur are specifically designed for Class 12 pass-outs and even current Class 12 students preparing in advance.</p></div>
+        </details>
+
+        <details>
+            <summary>How long does it take to become a Chartered Accountant?</summary>
+            <div class="faq-body"><p>On average, the CA course takes between 4.5 to 5 years from the date of Class 12 completion. This includes approximately 4 months for CA Foundation preparation, 8–12 months for CA Intermediate, 3 years of mandatory Articleship, and 12–18 months for CA Final. With structured preparation through the right CA coaching institute in Raipur, students can complete this journey in the minimum time frame.</p></div>
+        </details>
+
+        <details>
+            <summary>Is CA difficult for average students?</summary>
+            <div class="faq-body"><p>CA is challenging — but it is not out of reach for any student who is sincere and well-guided. At Excel Educational Institute, we have helped students who were not toppers in school go on to clear CA with All India Ranks. The key is concept clarity, consistent practice, and expert guidance. The CA exam rewards application and understanding, not just memory — and that is precisely what our teaching methodology is built around.</p></div>
+        </details>
+
+        <details>
+            <summary>What is the CA Course?</summary>
+            <div class="faq-body"><p>The Chartered Accountancy (CA) course is a professional qualification conducted by ICAI (Institute of Chartered Accountants of India). It consists of three levels — CA Foundation, CA Intermediate, and CA Final — along with mandatory practical training called Articleship. Upon completion, students become qualified Chartered Accountants, one of the most prestigious professional designations in India.</p></div>
+        </details>
+
+        <details>
+            <summary>Why is CA Course the best career option?</summary>
+            <div class="faq-body"><p>The CA qualification offers high earning potential (starting at ₹6–12 LPA and growing significantly with experience), global recognition, job security, and the freedom to practice independently. Every business needs a CA for auditing, taxation, and compliance — making it one of the most evergreen and future-proof careers in India. Raipur and Chhattisgarh have seen significant growth in demand for qualified CAs as the region industrialises rapidly.</p></div>
+        </details>
+
+        <details>
+            <summary>What are the eligibility criteria for CA Foundation?</summary>
+            <div class="faq-body"><p>To be eligible for CA Foundation, you must have passed Class 12 (10+2) from a recognised board in any stream. There is no minimum percentage requirement from ICAI for registration, though most competitive students have 50% or above. You can register with ICAI for CA Foundation while in Class 12 and appear for the Foundation exam after clearing your board exams.</p></div>
+        </details>
+
+        <details>
+            <summary>Does Excel Educational Institute provide mock tests?</summary>
+            <div class="faq-body"><p>Yes. Mock tests are a core part of our preparation at every level. We conduct chapter-wise tests, subject-level tests, and full-length mock exams under actual exam conditions. Each mock exam is evaluated by faculty with personalised feedback, performance analysis, and improvement recommendations. Our mock test series is one of the primary reasons our students consistently outperform the national pass percentage.</p></div>
+        </details>
+
+        <details>
+            <summary>Why should students choose Excel Educational Institute?</summary>
+            <div class="faq-body"><p>Excel Educational Institute stands apart because of three things: results, methodology, and care. With 173+ AIR holders since 2007, our results speak for themselves. Our concept-based teaching methodology ensures that students understand rather than memorise. And our personal mentorship approach ensures that every student — whether a topper or an average performer — receives the individual guidance they need. For students in Raipur and across Chhattisgarh looking for the best CA coaching, Excel is the clear choice.</p></div>
+        </details>
+
+    </div>
+</section>
+
+<!-- ══ CTA ════════════════════════════════════════ -->
+<section class="cta-section" id="contact">
+    <div class="container">
+        <div class="tag" style="border-color:rgba(201,168,76,.5);color:var(--gold-lt);">Enroll Today</div>
+        <h2>Start Your CA Journey with the Best CA Classes in Raipur</h2>
+        <p>Join the institute that has produced 173+ All India Rank holders. Seats are limited — secure your place in the upcoming batch.</p>
+        <div class="cta-btns">
+            <a href="tel:+91XXXXXXXXXX" class="btn-cta-gold">📞 Call Now</a>
+            <a href="#" class="btn-cta-white">📅 Book Free Counselling</a>
+            <a href="#" class="btn-cta-white">✉️ Enquire Now</a>
+        </div>
+
+        <div class="contact-block" style="max-width:720px;margin:48px auto 0;">
+            <p style="font-weight:700;font-size:1.05rem;color:var(--navy);">Excel Educational Institute</p>
+            <div class="contact-info">
+                <div class="c-item"><span class="c-icon">📍</span> Pachpedi Naka, Raipur, Chhattisgarh</div>
+                <div class="c-item"><span class="c-icon">📞</span> +91-XXXXXXXXXX</div>
+                <div class="c-item"><span class="c-icon">🕐</span> Mon–Sat: 8:00 AM – 8:00 PM</div>
+                <div class="c-item"><span class="c-icon">🌐</span> exceledulive.com</div>
+            </div>
+        </div>
+    </div>
 </section>
 
 
