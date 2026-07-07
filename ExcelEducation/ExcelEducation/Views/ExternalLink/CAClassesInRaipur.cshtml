@@ -13,23 +13,22 @@
 <style>
     /* ── TOKENS ────────────────────────────────────── */
     :root {
-      --navy:   #0D1B3E;
-      --gold:   #C9A84C;
-      --gold-lt:#F0D98B;
-      --sky:    #E8F0FE;
-      --white:  #FFFFFF;
-      --off:    #F7F8FC;
-      --text:   #1A1A2E;
-      --muted:  #5A6070;
-      --border: #DDE1EC;
-      --radius: 12px;
+        --maroon: #400b07;
+        --navy: #0D1B3E;
+        --gold: #C9A84C;
+        --gold-lt: #F0D98B;
+        --sky: #E8F0FE;
+        --white: #FFFFFF;
+        --off: #F7F8FC;
+        --text: #1A1A2E;
+        --muted: #5A6070;
+        --border: #DDE1EC;
+        --radius: 12px;
     }
 
     /* ── RESET ─────────────────────────────────────── */
-    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-    html { scroll-behavior: smooth; }
-    body { font-family: 'Inter', sans-serif; color: var(--text); background: var(--white); line-height: 1.7; }
-    img  { max-width: 100%; display: block; }
+    
+    body { font-family: 'Inter', sans-serif; color: var(--text);    } 
     a    { color: inherit; text-decoration: none; }
 
     /* ── TYPOGRAPHY ────────────────────────────────── */
@@ -40,7 +39,7 @@
     p  { margin-bottom: 1rem; color: var(--muted); }
 
     /* ── LAYOUT HELPERS ────────────────────────────── */
-    .container { max-width: 1100px; margin: 0 auto; padding: 0 20px; }
+    .container-r { max-width: 1100px; margin: 0 auto; padding: 0 20px; }
     .section    { padding: 72px 0; }
     .section-alt{ background: var(--off); }
     .tag {
@@ -53,9 +52,12 @@
 
     /* ── NAV ───────────────────────────────────────── */
     nav {
-      background: var(--navy); padding: 14px 0;
-      position: sticky; top: 0; z-index: 100;
-      box-shadow: 0 2px 16px rgba(13,27,62,.18);
+        background: var(--maroon);
+        padding: 14px 0;
+        position: sticky;
+        top: 0;
+        z-index: 100;
+        box-shadow: 0 2px 16px rgba(13,27,62,.18);
     }
     nav .inner {
       display: flex; align-items: center; justify-content: space-between;
@@ -64,7 +66,7 @@
     .logo { color: var(--white); font-family: 'Playfair Display', serif; font-size: 1.35rem; }
     .logo span { color: var(--gold); }
     .nav-cta {
-      background: var(--gold); color: var(--navy); font-weight: 600;
+      background: var(--gold); color: var(--maroon); font-weight: 600;
       padding: 9px 22px; border-radius: 100px; font-size: .9rem;
       transition: opacity .2s;
     }
@@ -72,7 +74,7 @@
 
     /* ── HERO ──────────────────────────────────────── */
     .hero {
-      background: var(--navy);
+      background: var(--maroon);
       padding: 96px 0 80px;
       position: relative; overflow: hidden;
     }
@@ -95,7 +97,7 @@
     }
     .hero-btns { display: flex; gap: 14px; flex-wrap: wrap; }
     .btn-primary {
-      background: var(--gold); color: var(--navy); font-weight: 700;
+      background: var(--gold); color: var(--maroon); font-weight: 700;
       padding: 14px 30px; border-radius: 100px; font-size: 1rem;
       transition: transform .2s, opacity .2s; display: inline-block;
     }
@@ -117,8 +119,8 @@
       gap: 20px; max-width: 1100px; margin: 0 auto; padding: 0 20px;
     }
     .stat { text-align: center; }
-    .stat-num { font-family: 'Playfair Display', serif; font-size: 2.2rem; font-weight: 900; color: var(--navy); }
-    .stat-lbl { font-size: .82rem; font-weight: 600; color: var(--navy); opacity: .7; text-transform: uppercase; letter-spacing: .06em; }
+    .stat-num { font-family: 'Playfair Display', serif; font-size: 2.2rem; font-weight: 900; color: var(--maroon); }
+    .stat-lbl { font-size: .82rem; font-weight: 600; color: var(--maroon); opacity: .7; text-transform: uppercase; letter-spacing: .06em; }
 
     /* ── CARDS ─────────────────────────────────────── */
     .card {
@@ -134,7 +136,7 @@
 
     /* ── COURSE PILLS ──────────────────────────────── */
     .course-band {
-      background: var(--navy); border-radius: var(--radius);
+      background: var(--maroon); border-radius: var(--radius);
       padding: 36px 32px; color: var(--white); margin-bottom: 28px;
     }
     .course-band h2 { color: var(--white); }
@@ -154,17 +156,17 @@
     .road-left { display: flex; flex-direction: column; align-items: center; }
     .road-dot {
       width: 44px; height: 44px; border-radius: 50%;
-      background: var(--navy); color: var(--white);
+      background: var(--maroon); color: var(--white);
       display: flex; align-items: center; justify-content: center;
       font-family: 'Playfair Display', serif; font-size: 1rem; font-weight: 700;
       flex-shrink: 0; position: relative; z-index: 1;
     }
     .road-line {
       width: 2px; flex: 1; min-height: 32px;
-      background: linear-gradient(to bottom, var(--navy), var(--gold));
+      background: linear-gradient(to bottom, var(--maroon), var(--gold));
     }
     .road-body { padding-bottom: 28px; }
-    .road-body h3 { color: var(--navy); margin-bottom: 4px; }
+    .road-body h3 { color: var(--maroon); margin-bottom: 4px; }
     .road-body p  { margin-bottom: 0; font-size: .9rem; }
 
     /* ── TESTIMONIALS ──────────────────────────────── */
@@ -174,7 +176,7 @@
       box-shadow: 0 2px 16px rgba(13,27,62,.06);
     }
     .testi-quote { font-size: 1.05rem; color: var(--text); font-style: italic; margin-bottom: 16px; }
-    .testi-author { font-weight: 600; color: var(--navy); font-size: .92rem; }
+    .testi-author { font-weight: 600; color: var(--maroon); font-size: .92rem; }
     .testi-detail { font-size: .82rem; color: var(--muted); }
     .stars { color: var(--gold); font-size: 1rem; margin-bottom: 10px; }
 
@@ -186,7 +188,7 @@
     summary {
       padding: 18px 20px; font-weight: 600; cursor: pointer;
       list-style: none; display: flex; justify-content: space-between; align-items: center;
-      font-size: .98rem; color: var(--navy);
+      font-size: .98rem; color: var(--maroon);
     }
     summary::after { content: '+'; font-size: 1.3rem; color: var(--gold); transition: transform .2s; }
     details[open] summary::after { transform: rotate(45deg); }
@@ -204,14 +206,14 @@
 
     /* ── CTA SECTION ───────────────────────────────── */
     .cta-section {
-      background: linear-gradient(135deg, var(--navy) 0%, #1a2f6e 100%);
+      background: linear-gradient(135deg, var(--maroon) 0%, #1a2f6e 100%);
       padding: 88px 0; text-align: center;
     }
     .cta-section h2 { color: var(--white); margin-bottom: 14px; }
     .cta-section p  { color: rgba(255,255,255,.7); max-width: 520px; margin: 0 auto 36px; }
     .cta-btns { display: flex; gap: 14px; justify-content: center; flex-wrap: wrap; }
     .btn-cta-gold {
-      background: var(--gold); color: var(--navy); font-weight: 700;
+      background: var(--gold); color: var(--maroon); font-weight: 700;
       padding: 15px 32px; border-radius: 100px; font-size: 1rem;
       transition: transform .2s; display: inline-block;
     }
@@ -233,7 +235,7 @@
 
     /* ── FOOTER ────────────────────────────────────── */
     footer {
-      background: var(--navy); color: rgba(255,255,255,.5);
+      background: var(--maroon); color: rgba(255,255,255,.5);
       text-align: center; padding: 28px 20px; font-size: .85rem;
     }
     footer strong { color: var(--gold); }
@@ -247,13 +249,13 @@
 <!-- HERO SECTION START -->
 <!-- ══ HERO ═════════════════════════════════════════ -->
 <header class="hero">
-    <div class="container">
+    <div class="container-r">
         <div class="hero-badge">Raipur's Most Trusted CA Institute Since 2007</div>
         <h1><em>CA Classes in Raipur</em><br>That Actually Deliver Results</h1>
         <p class="lead">Over 173 All India Rank holders. Experienced CA faculty. A student-first approach that has shaped thousands of careers across Chhattisgarh.</p>
         <div class="hero-btns">
-            <a href="#contact" class="btn-primary">📞 Call Now</a>
-            <a href="#contact" class="btn-outline">Book Free Counselling</a>
+            <a href="tel:+919926821000" class="btn-primary">📞 Call Now</a>
+            <a href="/contact" class="btn-outline">Book Free Counselling</a>
         </div>
     </div>
 </header>
@@ -270,7 +272,7 @@
 
 <!-- ══ INTRO ═════════════════════════════════════════ -->
 <section class="section">
-    <div class="container">
+    <div class="container-r">
         <div class="tag">About Us</div>
         <h2>Why Students Across Raipur Choose Excel Educational Institute</h2>
         <div class="grid-2">
@@ -294,7 +296,7 @@
 
 <!-- ══ WHAT IS CA ══════════════════════════════════ -->
 <section class="section section-alt">
-    <div class="container">
+    <div class="container-r">
         <div class="tag">Know the Profession</div>
         <h2>What is the CA Course?</h2>
         <div class="grid-2">
@@ -313,7 +315,7 @@
 
 <!-- ══ WHY CA CAREER ══════════════════════════════ -->
 <section class="section">
-    <div class="container">
+    <div class="container-r">
         <div class="tag">Career Outlook</div>
         <h2>Why CA is One of the Best Career Choices in India</h2>
         <p style="max-width:680px;">Few professions offer the combination of prestige, financial rewards, and career stability that Chartered Accountancy does. Here is why thousands of students across Raipur and Chhattisgarh aspire to become CAs every year.</p>
@@ -354,7 +356,7 @@
 
 <!-- ══ WHY EXCEL ═══════════════════════════════════ -->
 <section class="section section-alt">
-    <div class="container">
+    <div class="container-r">
         <div class="tag">Why Excel</div>
         <h2>Why Choose Excel Educational Institute for CA Classes in Raipur?</h2>
         <p style="max-width:660px;">There are many CA coaching institutes in Raipur, but very few can match the depth of academic rigour, personalised attention, and track record that Excel Educational Institute has built over 17 years.</p>
@@ -406,7 +408,7 @@
 
 <!-- ══ FOUNDATION ═════════════════════════════════ -->
 <section class="section">
-    <div class="container">
+    <div class="container-r">
         <div class="tag">Level 1</div>
         <div class="course-band">
             <h2>CA Foundation Classes in Raipur</h2>
@@ -421,12 +423,12 @@
         </div>
         <div class="grid-2">
             <div>
-                <h3 style="color:var(--navy);margin-bottom:12px;">Who Can Enroll?</h3>
+                <h3 style="color:var(--maroon);margin-bottom:12px;">Who Can Enroll?</h3>
                 <p>Any student who has passed Class 12 from any stream — Commerce, Science, or Arts — is eligible to register for CA Foundation with ICAI and join our <strong>CA Foundation classes in Raipur</strong>. Commerce students find the transition smoother, but Science and Arts students consistently excel here with the right coaching.</p>
                 <p>At Excel Educational Institute, our CA Foundation batch begins with a strong conceptual orientation. Faculty from each subject builds the foundation block by block, ensuring that no student enters the first exam without a thorough understanding of every topic.</p>
             </div>
             <div>
-                <h3 style="color:var(--navy);margin-bottom:12px;">Our Foundation Approach</h3>
+                <h3 style="color:var(--maroon);margin-bottom:12px;">Our Foundation Approach</h3>
                 <p><strong>Structured Weekly Schedule:</strong> Daily classes for each subject, with subject rotation to maintain focus and prevent fatigue.</p>
                 <p><strong>Chapter-wise Tests:</strong> Every chapter ends with a class test, so performance gaps are identified early — not three months later.</p>
                 <p><strong>Doubt-Solving Sessions:</strong> Dedicated weekly doubt-clearing sessions where students can revisit any concept without hesitation.</p>
@@ -438,7 +440,7 @@
 
 <!-- ══ INTERMEDIATE ════════════════════════════════ -->
 <section class="section section-alt">
-    <div class="container">
+    <div class="container-r">
         <div class="tag">Level 2</div>
         <div class="course-band">
             <h2>CA Intermediate Classes in Raipur</h2>
@@ -456,12 +458,12 @@
         </div>
         <div class="grid-2">
             <div>
-                <h3 style="color:var(--navy);margin-bottom:12px;">Course Structure & Strategy</h3>
+                <h3 style="color:var(--maroon);margin-bottom:12px;">Course Structure & Strategy</h3>
                 <p>CA Intermediate is split into Group I and Group II. Students can attempt both groups together or separately. Our expert faculty at Excel Educational Institute helps each student devise a personalised strategy based on their strengths, Articleship schedule, and exam timeline.</p>
                 <p>Our <strong>CA Intermediate classes in Raipur</strong> go deep into every subject — with special emphasis on Taxation and Auditing, which are historically the highest-scoring papers when prepared well, and the most commonly failed when not.</p>
             </div>
             <div>
-                <h3 style="color:var(--navy);margin-bottom:12px;">What Sets Our Intermediate Coaching Apart</h3>
+                <h3 style="color:var(--maroon);margin-bottom:12px;">What Sets Our Intermediate Coaching Apart</h3>
                 <p><strong>Subject Specialists:</strong> Each of the eight subjects is taught by a faculty member who specialises only in that subject — no generalists, no compromises.</p>
                 <p><strong>ICAI Study Material Integration:</strong> Our notes align with the ICAI curriculum and include past paper analysis, examiner comments, and topic-wise weightage charts.</p>
                 <p><strong>Revision Cycles:</strong> Multiple subject-wise revision cycles are built into the batch schedule, ensuring students enter the exam having seen every topic at least twice.</p>
@@ -473,7 +475,7 @@
 
 <!-- ══ FINAL ═══════════════════════════════════════ -->
 <section class="section">
-    <div class="container">
+    <div class="container-r">
         <div class="tag">Level 3</div>
         <div class="course-band">
             <h2>CA Final Classes in Raipur</h2>
@@ -491,12 +493,12 @@
         </div>
         <div class="grid-2">
             <div>
-                <h3 style="color:var(--navy);margin-bottom:12px;">Advanced Preparation Methodology</h3>
+                <h3 style="color:var(--maroon);margin-bottom:12px;">Advanced Preparation Methodology</h3>
                 <p>CA Final is where conceptual depth meets applied judgment. ICAI expects students not just to know the law or the standard — but to apply it intelligently in complex, case-study-based scenarios. Our <strong>CA Final classes in Raipur</strong> are built around this expectation.</p>
                 <p>Faculty at Excel Educational Institute have cleared CA Final themselves and bring first-hand knowledge of what the examination demands. Every class moves beyond textbooks into practical interpretation and application exercises.</p>
             </div>
             <div>
-                <h3 style="color:var(--navy);margin-bottom:12px;">Our Final-Level Edge</h3>
+                <h3 style="color:var(--maroon);margin-bottom:12px;">Our Final-Level Edge</h3>
                 <p><strong>Case Study Integration:</strong> Real-world financial statements, tax scenarios, and audit situations are woven into teaching, preparing students for exam surprises.</p>
                 <p><strong>Revision Plans:</strong> A structured revision calendar is shared at the start of every batch, covering every topic before mock tests begin.</p>
                 <p><strong>Full-Length Mock Exams:</strong> Our mock test series replicates actual exam conditions — timing, question patterns, and answer-writing discipline are all practised in advance.</p>
@@ -508,7 +510,7 @@
 
 <!-- ══ ROADMAP ════════════════════════════════════ -->
 <section class="section section-alt">
-    <div class="container">
+    <div class="container-r">
         <div class="tag">Your Journey</div>
         <h2 style="text-align:center;margin-bottom:40px;">CA Course Roadmap: From Class 12 to Chartered Accountant</h2>
         <div class="roadmap">
@@ -554,7 +556,7 @@
             </div>
 
             <div class="road-step">
-                <div class="road-left"><div class="road-dot" style="background:var(--gold);color:var(--navy);">✓</div></div>
+                <div class="road-left"><div class="road-dot" style="background:var(--gold);color:var(--maroon);">✓</div></div>
                 <div class="road-body">
                     <h3>Become a Chartered Accountant</h3>
                     <p>After clearing CA Final, you apply for ICAI membership and are officially designated a Chartered Accountant. You are now qualified to practice independently or join any organisation as a CA professional. The journey typically takes 4.5–5 years from Class 12.</p>
@@ -567,7 +569,7 @@
 
 <!-- ══ TESTIMONIALS ═══════════════════════════════ -->
 <section class="section">
-    <div class="container">
+    <div class="container-r">
         <div class="tag">Student Stories</div>
         <h2>Success Stories from Excel Educational Institute</h2>
         <p>Our students do not just clear the CA exam — they rank in it. Here are a few voices from the Excel family.</p>
@@ -600,7 +602,7 @@
 
 <!-- ══ CAREER ══════════════════════════════════════ -->
 <section class="section section-alt">
-    <div class="container">
+    <div class="container-r">
         <div class="tag">Your Future</div>
         <h2>Career Opportunities After Becoming a Chartered Accountant</h2>
         <p>A CA qualification opens more doors than almost any other professional degree in India. Here is a snapshot of where CA graduates are building careers today.</p>
@@ -613,14 +615,14 @@
             <div class="career-item"><div class="career-icon">🏛️</div><div><strong>Government & PSUs</strong><p style="margin:0;font-size:.88rem;">IRS, CAG, SEBI, RBI, and other government roles that specifically recruit qualified CAs.</p></div></div>
             <div class="career-item"><div class="career-icon">🌍</div><div><strong>Global Opportunities</strong><p style="margin:0;font-size:.88rem;">International accounting and finance roles in the UK, Canada, Middle East, Singapore, and Australia.</p></div></div>
             <div class="career-item"><div class="career-icon">🚀</div><div><strong>Own CA Practice</strong><p style="margin:0;font-size:.88rem;">Set up your own CA firm offering audit, tax, and advisory services — be your own boss.</p></div></div>
-            <div class="career-item"><div class="career-icon">💻</div><div><strong>Fintech & Startups</strong><p style="margin:0;font-size:.88rem;">CAs are increasingly sought after by fintech startups for compliance, fundraising, and financial modeling roles.</p></div></div>
+             
         </div>
     </div>
 </section>
 
 <!-- ══ FAQ ════════════════════════════════════════ -->
 <section class="section">
-    <div class="container">
+    <div class="container-r">
         <div class="tag">FAQs</div>
         <h2>Frequently Asked Questions</h2>
         <p style="margin-bottom:32px;">Everything students and parents from Raipur and across Chhattisgarh ask us before enrolling.</p>
@@ -680,21 +682,21 @@
 
 <!-- ══ CTA ════════════════════════════════════════ -->
 <section class="cta-section" id="contact">
-    <div class="container">
+    <div class="container-r">
         <div class="tag" style="border-color:rgba(201,168,76,.5);color:var(--gold-lt);">Enroll Today</div>
         <h2>Start Your CA Journey with the Best CA Classes in Raipur</h2>
         <p>Join the institute that has produced 173+ All India Rank holders. Seats are limited — secure your place in the upcoming batch.</p>
         <div class="cta-btns">
-            <a href="tel:+91XXXXXXXXXX" class="btn-cta-gold">📞 Call Now</a>
+            <a href="tel:+919926821000" class="btn-cta-gold">📞 Call Now</a>
             <a href="#" class="btn-cta-white">📅 Book Free Counselling</a>
             <a href="#" class="btn-cta-white">✉️ Enquire Now</a>
         </div>
 
         <div class="contact-block" style="max-width:720px;margin:48px auto 0;">
-            <p style="font-weight:700;font-size:1.05rem;color:var(--navy);">Excel Educational Institute</p>
+            <p style="font-weight:700;font-size:1.05rem;color:var(--maroon);">Excel Educational Institute</p>
             <div class="contact-info">
                 <div class="c-item"><span class="c-icon">📍</span> Pachpedi Naka, Raipur, Chhattisgarh</div>
-                <div class="c-item"><span class="c-icon">📞</span> +91-XXXXXXXXXX</div>
+                <div class="c-item"><span class="c-icon">📞</span> + 9926821000</div>
                 <div class="c-item"><span class="c-icon">🕐</span> Mon–Sat: 8:00 AM – 8:00 PM</div>
                 <div class="c-item"><span class="c-icon">🌐</span> exceledulive.com</div>
             </div>
