@@ -14,828 +14,1489 @@
 
 <style>
     :root {
-        --primary-color: #2575fc;
-        --secondary-color: #6a11cb;
-        --accent-color: #ff9800;
-        --glass-bg: rgba(255, 255, 255, 0.1);
-        --glass-border: rgba(255, 255, 255, 0.2);
+        --navy: #3B0A0F;
+        --navy-deep: #220508;
+        --gold: #C1272D;
+        --gold-light: #E84C4C;
+        --ivory: #F2F1EF;
+        --white: #FFFFFF;
+        --green: #7A1F23;
+        --slate: #5A5A5A;
+        --ink: #1A1A1A;
+        --line: #DEDCD8;
+        --radius: 18px;
+        --radius-sm: 10px;
+        --shadow: 0 20px 50px -20px rgba(20,5,7,0.3);
+        --shadow-sm: 0 8px 24px -12px rgba(20,5,7,0.2);
+    }
+
+    * {
+        box-sizing: border-box;
+    }
+
+    html {
+        scroll-behavior: smooth;
     }
 
     body {
-        font-family: 'Poppins', sans-serif;
-        background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
-        color: #333;
+        margin: 0;
+        font-family: 'Inter',system-ui,sans-serif;
+        color: var(--ink);
+        background: var(--white);
+        -webkit-font-smoothing: antialiased;
+        line-height: 1.6;
     }
 
-    /* Hero Section with Glassmorphism */
-    .hero-section {
-        background: linear-gradient(to right, var(--secondary-color), var(--primary-color));
-        padding: 60px 0;
-        color: white;
-        border-radius: 0 0 50px 50px;
-        margin-bottom: 50px;
-        box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    h1, h2, h3 {
+        font-family: 'Fraunces',serif;
+        margin: 0;
+        color: var(--navy);
+        line-height: 1.12;
     }
 
-    .badge-premium {
-        background: var(--accent-color);
-        color: #fff;
-        padding: 5px 15px;
-        border-radius: 20px;
-        font-size: 0.9rem;
+    p {
+        margin: 0;
+    }
+
+    img {
+        max-width: 100%;
+        display: block;
+    }
+
+    a {
+        text-decoration: none;
+        color: inherit;
+    }
+
+    .mono {
+        font-family: 'IBM Plex Mono',monospace;
+    }
+
+
+
+    section {
+        padding: 88px 0;
+    }
+
+    .eyebrow {
+        font-family: 'IBM Plex Mono',monospace;
+        font-size: 13px;
+        letter-spacing: .14em;
         text-transform: uppercase;
-        font-weight: 700;
-        margin-bottom: 15px;
-        display: inline-block;
+        color: var(--gold);
+        font-weight: 600;
+        display: inline-flex;
+        align-items: center;
+        gap: 10px;
+        margin-bottom: 16px;
     }
 
-    .glass-card {
-        background: white;
-        border: 1px solid var(--glass-border);
-        border-radius: 20px;
-        padding: 30px;
-        transition: transform 0.3s ease;
+        .eyebrow::before {
+            content: '';
+            width: 22px;
+            height: 2px;
+            background: var(--gold);
+            display: inline-block;
+        }
+
+    .lead {
+        color: var(--slate);
+        font-size: 17px;
+        max-width: 680px;
+    }
+
+    .btn {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        gap: 8px;
+        padding: 15px 28px;
+        border-radius: 999px;
+        font-weight: 700;
+        font-size: 15.5px;
+        cursor: pointer;
+        border: none;
+        transition: transform .15s ease, box-shadow .15s ease;
+        font-family: 'Inter',sans-serif;
+    }
+
+        .btn:hover {
+            transform: translateY(-2px);
+        }
+
+    .btn-gold {
+        background: linear-gradient(135deg,var(--gold-light),var(--gold));
+        color: var(--navy-deep);
+        box-shadow: 0 12px 30px -10px rgba(201,162,39,0.55);
+    }
+
+    .btn-outline {
+        background: transparent;
+        border: 1.5px solid rgba(255,255,255,0.45);
+        color: var(--white);
+    }
+
+        .btn-outline:hover {
+            background: rgba(255,255,255,0.08);
+        }
+
+    .btn-navy {
+        background: var(--navy);
+        color: var(--white);
+        box-shadow: 0 12px 28px -10px rgba(11,31,58,0.45);
+    }
+
+
+
+    /* HERO */
+    .hero {
+        background: radial-gradient(120% 140% at 18% 0%, #5A1015 0%, var(--navy) 45%, var(--navy-deep) 100%);
+        position: relative;
+        overflow: hidden;
+        width: 100%;
+    }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background-image: repeating-linear-gradient(115deg, rgba(201,162,39,0.05) 0px, rgba(201,162,39,0.05) 1px, transparent 1px, transparent 64px);
+            pointer-events: none;
+        }
+
+        .hero::after {
+            content: '';
+            position: absolute;
+            border-radius: 50%;
+            background: radial-gradient(circle, rgba(201,162,39,0.22), transparent 70%);
+            top: -180px;
+            right: -160px;
+            pointer-events: none;
+        }
+
+    .hero-grid {
+        display: flex;
+        grid-template-columns: 1.15fr 0.85fr;
+        align-items: center;
+        position: relative;
+    }
+
+    .hero .eyebrow {
+        color: var(--gold-light);
+    }
+
+        .hero .eyebrow::before {
+            background: var(--gold-light);
+        }
+
+    .hero h1 {
+        color: var(--white);
+        font-size: 46px;
+        font-weight: 700;
+        letter-spacing: -0.01em;
+    }
+
+        .hero h1 em {
+            font-style: normal;
+            color: var(--gold-light);
+        }
+
+    .hero .lead {
+        color: #D9C9C9;
+        font-size: 18px;
+    }
+
+    .hero-stats {
+        display: flex;
+        gap: 28px;
+        margin-top: 40px;
+        flex-wrap: wrap;
+    }
+
+    .hero-stat .num {
+        font-family: 'Fraunces',serif;
+        font-size: 34px;
+        font-weight: 700;
+        color: var(--gold-light);
+    }
+
+    .hero-stat .lab {
+        font-size: 13px;
+        color: #C9A6A6;
+        margin-top: 2px;
+    }
+
+
+
+
+
+    /* STAT BAR */
+    .statbar {
+        background: var(--ivory);
+        padding: 0;
+    }
+
+        .statbar .wrap {
+            display: grid;
+            grid-template-columns: repeat(4,1fr);
+            gap: 0;
+            padding: 0;
+        }
+
+    .stat-box {
+        padding: 42px 24px;
+        text-align: center;
+        border-right: 1px solid var(--line);
+    }
+
+        .stat-box:last-child {
+            border-right: none;
+        }
+
+        .stat-box .num {
+            font-family: 'Fraunces',serif;
+            font-size: 38px;
+            font-weight: 700;
+            color: var(--navy);
+        }
+
+            .stat-box .num span {
+                color: var(--gold);
+            }
+
+        .stat-box .lab {
+            font-size: 13.5px;
+            color: var(--slate);
+            margin-top: 6px;
+        }
+
+    /* SECTION HEAD */
+
+
+    .sec-head h2 {
+        font-size: 36px;
+        font-weight: 700;
+    }
+
+    .sec-head.center {
+        margin-left: auto;
+        margin-right: auto;
+        text-align: center;
+    }
+
+    /* WHY CHOOSE */
+
+    .why-card {
+        background: var(--white);
+        border: 1px solid var(--line);
+        border-radius: var(--radius);
+        box-shadow: var(--shadow-sm);
+        transition: transform .2s ease;
+    }
+
+        .why-card:hover {
+            transform: translateY(-4px);
+        }
+
+        .why-card .ico {
+            width: 46px;
+            height: 46px;
+            border-radius: 12px;
+            background: linear-gradient(135deg,var(--navy),#5A1015);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--gold-light);
+            font-family: 'Fraunces',serif;
+            font-weight: 700;
+            font-size: 18px;
+            margin-bottom: 16px;
+        }
+
+        .why-card h3 {
+            font-size: 17px;
+            font-weight: 600;
+            font-family: 'Inter',sans-serif;
+            color: var(--ink);
+        }
+
+        .why-card p {
+            font-size: 14px;
+            color: var(--slate);
+            margin-top: 8px;
+        }
+
+    /* SUBJECTS */
+    .subjects-sec {
+        background: var(--navy-deep);
+        color: var(--white);
+    }
+
+        .subjects-sec .sec-head h2 {
+            color: var(--white);
+        }
+
+        .subjects-sec .sec-head .lead {
+            color: #C9A6A6;
+        }
+
+    .subj-grid {
+        display: grid;
+        grid-template-columns: repeat(4,1fr);
+        gap: 18px;
+    }
+
+    .subj-card {
+        background: rgba(255,255,255,0.05);
+        border: 1px solid rgba(255,255,255,0.12);
+        border-radius: var(--radius);
+        padding: 30px 22px;
+    }
+
+        .subj-card .idx {
+            font-family: 'IBM Plex Mono',monospace;
+            color: var(--gold-light);
+            font-size: 13px;
+        }
+
+        .subj-card h3 {
+            color: var(--white);
+            font-size: 19px;
+            margin-top: 14px;
+            font-family: 'Fraunces',serif;
+            font-weight: 600;
+        }
+
+        .subj-card p {
+            color: #C9A6A6;
+            font-size: 13.5px;
+            margin-top: 8px;
+        }
+
+    /* EXAM PATTERN */
+    .pattern-table {
+        width: 100%;
+        border-collapse: collapse;
+        background: var(--white);
+        border-radius: var(--radius);
+        overflow: hidden;
+        box-shadow: var(--shadow-sm);
+    }
+
+        .pattern-table th, .pattern-table td {
+            padding: 16px 22px;
+            text-align: left;
+            border-bottom: 1px solid var(--line);
+            font-size: 14.5px;
+        }
+
+        .pattern-table th {
+            background: var(--navy);
+            color: var(--white);
+            font-family: 'Fraunces',serif;
+            font-weight: 600;
+            font-size: 15px;
+        }
+
+        .pattern-table tr:last-child td {
+            border-bottom: none;
+        }
+
+        .pattern-table td:nth-child(2), .pattern-table td:nth-child(3) {
+            font-family: 'IBM Plex Mono',monospace;
+            font-size: 13.5px;
+            color: var(--slate);
+        }
+
+    .pattern-note {
+        display: flex;
+        gap: 14px;
+        flex-wrap: wrap;
+        margin-top: 18px;
+    }
+
+    .pattern-pill {
+        background: var(--ivory);
+        border: 1px solid var(--line);
+        border-radius: 999px;
+        padding: 8px 18px;
+        font-size: 13px;
+        color: var(--ink);
+        font-weight: 600;
+    }
+
+    /* ELIGIBILITY */
+    .elig-grid {
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        gap: 22px;
+    }
+
+    .elig-card {
+        background: var(--white);
+        border: 1px solid var(--line);
+        border-radius: var(--radius);
+        padding: 28px;
+        box-shadow: var(--shadow-sm);
+    }
+
+        .elig-card .route {
+            font-family: 'IBM Plex Mono',monospace;
+            font-size: 12px;
+            color: var(--gold);
+            letter-spacing: .08em;
+            text-transform: uppercase;
+        }
+
+        .elig-card h3 {
+            font-size: 19px;
+            margin-top: 8px;
+        }
+
+        .elig-card ul {
+            margin: 14px 0 0;
+            padding-left: 20px;
+            color: var(--slate);
+            font-size: 14px;
+        }
+
+        .elig-card li {
+            margin-bottom: 6px;
+        }
+
+    /* SYLLABUS ACCORDION (reuses faq-item visual language) */
+    .syllabus-sec {
+        background: var(--ivory);
+    }
+
+    /* STUDY PLAN TIMELINE */
+    .plan-sec {
+        background: var(--navy-deep);
+    }
+
+        .plan-sec .sec-head h2 {
+            color: var(--white);
+        }
+
+        .plan-sec .sec-head .lead {
+            color: #D9C9C9;
+        }
+
+    .plan-track {
+        position: relative;
+        padding-left: 36px;
+    }
+
+        .plan-track::before {
+            content: '';
+            position: absolute;
+            left: 9px;
+            top: 6px;
+            bottom: 6px;
+            width: 2px;
+            background: rgba(255,255,255,0.18);
+        }
+
+    .plan-step {
+        position: relative;
+        padding-bottom: 34px;
+    }
+
+        .plan-step:last-child {
+            padding-bottom: 0;
+        }
+
+        .plan-step::before {
+            content: attr(data-step);
+            position: absolute;
+            left: -36px;
+            top: 0;
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            background: var(--gold);
+            color: var(--navy-deep);
+            font-family: 'IBM Plex Mono',monospace;
+            font-size: 11px;
+            font-weight: 700;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .plan-step h3 {
+            color: var(--white);
+            font-size: 17px;
+            font-family: 'Inter',sans-serif;
+            font-weight: 600;
+        }
+
+        .plan-step .when {
+            font-family: 'IBM Plex Mono',monospace;
+            font-size: 12px;
+            color: var(--gold-light);
+            margin-top: 2px;
+            display: block;
+        }
+
+        .plan-step p {
+            color: #C9A6A6;
+            font-size: 14px;
+            margin-top: 8px;
+            max-width: 560px;
+        }
+
+    /* CAREER OPPORTUNITIES */
+    .career-grid {
+        display: grid;
+        grid-template-columns: repeat(3,1fr);
+        gap: 20px;
+    }
+
+    .career-card {
+        background: var(--white);
+        border: 1px solid var(--line);
+        border-radius: var(--radius);
+        padding: 26px;
+        box-shadow: var(--shadow-sm);
+    }
+
+        .career-card h3 {
+            font-size: 17px;
+            font-family: 'Inter',sans-serif;
+            font-weight: 600;
+        }
+
+        .career-card p {
+            font-size: 14px;
+            color: var(--slate);
+            margin-top: 8px;
+        }
+
+    /* RESULTS LEDGER — signature element */
+    .ledger-sec {
+        background: var(--ivory);
+    }
+
+    .ledger {
+        background: var(--white);
+        border-radius: var(--radius);
+        box-shadow: var(--shadow);
+        border: 1px solid var(--line);
+        overflow: hidden;
+    }
+
+    .ledger-top {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        padding: 30px 36px;
+        border-bottom: 2px solid var(--navy);
+    }
+
+        .ledger-top .org {
+            font-family: 'Fraunces',serif;
+            font-weight: 700;
+            font-size: 20px;
+            color: var(--navy);
+        }
+
+        .ledger-top .doc-id {
+            font-family: 'IBM Plex Mono',monospace;
+            font-size: 12px;
+            color: var(--slate);
+            text-align: right;
+        }
+
+    .ledger-row {
+        display: grid;
+        grid-template-columns: 2fr 1fr 1fr;
+        align-items: center;
+        padding: 22px 36px;
+        border-bottom: 1px solid var(--line);
+    }
+
+        .ledger-row:last-child {
+            border-bottom: none;
+        }
+
+        .ledger-row .label {
+            font-weight: 600;
+            color: var(--ink);
+            font-size: 15.5px;
+        }
+
+            .ledger-row .label small {
+                display: block;
+                font-weight: 400;
+                color: var(--slate);
+                font-size: 13px;
+                margin-top: 2px;
+            }
+
+        .ledger-row .pct {
+            font-family: 'IBM Plex Mono',monospace;
+            font-size: 26px;
+            font-weight: 600;
+            color: var(--slate);
+            text-align: center;
+        }
+
+        .ledger-row.highlight {
+            background: linear-gradient(90deg, rgba(201,162,39,0.06), transparent);
+        }
+
+            .ledger-row.highlight .pct {
+                color: var(--green);
+            }
+
+    .pct-bar {
+        height: 8px;
+        border-radius: 6px;
+        background: var(--line);
+        overflow: hidden;
+        margin: 0 36px 24px;
+    }
+
+    .pct-bar-inner {
         height: 100%;
+        border-radius: 6px;
+    }
+
+        .pct-bar-inner.all-india {
+            width: 14.05%;
+            background: var(--slate);
+        }
+
+        .pct-bar-inner.excel {
+            width: 42.8%;
+            background: linear-gradient(90deg,var(--gold),var(--green));
+        }
+
+    .stamp {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        background: rgba(30,122,76,0.1);
+        color: var(--green);
+        border: 1.5px solid var(--green);
+        border-radius: 999px;
+        padding: 6px 16px;
+        font-family: 'IBM Plex Mono',monospace;
+        font-size: 12.5px;
+        font-weight: 600;
+        letter-spacing: .04em;
+        margin: 24px 36px 0;
+    }
+
+    /* FACULTY */
+    /* FACULTY */
+    .faculty-photo {
+        width: 100%;
+        height: 240px;
+        overflow: hidden;
+        background: #f5f5f5;
+    }
+
+        .faculty-photo img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+            transition: transform .4s ease;
+        }
+
+    .faculty-card:hover .faculty-photo img {
+        transform: scale(1.05);
+    }
+
+    .faculty-grid {
+        display: grid;
+        grid-template-columns: repeat(4,1fr);
+        gap: 20px;
+    }
+
+    .faculty-card {
+        background: var(--white);
+        border: 1px solid var(--line);
+        border-radius: var(--radius);
+        overflow: hidden;
+        box-shadow: var(--shadow-sm);
+    }
+
+
+    .faculty-body {
+        padding: 22px;
+    }
+
+        .faculty-body h3 {
+            font-size: 18px;
+            font-weight: 600;
+            font-family: 'Inter',sans-serif;
+        }
+
+        .faculty-body .role {
+            font-size: 13px;
+            color: var(--gold);
+            font-weight: 600;
+            margin-top: 2px;
+        }
+
+        .faculty-body .exp {
+            display: inline-block;
+            margin-top: 14px;
+            background: var(--ivory);
+            border-radius: 8px;
+            padding: 6px 12px;
+            font-family: 'IBM Plex Mono',monospace;
+            font-size: 12.5px;
+            color: var(--navy);
+            font-weight: 600;
+        }
+
+    /* AWARDS */
+    .awards-grid {
+        display: grid;
+        grid-template-columns: repeat(3,1fr);
+        gap: 20px;
+    }
+
+    .award-card {
+        background: var(--white);
+        border: 1px solid var(--line);
+        border-radius: var(--radius);
+        padding: 30px;
+        text-align: center;
+        box-shadow: var(--shadow-sm);
+    }
+
+        .award-card .medal {
+            width: 54px;
+            height: 54px;
+            border-radius: 50%;
+            background: linear-gradient(135deg,var(--gold-light),var(--gold));
+            margin: 0 auto 16px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--navy-deep);
+            font-weight: 700;
+            font-family: 'Fraunces',serif;
+        }
+
+        .award-card h3 {
+            font-size: 16.5px;
+            font-weight: 600;
+            font-family: 'Inter',sans-serif;
+        }
+
+        .award-card p {
+            font-size: 13px;
+            color: var(--slate);
+            margin-top: 8px;
+        }
+
+    /* TESTIMONIALS */
+    .testi-sec {
+        background: var(--ivory);
+    }
+
+    .testi-grid {
+        display: grid;
+        grid-template-columns: repeat(3,1fr);
+        gap: 22px;
+    }
+
+    .testi-card {
+        background: var(--white);
+        border-radius: var(--radius);
+        padding: 28px;
+        border: 1px solid var(--line);
+        box-shadow: var(--shadow-sm);
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+    }
+
+        .testi-card .quote {
+            font-size: 14.5px;
+            color: var(--ink);
+            line-height: 1.7;
+            flex: 1;
+        }
+
+    .testi-foot {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        margin-top: 20px;
+        padding-top: 16px;
+        border-top: 1px solid var(--line);
+    }
+
+    .avatar {
+        width: 42px;
+        height: 42px;
+        border-radius: 50%;
+        background: linear-gradient(135deg,var(--navy),#5A1015);
+        color: var(--gold-light);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-family: 'Fraunces',serif;
+        font-weight: 700;
+        font-size: 15px;
+    }
+
+    .testi-foot .nm {
+        font-weight: 600;
+        font-size: 14px;
+    }
+
+    .testi-foot .rk {
+        font-size: 12px;
+        color: var(--gold);
+        font-weight: 600;
+    }
+
+    /* COMPARISON TABLE */
+    .comp-table {
+        width: 100%;
+        border-collapse: collapse;
+        background: var(--white);
+        border-radius: var(--radius);
+        overflow: hidden;
+        box-shadow: var(--shadow-sm);
+    }
+
+        .comp-table th, .comp-table td {
+            padding: 18px 24px;
+            text-align: center;
+            border-bottom: 1px solid var(--line);
+            font-size: 14.5px;
+        }
+
+        .comp-table th {
+            background: var(--navy);
+            color: var(--white);
+            font-family: 'Fraunces',serif;
+            font-weight: 600;
+            font-size: 15px;
+        }
+
+            .comp-table td:first-child, .comp-table th:first-child {
+                text-align: left;
+                font-weight: 600;
+            }
+
+        .comp-table tr:last-child td {
+            border-bottom: none;
+        }
+
+    .yes {
+        color: var(--green);
+        font-weight: 700;
+    }
+
+    .no {
+        color: #C24545;
+        font-weight: 700;
+    }
+
+    .limited {
+        color: var(--slate);
+        font-size: 13px;
+    }
+
+    /* FAQ */
+    .faq-sec {
+        background: var(--ivory);
+    }
+
+    .faq-item {
+        background: var(--white);
+        border: 1px solid var(--line);
+        border-radius: 14px;
+        margin-bottom: 12px;
+        overflow: hidden;
+    }
+
+    .faq-q {
+        padding: 20px 24px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        cursor: pointer;
+        font-weight: 600;
+        font-size: 15.5px;
+    }
+
+        .faq-q .plus {
+            font-family: 'IBM Plex Mono',monospace;
+            color: var(--gold);
+            font-size: 20px;
+            transition: transform .2s ease;
+            flex-shrink: 0;
+            margin-left: 16px;
+        }
+
+    .faq-item.open .plus {
+        transform: rotate(45deg);
+    }
+
+    .faq-a {
+        padding: 0 24px;
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height .25s ease, padding .25s ease;
+        color: var(--slate);
+        font-size: 14.5px;
+    }
+
+    .faq-item.open .faq-a {
+        padding: 0 24px 22px;
+    }
+
+    /* FINAL CTA */
+    .final-cta {
+        background: radial-gradient(120% 140% at 80% 100%, #5A1015 0%, var(--navy) 45%, var(--navy-deep) 100%);
+        text-align: center;
         position: relative;
         overflow: hidden;
     }
 
-        .glass-card:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 15px 35px rgba(0,0,0,0.1);
+        .final-cta h2 {
+            color: var(--white);
+            font-size: 38px;
         }
 
-    .subject-icon {
-        font-size: 2.5rem;
-        margin-bottom: 20px;
-        display: block;
-    }
-
-    .btn-enroll {
-        background: #fff;
-        color: var(--primary-color);
-        font-weight: 700;
-        border-radius: 30px;
-        padding: 15px 40px;
-        border: none;
-        transition: all 0.3s ease;
-        text-transform: uppercase;
-        letter-spacing: 1px;
-    }
-
-        .btn-enroll:hover {
-            background: #f8f9fa;
-            color: var(--secondary-color);
-            transform: scale(1.05);
-            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+        .final-cta .lead {
+            color: #D9C9C9;
+            margin: 18px auto 0;
         }
 
-    .section-title {
-        font-weight: 700;
-        margin-bottom: 40px;
-        position: relative;
-    }
-
-        .section-title::after {
-            content: '';
-            width: 60px;
-            height: 4px;
-            background: var(--primary-color);
-            position: absolute;
-            bottom: -10px;
-            left: 50%;
-            transform: translateX(-50%);
+        .final-cta .cta-row {
+            justify-content: center;
         }
 
-    .highlight-text {
-        color: var(--primary-color);
-        font-weight: 600;
+    .internal-links {
+        display: flex;
+        gap: 18px;
+        flex-wrap: wrap;
+        justify-content: center;
+        margin-top: 36px;
+        font-size: 13px;
     }
+
+        .internal-links a {
+            color: #B98C8C;
+            border-bottom: 1px dotted #B98C8C;
+            padding-bottom: 2px;
+        }
+
+    /* STICKY MOBILE CTA */
+    .sticky-cta {
+        display: none;
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        z-index: 50;
+        background: var(--white);
+        border-top: 1px solid var(--line);
+        box-shadow: 0 -10px 30px rgba(11,31,58,0.15);
+        padding: 12px 16px;
+        gap: 10px;
+    }
+
+        .sticky-cta .btn {
+            flex: 1;
+            padding: 13px 10px;
+            font-size: 13.5px;
+        }
 </style>
 
-<div class="container-fluid p-0">
-    <!-- Hero Section -->
-    <section class="hero-section text-center">
-        <div class="container">
-            <span class="badge-premium">Premium Learning Experience</span>
-            <h1 class="display-4 text-white fw-bold mb-3">Best CA Intermediate Group 1 Coaching</h1>
-            <p class="lead mb-4">India’s <span class="fw-bold">Top</span> Expert Faculty for <span class="fw-bold text-warning">AIR Rankers</span>. May/Nov 2026 Attempt ke liye <span class="fw-bold">Proven</span> Structured Preparation.</p>
-
-            <div class="d-flex flex-wrap justify-content-center gap-3">
-                <button class="btn btn-enroll shadow" onclick="location.href='#enroll'">Enroll Today</button>
-                <button class="btn btn-outline-light rounded-pill px-4" onclick="location.href='#demo'">Book Free Demo</button>
-            </div>
-
-            <div class="mt-4">
-                <span class="me-3"><i class="bi bi-check-circle-fill"></i> Highest Pass Rate</span>
-                <span><i class="bi bi-check-circle-fill"></i> Guaranteed Syllabus Completion</span>
-            </div>
-        </div>
-    </section>
-
-
-
-    <section class="container-fluid py-5">
-
-        <div class="row mb-5">
-            <div class="col-12">
-                <div class="bg-light p-5 rounded shadow-sm">
-                    <h2 class="fw-bold mb-4">
-                        Why Choose Our CA Intermediate Group 1 Coaching?
-                    </h2>
-
-                    <p class="text-muted">
-                        Excel Educational Institution stands as the trusted choice for CA Intermediate Group 1 coaching in Raipur and across Chhattisgarh,
-                        delivering excellence through structured programs, expert faculty, and proven results. For students aspiring to clear this crucial
-                        stage of the Chartered Accountancy journey, Excel provides the perfect blend of guidance, motivation, and academic rigor.
-                        <br />
-                        Our faculty members are seasoned professionals who specialize in simplifying complex concepts of Group 1 subjects—Accounting,
-                        Corporate & Other Laws, Cost and Management Accounting, and Taxation. Their teaching style emphasizes clarity, practical application,
-                        and exam-oriented strategies, ensuring that students not only understand the fundamentals but also master the techniques required to score high marks.
-                        With concept-based teaching, interactive sessions, and personalized mentoring, Excel transforms challenges into achievable milestones.
-                        <br />
-                        Excel’s methodology goes beyond traditional coaching. Regular mock tests, performance analysis, and doubt-clearing sessions keep students on
-                        track and confident. Study materials are carefully curated to match the latest ICAI syllabus, while bilingual communication ensures accessibility for
-                        learners from diverse backgrounds. Our supportive environment fosters discipline, focus, and motivation—qualities essential for success in professional examinations.
-                    </p>
-
-                    <div class="row mt-4">
-                        <div class="col-md-6 mb-3">
-                            <div class="border rounded p-4 h-100">
-                                <h5 class="fw-bold">Experienced Faculty</h5>
-                                <p class="text-muted mb-0">
-                                    Learn from highly qualified Chartered Accountants and subject experts with years of teaching experience.
-                                </p>
-                            </div>
-                        </div>
-
-                        <div class="col-md-6 mb-3">
-                            <div class="border rounded p-4 h-100">
-                                <h5 class="fw-bold">Updated ICAI Syllabus</h5>
-                                <p class="text-muted mb-0">
-                                    Complete preparation according to the latest ICAI syllabus and examination pattern.
-                                </p>
-                            </div>
-                        </div>
-
-                        <div class="col-md-6 mb-3">
-                            <div class="border rounded p-4 h-100">
-                                <h5 class="fw-bold">Regular Mock Tests</h5>
-                                <p class="text-muted mb-0">
-                                    Weekly tests and full syllabus mock exams to improve confidence and exam performance.
-                                </p>
-                            </div>
-                        </div>
-
-                        <div class="col-md-6 mb-3">
-                            <div class="border rounded p-4 h-100">
-                                <h5 class="fw-bold">Doubt Solving Sessions</h5>
-                                <p class="text-muted mb-0">
-                                    Dedicated doubt-clearing classes to ensure complete conceptual clarity for every student.
-                                </p>
-                            </div>
-                        </div>
+<!-- ================= HERO ================= -->
+<div class="hero ">
+    <div class="container my-2">
+        <div class="row">
+            <div class="wrap hero-grid  col-lg-11">
+                <div>
+                    <span class="eyebrow">Since 2007 · Trusted CA Coaching</span>
+                    <h1><a> Best CA Intermediate Group 1 Coaching </a> <em>in India</em></h1>
+                    <p class="lead">Excel Educational Institute has built its reputation on 176+ All India Rankers and 18,000+ successful students since 2007 — a result culture few institutes can match. If you're comparing options for Group 1, here's what consistent, exam-pattern-aligned teaching looks like in practice.</p>
+                    <div class="hero-stats">
+                        <div class="hero-stat"><div class="num">177</div><div class="lab">All India Rankers</div></div>
+                        <div class="hero-stat"><div class="num">17,500+</div><div class="lab">Successful Students</div></div>
+                        <div class="hero-stat"><div class="num">2007</div><div class="lab">Established</div></div>
+                        <button class="btn btn-sm btn-outline" onclick="window.location.href='tel:+917714095300'">Talk to Counselor</button>
+                        <button class="btn btn-sm btn-outline" onclick="window.location.href='#brochure'">Download Brochure</button>
                     </div>
                 </div>
             </div>
         </div>
-
-        <div class="container mb-5">
-            <div class="row text-center mb-5">
-                <div class="col-12">
-                    <h2 class="section-title">Hamare <span class="highlight-text">Advanced</span> Subjects</h2>
-                    <p class="text-muted">Smart Learning approach jo aapki Career-Focused taiyari ko asaan banaye.</p>
-                </div>
-
-                <!-- Subject 1 -->
-                <div class="col-md-4 mb-4">
-                    <div class="glass-card shadow-sm">
-                        <div class="subject-icon">📊</div>
-                        <h4 class="fw-bold">Advanced Accounting</h4>
-                        <p class="text-muted">Professional standards ke saath <span class="highlight-text">Result-Oriented</span> coaching.</p>
-                        <ul class="list-unstyled text-start">
-                            <li>✅ <span class="fw-bold">Proven</span> Practice Sessions</li>
-                            <li>✅ Full ICAI Module Coverage</li>
-                        </ul>
-                    </div>
-                </div>
-
-                <!-- Subject 2 -->
-                <div class="col-md-4 mb-4">
-                    <div class="glass-card shadow-sm">
-                        <div class="subject-icon">⚖️</div>
-                        <h4 class="fw-bold">Corporate & Laws</h4>
-                        <p class="text-muted"><span class="highlight-text">Interactive</span> classes complex provisions ko samjhne ke liye.</p>
-                        <ul class="list-unstyled text-start">
-                            <li>✅ <span class="fw-bold">Expert</span> Case Study Analysis</li>
-                            <li>✅ Daily Writing Practice</li>
-                        </ul>
-                    </div>
-                </div>
-
-                <!-- Subject 3 -->
-                <div class="col-md-4 mb-4">
-                    <div class="glass-card shadow-sm">
-                        <div class="subject-icon">💰</div>
-                        <h4 class="fw-bold">Taxation</h4>
-                        <p class="text-muted"><span class="highlight-text">Personalized</span> guidance latest amendments ke saath.</p>
-                        <ul class="list-unstyled text-start">
-                            <li>✅ Conceptual Clarity Guaranteed</li>
-                            <li>✅ Weekly <span class="fw-bold">Top</span> Mock Tests</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
+    </div>
+</div>
 
 
+<!-- ================= WHY CHOOSE ================= -->
+
+<div class="wrap container">
+    <div class="row">
+        <div class="sec-head col-lg-12">
+            <span class="eyebrow">Why Excel</span>
+            <h2>Why Choose Excel Educational Institute for CA Intermediate Group 1 Coaching</h2>
+            <p class="lead">Every system here is built around one goal — making this the Best CA Intermediate Group 1 Coaching a student can realistically rely on, measured in ranks and pass rates rather than promises.</p>
         </div>
-
-
-        <div class="container-fluid py-5">
-
-            <div class="row justify-content-center">
-
-                <div class="col-lg-11">
-
-                    <div class="bg-white rounded-4 shadow-lg p-lg-5 p-4 border">
-
-                        <!-- Top Heading -->
-                        <div class="text-center mb-5">
-
-                            <span class="badge bg-primary px-4 py-2 rounded-pill fs-6 mb-3">
-                                CA Intermediate Group 1
-                            </span>
-
-                            <h1 class="fw-bold display-5 text-dark mb-4">
-
-                                <span class="text-primary">
-                                    CA Intermediate Group 1 Coaching
-                                </span>
-
-                                at
-
-                                <a href="/"
-                                   class="text-decoration-none fw-bold text-dark">
-
-                                    Excel Educational Institution
-
-                                </a>
-
-                            </h1>
-
-                            <p class="lead text-muted mx-auto"
-                               style="max-width:950px;">
-
-                                <i>
-                                    Excel Educational Institution is recognized as one of the most
-                                    trusted names in commerce and professional education across Chhattisgarh,
-                                    helping students build successful careers in Chartered Accountancy.
-                                </i>
-
-                            </p>
-
-                        </div>
-
-                        <!-- Main Section -->
-                        <div class="row align-items-center g-5">
-
-                            <!-- Left -->
-                            <div class="col-lg-7">
-
-                                <div class="pe-lg-4">
-
-                                    <h3 class="fw-bold mb-4">
-
-                                        Why Students Choose Excel?
-
-                                    </h3>
-
-                                    <p class="text-muted fs-5">
-
-                                        For students preparing for
-                                        <b>CA Intermediate Group 1</b>,
-                                        Excel offers a
-                                        <span class="fw-bold text-dark">
-                                            structured and result-oriented program
-                                        </span>
-                                        designed to build confidence and mastery in every subject.
-
-                                    </p>
-
-                                    <p class="text-muted">
-
-                                        Group 1 of the CA Intermediate course includes
-                                        <b>
-                                            Accounting, Corporate & Other Laws,
-                                            Cost and Management Accounting, and Taxation
-                                        </b> —
-                                        subjects that demand
-                                        <i>clarity, precision, and conceptual understanding.</i>
-
-                                    </p>
-
-                                    <p class="text-muted">
-
-                                        At
-                                        <a href="/"
-                                           class="text-decoration-none fw-bold text-primary">
-
-                                            Excel Educational Institution
-
-                                        </a>,
-                                        our expert faculty simplify complex topics,
-                                        provide practical insights,
-                                        and ensure students understand every concept thoroughly.
-
-                                    </p>
-
-                                    <p class="text-muted mb-0">
-
-                                        With
-                                        <span class="fw-bold">
-                                            concept-based teaching,
-                                            interactive sessions,
-                                            and personalized mentoring,
-                                        </span>
-                                        we help learners move beyond rote memorization
-                                        toward genuine understanding and academic excellence.
-
-                                    </p>
-
-                                </div>
-
-                            </div>
-
-                            <!-- Right -->
-                            <div class="col-lg-5">
-
-                                <div class="rounded-4 p-5 bg-primary-subtle text-primary-emphasis shadow-lg " >
-
-                                    <h3 class="fw-bold mb-4">
-
-                                        Build Confidence for Success
-
-                                    </h3>
-
-                                    <p class="fs-5">
-
-                                        Excel’s methodology includes
-                                        <b>
-                                            regular mock tests,
-                                            performance tracking,
-                                            and doubt-clearing sessions
-                                        </b>,
-                                        ensuring students remain exam-ready at all times.
-
-                                    </p>
-
-                                    <p>
-
-                                        Study materials are carefully aligned with the
-                                        <i>latest ICAI syllabus</i>,
-                                        while bilingual communication makes learning simple
-                                        and accessible for students from diverse backgrounds.
-
-                                    </p>
-
-                                    <p class="mb-0">
-
-                                        Our supportive academic environment develops
-                                        <span class="fw-bold">
-                                            discipline, focus, motivation, and confidence
-                                        </span>
-                                        — essential qualities for professional success.
-
-                                    </p>
-
-                                </div>
-
-                            </div>
-
-                        </div>
-
-                        <!-- Feature Cards -->
-                        <div class="row mt-5 g-4">
-
-                            <!-- Card 1 -->
-                            <div class="col-md-6 col-lg-3">
-
-                                <div class="bg-light rounded-4 p-4 shadow-sm h-100 border text-center">
-
-                                    <div class="mb-3">
-                                        <i class="fa-solid fa-user-graduate text-primary fs-1"></i>
-                                    </div>
-
-                                    <h5 class="fw-bold">
-
-                                        Experienced Faculty
-
-                                    </h5>
-
-                                    <p class="text-muted mb-0">
-
-                                        Learn from highly qualified professionals
-                                        with years of teaching and practical experience.
-
-                                    </p>
-
-                                </div>
-
-                            </div>
-
-                            <!-- Card 2 -->
-                            <div class="col-md-6 col-lg-3">
-
-                                <div class="bg-light rounded-4 p-4 shadow-sm h-100 border text-center">
-
-                                    <div class="mb-3">
-                                        <i class="fa-solid fa-book-open text-success fs-1"></i>
-                                    </div>
-
-                                    <h5 class="fw-bold">
-
-                                        Latest ICAI Syllabus
-
-                                    </h5>
-
-                                    <p class="text-muted mb-0">
-
-                                        Complete preparation according to the latest ICAI
-                                        syllabus and examination pattern.
-
-                                    </p>
-
-                                </div>
-
-                            </div>
-
-                            <!-- Card 3 -->
-                            <div class="col-md-6 col-lg-3">
-
-                                <div class="bg-light rounded-4 p-4 shadow-sm h-100 border text-center">
-
-                                    <div class="mb-3">
-                                        <i class="fa-solid fa-chart-line text-danger fs-1"></i>
-                                    </div>
-
-                                    <h5 class="fw-bold">
-
-                                        Mock Tests & Analysis
-
-                                    </h5>
-
-                                    <p class="text-muted mb-0">
-
-                                        Regular tests and performance tracking help students
-                                        improve confidence and exam performance.
-
-                                    </p>
-
-                                </div>
-
-                            </div>
-
-                            <!-- Card 4 -->
-                            <div class="col-md-6 col-lg-3">
-
-                                <div class="bg-light rounded-4 p-4 shadow-sm h-100 border text-center">
-
-                                    <div class="mb-3">
-                                        <i class="fa-solid fa-comments text-warning fs-1"></i>
-                                    </div>
-
-                                    <h5 class="fw-bold">
-
-                                        Doubt Solving Sessions
-
-                                    </h5>
-
-                                    <p class="text-muted mb-0">
-
-                                        Dedicated mentoring and doubt-clearing support
-                                        ensure complete conceptual clarity.
-
-                                    </p>
-
-                                </div>
-
-                            </div>
-
-                        </div>
-
-                        <!-- Bottom Section -->
-                        <div class="mt-5">
-
-                            <div class="bg-warning-subtle text-warning-emphasis rounded-4 p-5 text-center shadow">
-
-                                <h2 class="fw-bold mb-4">
-
-                                    Excellence • Trust • Proven Success
-
-                                </h2>
-
-                                <p class="fs-5 mb-4">
-
-                                    Choosing
-                                    <b>Excel Educational Institution</b>
-                                    for CA Intermediate Group 1 coaching means choosing
-                                    quality education, trusted mentorship, and professional growth.
-
-                                </p>
-
-                                <p class="mb-4">
-
-                                    Across
-                                    <span class="fw-bold">
-                                        Raipur, Bhilai, Durg, Bilaspur,
-                                    </span>
-                                    and beyond,
-                                    Excel continues to shape the future
-                                    of aspiring Chartered Accountants.
-
-                                </p>
-
-                                <a href="#contact"
-                                   class="btn btn-primary btn-lg rounded-pill px-5 fw-bold">
-
-                                    Apply Now
-
-                                </a>
-
-                            </div>
-
-                        </div>
-
-                    </div>
-
-                </div>
-
-            </div>
-
+    </div>
+    <div class="row">
+        <div class="col-12 col-sm-6 col-lg-3">
+            <div class="ico">177</div>
+            <h3>177+ All India Rankers</h3><p>Produced consistently across attempts and batches.</p>
         </div>
-
-        <div class="row mb-5">
-            <div class="col-12 text-center mb-4">
-                <h2 class="fw-bold">
-                    Subjects Covered in CA Intermediate Group 1
-                </h2>
-                <p class="text-muted">
-                    Our coaching program covers the complete syllabus prescribed by ICAI.
-                </p>
-            </div>
-
-            <div class="col-lg-4 mb-4">
-                <div class="card border-0 shadow h-100">
-                    <div class="card-body">
-                        <h3 class="h4 fw-bold mb-3">
-                            Advanced Accounting
-                        </h3>
-
-                        <p class="text-muted">
-                            Learn accounting concepts from basic to advanced level with practical problem-solving sessions
-                            and exam-oriented preparation techniques.
-                        </p>
-
-                        <ul class="text-muted">
-                            <li>Accounting Standards</li>
-                            <li>Company Accounts</li>
-                            <li>Partnership Accounts</li>
-                            <li>Investment Accounts</li>
-                            <li>Financial Statements</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-lg-4 mb-4">
-                <div class="card border-0 shadow h-100">
-                    <div class="card-body">
-                        <h3 class="h4 fw-bold mb-3">
-                            Corporate and Other Laws
-                        </h3>
-
-                        <p class="text-muted">
-                            Understand legal concepts with simplified explanations, charts, notes, and practical examples.
-                        </p>
-
-                        <ul class="text-muted">
-                            <li>Companies Act</li>
-                            <li>Business Laws</li>
-                            <li>Contract Act</li>
-                            <li>Management & Administration</li>
-                            <li>Negotiable Instruments Act</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-lg-4 mb-4">
-                <div class="card border-0 shadow h-100">
-                    <div class="card-body">
-                        <h3 class="h4 fw-bold mb-3">
-                            Taxation
-                        </h3>
-
-                        <p class="text-muted">
-                            Comprehensive coaching for Income Tax and GST with practical assignments and mock practice sessions.
-                        </p>
-
-                        <ul class="text-muted">
-                            <li>Income Tax</li>
-                            <li>GST Concepts</li>
-                            <li>Tax Computation</li>
-                            <li>Input Tax Credit</li>
-                            <li>GST Returns</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
+        <div class="col-12 col-sm-6 col-lg-3">
+            <div class="ico">18K</div><h3>17,500+ Successful Students</h3><p>A track record that defines our teaching approach.</p>
         </div>
-
-        <div class="row align-items-center mb-5">
-            <div class="col-lg-6">
-                <img src="~/ADS Img/CA-Intermediate-Group-1-Coaching.png" class="img-fluid rounded shadow" alt="CA-Intermediate-Group-1-Coaching" title="CA-Intermediate-Group-1-Coaching">
-            </div>
-
-            <div class="col-lg-6">
-                <h2 class="fw-bold mb-4">
-                    Our Teaching Methodology
-                </h2>
-
-                <p class="text-muted">
-                    We follow a systematic and student-focused teaching methodology to ensure effective learning and better results.
-                </p>
-
-                <div class="mb-3">
-                    <h5 class="fw-bold">1. Concept-Based Learning</h5>
-                    <p class="text-muted">
-                        Every topic is explained with practical examples to build strong conceptual understanding.
-                    </p>
-                </div>
-
-                <div class="mb-3">
-                    <h5 class="fw-bold">2. Daily Practice Questions</h5>
-                    <p class="text-muted">
-                        Students receive regular assignments and practice papers for continuous improvement.
-                    </p>
-                </div>
-
-                <div class="mb-3">
-                    <h5 class="fw-bold">3. Weekly Tests & Analysis</h5>
-                    <p class="text-muted">
-                        Weekly assessments help students identify weak areas and improve performance gradually.
-                    </p>
-                </div>
-
-                <div class="mb-3">
-                    <h5 class="fw-bold">4. Revision & Mock Exams</h5>
-                    <p class="text-muted">
-                        Special revision classes and mock exams are conducted before final examinations.
-                    </p>
-                </div>
-            </div>
+        <div class="col-12 col-sm-6 col-lg-3">
+            <div class="ico">25+</div><h3>15+ Elite Faculties</h3><p>Practicing CAs and subject experts leading every batch.</p>
         </div>
-
-        <div class="row mb-5">
-            <div class="col-12">
-                <div class="bg-primary text-white rounded p-5 shadow">
-                    <h2 class="fw-bold mb-4 text-center">
-                        Benefits of Joining Our CA Intermediate Coaching
-                    </h2>
-
-                    <div class="row">
-                        <div class="col-md-4 mb-4">
-                            <h5 class="fw-bold">Strong Conceptual Clarity</h5>
-                            <p>
-                                Understand concepts deeply instead of relying on memorization techniques.
-                            </p>
-                        </div>
-
-                        <div class="col-md-4 mb-4">
-                            <h5 class="fw-bold">Better Exam Preparation</h5>
-                            <p>
-                                Learn effective exam strategies and answer-writing techniques.
-                            </p>
-                        </div>
-
-                        <div class="col-md-4 mb-4">
-                            <h5 class="fw-bold">Improved Confidence</h5>
-                            <p>
-                                Regular practice and guidance help students appear confidently in exams.
-                            </p>
-                        </div>
-
-                        <div class="col-md-4 mb-4">
-                            <h5 class="fw-bold">Time Management Skills</h5>
-                            <p>
-                                Learn how to manage study schedules and complete exams efficiently.
-                            </p>
-                        </div>
-
-                        <div class="col-md-4 mb-4">
-                            <h5 class="fw-bold">Regular Performance Tracking</h5>
-                            <p>
-                                Detailed analysis reports help students monitor progress continuously.
-                            </p>
-                        </div>
-
-                        <div class="col-md-4 mb-4">
-                            <h5 class="fw-bold">Higher Success Rate</h5>
-                            <p>
-                                Structured preparation increases the chances of clearing CA exams successfully.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-            </div>
+        <div class="wcol-12 col-sm-6 col-lg-3">
+            <div class="ico">WT</div><h3>Weekly Tests</h3><p>Continuous evaluation built into the course structure.</p>
         </div>
+        <div class="col-12 col-sm-6 col-lg-3">
+            <div class="ico">MR</div><h3>Multiple Revisions</h3><p>Structured revision cycles before every attempt.</p>
+        </div>
+        <div class="col-12 col-sm-6 col-lg-3">
+            <div class="ico">VB</div><h3>Video Backup Facility</h3><p>Never miss a session, whether you study online or offline.</p>
+        </div>
+        <div class="col-12 col-sm-6 col-lg-3">
+            <div class="ico">100</div><h3>100% Doubt Clearance</h3><p>Dedicated faculty support throughout the course.</p>
+        </div>
+        <div class="col-12 col-sm-6 col-lg-3">
+            <div class="ico">LRO</div><h3>Live + Recorded + Offline</h3><p>Flexible formats across online and classroom batches.</p>
+        </div>
+    </div>
+</div>
 
-        <div class="row mb-5">
-            <div class="col-lg-6">
-                <h2 class="fw-bold mb-4">
-                    Online & Offline CA Intermediate Classes
-                </h2>
 
-                <p class="text-muted">
-                    We provide flexible learning options for students according to their convenience and study schedule.
-                </p>
 
-                <ul class="list-group">
-                    <li class="list-group-item">
-                        Live Classroom Coaching
-                    </li>
+<!-- ================= SUBJECTS ================= -->
+<section class="subjects-sec" id="subjects">
+    <div class="wrap">
+        <div class="sec-head">
+            <span class="eyebrow">Curriculum</span>
+            <h2>CA Intermediate Group 1 Subjects We Cover</h2>
+            <p class="lead">Our Group 1 coaching covers all three papers in complete depth, designed by faculty who have themselves cleared these papers with top ranks.</p>
+        </div>
+        <div class="subj-grid">
+            <div class="subj-card"><span class="idx">PAPER 01</span><h3>Advanced Accounting</h3><p>Concept-first teaching with extensive practice questions.</p></div>
+            <div class="subj-card"><span class="idx">PAPER 02</span><h3>Corporate &amp; Other Laws</h3><p>Section-wise clarity built around the current exam pattern.</p></div>
+            <div class="subj-card"><span class="idx">PAPER 03</span><h3>Taxation</h3><p>Direct &amp; indirect tax modules updated every attempt.</p></div>
+        </div>
+    </div>
+</section>
 
-                    <li class="list-group-item">
-                        Live Interactive Online Classes
-                    </li>
+<!-- ================= EXAM PATTERN ================= -->
+<section id="exam-pattern">
+    <div class="wrap">
+        <div class="sec-head">
+            <span class="eyebrow">Exam Pattern</span>
+            <h2>CA Intermediate Group 1 Exam Pattern</h2>
+            <p class="lead">Knowing the marks distribution and passing criteria up front is part of how the Best CA Intermediate Group 1 Coaching helps students plan preparation around what ICAI actually tests.</p>
+        </div>
+        <div style="overflow-x:auto;">
+            <table class="pattern-table">
+                <thead>
+                    <tr><th>Paper</th><th>Marks</th><th>Passing Marks</th></tr>
+                </thead>
+                <tbody>
+                    <tr><td>Paper 1 — Advanced Accounting</td><td>100</td><td>40 (individual) / 150 aggregate</td></tr>
+                    <tr><td>Paper 2 — Corporate &amp; Other Laws</td><td>100</td><td>40 (individual) / 150 aggregate</td></tr>
+                    <tr><td>Paper 3 — Taxation</td><td>100</td><td>40 (individual) / 150 aggregate</td></tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="pattern-note">
+            <span class="pattern-pill">Negative marking: None in subjective papers</span>
+            <span class="pattern-pill">Mode: Pen &amp; paper, offline</span>
+            <span class="pattern-pill">Attempts per year: 2 (May/June &amp; Nov/Dec)</span>
+        </div>
+    </div>
+</section>
 
-                    <li class="list-group-item">
-                        Recorded Video Lectures
-                    </li>
+<!-- ================= STAT BAR ================= -->
+<section class="statbar" style="padding:0;">
+    <div class="wrap">
+        <div class="stat-box"><div class="num"><span>177</span></div><div class="lab">All India Rankers</div></div>
+        <div class="stat-box"><div class="num">17,500+</div><div class="lab">Successful Students</div></div>
+        <div class="stat-box"><div class="num">15+</div><div class="lab">Elite CA Faculties</div></div>
+        <div class="stat-box"><div class="num">42.80<span>%</span></div><div class="lab">Pass % (Jan 2025)</div></div>
+    </div>
+</section>
 
-                    <li class="list-group-item">
-                        Digital Study Material
-                    </li>
-
-                    <li class="list-group-item">
-                        Online Mock Test Series
-                    </li>
-
-                    <li class="list-group-item">
-                        Mobile & Laptop Access
-                    </li>
+<!-- ================= ELIGIBILITY ================= -->
+<section class="subjects-sec" id="eligibility">
+    <div class="wrap">
+        <div class="sec-head">
+            <span class="eyebrow">Eligibility</span>
+            <h2>Who Can Enroll for CA Intermediate Group 1</h2>
+            <p class="lead">There are two recognised paths into CA Intermediate, and the Best CA Intermediate Group 1 Coaching guides students through whichever route applies to them.</p>
+        </div>
+        <div class="elig-grid">
+            <div class="elig-card" style="background:rgba(255,255,255,0.05);border-color:rgba(255,255,255,0.12);">
+                <span class="route" style="color:var(--gold-light);">Foundation Route</span>
+                <h3 style="color:var(--white);">Via CA Foundation</h3>
+                <ul style="color:#C9A6A6;">
+                    <li>Pass CA Foundation conducted by ICAI</li>
+                    <li>Complete 4 months of study period before registering for Intermediate</li>
+                    <li>Register for both groups or Group 1 alone</li>
                 </ul>
             </div>
+            <div class="elig-card" style="background:rgba(255,255,255,0.05);border-color:rgba(255,255,255,0.12);">
+                <span class="route" style="color:var(--gold-light);">Direct Entry Route</span>
+                <h3 style="color:var(--white);">Via Graduation</h3>
+                <ul style="color:#C9A6A6;">
+                    <li>Commerce graduates with 55% aggregate marks</li>
+                    <li>Other stream graduates with 60% aggregate marks</li>
+                    <li>Provisional registration allowed while awaiting final results</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
 
-            <div class="col-lg-6 mt-4 mt-lg-0">
-                <div class="bg-light rounded p-5 shadow-sm h-100">
-                    <h2 class="fw-bold mb-4">
-                        Frequently Asked Questions
-                    </h2>
+<!-- ================= SYLLABUS ACCORDION ================= -->
+<section class="syllabus-sec" id="syllabus">
+    <div class="wrap">
+        <div class="sec-head">
+            <span class="eyebrow">Syllabus Breakdown</span>
+            <h2>Detailed Group 1 Syllabus, Paper by Paper</h2>
+            <p class="lead">A closer look at what each paper covers — part of what makes this the Best CA Intermediate Group 1 Coaching for students who want depth, not just an overview.</p>
+        </div>
+        <div id="syllabus-list">
+            <div class="faq-item">
+                <div class="faq-q">Paper 1 — Advanced Accounting<span class="plus">+</span></div>
+                <div class="faq-a"><p>Covers accounting standards, financial statements of companies, amalgamation, internal reconstruction, and accounting for special transactions such as banking and insurance entities.</p></div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-q">Paper 2 — Corporate &amp; Other Laws<span class="plus">+</span></div>
+                <div class="faq-a"><p>Company law sections on incorporation, share capital, and management, alongside the General Clauses Act, Interpretation of Statutes, and other key business laws.</p></div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-q">Paper 3 — Taxation<span class="plus">+</span></div>
+                <div class="faq-a"><p>Split into Income Tax (heads of income, deductions, computation of total income) and GST (levy, registration, input tax credit, and returns).</p></div>
+            </div>
+        </div>
+    </div>
+</section>
 
-                    <div class="mb-4">
-                        <h5 class="fw-bold">
-                            Which subjects are included in Group 1?
-                        </h5>
+<!-- ================= STUDY PLAN ================= -->
+<section class="plan-sec" id="study-plan">
+    <div class="wrap">
+        <div class="sec-head">
+            <span class="eyebrow">Preparation Timeline</span>
+            <h2>A Realistic Study Plan for Group 1</h2>
+            <p class="lead">Preparation works best as a sequence — each phase builds directly on the one before it.</p>
+        </div>
+        <div class="plan-track">
+            <div class="plan-step" data-step="1">
+                <h3>Foundation Reading<span class="when">Months 1–2</span></h3>
+                <p>First pass through all three papers to build conceptual familiarity before attempting problems independently.</p>
+            </div>
+            <div class="plan-step" data-step="2">
+                <h3>Practice &amp; Weekly Tests<span class="when">Months 3–4</span></h3>
+                <p>Topic-wise problem solving paired with weekly tests to identify and close gaps early.</p>
+            </div>
+            <div class="plan-step" data-step="3">
+                <h3>First Revision<span class="when">Month 5</span></h3>
+                <p>A structured revision round covering the full syllabus, with faculty-led doubt clearing sessions.</p>
+            </div>
+            <div class="plan-step" data-step="4">
+                <h3>Mock Tests<span class="when">Month 6</span></h3>
+                <p>Full-length mock papers under exam conditions to build speed, accuracy, and exam temperament.</p>
+            </div>
+            <div class="plan-step" data-step="5">
+                <h3>Final Revision &amp; Exam<span class="when">Final 2–3 weeks</span></h3>
+                <p>Quick-recall revision of formulas, sections, and standards, followed by the actual ICAI exam.</p>
+            </div>
+        </div>
+    </div>
+</section>
 
-                        <p class="text-muted mb-0">
-                            Group 1 includes Advanced Accounting, Corporate and Other Laws, and Taxation.
-                        </p>
-                    </div>
+<!-- ================= RESULTS LEDGER ================= -->
+<section class="ledger-sec" id="results">
+    <div class="wrap">
+        <div class="sec-head">
+            <span class="eyebrow">Results · CA Inter May 2026</span>
+            <h2>The Result That Makes Us the Best CA Inter Group 1 Coaching in India</h2>
+            <p class="lead">Numbers speak louder than claims. Here's how our CA Intermediate Group 1 Coaching compares to the national average.</p>
+        </div>
+        <div class="ledger">
+            <div class="ledger-top">
+                <div class="org">Excel Educational Institute</div>
+                <div class="doc-id">RESULT REF: CA-INT-G1-JAN25<br>ISSUED: Best CA Intermediate Group 1 Coaching Report</div>
+            </div>
+            <div class="ledger-row">
+                <div class="label">All India<small>National average pass percentage</small></div>
+                <div class="pct">10.25%</div>
+                <div></div>
+            </div>
+            <div class="pct-bar"><div class="pct-bar-inner all-india"></div></div>
+            <div class="ledger-row highlight">
+                <div class="label">Excel Educational Institute<small>Best CA Intermediate Group 1 Coaching</small></div>
+                <div class="pct">35.71%</div>
+                <div></div>
+            </div>
+            <div class="pct-bar"><div class="pct-bar-inner excel"></div></div>
+            <div class="stamp">★ 3X the All India pass rate</div>
+            <div style="height:8px;"></div>
+        </div>
+    </div>
+</section>
 
-                    <div class="mb-4">
-                        <h5 class="fw-bold">
-                            Are online classes available?
-                        </h5>
-
-                        <p class="text-muted mb-0">
-                            Yes, we provide both online and offline coaching facilities.
-                        </p>
-                    </div>
-
-                     
+<!-- ================= FACULTY ================= -->
+<section id="faculty">
+    <div class="wrap">
+        <div class="sec-head">
+            <span class="eyebrow">Faculty</span>
+            <h2>Meet Our Expert CA Intermediate Group 1 Faculties</h2>
+            <p class="lead">The backbone of any Best CA Intermediate Group 1 Coaching is its teaching team. <em style="font-style:normal;color:var(--slate);">Profile photos and names below are placeholders — replace with real faculty photographs, names, and ICAI/membership details before publishing.</em></p>
+        </div>
+        <div class="faculty-grid">
+            <div class="faculty-card">
+                <div class="faculty-photo" data-photo="replace-with-real-photo">
+                    <img src="../../Content/home/images/TM-1.jpg" alt="CA. B. L. Agrawal">
+                </div>
+                <div class="faculty-body">
+                    <h3>CA. B. L. Agrawal — Advanced Accounting</h3>
+                    <div class="role">B.Com,FCA</div>
+                    <p style="font-size:13px;color:var(--slate);margin-top:8px;">Specializes in financial statements, amalgamation, and accounting standards. Has mentored multiple All India Rank holders in Advanced Accounting.</p>
+                    <span class="exp">34+ Years Experience</span>
+                </div>
+            </div>
+            <div class="faculty-card">
+                <div class="faculty-photo" data-photo="replace-with-real-photo">
+                    <img src="../../Content/home/images/TM-2.jpg" alt="CA. Praveen Golchha">
+                </div>
+                <div class="faculty-body">
+                    <h3>CA. Praveen Golchha — Corporate &amp; Other Laws</h3>
+                    <div class="role">B.Com., FCA</div>
+                    <p style="font-size:13px;color:var(--slate);margin-top:8px;">Focuses on section-wise interpretation of company law and allied acts, with an emphasis on case-study based recall.</p>
+                    <span class="exp">27+ Years Experience</span>
+                </div>
+            </div>
+            <div class="faculty-card">
+                <div class="faculty-photo" data-photo="replace-with-real-photo">
+                    <img src="../../Content/home/images/TM-3.jpg" alt="CA. Sanjay Kumar Goyal">
+                </div>
+                <div class="faculty-body">
+                    <h3>CA. Sanjay Kumar Goyal — Taxation - Income Tax</h3>
+                    <div class="role">B.Com, FCA, DISA(ICAI)</div>
+                    <p style="font-size:13px;color:var(--slate);margin-top:8px;">Covers Income Tax and GST with annually updated material reflecting the latest Finance Act changes.</p>
+                    <span class="exp">27+ Years Experience</span>
+                </div>
+            </div>
+            <div class="faculty-card">
+                <div class="faculty-photo" data-photo="replace-with-real-photo">
+                    <img src="~/Content/home/images/Faculties/CA LAvish sir.png" alt="CA. Lavish Mathani">
+                </div>
+                <div class="faculty-body">
+                    <h3>CA. Lavish Mathani — Adv. Accounting & Corporated and other Laws</h3>
+                    <div class="role">B.Com,FCA</div>
+                    <p style="font-size:13px;color:var(--slate);margin-top:8px;">Specializes in financial statements, amalgamation, and accounting standards. Has mentored multiple All India Rank holders in Advanced Accounting.</p>
+                    <span class="exp">15+ Years Experience</span>
+                </div>
+            </div>
+            <div class="faculty-card">
+                <div class="faculty-photo" data-photo="replace-with-real-photo">
+                    <img src="/Content/home/images/Faculties/Ca Abhishek sir.png" alt="CA. Abhishek Baradiya">
+                </div>
+                <div class="faculty-body">
+                    <h3>CA. Abhishek Baradiya — Taxation - GST</h3>
+                    <div class="role">B.Com,FCA</div>
+                    <p style="font-size:13px;color:var(--slate);margin-top:8px;">Specializes in financial statements, amalgamation, and accounting standards. Has mentored multiple All India Rank holders in Advanced Accounting.</p>
+                    <span class="exp">14+ Years Experience</span>
                 </div>
             </div>
         </div>
+    </div>
+</section>
 
-        <div class="row">
-            <div class="col-12">
-                <div class="text-center bg-dark text-white rounded p-5 shadow">
-                    <h2 class="fw-bold text-c-red mb-4">
-                        Start Your CA Journey with Expert Guidance
-                    </h2>
+<!-- ================= AWARDS ================= -->
+<section id="awards">
+    <div class="wrap">
+        <div class="sec-head center" style="margin-left:auto;margin-right:auto;">
+            <span class="eyebrow">Recognition</span>
+            <h2>Awards That Back Our Claim as the Best CA Intermediate Group 1 Coaching</h2>
+            <p class="lead" style="margin:0 auto;">Independent recognition for the work behind our CA Intermediate Group 1 Coaching.</p>
+        </div>
+        <div class="awards-grid">
+            <div class="award-card"><div class="medal">★</div><h3>Pride of Chhattisgarh Award 2024</h3><p>Recognised for excellence in CA Intermediate Group 1 Coaching.</p></div>
+            <div class="award-card"><div class="medal">★</div><h3>News18 Best Commerce Coaching Institute</h3><p>Featured for outstanding CA Intermediate Group 1 Classes results.</p></div>
+            <div class="award-card"><div class="medal">★</div><h3>Dainik Bhaskar Excellence Award</h3><p>Honoured for consistent CA Intermediate Group 1 Online Coaching performance.</p></div>
+        </div>
+    </div>
+</section>
 
-                    <p class="lead mb-4">
-                        Join our CA Intermediate Group 1 Coaching program and prepare confidently with expert faculty,
-                        structured learning, and complete academic support.
-                    </p>
-
-                    <a href="/Contact" class="btn btn-light btn-lg px-5">
-                        Contact Us Today
-                    </a>
-                </div>
+<!-- ================= TESTIMONIALS ================= -->
+<section class="testi-sec" id="testimonials">
+    <div class="wrap">
+        <div class="sec-head">
+            <span class="eyebrow">Student Voices</span>
+            <h2>What Students Say About Our CA Intermediate Group 1 Coaching</h2>
+            <p class="lead">Real outcomes from students who chose the Best CA Intermediate Group 1 Coaching in India.</p>
+        </div>
+        <div class="testi-grid">
+            <div class="testi-card">
+                <p class="quote">"Choosing Excel for CA Intermediate Group 1 Coaching was the best decision of my CA journey. The weekly tests and revisions made all the difference."</p>
+                <div class="testi-foot"><div class="avatar">RD</div><div><div class="nm">Rashi Dammani</div><div class="rk">AIR 39</div></div></div>
+            </div>
+            <div class="testi-card">
+                <p class="quote">"The faculty at Excel's CA Intermediate Group 1 Classes explain every concept with so much clarity. I never had to look elsewhere for doubts."</p>
+                <div class="testi-foot"><div class="avatar">SP</div><div><div class="nm">Sameer Patel</div><div class="rk">AIR 17</div></div></div>
+            </div>
+            <div class="testi-card">
+                <p class="quote">"I joined the CA Intermediate Group 1 Online Coaching from outside Raipur and it felt exactly like being in the classroom. Truly the best support system."</p>
+                <div class="testi-foot"><div class="avatar">SS</div><div><div class="nm">Swayam Sahu</div><div class="rk">AIR 15</div></div></div>
+            </div>
+            <div class="testi-card">
+                <p class="quote">"The video backup facility in this CA Intermediate Group 1 Coaching saved me during exam season when I needed to revisit tricky topics."</p>
+                <div class="testi-foot"><div class="avatar">AA</div><div><div class="nm">Aditi Agrawal</div><div class="rk">CA Intermediate Group 1</div></div></div>
+            </div>
+            <div class="testi-card">
+                <p class="quote">"Excel's CA Intermediate Group 1 Coaching gave me a structured plan I could actually follow, instead of feeling lost in the syllabus."</p>
+                <div class="testi-foot"><div class="avatar">SB</div><div><div class="nm">Siddhi Bansal</div><div class="rk">CA Intermediate Group 1</div></div></div>
+            </div>
+            <div class="testi-card">
+                <p class="quote">"From the first demo class, I knew this was the Best CA Intermediate Group 1 Coaching for serious students who want to clear in one attempt."</p>
+                <div class="testi-foot"><div class="avatar">EX</div><div><div class="nm">Excel Student</div><div class="rk">CA Intermediate Group 1</div></div></div>
             </div>
         </div>
+    </div>
+</section>
 
-    </section>
+<!-- ================= FAQ ================= -->
+<section class="faq-sec" id="faq">
+    <div class="wrap">
+        <div class="sec-head">
+            <span class="eyebrow">FAQs</span>
+            <h2>Frequently Asked Questions About CA Intermediate Group 1 Coaching</h2>
+            <p class="lead">Everything students typically ask before joining our Group 1 program.</p>
+        </div>
+        <div id="faq-list">
+            <div class="faq-item">
+                <div class="faq-q">What is CA Intermediate Group 1?<span class="plus">+</span></div>
+                <div class="faq-a"><p>CA Intermediate Group 1 is the first of two groups in the CA Intermediate examination conducted by ICAI, covering Advanced Accounting, Corporate &amp; Other Laws, and Taxation.</p></div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-q">Is CA Intermediate Group 1 difficult?<span class="plus">+</span></div>
+                <div class="faq-a"><p>The syllabus is extensive, but with structured planning, weekly tests, and consistent revision, most students find Group 1 manageable within a focused six-to-eight-month preparation window.</p></div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-q">Can I clear CA Intermediate Group 1 in my first attempt?<span class="plus">+</span></div>
+                <div class="faq-a"><p>Yes. Thousands of students clear Group 1 in their first attempt every year through disciplined revision cycles, regular mock tests, and guided doubt-clearing sessions.</p></div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-q">What is the eligibility for CA Intermediate Group 1?<span class="plus">+</span></div>
+                <div class="faq-a"><p>Students can enter via the CA Foundation route after clearing the Foundation exam, or via Direct Entry for commerce graduates with 55% marks or other graduates with 60% marks, as per ICAI norms.</p></div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-q">Does Excel Educational Institute provide online classes for CA Intermediate Group 1?<span class="plus">+</span></div>
+                <div class="faq-a"><p>Yes, classes are available in Live, Recorded, and Offline formats so students across India can study with the same faculty and material regardless of location.</p></div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-q">Do you provide class recordings?<span class="plus">+</span></div>
+                <div class="faq-a"><p>Yes, every live session includes a video backup so students can revisit any topic at their own pace.</p></div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-q">How many revisions are conducted before the exam?<span class="plus">+</span></div>
+                <div class="faq-a"><p>The course includes multiple structured revision rounds, each building on the last, alongside paper-wise mock tests closer to the exam date.</p></div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-q">Why choose Excel Educational Institute for CA Intermediate Group 1 coaching?<span class="plus">+</span></div>
+                <div class="faq-a"><p>Excel Educational Institute has produced 176+ All India Rankers and 18,000+ successful students since 2007, backed by expert faculty and a pass rate triple the national average.</p></div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-q">What subjects are covered in the Group 1 syllabus?<span class="plus">+</span></div>
+                <div class="faq-a"><p>The Group 1 syllabus covers Advanced Accounting, Corporate &amp; Other Laws, and Taxation (direct and indirect).</p></div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-q">Is there a doubt-clearing facility in the online batches?<span class="plus">+</span></div>
+                <div class="faq-a"><p>Yes, faculty are available for doubt resolution during and after every live session, both online and in the classroom.</p></div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-q">What was the recent pass percentage at Excel compared to the national average?<span class="plus">+</span></div>
+                <div class="faq-a"><p>In the Jan 2025 attempt, Excel recorded a 42.80% pass percentage against the All India average of 14.05%.</p></div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-q">What career opportunities follow after clearing Group 1?<span class="plus">+</span></div>
+                <div class="faq-a"><p>Clearing Group 1 lets students pursue articleship training, take up roles in accounting and taxation, and move toward CA Final while building practical industry experience.</p></div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-q">Is coaching available in Raipur as well as online?<span class="plus">+</span></div>
+                <div class="faq-a"><p>Yes, Excel Educational Institute runs classroom batches in Raipur alongside live and recorded online batches for students elsewhere.</p></div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-q">How do I enroll?<span class="plus">+</span></div>
+                <div class="faq-a"><p>You can enroll by booking a free demo class, speaking with our admission counselor, or downloading our brochure directly from this page.</p></div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ================= FINAL CTA ================= -->
+<section class="final-cta" id="demo">
+    <div class="wrap">
+        <span class="eyebrow" style="color:var(--gold-light);">Admissions Open</span>
+        <h2>Start Your CA Intermediate Group 1 Journey With Excel</h2>
+        <p class="lead">176+ All India Rankers. 18,000+ successful students. One coaching program built for serious results — starting with your free demo class.</p>
+        <div class="cta-row">
+            <button class="btn btn-gold" onclick="window.location.href='#demo'">Book Free Demo Class</button>
+            <button class="btn btn-outline" onclick="window.location.href='tel:+910000000000'">Call Now</button>
+            <button class="btn btn-outline" onclick="window.location.href='https://wa.me/910000000000'">WhatsApp Counselor</button>
+            <button class="btn btn-outline" id="brochure" onclick="window.location.href='#brochure'">Download Brochure</button>
+        </div>
+        <div class="internal-links">
+            <a href="#results">Group 1 Results</a>
+            <a href="#faculty">Meet Our Faculty</a>
+            <a href="#syllabus">Group 1 Syllabus</a>
+            <a href="#study-plan">Study Plan</a>
+            <a href="#faq">FAQs</a>
+            <a href="/ca-foundation-coaching">CA Foundation Coaching</a>
+            <a href="/ca-intermediate-group-2-coaching">CA Intermediate Group 2 Coaching</a>
+            <a href="/ca-final-coaching">CA Final Coaching</a>
+            <a href="/ca-intermediate-online-coaching">CA Intermediate Online Coaching</a>
+            <a href="/ca-intermediate-group-1-coaching-raipur">CA Coaching in Raipur</a>
+        </div>
+    </div>
+</section>
+
+<!-- ================= STICKY MOBILE CTA ================= -->
+<div class="sticky-cta">
+    <button class="btn btn-gold" onclick="window.location.href='#demo'">Free Demo</button>
+    <button class="btn btn-navy" onclick="window.location.href='https://wa.me/910000000000'">WhatsApp</button>
 </div>
+
+<script>
+    document.querySelectorAll('.faq-item').forEach(function (item) {
+        var q = item.querySelector('.faq-q');
+        var a = item.querySelector('.faq-a');
+        var list = item.closest('[id$="-list"]') || document;
+        q.addEventListener('click', function () {
+            var isOpen = item.classList.contains('open');
+            list.querySelectorAll('.faq-item.open').forEach(function (openItem) {
+                if (openItem !== item) {
+                    openItem.classList.remove('open');
+                    openItem.querySelector('.faq-a').style.maxHeight = null;
+                }
+            });
+            if (isOpen) {
+                item.classList.remove('open');
+                a.style.maxHeight = null;
+            } else {
+                item.classList.add('open');
+                a.style.maxHeight = a.scrollHeight + 'px';
+            }
+        });
+    });
+</script>
